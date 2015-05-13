@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		524C27141AF92CAB0083AB5A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524C27131AF92CAB0083AB5A /* Social.framework */; };
+		524C27161AF92CB30083AB5A /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524C27151AF92CB30083AB5A /* Accounts.framework */; };
 		52D9F1A01AF9181A00C3DCF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9F19F1AF9181A00C3DCF3 /* AppDelegate.swift */; };
 		52D9F1A31AF9181A00C3DCF3 /* ZenWalk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52D9F1A11AF9181A00C3DCF3 /* ZenWalk.xcdatamodeld */; };
 		52D9F1A51AF9181A00C3DCF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9F1A41AF9181A00C3DCF3 /* ViewController.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		524C27131AF92CAB0083AB5A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		524C27151AF92CB30083AB5A /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		52D9F19A1AF9181A00C3DCF3 /* ZenWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D9F19E1AF9181A00C3DCF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52D9F19F1AF9181A00C3DCF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				524C27161AF92CB30083AB5A /* Accounts.framework in Frameworks */,
+				524C27141AF92CAB0083AB5A /* Social.framework in Frameworks */,
 				52D9F1DA1AF91C4500C3DCF3 /* AudioToolbox.framework in Frameworks */,
 				52D9F1DB1AF91C4500C3DCF3 /* CFNetwork.framework in Frameworks */,
 				52D9F1DC1AF91C4500C3DCF3 /* CoreGraphics.framework in Frameworks */,
@@ -112,6 +118,8 @@
 		52D9F1911AF9181A00C3DCF3 = {
 			isa = PBXGroup;
 			children = (
+				524C27151AF92CB30083AB5A /* Accounts.framework */,
+				524C27131AF92CAB0083AB5A /* Social.framework */,
 				52D9F19C1AF9181A00C3DCF3 /* ZenWalk */,
 				52D9F1B51AF9181B00C3DCF3 /* ZenWalkTests */,
 				52D9F19B1AF9181A00C3DCF3 /* Products */,
@@ -497,6 +505,7 @@
 				52D9F1BE1AF9181B00C3DCF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52D9F1BF1AF9181B00C3DCF3 /* Build configuration list for PBXNativeTarget "ZenWalkTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +514,7 @@
 				52D9F1C11AF9181B00C3DCF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

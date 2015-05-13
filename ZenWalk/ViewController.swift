@@ -8,13 +8,21 @@
 
 import UIKit
 import Parse
+import ParseUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate{
 
+    override func viewDidAppear(animated: Bool) {
+        var logInController = PFLogInViewController()
+        logInController.delegate = self
+        self.presentViewController(logInController, animated:true, completion: nil)
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let testObject = PFObject(className: "TestObject")
+    
+                let testObject = PFObject(className: "TestObject")
         testObject["foo"] = "bar"
         testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             println("Object has been saved.")
