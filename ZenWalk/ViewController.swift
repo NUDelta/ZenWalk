@@ -23,10 +23,12 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     var avPlayer2:AVPlayerItem!
     var avPlayer3:AVPlayerItem!
     var avPlayer4:AVPlayerItem!
+    var currentStage:NSString = ""
     
     var queue:AVQueuePlayer!
     
     
+    @IBOutlet weak var sessionName: UITextField!
     var manager:CLLocationManager!
     var myLocations: [CLLocation] = []
 
@@ -40,6 +42,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        currentStage = "Part 1"
         // Set up the audio players
         let fileURL:NSURL = NSBundle.mainBundle().URLForResource("Part 1", withExtension: "mp3")!
         var error: NSError?
@@ -50,7 +53,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
-        
+        currentStage = "Part 2"
         let fileURL2:NSURL = NSBundle.mainBundle().URLForResource("Part 2", withExtension: "mp3")!
         var error2: NSError?
         avPlayer2 = AVPlayerItem(URL: fileURL2)
@@ -60,6 +63,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
+        currentStage = "Part 3"
         let fileURL3:NSURL = NSBundle.mainBundle().URLForResource("Part 3", withExtension: "mp3")!
         var error3: NSError?
         avPlayer3 = AVPlayerItem(URL: fileURL3)
@@ -69,6 +73,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
+        currentStage = "Part 4"
         let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("Part 4", withExtension: "mp3")!
         var error4: NSError?
         avPlayer4 = AVPlayerItem(URL: fileURL4)
@@ -126,6 +131,12 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             let loc = PFObject(className: "Location")
             loc["latitude"] = c2.latitude
             loc["longitude"] = c2.longitude
+            loc["session"] = sessionName
+            
+            // which stage are we at?
+            currentStage = queue.currentItem.description
+            
+            loc["stage"] = currentStage
             loc.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 println("Object has been saved.")
             }
