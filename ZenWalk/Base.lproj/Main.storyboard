@@ -2,23 +2,60 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ZenWalk" customModuleProvider="target" sceneMemberID="viewController">
-                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="cng-am-1n2">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nSg-Cw-bx0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wdn-B8-47v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J8l-uK-wez">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </mapView>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8mO-Zv-K3x">
+                                <rect key="frame" x="16" y="28" width="568" height="281"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8a-6W-9nt">
+                                <rect key="frame" x="250" y="415" width="100" height="65"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ggs-zF-zDG"/>
+                                    <constraint firstAttribute="height" constant="65" id="o0K-ti-fEY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Dit-GP-gbQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8mO-Zv-K3x" firstAttribute="trailing" secondItem="J8l-uK-wez" secondAttribute="trailingMargin" id="5xP-Kh-hD5"/>
+                            <constraint firstItem="8mO-Zv-K3x" firstAttribute="leading" secondItem="J8l-uK-wez" secondAttribute="leadingMargin" id="Xs1-fZ-OdM"/>
+                            <constraint firstItem="Wdn-B8-47v" firstAttribute="top" secondItem="8mO-Zv-K3x" secondAttribute="bottom" constant="247" id="kH6-Mh-mHi"/>
+                            <constraint firstItem="Y8a-6W-9nt" firstAttribute="centerX" secondItem="8mO-Zv-K3x" secondAttribute="centerX" id="mKb-Iy-dSF"/>
+                            <constraint firstItem="Wdn-B8-47v" firstAttribute="top" secondItem="Y8a-6W-9nt" secondAttribute="bottom" constant="76" id="n1O-Wl-WiR"/>
+                            <constraint firstItem="8mO-Zv-K3x" firstAttribute="top" secondItem="nSg-Cw-bx0" secondAttribute="bottom" constant="8" symbolic="YES" id="sM7-Kr-Yg0"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="theMap" destination="cng-am-1n2" id="ek3-vf-mFj"/>
+                        <outlet property="theMap" destination="8mO-Zv-K3x" id="bSi-Mz-f82"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="444" y="235"/>
+            <point key="canvasLocation" x="571" y="219"/>
         </scene>
     </scenes>
 </document>
