@@ -131,12 +131,12 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             let loc = PFObject(className: "Location")
             loc["latitude"] = c2.latitude
             loc["longitude"] = c2.longitude
-            loc["session"] = sessionName
+            loc["session"] = sessionName.text
             
             // which stage are we at?
             currentStage = queue.currentItem.description
             
-            loc["stage"] = currentStage
+            loc["stage"] = currentStage.substringFromIndex(currentStage.length - 7)
             loc.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 println("Object has been saved.")
             }
