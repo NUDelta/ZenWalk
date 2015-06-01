@@ -37,6 +37,7 @@
                                     <segment title="A"/>
                                     <segment title="B"/>
                                     <segment title="C"/>
+                                    <segment title="D"/>
                                 </segments>
                                 <connections>
                                     <action selector="conditionSegmentControl:" destination="vXZ-lx-hvc" eventType="valueChanged" id="p5b-Xy-vDA"/>
