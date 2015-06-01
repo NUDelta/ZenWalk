@@ -22,7 +22,12 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     var avPlayer1:AVPlayerItem!
     var avPlayer2:AVPlayerItem!
     var avPlayer3:AVPlayerItem!
-    var avPlayer4:AVPlayerItem!
+    var avPlayer4Tree:AVPlayerItem!
+    var avPlayer4Rock:AVPlayerItem!
+    var avPlayer5TreeCircle:AVPlayerItem!
+    var avPlayer5TreeSpin:AVPlayerItem!
+    var avPlayer5GreyRock:AVPlayerItem! // to be used with avPlayer5Rocks
+    var avPlayer5Rocks:AVPlayerItem!
     var currentStage:NSString = "Not Started"
     var selectedCondition:NSString = "Not Selected"
     var queue:AVQueuePlayer!
@@ -43,14 +48,17 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         self.presentViewController(logInController, animated:true, completion: nil)
 
     }*/
-    func segmentedControlValueChange(sender : UISegmentedControl){
-        let segindex = sender.selectedSegmentIndex
-        self.selectedCondition = sender.titleForSegmentAtIndex(segindex)!
+    
+    func segmentedControlValueChanged(conditionControl : UISegmentedControl){
+        let segindex = conditionControl.selectedSegmentIndex
+        self.selectedCondition = conditionControl.titleForSegmentAtIndex(segindex)!
         println("condition = " + (self.selectedCondition as String))
+        setUpAVQueuePlayer()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // set up alert controller
         controller = UIAlertController(title: "Condition or Session not set",
@@ -63,6 +71,11 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
                 })
         controller!.addAction(action)
         
+        // Set up the segmented control
+        
+        conditionControl.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents: .ValueChanged)
+        
+                
         // Set up the audio players
         let fileURL:NSURL = NSBundle.mainBundle().URLForResource("Part 1", withExtension: "mp3")!
         var error: NSError?
@@ -91,35 +104,60 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
-        let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("Part 4", withExtension: "mp3")!
-        var error4: NSError?
-        avPlayer4 = AVPlayerItem(URL: fileURL4)
-        if avPlayer4 == nil {
-            if let e = error4 {
+        let fileURL4Tree:NSURL = NSBundle.mainBundle().URLForResource("Part 4 Tree", withExtension: "mp3")!
+        var error4Tree: NSError?
+        avPlayer4Tree = AVPlayerItem(URL: fileURL4Tree)
+        if avPlayer4Tree == nil {
+            if let e = error4Tree {
                 println(e.localizedDescription)
             }
         }
         
-        var avPlayerItemsArray = [AVPlayerItem]()
-        avPlayerItemsArray.append(avPlayer1)
-        avPlayerItemsArray.append(avPlayer2)
-        avPlayerItemsArray.append(avPlayer3)
-        avPlayerItemsArray.append(avPlayer4)
+        let fileURL4Rocks:NSURL = NSBundle.mainBundle().URLForResource("Part 4 Rocks", withExtension: "mp3")!
+        var error4Rocks: NSError?
+        avPlayer4Rock = AVPlayerItem(URL: fileURL4Rocks)
+        if avPlayer4Rock == nil {
+            if let e = error4Rocks {
+                println(e.localizedDescription)
+            }
+        }
         
-        queue = AVQueuePlayer(items: avPlayerItemsArray)
+        let fileURL5TreeCircle:NSURL = NSBundle.mainBundle().URLForResource("Part 5 Tree Circle", withExtension: "mp3")!
+        var error5TreeCircle: NSError?
+        avPlayer5TreeCircle = AVPlayerItem(URL: fileURL5TreeCircle)
+        if avPlayer5TreeCircle == nil {
+            if let e = error5TreeCircle {
+                println(e.localizedDescription)
+            }
+        }
         
-    
-        // Set up the location manager
-        manager = CLLocationManager()
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestAlwaysAuthorization()
-        manager.startUpdatingLocation()
+        let fileURL5TreeSpin:NSURL = NSBundle.mainBundle().URLForResource("Part 5 Tree Spin", withExtension: "mp3")!
+        var error5TreeSpin: NSError?
+        avPlayer5TreeSpin = AVPlayerItem(URL: fileURL5TreeSpin)
+        if avPlayer5TreeSpin == nil {
+            if let e = error5TreeSpin {
+                println(e.localizedDescription)
+            }
+        }
         
-        // Set up the map view
-        theMap.delegate = self
-        theMap.mapType = MKMapType.Standard
-        theMap.showsUserLocation = true
+        let fileURL5GreyRock:NSURL = NSBundle.mainBundle().URLForResource("Part 5 Grey Rock", withExtension: "mp3")!
+        var error5gr: NSError?
+        avPlayer5GreyRock = AVPlayerItem(URL: fileURL5GreyRock)
+        if avPlayer5GreyRock == nil {
+            if let e = error5gr {
+                println(e.localizedDescription)
+            }
+        }
+        
+        let fileURL5Rocks:NSURL = NSBundle.mainBundle().URLForResource("Part 5 Rocks", withExtension: "mp3")!
+        var error5rock: NSError?
+        avPlayer5Rocks = AVPlayerItem(URL: fileURL5Rocks)
+        if avPlayer5Rocks == nil {
+            if let e = error5rock {
+                println(e.localizedDescription)
+            }
+        }
+        
         
         //set up Core Motion
         if motionManager.accelerometerAvailable{
@@ -143,13 +181,56 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         
     }
     
+    // Set up AVQueuePlayer AND start location updates
     func setUpAVQueuePlayer(){
+        var avPlayerItemsArray = [AVPlayerItem]()
+        avPlayerItemsArray.append(avPlayer1)
+        avPlayerItemsArray.append(avPlayer2)
+        avPlayerItemsArray.append(avPlayer3)
+        
         // check self.selectedCondition
-        // if condition is A : control condition
-        // else if condition is B : location loop
-        // else if condition is C : jumping
-        // else if condition is D : known object
+        // Walk around tree in a circle
+        if self.selectedCondition == "A" {
+            avPlayerItemsArray.append(avPlayer4Tree)
+            avPlayerItemsArray.append(avPlayer5TreeCircle)
+            println("A")
+        }
+        // Spin yourself around near tree
+        else if self.selectedCondition == "B" {
+            avPlayerItemsArray.append(avPlayer4Tree)
+            avPlayerItemsArray.append(avPlayer5TreeSpin)
+            println("B")
+        
+        }
+        // Identify known grey rock
+        else if self.selectedCondition == "C" {
+            avPlayerItemsArray.append(avPlayer4Rock)
+            avPlayerItemsArray.append(avPlayer5GreyRock)
+            avPlayerItemsArray.append(avPlayer5Rocks)
+            println("C")
+        }
+        // Observe rocks
+        else if self.selectedCondition == "D" {
+            avPlayerItemsArray.append(avPlayer4Rock)
+            avPlayerItemsArray.append(avPlayer5Rocks)
+            println("D")
+        }
+        
+        queue = AVQueuePlayer(items: avPlayerItemsArray)
+        
+        // Set up the location manager
+        manager = CLLocationManager()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestAlwaysAuthorization()
+        manager.startUpdatingLocation()
+        
+        // Set up the map view
+        theMap.delegate = self
+        theMap.mapType = MKMapType.Standard
+        theMap.showsUserLocation = true
     }
+    
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]!) {
         //theLabel.text = "\(locations[0])"
         myLocations.append(locations[0] as! CLLocation)

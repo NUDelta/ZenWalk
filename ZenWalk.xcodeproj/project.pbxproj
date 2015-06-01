@@ -32,10 +32,15 @@
 		52D9F1E11AF91C4500C3DCF3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D61AF91C4500C3DCF3 /* QuartzCore.framework */; };
 		52D9F1E21AF91C4500C3DCF3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D71AF91C4500C3DCF3 /* Security.framework */; };
 		52D9F1E41AF91C4500C3DCF3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D91AF91C4500C3DCF3 /* SystemConfiguration.framework */; };
-		64EBB5831B0E528100AE1198 /* Part 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64EBB57F1B0E528100AE1198 /* Part 4.mp3 */; };
-		64EBB5841B0E528100AE1198 /* Part 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64EBB5801B0E528100AE1198 /* Part 3.mp3 */; };
-		64EBB5851B0E528100AE1198 /* Part 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64EBB5811B0E528100AE1198 /* Part 2.mp3 */; };
-		64EBB5861B0E528100AE1198 /* Part 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64EBB5821B0E528100AE1198 /* Part 1.mp3 */; };
+		64E9ABE01B1CF097007B5197 /* Part 4 Rocks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABDD1B1CF097007B5197 /* Part 4 Rocks.mp3 */; };
+		64E9ABE11B1CF097007B5197 /* Part 5 Grey Rock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABDE1B1CF097007B5197 /* Part 5 Grey Rock.mp3 */; };
+		64E9ABE21B1CF097007B5197 /* Part 5 Rocks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABDF1B1CF097007B5197 /* Part 5 Rocks.mp3 */; };
+		64E9ABE61B1CF0C6007B5197 /* Part 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABE31B1CF0C6007B5197 /* Part 1.mp3 */; };
+		64E9ABE71B1CF0C6007B5197 /* Part 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABE41B1CF0C6007B5197 /* Part 2.mp3 */; };
+		64E9ABE81B1CF0C6007B5197 /* Part 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABE51B1CF0C6007B5197 /* Part 3.mp3 */; };
+		64E9ABEC1B1CF5DA007B5197 /* Part 4 Tree.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABE91B1CF5DA007B5197 /* Part 4 Tree.mp3 */; };
+		64E9ABED1B1CF5DA007B5197 /* Part 5 Tree Circle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABEA1B1CF5DA007B5197 /* Part 5 Tree Circle.mp3 */; };
+		64E9ABEE1B1CF5DA007B5197 /* Part 5 Tree Spin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABEB1B1CF5DA007B5197 /* Part 5 Tree Spin.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,10 +83,15 @@
 		52D9F1D61AF91C4500C3DCF3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		52D9F1D71AF91C4500C3DCF3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		52D9F1D91AF91C4500C3DCF3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		64EBB57F1B0E528100AE1198 /* Part 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Part 4.mp3"; path = "../../../Downloads/Part 4.mp3"; sourceTree = "<group>"; };
-		64EBB5801B0E528100AE1198 /* Part 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Part 3.mp3"; path = "../../../Downloads/Part 3.mp3"; sourceTree = "<group>"; };
-		64EBB5811B0E528100AE1198 /* Part 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Part 2.mp3"; path = "../../../Downloads/Part 2.mp3"; sourceTree = "<group>"; };
-		64EBB5821B0E528100AE1198 /* Part 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Part 1.mp3"; path = "../../../Downloads/Part 1.mp3"; sourceTree = "<group>"; };
+		64E9ABDD1B1CF097007B5197 /* Part 4 Rocks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Part 4 Rocks.mp3"; path = "../../../Downloads/documents-export-2015-06-01 (1)/Part 4 Rocks.mp3"; sourceTree = "<group>"; };
+		64E9ABDE1B1CF097007B5197 /* Part 5 Grey Rock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Part 5 Grey Rock.mp3"; path = "../../../Downloads/documents-export-2015-06-01 (1)/Part 5 Grey Rock.mp3"; sourceTree = "<group>"; };
+		64E9ABDF1B1CF097007B5197 /* Part 5 Rocks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Part 5 Rocks.mp3"; path = "../../../Downloads/documents-export-2015-06-01 (1)/Part 5 Rocks.mp3"; sourceTree = "<group>"; };
+		64E9ABE31B1CF0C6007B5197 /* Part 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Part 1.mp3"; path = "../../../Downloads/documents-export-2015-06-01 (2)/Part 1.mp3"; sourceTree = "<group>"; };
+		64E9ABE41B1CF0C6007B5197 /* Part 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Part 2.mp3"; path = "../../../Downloads/documents-export-2015-06-01 (2)/Part 2.mp3"; sourceTree = "<group>"; };
+		64E9ABE51B1CF0C6007B5197 /* Part 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Part 3.mp3"; path = "../../../Downloads/documents-export-2015-06-01 (2)/Part 3.mp3"; sourceTree = "<group>"; };
+		64E9ABE91B1CF5DA007B5197 /* Part 4 Tree.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 4 Tree.mp3"; sourceTree = "<group>"; };
+		64E9ABEA1B1CF5DA007B5197 /* Part 5 Tree Circle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 5 Tree Circle.mp3"; sourceTree = "<group>"; };
+		64E9ABEB1B1CF5DA007B5197 /* Part 5 Tree Spin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 5 Tree Spin.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,11 +154,16 @@
 			isa = PBXGroup;
 			children = (
 				52D9F1CE1AF91B9B00C3DCF3 /* Frameworks */,
-				64EBB57F1B0E528100AE1198 /* Part 4.mp3 */,
-				64EBB5801B0E528100AE1198 /* Part 3.mp3 */,
-				64EBB5811B0E528100AE1198 /* Part 2.mp3 */,
-				64EBB5821B0E528100AE1198 /* Part 1.mp3 */,
 				52D9F19F1AF9181A00C3DCF3 /* AppDelegate.swift */,
+				64E9ABE31B1CF0C6007B5197 /* Part 1.mp3 */,
+				64E9ABE41B1CF0C6007B5197 /* Part 2.mp3 */,
+				64E9ABE51B1CF0C6007B5197 /* Part 3.mp3 */,
+				64E9ABDD1B1CF097007B5197 /* Part 4 Rocks.mp3 */,
+				64E9ABDE1B1CF097007B5197 /* Part 5 Grey Rock.mp3 */,
+				64E9ABDF1B1CF097007B5197 /* Part 5 Rocks.mp3 */,
+				64E9ABE91B1CF5DA007B5197 /* Part 4 Tree.mp3 */,
+				64E9ABEA1B1CF5DA007B5197 /* Part 5 Tree Circle.mp3 */,
+				64E9ABEB1B1CF5DA007B5197 /* Part 5 Tree Spin.mp3 */,
 				52D9F1A41AF9181A00C3DCF3 /* ViewController.swift */,
 				52D9F1A61AF9181B00C3DCF3 /* Main.storyboard */,
 				52D9F1A91AF9181B00C3DCF3 /* Images.xcassets */,
@@ -293,13 +308,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E9ABE21B1CF097007B5197 /* Part 5 Rocks.mp3 in Resources */,
+				64E9ABED1B1CF5DA007B5197 /* Part 5 Tree Circle.mp3 in Resources */,
+				64E9ABE71B1CF0C6007B5197 /* Part 2.mp3 in Resources */,
 				52D9F1A81AF9181B00C3DCF3 /* Main.storyboard in Resources */,
+				64E9ABEE1B1CF5DA007B5197 /* Part 5 Tree Spin.mp3 in Resources */,
 				52D9F1AD1AF9181B00C3DCF3 /* LaunchScreen.xib in Resources */,
+				64E9ABEC1B1CF5DA007B5197 /* Part 4 Tree.mp3 in Resources */,
+				64E9ABE61B1CF0C6007B5197 /* Part 1.mp3 in Resources */,
+				64E9ABE11B1CF097007B5197 /* Part 5 Grey Rock.mp3 in Resources */,
 				52D9F1AA1AF9181B00C3DCF3 /* Images.xcassets in Resources */,
-				64EBB5861B0E528100AE1198 /* Part 1.mp3 in Resources */,
-				64EBB5841B0E528100AE1198 /* Part 3.mp3 in Resources */,
-				64EBB5831B0E528100AE1198 /* Part 4.mp3 in Resources */,
-				64EBB5851B0E528100AE1198 /* Part 2.mp3 in Resources */,
+				64E9ABE81B1CF0C6007B5197 /* Part 3.mp3 in Resources */,
+				64E9ABE01B1CF097007B5197 /* Part 4 Rocks.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
