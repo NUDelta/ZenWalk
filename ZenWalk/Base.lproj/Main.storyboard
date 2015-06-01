@@ -31,18 +31,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IyV-ki-So6">
-                                <rect key="frame" x="239" y="447" width="123" height="29"/>
-                                <segments>
-                                    <segment title="A"/>
-                                    <segment title="B"/>
-                                    <segment title="C"/>
-                                    <segment title="D"/>
-                                </segments>
-                                <connections>
-                                    <action selector="conditionSegmentControl:" destination="vXZ-lx-hvc" eventType="valueChanged" id="p5b-Xy-vDA"/>
-                                </connections>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVx-9X-JsD">
                                 <rect key="frame" x="143" y="442" width="88" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -79,7 +67,6 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="conditionControl" destination="IyV-ki-So6" id="Kun-Fw-3Lj"/>
                         <outlet property="sessionName" destination="NVN-BI-9Cy" id="1jb-Zi-VaW"/>
                         <outlet property="theMap" destination="8mO-Zv-K3x" id="bSi-Mz-f82"/>
                     </connections>

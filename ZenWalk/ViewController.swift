@@ -37,7 +37,9 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     var controller:UIAlertController?
     
-    @IBOutlet weak var conditionControl: UISegmentedControl!
+    
+    var conditionControl: UISegmentedControl!
+
     @IBOutlet weak var sessionName: UITextField!
     var manager:CLLocationManager!
     var myLocations: [CLLocation] = []
@@ -49,15 +51,28 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
 
     }*/
     
-    func segmentedControlValueChanged(conditionControl : UISegmentedControl){
-        let segindex = conditionControl.selectedSegmentIndex
-        self.selectedCondition = conditionControl.titleForSegmentAtIndex(segindex)!
-        println("condition = " + (self.selectedCondition as String))
+    @IBAction func segmentedControlValueChanged(sender: UISegmentedControl) {
+        
+        let selectedSegmentIndex = sender.selectedSegmentIndex
+        let selectedSegmentText = sender.titleForSegmentAtIndex(selectedSegmentIndex)
+        
+        self.selectedCondition = selectedSegmentText!
+        
         setUpAVQueuePlayer()
+        println("Segment \(selectedSegmentIndex) with text" + " of \(selectedSegmentText) is selected")
+        
     }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let segments = ["A", "B", "C", "D"]
+        conditionControl = UISegmentedControl(items: segments)
+        conditionControl.center = view.center
+        
+        conditionControl.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents: .ValueChanged)
+        
+        self.view.addSubview(conditionControl)
         
 
         // set up alert controller
@@ -70,10 +85,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
                 handler: {(paramAction:UIAlertAction!) in println("Tried to start ZenWalk without session or condition")
                 })
         controller!.addAction(action)
-        
-        // Set up the segmented control
-        
-        conditionControl.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents: .ValueChanged)
         
                 
         // Set up the audio players
