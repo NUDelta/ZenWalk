@@ -24,12 +24,13 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     var avPlayer3:AVPlayerItem!
     var avPlayer4:AVPlayerItem!
     var currentStage:NSString = "Not Started"
-    var conditions:NSArray!
     var selectedCondition:NSString = "Not Selected"
     var queue:AVQueuePlayer!
     var x:NSString = "No X"
     var y:NSString = "No Y"
     var z:NSString = "No Z"
+    
+    var controller:UIAlertController?
     
     @IBOutlet weak var conditionControl: UISegmentedControl!
     @IBOutlet weak var sessionName: UITextField!
@@ -50,8 +51,17 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.conditions = ["A","B","C"]
 
+        // set up alert controller
+        controller = UIAlertController(title: "Condition or Session not set",
+            message: "You must set both the session and the condition before starting.",
+            preferredStyle: .Alert)
+        let action = UIAlertAction(
+                title: "Done",
+                style: UIAlertActionStyle.Default,
+                handler: {(paramAction:UIAlertAction!) in println("Tried to start ZenWalk without session or condition")
+                })
+        controller!.addAction(action)
         
         // Set up the audio players
         let fileURL:NSURL = NSBundle.mainBundle().URLForResource("Part 1", withExtension: "mp3")!
@@ -133,7 +143,13 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         
     }
     
-    
+    func setUpAVQueuePlayer(){
+        // check self.selectedCondition
+        // if condition is A : control condition
+        // else if condition is B : location loop
+        // else if condition is C : jumping
+        // else if condition is D : known object
+    }
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]!) {
         //theLabel.text = "\(locations[0])"
         myLocations.append(locations[0] as! CLLocation)
@@ -165,15 +181,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             
             loc["stage"] = currentStage.substringFromIndex(currentStage.length - 7)
            
-            if (self.currentStage == "Part 4"){
-                if self.selectedCondition == "A" {
-                    // set up condition A 4th Stage
-                } else if self.selectedCondition == "B" {
-                    // set up condition B 4th Stage
-                } else if self.selectedCondition == "C" {
-                    // set up condition C 4th Stageg
-                }
-            }
+            
             loc.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 println("Object has been saved.")
             }
@@ -213,18 +221,27 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     var isPlaying = false
     
     @IBAction func playButton(sender: AnyObject) {
-        if (!isPlaying) {
-            isPlaying = true
-            sender.setTitle("Pause", forState: UIControlState.Normal)
-            queue.play()
+        // check that session and session are set
+        if (self.sessionName.text == "") || (self.selectedCondition == "Not Selected"){
+            self.presentViewController(self.controller!, animated: true, completion: nil)
+        } else {
+            // if queue player null, set up for this condition
         
+            // start playing for this condition
+            if (!isPlaying) {
+                    // set self.selectedCondition
+                    // load up player
+                    isPlaying = true
+                    sender.setTitle("Pause", forState: UIControlState.Normal)
+                    queue.play()
+                    
+            } else {
+                isPlaying = false
+                sender.setTitle("Play", forState: UIControlState.Normal)
+                queue.pause()
+            }
         }
-        else {
-            isPlaying = false
-            sender.setTitle("Play", forState: UIControlState.Normal)
-            
-            queue.pause()
-        }
+
     }
     
     
