@@ -267,7 +267,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             // which stage are we at?
             currentStage = queue.currentItem.description
             
-            loc["stage"] = currentStage.substringFromIndex(currentStage.length - 7)
+            loc["stage"] = currentStage.substringFromIndex(currentStage.length - 15)
            
             
             loc.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
