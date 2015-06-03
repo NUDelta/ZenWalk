@@ -38,8 +38,8 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     var controller:UIAlertController?
     
     
-    var conditionControl: UISegmentedControl!
-
+    @IBOutlet var conditionControl: UISegmentedControl!
+    
     @IBOutlet weak var sessionName: UITextField!
     var manager:CLLocationManager!
     var myLocations: [CLLocation] = []
@@ -65,10 +65,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let segments = ["A", "B", "C", "D"]
-        conditionControl = UISegmentedControl(items: segments)
-        conditionControl.center = view.center
         
         conditionControl.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents: .ValueChanged)
         
