@@ -16,7 +16,7 @@ import AVFoundation
 
 
 
-class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, AVAudioPlayerDelegate, CLLocationManagerDelegate, MKMapViewDelegate{
+class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, AVAudioPlayerDelegate, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate {
     @IBOutlet var theMap: MKMapView!
     lazy var motionManager = CMMotionManager()
     var avPlayer1:AVPlayerItem!
@@ -66,9 +66,12 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        queue = AVQueuePlayer()
+        
         conditionControl.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents: .ValueChanged)
         
         self.view.addSubview(conditionControl)
+        self.sessionName.delegate = self
         
 
         // set up alert controller
@@ -190,40 +193,44 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     // Set up AVQueuePlayer AND start location updates
     func setUpAVQueuePlayer(){
-        var avPlayerItemsArray = [AVPlayerItem]()
-        avPlayerItemsArray.append(avPlayer1)
-        avPlayerItemsArray.append(avPlayer2)
-        avPlayerItemsArray.append(avPlayer3)
+        
+        if queue != nil {
+            queue.removeAllItems()
+            println("removing items")
+        }
+        
+        queue.insertItem(avPlayer1, afterItem: nil)
+        queue.insertItem(avPlayer2, afterItem: nil)
+        queue.insertItem(avPlayer3, afterItem: nil)
         
         // check self.selectedCondition
         // Walk around tree in a circle
         if self.selectedCondition == "A" {
-            avPlayerItemsArray.append(avPlayer4Tree)
-            avPlayerItemsArray.append(avPlayer5TreeCircle)
+            queue.insertItem(avPlayer4Tree, afterItem: nil)
+            queue.insertItem(avPlayer5TreeCircle, afterItem: nil)
             println("A")
         }
         // Spin yourself around near tree
         else if self.selectedCondition == "B" {
-            avPlayerItemsArray.append(avPlayer4Tree)
-            avPlayerItemsArray.append(avPlayer5TreeSpin)
+            queue.insertItem(avPlayer4Tree, afterItem: nil)
+            queue.insertItem(avPlayer5TreeSpin, afterItem: nil)
             println("B")
         
         }
         // Identify known grey rock
         else if self.selectedCondition == "C" {
-            avPlayerItemsArray.append(avPlayer4Rock)
-            avPlayerItemsArray.append(avPlayer5GreyRock)
-            avPlayerItemsArray.append(avPlayer5Rocks)
+            queue.insertItem(avPlayer4Rock, afterItem: nil)
+            queue.insertItem(avPlayer5GreyRock, afterItem: nil)
+            queue.insertItem(avPlayer5Rocks, afterItem: nil)
             println("C")
         }
         // Observe rocks
         else if self.selectedCondition == "D" {
-            avPlayerItemsArray.append(avPlayer4Rock)
-            avPlayerItemsArray.append(avPlayer5Rocks)
+            queue.insertItem(avPlayer4Rock, afterItem: nil)
+            queue.insertItem(avPlayer5Rocks, afterItem: nil)
             println("D")
         }
-        
-        queue = AVQueuePlayer(items: avPlayerItemsArray)
+    
         
         // Set up the location manager
         manager = CLLocationManager()
@@ -297,6 +304,11 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         // Dispose of any resources that can be recreated.
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     // Play Part1 when standing
     // Play Part2 when walking -- focus on posture
     // Play Part3 when walking -- focus on breath, emotions
@@ -305,6 +317,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     //optional func audioPlayerDidFinishPlaying(_player: AVAudioPlayer!, successfully flag: Bool)
     // when user pauses at preknown object, play a certain file
     // also to switch out different interactions
+    
     
     var isPlaying = false
     
