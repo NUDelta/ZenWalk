@@ -29,7 +29,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     var avPlayer5GreyRock:AVPlayerItem! // to be used with avPlayer5Rocks
     var avPlayer5Rocks:AVPlayerItem!
     var currentStage:NSString = "Not Started"
-    var selectedCondition:NSString = "Not Selected"
+    var selectedCondition:NSString = "A" // Default set to condition A
     var queue:AVQueuePlayer!
     var x:NSString = "No X"
     var y:NSString = "No Y"
@@ -187,11 +187,13 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         } else {
             println("Accelerometer is not available")
         }
+        
+        setUpAVQueuePlayer()
 
         
     }
     
-    // Set up AVQueuePlayer AND start location updates
+    // Set up AVQueuePlayer AND set up location manager
     func setUpAVQueuePlayer(){
         
         if queue != nil {
@@ -230,6 +232,8 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             queue.insertItem(avPlayer5Rocks, afterItem: nil)
             println("D")
         }
+        
+        queue.seekToTime(CMTimeMake(0, 1))
     
         
         // Set up the location manager
@@ -237,7 +241,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestAlwaysAuthorization()
-        manager.startUpdatingLocation()
+        //manager.startUpdatingLocation()
         
         // Set up the map view
         theMap.delegate = self
@@ -327,6 +331,11 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             self.presentViewController(self.controller!, animated: true, completion: nil)
         } else {
             // if queue player null, set up for this condition
+            // Start updating location
+            if sender.titleLabel!!.text == "Start" {
+                manager.startUpdatingLocation()
+                println("updating location")
+            }
         
             // start playing for this condition
             if (!isPlaying) {
