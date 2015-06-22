@@ -3,11 +3,11 @@ Mindfulness promotion and Citizen Science iOS app
 
 
 Meditation Option A: Walk around tree in a circle
-*Part 1: standing
-*Part 2: walking -- focus on posture
-*Part 3: walking -- focus on breath, emotions
-*Part 4 Tree: observe a tree
-*Part 5 Tree Circle: circle the tree
+* Part 1: standing
+* Part 2: walking -- focus on posture
+* Part 3: walking -- focus on breath, emotions
+* Part 4 Tree: observe a tree
+* Part 5 Tree Circle: circle the tree
 
 Meditation Option B: Spin yourself around near tree
 *Part 1: standing
