@@ -16,7 +16,7 @@ import AVFoundation
 
 
 
-class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, AVAudioPlayerDelegate, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate {
+class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, AVAudioPlayerDelegate, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate, OEEventsObserverDelegate {
     @IBOutlet var theMap: MKMapView!
     lazy var motionManager = CMMotionManager()
     var avPlayer1:AVPlayerItem!
@@ -28,6 +28,9 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     var avPlayer5TreeSpin:AVPlayerItem!
     var avPlayer5GreyRock:AVPlayerItem! // to be used with avPlayer5Rocks
     var avPlayer5Rocks:AVPlayerItem!
+    var avPlayer5ColorRocks1:AVPlayerItem!
+    var avPlayer5ColorRocks2:AVPlayerItem!
+    var avPlayer5ColorRocks3:AVPlayerItem!
     var currentStage:NSString = "Not Started"
     var selectedCondition:NSString = "A" // Default set to condition A
     var queue:AVQueuePlayer!
@@ -36,6 +39,10 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     var z:NSString = "No Z"
     
     var controller:UIAlertController?
+    
+    // Speech to text 
+    var openEarsEventsObserver : OEEventsObserver = OEEventsObserver()
+    var currentHypothesis = ""
     
     
     @IBOutlet var conditionControl: UISegmentedControl!
@@ -168,29 +175,60 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
+        let fileURL5ColorRocks1:NSURL = NSBundle.mainBundle().URLForResource("ColorRock1", withExtension: "mp3")!
+        var error5color: NSError?
+        avPlayer5ColorRocks1 = AVPlayerItem(URL: fileURL5ColorRocks1)
+        if avPlayer5ColorRocks1 == nil {
+            if let e = error5color {
+                println(e.localizedDescription)
+            }
+        }
+        
+        let fileURL5ColorRocks2:NSURL = NSBundle.mainBundle().URLForResource("ColorRock2", withExtension: "mp3")!
+        var error5color2: NSError?
+        avPlayer5ColorRocks2 = AVPlayerItem(URL: fileURL5ColorRocks2)
+        if avPlayer5ColorRocks2 == nil {
+            if let e = error5color2 {
+                println(e.localizedDescription)
+            }
+        }
+
+        
+        let fileURL5ColorRocks3:NSURL = NSBundle.mainBundle().URLForResource("ColorRock3", withExtension: "mp3")!
+        var error5color3: NSError?
+        avPlayer5ColorRocks3 = AVPlayerItem(URL: fileURL5ColorRocks3)
+        if avPlayer5ColorRocks3 == nil {
+            if let e = error5color3 {
+                println(e.localizedDescription)
+            }
+        }
+
+        
         
         //set up Core Motion
-        if motionManager.accelerometerAvailable{
+        if motionManager.accelerometerAvailable {
             let queue = NSOperationQueue()
+            
             motionManager.startAccelerometerUpdatesToQueue(queue, withHandler:
                 {(data: CMAccelerometerData!, error: NSError!) in
                     
-                    println("X = \(data.acceleration.x)")
-                    println("Y = \(data.acceleration.y)")
-                    println("Z = \(data.acceleration.z)")
-                    self.x = String(format:"%f", data.acceleration.x)
-                    self.y = String(format:"%f", data.acceleration.y)
-                    self.z = String(format:"%f", data.acceleration.z)
-
+                    if self.motionManager.accelerometerData != nil {
+                        println("X = \(data.acceleration.x)")
+                        println("Y = \(data.acceleration.y)")
+                        println("Z = \(data.acceleration.z)")
+                        self.x = String(format:"%f", data.acceleration.x)
+                        self.y = String(format:"%f", data.acceleration.y)
+                        self.z = String(format:"%f", data.acceleration.z)
+                    }
+                    
                 }
             )
+            
         } else {
             println("Accelerometer is not available")
         }
         
         setUpAVQueuePlayer()
-
-        
     }
     
     // Set up AVQueuePlayer AND set up location manager
@@ -233,6 +271,15 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             println("D")
         }
         
+        // Observe colors of rocks
+        else if self.selectedCondition == "E" {
+            queue.insertItem(avPlayer4Rock, afterItem: nil)
+            queue.insertItem(avPlayer5ColorRocks1, afterItem: nil)
+            queue.insertItem(avPlayer5ColorRocks2, afterItem: nil)
+            queue.insertItem(avPlayer5ColorRocks3, afterItem: nil)
+            println("E")
+        }
+        
         queue.seekToTime(CMTimeMake(0, 1))
     
         
@@ -247,6 +294,32 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         theMap.delegate = self
         theMap.mapType = MKMapType.Standard
         theMap.showsUserLocation = true
+        
+        // Set up the language model
+        var lmGenerator : OELanguageModelGenerator = OELanguageModelGenerator()
+        var words : [String] = ["light", "dark", "medium", "brown", "lime", "black", "red", "orange", "yellow", "green", "blue", "purple", "turquoise", "pink", "white", "magenta", "violet", "maroon", "gray", "rainbow"]
+        var name = "languageModelFiles"
+        var error = lmGenerator.generateLanguageModelFromArray(words, withFilesNamed: name, forAcousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"))
+        
+        var lmPath : String = String()
+        var dicPath : String = String()
+        
+        if (error == nil) {
+            
+            lmPath = lmGenerator.pathToSuccessfullyGeneratedLanguageModelWithRequestedName(name)
+            dicPath = lmGenerator.pathToSuccessfullyGeneratedDictionaryWithRequestedName(name)
+            
+        } else {
+            println(error.localizedDescription)
+        }
+        
+        var sphinxController : OEPocketsphinxController = OEPocketsphinxController.sharedInstance()
+        sphinxController.setActive(true, error: nil)
+        sphinxController.startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"), languageModelIsJSGF: false)
+        
+        openEarsEventsObserver.delegate = self
+
+        
     }
     
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]!) {
@@ -276,10 +349,25 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             loc["session"] = sessionName.text
             
             // which stage are we at?
-            currentStage = queue.currentItem.description
+            if queue.currentItem != nil {
+                currentStage = queue.currentItem.description
+                loc["stage"] = currentStage.substringFromIndex(currentStage.length - 20)
+            } else {
+                currentStage = "none"
+                loc["stage"] = currentStage
+            }
+            //currentStage = queue.currentItem.description
             
-            loc["stage"] = currentStage.substringFromIndex(currentStage.length - 15)
-           
+            
+            // Save accelerometer data to Parse
+            loc["x"] = self.x
+            loc["y"] = self.y
+            loc["z"] = self.z
+            
+            // Save the color data to Parse
+            loc["color"] = self.currentHypothesis
+            self.currentHypothesis = ""
+            println(self.currentHypothesis)
             
             loc.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 println("Object has been saved.")
@@ -313,6 +401,56 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         return false
     }
     
+    // OEEventsObserver delegate methods
+    
+    func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
+        println("The received hypothesis is " + hypothesis + " with a score of " + recognitionScore + "and an ID of " + utteranceID)
+        // if score is a certain certainty
+        self.currentHypothesis = hypothesis
+        // add the hypothesis to wherever you wanna store it
+    }
+    
+    func pocketsphinxDidStartListening() {
+        println("Pocketsphinx is now listening.")
+    }
+    
+    func pocketsphinxDidDetectSpeech() {
+        println("Pocketsphinx has detected speech.")
+    }
+    
+    func pocketsphinxDidDetectFinishedSpeech() {
+        println("Pocketsphinx has detected a period of silence, concluding an utterance.")
+    }
+    
+    func pocketsphinxDidStopListening() {
+        println("Pocketsphinx has stopped listening.")
+    }
+    
+    func pocketsphinxDidSuspendRecognition() {
+        println("Pocketsphinx has suspended recognition")
+    }
+    
+    func pocketsphinxDidResumeRecognition() {
+        println("Pocketsphinx has resumed recognition")
+    }
+    
+    func pocketsphinxDidChangeLanguageModelToFile(newLanguageModelPathAsString: String!, andDictionary newDictionaryPathAsString: String!) {
+        println("Pocketsphinx is now using the following language model: " + newLanguageModelPathAsString + " and the following dictionary: " + newDictionaryPathAsString)
+    }
+    
+    func pocketSphinxContinuousSetupDidFailWithReason(reasonForFailure: String!) {
+        println("Listening setup wasn't successful and returned the failure reason " + reasonForFailure)
+    }
+    
+    func pocketSphinxContinuousTeardownDidFailWithReason(reasonForFailure: String!) {
+        println("Listening teardown wasn't successful and returned with the following failure reason: " + reasonForFailure)
+    }
+    
+    func testRecognitionCompleted() {
+        println("A test file that was submitted for recognition is now compete")
+    }
+
+    
     // Play Part1 when standing
     // Play Part2 when walking -- focus on posture
     // Play Part3 when walking -- focus on breath, emotions
@@ -341,11 +479,14 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             if (!isPlaying) {
                     // set self.selectedCondition
                     // load up player
+                    manager.startUpdatingLocation()
                     isPlaying = true
                     sender.setTitle("Pause", forState: UIControlState.Normal)
                     queue.play()
-                    
+                
             } else {
+                // should we stop updating location when paused??
+                manager.stopUpdatingLocation()
                 isPlaying = false
                 sender.setTitle("Play", forState: UIControlState.Normal)
                 queue.pause()
@@ -355,8 +496,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     }
     
     
-    
-
 
 }
 

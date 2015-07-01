@@ -32,12 +32,19 @@
 		52D9F1E11AF91C4500C3DCF3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D61AF91C4500C3DCF3 /* QuartzCore.framework */; };
 		52D9F1E21AF91C4500C3DCF3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D71AF91C4500C3DCF3 /* Security.framework */; };
 		52D9F1E41AF91C4500C3DCF3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D91AF91C4500C3DCF3 /* SystemConfiguration.framework */; };
-		64E9ABE01B1CF097007B5197 /* Part 4 Rocks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABDD1B1CF097007B5197 /* Part 4 Rocks.mp3 */; };
-		64E9ABE11B1CF097007B5197 /* Part 5 Grey Rock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABDE1B1CF097007B5197 /* Part 5 Grey Rock.mp3 */; };
-		64E9ABE21B1CF097007B5197 /* Part 5 Rocks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABDF1B1CF097007B5197 /* Part 5 Rocks.mp3 */; };
+		641469781B43BC7E00F70AB8 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 641469741B43BC7E00F70AB8 /* AcousticModelEnglish.bundle */; };
+		641469791B43BC7E00F70AB8 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 641469751B43BC7E00F70AB8 /* AcousticModelSpanish.bundle */; };
+		6414697A1B43BC7E00F70AB8 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641469761B43BC7E00F70AB8 /* OpenEars.framework */; };
+		6414697B1B43BC7E00F70AB8 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641469771B43BC7E00F70AB8 /* Slt.framework */; };
+		64A2561B1B389D0C00A3C041 /* Part 4 Rocks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64A256181B389D0C00A3C041 /* Part 4 Rocks.mp3 */; };
+		64A2561C1B389D0C00A3C041 /* Part 5 Grey Rock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64A256191B389D0C00A3C041 /* Part 5 Grey Rock.mp3 */; };
+		64A2561D1B389D0C00A3C041 /* Part 5 Rocks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64A2561A1B389D0C00A3C041 /* Part 5 Rocks.mp3 */; };
 		64E9ABEC1B1CF5DA007B5197 /* Part 4 Tree.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABE91B1CF5DA007B5197 /* Part 4 Tree.mp3 */; };
 		64E9ABED1B1CF5DA007B5197 /* Part 5 Tree Circle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABEA1B1CF5DA007B5197 /* Part 5 Tree Circle.mp3 */; };
 		64E9ABEE1B1CF5DA007B5197 /* Part 5 Tree Spin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABEB1B1CF5DA007B5197 /* Part 5 Tree Spin.mp3 */; };
+		64F16C8F1B4429F600AA563C /* ColorRock1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64F16C8C1B4429F500AA563C /* ColorRock1.mp3 */; };
+		64F16C901B4429F600AA563C /* ColorRock2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64F16C8D1B4429F500AA563C /* ColorRock2.mp3 */; };
+		64F16C911B4429F600AA563C /* ColorRock3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64F16C8E1B4429F500AA563C /* ColorRock3.mp3 */; };
 		64F62ED71B1E582E006E7A53 /* Part 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64F62ED41B1E582E006E7A53 /* Part 1.mp3 */; };
 		64F62ED81B1E582E006E7A53 /* Part 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64F62ED51B1E582E006E7A53 /* Part 2.mp3 */; };
 		64F62ED91B1E582E006E7A53 /* Part 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64F62ED61B1E582E006E7A53 /* Part 3.mp3 */; };
@@ -83,12 +90,20 @@
 		52D9F1D61AF91C4500C3DCF3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		52D9F1D71AF91C4500C3DCF3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		52D9F1D91AF91C4500C3DCF3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		64E9ABDD1B1CF097007B5197 /* Part 4 Rocks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Part 4 Rocks.mp3"; path = "../../../Downloads/documents-export-2015-06-01 (1)/Part 4 Rocks.mp3"; sourceTree = "<group>"; };
-		64E9ABDE1B1CF097007B5197 /* Part 5 Grey Rock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Part 5 Grey Rock.mp3"; path = "../../../Downloads/documents-export-2015-06-01 (1)/Part 5 Grey Rock.mp3"; sourceTree = "<group>"; };
-		64E9ABDF1B1CF097007B5197 /* Part 5 Rocks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Part 5 Rocks.mp3"; path = "../../../Downloads/documents-export-2015-06-01 (1)/Part 5 Rocks.mp3"; sourceTree = "<group>"; };
+		641469741B43BC7E00F70AB8 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
+		641469751B43BC7E00F70AB8 /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelSpanish.bundle; sourceTree = "<group>"; };
+		641469761B43BC7E00F70AB8 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
+		641469771B43BC7E00F70AB8 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		6414697C1B43BCEC00F70AB8 /* OEBridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OEBridging-Header.h"; sourceTree = "<group>"; };
+		64A256181B389D0C00A3C041 /* Part 4 Rocks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 4 Rocks.mp3"; sourceTree = "<group>"; };
+		64A256191B389D0C00A3C041 /* Part 5 Grey Rock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 5 Grey Rock.mp3"; sourceTree = "<group>"; };
+		64A2561A1B389D0C00A3C041 /* Part 5 Rocks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 5 Rocks.mp3"; sourceTree = "<group>"; };
 		64E9ABE91B1CF5DA007B5197 /* Part 4 Tree.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 4 Tree.mp3"; sourceTree = "<group>"; };
 		64E9ABEA1B1CF5DA007B5197 /* Part 5 Tree Circle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 5 Tree Circle.mp3"; sourceTree = "<group>"; };
 		64E9ABEB1B1CF5DA007B5197 /* Part 5 Tree Spin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 5 Tree Spin.mp3"; sourceTree = "<group>"; };
+		64F16C8C1B4429F500AA563C /* ColorRock1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ColorRock1.mp3; sourceTree = "<group>"; };
+		64F16C8D1B4429F500AA563C /* ColorRock2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ColorRock2.mp3; sourceTree = "<group>"; };
+		64F16C8E1B4429F500AA563C /* ColorRock3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ColorRock3.mp3; sourceTree = "<group>"; };
 		64F62ED41B1E582E006E7A53 /* Part 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 1.mp3"; sourceTree = "<group>"; };
 		64F62ED51B1E582E006E7A53 /* Part 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 2.mp3"; sourceTree = "<group>"; };
 		64F62ED61B1E582E006E7A53 /* Part 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 3.mp3"; sourceTree = "<group>"; };
@@ -99,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6414697B1B43BC7E00F70AB8 /* Slt.framework in Frameworks */,
 				524C27161AF92CB30083AB5A /* Accounts.framework in Frameworks */,
 				524C27141AF92CAB0083AB5A /* Social.framework in Frameworks */,
 				52D9F1DA1AF91C4500C3DCF3 /* AudioToolbox.framework in Frameworks */,
@@ -112,6 +128,7 @@
 				52D9F1E21AF91C4500C3DCF3 /* Security.framework in Frameworks */,
 				52D9F1E41AF91C4500C3DCF3 /* SystemConfiguration.framework in Frameworks */,
 				52D9F1CA1AF91B8D00C3DCF3 /* ParseUI.framework in Frameworks */,
+				6414697A1B43BC7E00F70AB8 /* OpenEars.framework in Frameworks */,
 				52D9F1C81AF91B8D00C3DCF3 /* Bolts.framework in Frameworks */,
 				52D9F1CB1AF91B8D00C3DCF3 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				52D9F1CC1AF91B8D00C3DCF3 /* ParseFacebookUtils.framework in Frameworks */,
@@ -153,19 +170,24 @@
 		52D9F19C1AF9181A00C3DCF3 /* ZenWalk */ = {
 			isa = PBXGroup;
 			children = (
+				641469731B43BC7E00F70AB8 /* Framework */,
 				52D9F1CE1AF91B9B00C3DCF3 /* Frameworks */,
 				52D9F19F1AF9181A00C3DCF3 /* AppDelegate.swift */,
 				64F62ED41B1E582E006E7A53 /* Part 1.mp3 */,
 				64F62ED51B1E582E006E7A53 /* Part 2.mp3 */,
 				64F62ED61B1E582E006E7A53 /* Part 3.mp3 */,
-				64E9ABDD1B1CF097007B5197 /* Part 4 Rocks.mp3 */,
-				64E9ABDE1B1CF097007B5197 /* Part 5 Grey Rock.mp3 */,
-				64E9ABDF1B1CF097007B5197 /* Part 5 Rocks.mp3 */,
+				64A256181B389D0C00A3C041 /* Part 4 Rocks.mp3 */,
+				64A256191B389D0C00A3C041 /* Part 5 Grey Rock.mp3 */,
+				64A2561A1B389D0C00A3C041 /* Part 5 Rocks.mp3 */,
 				64E9ABE91B1CF5DA007B5197 /* Part 4 Tree.mp3 */,
 				64E9ABEA1B1CF5DA007B5197 /* Part 5 Tree Circle.mp3 */,
 				64E9ABEB1B1CF5DA007B5197 /* Part 5 Tree Spin.mp3 */,
 				52D9F1A41AF9181A00C3DCF3 /* ViewController.swift */,
+				64F16C8C1B4429F500AA563C /* ColorRock1.mp3 */,
+				64F16C8D1B4429F500AA563C /* ColorRock2.mp3 */,
+				64F16C8E1B4429F500AA563C /* ColorRock3.mp3 */,
 				52D9F1A61AF9181B00C3DCF3 /* Main.storyboard */,
+				6414697C1B43BCEC00F70AB8 /* OEBridging-Header.h */,
 				52D9F1A91AF9181B00C3DCF3 /* Images.xcassets */,
 				52D9F1AB1AF9181B00C3DCF3 /* LaunchScreen.xib */,
 				52D9F1A11AF9181A00C3DCF3 /* ZenWalk.xcdatamodeld */,
@@ -222,6 +244,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		641469731B43BC7E00F70AB8 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				641469741B43BC7E00F70AB8 /* AcousticModelEnglish.bundle */,
+				641469751B43BC7E00F70AB8 /* AcousticModelSpanish.bundle */,
+				641469761B43BC7E00F70AB8 /* OpenEars.framework */,
+				641469771B43BC7E00F70AB8 /* Slt.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,6 +306,9 @@
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = W4E2C6X642;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.InAppPurchase = {
 								enabled = 0;
 							};
@@ -308,18 +344,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64E9ABE21B1CF097007B5197 /* Part 5 Rocks.mp3 in Resources */,
+				641469781B43BC7E00F70AB8 /* AcousticModelEnglish.bundle in Resources */,
+				64A2561D1B389D0C00A3C041 /* Part 5 Rocks.mp3 in Resources */,
+				64A2561B1B389D0C00A3C041 /* Part 4 Rocks.mp3 in Resources */,
+				641469791B43BC7E00F70AB8 /* AcousticModelSpanish.bundle in Resources */,
+				64A2561C1B389D0C00A3C041 /* Part 5 Grey Rock.mp3 in Resources */,
+				64F16C8F1B4429F600AA563C /* ColorRock1.mp3 in Resources */,
 				64F62ED81B1E582E006E7A53 /* Part 2.mp3 in Resources */,
 				64E9ABED1B1CF5DA007B5197 /* Part 5 Tree Circle.mp3 in Resources */,
 				52D9F1A81AF9181B00C3DCF3 /* Main.storyboard in Resources */,
 				64E9ABEE1B1CF5DA007B5197 /* Part 5 Tree Spin.mp3 in Resources */,
 				52D9F1AD1AF9181B00C3DCF3 /* LaunchScreen.xib in Resources */,
+				64F16C911B4429F600AA563C /* ColorRock3.mp3 in Resources */,
 				64E9ABEC1B1CF5DA007B5197 /* Part 4 Tree.mp3 in Resources */,
-				64E9ABE11B1CF097007B5197 /* Part 5 Grey Rock.mp3 in Resources */,
+				64F16C901B4429F600AA563C /* ColorRock2.mp3 in Resources */,
 				52D9F1AA1AF9181B00C3DCF3 /* Images.xcassets in Resources */,
 				64F62ED71B1E582E006E7A53 /* Part 1.mp3 in Resources */,
 				64F62ED91B1E582E006E7A53 /* Part 3.mp3 in Resources */,
-				64E9ABE01B1CF097007B5197 /* Part 4 Rocks.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,12 +512,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZenWalk",
+					"$(PROJECT_DIR)/ZenWalk/Framework",
 				);
 				INFOPLIST_FILE = ZenWalk/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "228df4d3-4dc3-45b4-9b57-f30e5c4da934";
+				PROVISIONING_PROFILE = "4aadcea9-3094-46a9-8ead-57c6d76cadce";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ZenWalk/OEBridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -489,12 +532,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZenWalk",
+					"$(PROJECT_DIR)/ZenWalk/Framework",
 				);
 				INFOPLIST_FILE = ZenWalk/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "228df4d3-4dc3-45b4-9b57-f30e5c4da934";
+				PROVISIONING_PROFILE = "4aadcea9-3094-46a9-8ead-57c6d76cadce";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ZenWalk/OEBridging-Header.h";
 			};
 			name = Release;
 		};
