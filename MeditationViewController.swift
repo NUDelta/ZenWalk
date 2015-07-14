@@ -12,12 +12,9 @@ import CoreLocation
 import CoreMotion
 import MapKit
 import Parse
-import ParseUI
 import UIKit
 
-//class MeditationViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, AVAudioPlayerDelegate,CLLocationManagerDelegate, MKMapViewDelegate, OEEventsObserverDelegate {
-    
-class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocationManagerDelegate, MKMapViewDelegate {
+class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocationManagerDelegate, MKMapViewDelegate, OEEventsObserverDelegate {
     
     @IBOutlet weak var theMap: MKMapView!
     lazy var motionManager = CMMotionManager()
@@ -33,14 +30,14 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
     var y:NSString = "No Y"
     var z:NSString = "No Z"
     
-    /* add speech recognition stuff back in later */
+    var openEarsEventsObserver: OEEventsObserver = OEEventsObserver()
+    var currentHypothesis: String = ""
     
     var manager: CLLocationManager!
     var myLocations: [CLLocation] = []
     
     let defaults = NSUserDefaults.standardUserDefaults()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         queue = AVQueuePlayer()
@@ -174,7 +171,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         theMap.showsUserLocation = true
         
         // Set up the language model
-        /*var lmGenerator : OELanguageModelGenerator = OELanguageModelGenerator()
+        var lmGenerator : OELanguageModelGenerator = OELanguageModelGenerator()
         var words : [String] = ["light", "dark", "medium", "brown", "lime", "black", "red", "orange", "yellow", "green", "blue", "purple", "turquoise", "pink", "white", "magenta", "violet", "maroon", "gray", "rainbow"]
         var name = "languageModelFiles"
         var error = lmGenerator.generateLanguageModelFromArray(words, withFilesNamed: name, forAcousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"))
@@ -196,7 +193,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         sphinxController.startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"), languageModelIsJSGF: false)
         
         openEarsEventsObserver.delegate = self
-    */
+    
 
     }
     
@@ -289,6 +286,55 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             queue.pause()
         }
     }
+    
+    // OEEventsObserver delegate methods
+    func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
+        //println("The received hypothesis is " + hypothesis + " with a score of " + recognitionScore + "and an ID of " + utteranceID)
+        // if score is a certain certainty
+        self.currentHypothesis = hypothesis
+        // add the hypothesis to wherever you wanna store it
+    }
+    
+    func pocketsphinxDidStartListening() {
+        //println("Pocketsphinx is now listening.")
+    }
+    
+    func pocketsphinxDidDetectSpeech() {
+        //println("Pocketsphinx has detected speech.")
+    }
+    
+    func pocketsphinxDidDetectFinishedSpeech() {
+        //println("Pocketsphinx has detected a period of silence, concluding an utterance.")
+    }
+    
+    func pocketsphinxDidStopListening() {
+        //println("Pocketsphinx has stopped listening.")
+    }
+    
+    func pocketsphinxDidSuspendRecognition() {
+        //println("Pocketsphinx has suspended recognition")
+    }
+    
+    func pocketsphinxDidResumeRecognition() {
+        //println("Pocketsphinx has resumed recognition")
+    }
+    
+    func pocketsphinxDidChangeLanguageModelToFile(newLanguageModelPathAsString: String!, andDictionary newDictionaryPathAsString: String!) {
+        println("Pocketsphinx is now using the following language model: " + newLanguageModelPathAsString + " and the following dictionary: " + newDictionaryPathAsString)
+    }
+    
+    func pocketSphinxContinuousSetupDidFailWithReason(reasonForFailure: String!) {
+        println("Listening setup wasn't successful and returned the failure reason " + reasonForFailure)
+    }
+    
+    func pocketSphinxContinuousTeardownDidFailWithReason(reasonForFailure: String!) {
+        println("Listening teardown wasn't successful and returned with the following failure reason: " + reasonForFailure)
+    }
+    
+    func testRecognitionCompleted() {
+        println("A test file that was submitted for recognition is now compete")
+    }
+
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
