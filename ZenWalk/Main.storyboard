@@ -8,7 +8,7 @@
         <!--Sign Up In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignUpInViewController" customModule="ZenWalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpInViewController" id="BYZ-38-t0r" customClass="SignUpInViewController" customModule="ZenWalk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -114,7 +114,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="clear me later" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaB-sO-R3S">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaB-sO-R3S">
                                 <rect key="frame" x="201" y="145" width="219" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -166,12 +166,12 @@
                         <outlet property="passwordTextField" destination="4fr-AU-G6d" id="NNn-Bp-6FJ"/>
                         <outlet property="savePasswordSwitch" destination="zuj-0Q-gJO" id="7ln-c3-vF2"/>
                         <outlet property="usernameTextField" destination="rH2-50-eII" id="dnQ-T9-EAd"/>
-                        <segue destination="lYM-Gr-GDh" kind="show" identifier="toCondition" id="AsW-pH-m5x"/>
+                        <segue destination="lYM-Gr-GDh" kind="show" identifier="toCondition" id="o70-KT-93l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1252" y="429"/>
+            <point key="canvasLocation" x="1955" y="429"/>
         </scene>
         <!--Condition View Controller-->
         <scene sceneID="Zrl-Ff-g0c">
@@ -182,11 +182,11 @@
                         <viewControllerLayoutGuide type="bottom" id="OtY-Ob-DtZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Nyg-q1-U1U">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdf-ZZ-Stc">
-                                <rect key="frame" x="215" y="280" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdf-ZZ-Stc">
+                                <rect key="frame" x="215" y="279" width="30" height="30"/>
                                 <state key="normal" title="10">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -194,7 +194,7 @@
                                     <action selector="tenMinButton:" destination="lYM-Gr-GDh" eventType="touchUpInside" id="Rg9-mG-HgO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How long do you want to walk (in minutes)?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyq-zq-pgy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long do you want to walk (in minutes)?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyq-zq-pgy">
                                 <rect key="frame" x="133" y="194" width="335" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="335" id="XDb-QH-1qi"/>
@@ -203,8 +203,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxK-bc-W2f">
-                                <rect key="frame" x="355" y="280" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxK-bc-W2f">
+                                <rect key="frame" x="355" y="279" width="30" height="30"/>
                                 <state key="normal" title="20">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -212,7 +212,7 @@
                                     <action selector="twentyMinButton:" destination="lYM-Gr-GDh" eventType="touchUpInside" id="14M-p2-1Zt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3b0-Fw-bah">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3b0-Fw-bah">
                                 <rect key="frame" x="285" y="274" width="30" height="40"/>
                                 <state key="normal" title="15">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -244,14 +244,22 @@
                         </variation>
                     </view>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" id="p2i-HQ-pAg">
+                        <barButtonItem key="rightBarButtonItem" title="Log out" id="k5m-34-y71">
+                            <connections>
+                                <action selector="logoutButton:" destination="lYM-Gr-GDh" id="VcG-ag-eIz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="3L9-h4-VX7" kind="show" identifier="toMeditation" id="ENR-7H-gHN"/>
+                        <segue destination="3L9-h4-VX7" kind="show" identifier="toMeditation" id="J3j-Ay-dV3"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toLogin" id="Mex-WR-hE5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yVS-v2-HIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1904" y="429"/>
+            <point key="canvasLocation" x="2716" y="429"/>
         </scene>
         <!--Meditation View Controller-->
         <scene sceneID="Qir-gJ-X48">
@@ -262,7 +270,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QEn-my-dtj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="flq-Wk-1QH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1C-MW-5Ck">
@@ -294,13 +302,21 @@
                             <constraint firstItem="QEn-my-dtj" firstAttribute="top" secondItem="M1C-MW-5Ck" secondAttribute="bottom" constant="63" id="ewv-ag-8wQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="NH7-3U-dP9">
+                        <barButtonItem key="rightBarButtonItem" title="Log out" id="2Ta-7W-6yX">
+                            <connections>
+                                <action selector="logoutButton:" destination="3L9-h4-VX7" id="5ac-Vt-vBz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="theMap" destination="K69-W0-Qxk" id="zoA-iG-v8M"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toLogin" id="eM0-K5-1oy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4b9-Jq-2ij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2564" y="429"/>
+            <point key="canvasLocation" x="3411" y="429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Ce-i8-ksL">
@@ -318,7 +334,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNL-ah-wne" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474" y="429"/>
+            <point key="canvasLocation" x="1185" y="429"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eM0-K5-1oy"/>
+    </inferredMetricsTieBreakers>
 </document>

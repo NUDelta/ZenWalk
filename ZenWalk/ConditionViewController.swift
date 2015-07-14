@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Pamina Lin. All rights reserved.
 //
 
+import Parse
 import UIKit
 
 class ConditionViewController: UIViewController {
@@ -15,8 +16,7 @@ class ConditionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navigationController!.setNavigationBarHidden(false, animated:  true)
     }
     
     @IBAction func tenMinButton(sender: UIButton) {
@@ -41,21 +41,19 @@ class ConditionViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func logoutButton(sender: UIBarButtonItem) {
+        PFUser.logOut()
+        performSegueWithIdentifier("toLogin", sender: self)
     }
-    */
+   
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toMeditation" {
             var svc = segue.destinationViewController as! MeditationViewController
             svc.condition = self.meditationCondition
-            
+        }
+        if segue.identifier == "toLogin" {
+            var svc = segue.destinationViewController as! SignUpInViewController
         }
     }
 

@@ -40,6 +40,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.setNavigationBarHidden(false, animated:  true)
         queue = AVQueuePlayer()
         println(condition)
         
@@ -163,7 +164,6 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestAlwaysAuthorization()
-        //manager.startUpdatingLocation()
         
         // Set up the map view
         theMap.delegate = self
@@ -221,7 +221,8 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             let loc = PFObject(className: "Location")
             loc["latitude"] = c2.latitude
             loc["longitude"] = c2.longitude
-            loc["session"] = defaults.stringForKey("session") // change to constant later
+            //loc["session"] = defaults.stringForKey("session") // change to constant later
+            loc["session"] = "test"
             
             // which stage are we at?
             if queue.currentItem != nil {
@@ -240,10 +241,10 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             loc["y"] = self.y
             loc["z"] = self.z
             
-            /*// Save the color data to Parse
+            // Save the color data to Parse
             loc["color"] = self.currentHypothesis
             self.currentHypothesis = ""
-            println(self.currentHypothesis)*/
+            println(self.currentHypothesis)
             
             loc.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
                 println("Object has been saved.")
@@ -340,6 +341,18 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         self.view.endEditing(true)
         return false
     }
+    
+    @IBAction func logoutButton(sender: UIBarButtonItem) {
+        PFUser.logOut()
+        performSegueWithIdentifier("toLogin", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toLogin" {
+            var svc = segue.destinationViewController as! SignUpInViewController
+        }
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
