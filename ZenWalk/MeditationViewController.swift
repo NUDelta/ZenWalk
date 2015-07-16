@@ -23,6 +23,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
     var avPlayer3:AVPlayerItem!
     var avPlayer4:AVPlayerItem!
     var avPlayer5:AVPlayerItem!
+    var avPlayerEnd:AVPlayerItem!
     var currentStage:NSString = "Not Started"
     var condition: String!  // the meditation condition
     var queue:AVQueuePlayer!
@@ -84,9 +85,10 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         
         // Condition A: Walk around tree in a loop
         if self.condition == "A" {
+            println("Condition A")
             let fileURL5:NSURL = NSBundle.mainBundle().URLForResource("5a", withExtension: "mp3")!
             var error5: NSError?
-            avPlayer5 = AVPlayerItem(URL: fileURL)
+            avPlayer5 = AVPlayerItem(URL: fileURL5)
             if avPlayer5 == nil {
                 if let e = error5 {
                     println(e.localizedDescription)
@@ -96,9 +98,10 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         
         // Condition B: Spin self next to tree
         else if self.condition == "B" {
+            println("Condition B")
             let fileURL5:NSURL = NSBundle.mainBundle().URLForResource("5b", withExtension: "mp3")!
             var error5: NSError?
-            avPlayer5 = AVPlayerItem(URL: fileURL)
+            avPlayer5 = AVPlayerItem(URL: fileURL5)
             if avPlayer5 == nil {
                 if let e = error5 {
                     println(e.localizedDescription)
@@ -106,8 +109,20 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             }
         }
         
-        // etc
+        // Condition C: Observing colors of flowers
+        /*else if self.condition == "C" {
+            // do stuff
+        }*/
         
+        // End
+        let fileURLEnd:NSURL = NSBundle.mainBundle().URLForResource("End", withExtension: "mp3")!
+        var errorEnd: NSError?
+        avPlayerEnd = AVPlayerItem(URL: fileURLEnd)
+        if avPlayerEnd == nil {
+            if let e = errorEnd {
+                println(e.localizedDescription)
+            }
+        }
         
         // Set up Core Motion
         if motionManager.accelerometerAvailable {
@@ -125,6 +140,8 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         }
         
         setUpAVQueuePlayer()
+        manager.startUpdatingLocation()
+        queue.play()
     }
     
 
@@ -134,27 +151,37 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         }
         
         queue.insertItem(avPlayer1, afterItem: nil)
+        println("Inserted 1")
         queue.insertItem(avPlayer2, afterItem: nil)
+        println("Inserted 2")
         queue.insertItem(avPlayer3, afterItem: nil)
+        println("Inserted 3")
         
         // Walk around tree in a circle
         if self.condition == "A" {
-            //queue.insertItem(avPlayer4Tree, afterItem: nil)
-            //queue.insertItem(avPlayer5TreeCircle, afterItem: nil)
+            queue.insertItem(avPlayer4, afterItem: nil)
+            println("Inserted 4")
+            queue.insertItem(avPlayer5, afterItem: nil)
+            println("Inserted 5")
         }
             
         // Spin yourself around near tree
         else if self.condition == "B" {
-            //queue.insertItem(avPlayer4Tree, afterItem: nil)
-            //queue.insertItem(avPlayer5TreeSpin, afterItem: nil)
+            queue.insertItem(avPlayer4, afterItem: nil)
+            println("Inserted 4")
+            queue.insertItem(avPlayer5, afterItem: nil)
+            println("Inserted 5")
         }
         
         // Color thing
-        else if self.condition == "C" {
+        /*else if self.condition == "C" {
             //queue.insertItem(avPlayer4Rock, afterItem: nil)
             //queue.insertItem(avPlayer5GreyRock, afterItem: nil)
             //queue.insertItem(avPlayer5Rocks, afterItem: nil)
-        }
+        }*/
+        
+        queue.insertItem(avPlayerEnd, afterItem: nil)
+        println("Inserted end")
         
         queue.seekToTime(CMTimeMake(0, 1))
         
@@ -189,8 +216,8 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         }
         
         var sphinxController : OEPocketsphinxController = OEPocketsphinxController.sharedInstance()
-        sphinxController.setActive(true, error: nil)
-        sphinxController.startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"), languageModelIsJSGF: false)
+            sphinxController.setActive(true, error: nil)
+        //sphinxController.startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"), languageModelIsJSGF: false)
         
         openEarsEventsObserver.delegate = self
     
@@ -216,13 +243,12 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             var polyline = MKPolyline(coordinates: &a, count: a.count)
             theMap.addOverlay(polyline)
             
-            //PARSE STUFF
             // Save the location to Parse
             let loc = PFObject(className: "Location")
             loc["latitude"] = c2.latitude
             loc["longitude"] = c2.longitude
             //loc["session"] = defaults.stringForKey("session") // change to constant later
-            loc["session"] = "test"
+            loc["session"] = defaults.stringForKey("username") // just user username for right now
             
             // which stage are we at?
             if queue.currentItem != nil {
@@ -233,8 +259,6 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
                 currentStage = "none"
                 loc["stage"] = currentStage
             }
-            //currentStage = queue.currentItem.description
-            
             
             // Save accelerometer data to Parse
             loc["x"] = self.x
@@ -244,10 +268,10 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             // Save the color data to Parse
             loc["color"] = self.currentHypothesis
             self.currentHypothesis = ""
-            println(self.currentHypothesis)
+            //println(self.currentHypothesis)
             
             loc.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                println("Object has been saved.")
+                //println("Object has been saved.")
             }
 
             
@@ -269,10 +293,11 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
     
     @IBAction func playButton(sender: UIButton) {
         // Start updating location
-        if sender.titleLabel!.text == "Start" {
+        /*if sender.titleLabel!.text == "Start" {
             manager.startUpdatingLocation()
             println("updating location")
         }
+        */
         
         // Start playing
         if !isPlaying {

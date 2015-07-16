@@ -19,7 +19,10 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var loginSignupButton: UIButton!
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
     var loggingIn: Bool = true
+
     
     override func viewDidAppear(animated: Bool) {
         
@@ -29,6 +32,10 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if (PFUser.currentUser() != nil) {
+            self.performSegueWithIdentifier("toCondition", sender: self)
+        }
+        
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         
@@ -36,6 +43,7 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
         activityIndicator.hidesWhenStopped = true
         message.hidden = true
         passwordTextField.secureTextEntry = true
+    
     }
 
     
@@ -53,6 +61,7 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
                 if user != nil {
                     self.activityIndicator.stopAnimating()
                     self.message.hidden = true
+                    self.defaults.setObject(userUsername, forKey: "username")
                     dispatch_async(dispatch_get_main_queue()) {
                         self.performSegueWithIdentifier("toCondition", sender: self)
                     }
@@ -77,6 +86,7 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
                 if error == nil {
                     self.activityIndicator.stopAnimating()
                     self.message.hidden = true
+                    self.defaults.setObject(userUsername, forKey: "username")
                     dispatch_async(dispatch_get_main_queue()) {
                         self.performSegueWithIdentifier("toCondition", sender: self)
                     }

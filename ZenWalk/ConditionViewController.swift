@@ -11,29 +11,42 @@ import UIKit
 
 class ConditionViewController: UIViewController {
     
+    
+    @IBOutlet weak var tenMinButton: UIButton!
+    @IBOutlet weak var fifteenMinButton: UIButton!
+    //@IBOutlet weak var twentyMinButton: UIButton!
+    
     var meditationCondition: String = ""
     let defaults = NSUserDefaults.standardUserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //twentyMinButton.hidden = true
         self.navigationController!.setNavigationBarHidden(false, animated:  true)
     }
     
     @IBAction func tenMinButton(sender: UIButton) {
         self.meditationCondition = "A"
-        performSegueWithIdentifier("toMeditation", sender: self)
+        sender.backgroundColor = UIColor.lightGrayColor()
+        fifteenMinButton.backgroundColor = UIColor.whiteColor()
+        //performSegueWithIdentifier("toMeditation", sender: self)
     }
     
     @IBAction func fifteenMinButton(sender: UIButton) {
         self.meditationCondition = "B"
-        performSegueWithIdentifier("toMeditation", sender: self)
+        sender.backgroundColor = UIColor.lightGrayColor()
+        tenMinButton.backgroundColor = UIColor.whiteColor()
+        //performSegueWithIdentifier("toMeditation", sender: self)
     }
     
     @IBAction func twentyMinButton(sender: UIButton) {
         self.meditationCondition = "C"
-        performSegueWithIdentifier("toMeditation", sender: self)
+        //performSegueWithIdentifier("toMeditation", sender: self)
     }
     
+    @IBAction func startButton(sender: UIButton) {
+        performSegueWithIdentifier("toMeditation", sender: self)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
