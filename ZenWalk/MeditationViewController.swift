@@ -16,6 +16,7 @@ import UIKit
 
 class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocationManagerDelegate, MKMapViewDelegate, OEEventsObserverDelegate {
     
+    @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var theMap: MKMapView!
     lazy var motionManager = CMMotionManager()
     var avPlayer1:AVPlayerItem!
@@ -142,6 +143,14 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         setUpAVQueuePlayer()
         manager.startUpdatingLocation()
         queue.play()
+        
+        // Check if audio route changed
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "routeChanged", name: "AVAudioSessionRouteChangeNotification", object: nil)
+    }
+    
+    func routeChanged() {
+        // If the audio route changed, pause
+        self.playPauseButton.setTitle("Play", forState: UIControlState.Normal)
     }
     
 
