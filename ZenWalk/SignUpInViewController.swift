@@ -14,10 +14,12 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var savePasswordSwitch: UISwitch!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var loginSignupButton: UIButton!
+    
+    @IBOutlet weak var rememberSwitch: UISwitch!
+    @IBOutlet weak var rememberTextField: UILabel!
     
     let defaults = NSUserDefaults.standardUserDefaults()
     
@@ -31,6 +33,9 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        rememberSwitch.hidden = true
+        rememberTextField.hidden = true
         
         if (PFUser.currentUser() != nil) {
             self.performSegueWithIdentifier("toCondition", sender: self)
@@ -123,6 +128,7 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toCondition" {
             var svc = segue.destinationViewController as! ConditionViewController
+            svc.navigationItem.setHidesBackButton(true, animated: false)
         }
     }
     

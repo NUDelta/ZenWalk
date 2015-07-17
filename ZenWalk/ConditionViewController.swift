@@ -18,23 +18,28 @@ class ConditionViewController: UIViewController {
     
     var meditationCondition: String = ""
     let defaults = NSUserDefaults.standardUserDefaults()
+    var selectColor:UIColor = UIColor.lightGrayColor()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //twentyMinButton.hidden = true
         self.navigationController!.setNavigationBarHidden(false, animated:  true)
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        tenMinButton.backgroundColor = selectColor
     }
     
     @IBAction func tenMinButton(sender: UIButton) {
         self.meditationCondition = "A"
-        sender.backgroundColor = UIColor.lightGrayColor()
+        sender.backgroundColor = selectColor
         fifteenMinButton.backgroundColor = UIColor.whiteColor()
         //performSegueWithIdentifier("toMeditation", sender: self)
     }
     
     @IBAction func fifteenMinButton(sender: UIButton) {
         self.meditationCondition = "B"
-        sender.backgroundColor = UIColor.lightGrayColor()
+        sender.backgroundColor = selectColor
         tenMinButton.backgroundColor = UIColor.whiteColor()
         //performSegueWithIdentifier("toMeditation", sender: self)
     }
@@ -45,7 +50,14 @@ class ConditionViewController: UIViewController {
     }
     
     @IBAction func startButton(sender: UIButton) {
-        performSegueWithIdentifier("toMeditation", sender: self)
+        // If no time was selected, alert
+        if tenMinButton.backgroundColor != selectColor && fifteenMinButton.backgroundColor != selectColor {
+            let alertController = UIAlertController(title: "Select an amount of time", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        } else {
+            performSegueWithIdentifier("toMeditation", sender: self)
+        }
     }
 
     override func didReceiveMemoryWarning() {

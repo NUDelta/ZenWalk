@@ -7,6 +7,7 @@
 //
 
 
+import AudioToolbox
 import AVFoundation
 import CoreLocation
 import CoreMotion
@@ -16,34 +17,43 @@ import UIKit
 
 class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocationManagerDelegate, MKMapViewDelegate, OEEventsObserverDelegate {
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var theMap: MKMapView!
     lazy var motionManager = CMMotionManager()
+    
+    var audioSession:AVAudioSession!
+    var queue:AVQueuePlayer!
     var avPlayer1:AVPlayerItem!
     var avPlayer2:AVPlayerItem!
     var avPlayer3:AVPlayerItem!
     var avPlayer4:AVPlayerItem!
     var avPlayer5:AVPlayerItem!
     var avPlayerEnd:AVPlayerItem!
+    
     var currentStage:NSString = "Not Started"
     var condition: String!  // the meditation condition
-    var queue:AVQueuePlayer!
+    var timeStamp:String!
     var x:NSString = "No X"
     var y:NSString = "No Y"
     var z:NSString = "No Z"
     
     var openEarsEventsObserver: OEEventsObserver = OEEventsObserver()
+    var sphinxController : OEPocketsphinxController = OEPocketsphinxController.sharedInstance()
     var currentHypothesis: String = ""
     
     var manager: CLLocationManager!
     var myLocations: [CLLocation] = []
     
-    let defaults = NSUserDefaults.standardUserDefaults()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.setNavigationBarHidden(false, animated:  true)
+        self.timeStamp = getCurrentTimestampString()
         queue = AVQueuePlayer()
+        audioSession = AVAudioSession()
+        audioSession.setCategory(AVAudioSessionCategoryPlayback, error: nil)
+        audioSession.setActive(true, error: nil)
         println(condition)
         
         // Set up the audio players
@@ -141,16 +151,47 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         }
         
         setUpAVQueuePlayer()
-        manager.startUpdatingLocation()
-        queue.play()
         
         // Check if audio route changed
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "routeChanged", name: "AVAudioSessionRouteChangeNotification", object: nil)
+        
+        
+        manager.startUpdatingLocation()
+        queue.play()
+        
+        
     }
     
     func routeChanged() {
         // If the audio route changed, pause
+        queue.pause()
         self.playPauseButton.setTitle("Play", forState: UIControlState.Normal)
+        isPlaying = false
+        
+        // jk If audio route changes, keep playing
+        println("route changed")
+        //queue.play()
+        //self.playPauseButton.setTitle("Pause", forState: UIControlState.Normal)
+    }
+    
+    override func didMoveToParentViewController(parent: UIViewController?) {
+        if parent == nil {
+            queue.pause()
+            queue.removeAllItems()
+            //audioSession.setActive(false, error: nil)
+            sphinxController.stopListening()
+        }
+    }
+    
+    func getCurrentTimestampString() -> String {
+        let date = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        formatter.timeStyle = .ShortStyle
+        
+        println(formatter.stringFromDate(date))
+        
+        return formatter.stringFromDate(date)
     }
     
 
@@ -160,26 +201,19 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         }
         
         queue.insertItem(avPlayer1, afterItem: nil)
-        println("Inserted 1")
         queue.insertItem(avPlayer2, afterItem: nil)
-        println("Inserted 2")
         queue.insertItem(avPlayer3, afterItem: nil)
-        println("Inserted 3")
         
         // Walk around tree in a circle
         if self.condition == "A" {
             queue.insertItem(avPlayer4, afterItem: nil)
-            println("Inserted 4")
             queue.insertItem(avPlayer5, afterItem: nil)
-            println("Inserted 5")
         }
             
         // Spin yourself around near tree
         else if self.condition == "B" {
             queue.insertItem(avPlayer4, afterItem: nil)
-            println("Inserted 4")
             queue.insertItem(avPlayer5, afterItem: nil)
-            println("Inserted 5")
         }
         
         // Color thing
@@ -190,7 +224,6 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         }*/
         
         queue.insertItem(avPlayerEnd, afterItem: nil)
-        println("Inserted end")
         
         queue.seekToTime(CMTimeMake(0, 1))
         
@@ -216,17 +249,15 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         var dicPath : String = String()
         
         if (error == nil) {
-            
             lmPath = lmGenerator.pathToSuccessfullyGeneratedLanguageModelWithRequestedName(name)
             dicPath = lmGenerator.pathToSuccessfullyGeneratedDictionaryWithRequestedName(name)
-            
         } else {
             println(error.localizedDescription)
         }
         
-        var sphinxController : OEPocketsphinxController = OEPocketsphinxController.sharedInstance()
-            sphinxController.setActive(true, error: nil)
-        //sphinxController.startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"), languageModelIsJSGF: false)
+        sphinxController.setActive(true, error: nil)
+        sphinxController.doNotWarnAboutPermissions = true
+        sphinxController.startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"), languageModelIsJSGF: false)
         
         openEarsEventsObserver.delegate = self
     
@@ -256,8 +287,9 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             let loc = PFObject(className: "Location")
             loc["latitude"] = c2.latitude
             loc["longitude"] = c2.longitude
-            //loc["session"] = defaults.stringForKey("session") // change to constant later
-            loc["session"] = defaults.stringForKey("username") // just user username for right now
+            loc["user"] = defaults.stringForKey("username")
+            loc["date"] = self.timeStamp
+            loc["session"] = defaults.stringForKey("username")! + self.timeStamp
             
             // which stage are we at?
             if queue.currentItem != nil {
@@ -324,7 +356,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
     
     // OEEventsObserver delegate methods
     func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
-        //println("The received hypothesis is " + hypothesis + " with a score of " + recognitionScore + "and an ID of " + utteranceID)
+        println("The received hypothesis is " + hypothesis + " with a score of " + recognitionScore + "and an ID of " + utteranceID)
         // if score is a certain certainty
         self.currentHypothesis = hypothesis
         // add the hypothesis to wherever you wanna store it

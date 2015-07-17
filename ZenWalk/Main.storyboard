@@ -152,7 +152,8 @@
                         <outlet property="loginSignupButton" destination="Ndc-lv-Of7" id="hW9-gd-1g4"/>
                         <outlet property="message" destination="GaB-sO-R3S" id="vJG-u7-6i3"/>
                         <outlet property="passwordTextField" destination="4fr-AU-G6d" id="NNn-Bp-6FJ"/>
-                        <outlet property="savePasswordSwitch" destination="zuj-0Q-gJO" id="7ln-c3-vF2"/>
+                        <outlet property="rememberSwitch" destination="zuj-0Q-gJO" id="1Cx-Sf-AFc"/>
+                        <outlet property="rememberTextField" destination="C84-Te-NAB" id="gQU-g8-T74"/>
                         <outlet property="usernameTextField" destination="rH2-50-eII" id="dnQ-T9-EAd"/>
                         <segue destination="lYM-Gr-GDh" kind="show" identifier="toCondition" id="o70-KT-93l"/>
                     </connections>
@@ -161,7 +162,7 @@
             </objects>
             <point key="canvasLocation" x="1955" y="429"/>
         </scene>
-        <!--Condition View Controller-->
+        <!--New Walk-->
         <scene sceneID="Zrl-Ff-g0c">
             <objects>
                 <viewController id="lYM-Gr-GDh" customClass="ConditionViewController" customModule="ZenWalk" customModuleProvider="target" sceneMemberID="viewController">
@@ -254,7 +255,7 @@
                         </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="p2i-HQ-pAg">
+                    <navigationItem key="navigationItem" title="New Walk" id="p2i-HQ-pAg">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="k5m-34-y71">
                             <connections>
                                 <action selector="logoutButton:" destination="lYM-Gr-GDh" id="VcG-ag-eIz"/>
@@ -273,7 +274,7 @@
             </objects>
             <point key="canvasLocation" x="2716" y="429"/>
         </scene>
-        <!--Meditation View Controller-->
+        <!--Current Walk-->
         <scene sceneID="Qir-gJ-X48">
             <objects>
                 <viewController id="3L9-h4-VX7" customClass="MeditationViewController" customModule="ZenWalk" customModuleProvider="target" sceneMemberID="viewController">
@@ -314,7 +315,7 @@
                             <constraint firstItem="QEn-my-dtj" firstAttribute="top" secondItem="M1C-MW-5Ck" secondAttribute="bottom" constant="63" id="ewv-ag-8wQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="NH7-3U-dP9">
+                    <navigationItem key="navigationItem" title="Current Walk" id="NH7-3U-dP9">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="2Ta-7W-6yX">
                             <connections>
                                 <action selector="logoutButton:" destination="3L9-h4-VX7" id="5ac-Vt-vBz"/>
@@ -351,6 +352,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eM0-K5-1oy"/>
+        <segue reference="fDG-dk-cZr"/>
     </inferredMetricsTieBreakers>
 </document>
