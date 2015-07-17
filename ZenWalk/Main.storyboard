@@ -175,57 +175,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdf-ZZ-Stc">
-                                <rect key="frame" x="180" y="242" width="116" height="46"/>
+                                <rect key="frame" x="172" y="238" width="131" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="52" id="0vp-VM-8cw"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="SHd-NC-qlC"/>
-                                    <constraint firstAttribute="height" constant="46" id="bur-ew-Oiq"/>
+                                    <constraint firstAttribute="width" constant="131" id="EeZ-86-jaG"/>
+                                    <constraint firstAttribute="height" constant="55" id="f0E-ZF-3ws"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="10 minutes">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="0vp-VM-8cw"/>
-                                    </mask>
-                                </variation>
                                 <connections>
                                     <action selector="tenMinButton:" destination="lYM-Gr-GDh" eventType="touchUpInside" id="Rg9-mG-HgO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long do you want to walk?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyq-zq-pgy">
-                                <rect key="frame" x="16" y="146" width="568" height="29"/>
+                                <rect key="frame" x="16" y="150" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUf-OI-WOd">
-                                <rect key="frame" x="249" y="344" width="103" height="43"/>
-                                <color key="backgroundColor" red="0.90185032249999997" green="0.81628803979999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="KBb-Rt-FKs"/>
-                                    <constraint firstAttribute="width" constant="103" id="eYa-1R-0Jr"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103" id="n2C-rW-POj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="26"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="n2C-rW-POj"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="playButton:" destination="3L9-h4-VX7" eventType="touchUpInside" id="geQ-qA-188"/>
-                                    <action selector="startButton:" destination="lYM-Gr-GDh" eventType="touchUpInside" id="wJt-J9-gqb"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3b0-Fw-bah">
-                                <rect key="frame" x="304" y="242" width="116" height="46"/>
+                                <rect key="frame" x="297" y="238" width="131" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="15">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -235,10 +206,26 @@
                                     <action selector="fifteenMinButton:" destination="lYM-Gr-GDh" eventType="touchUpInside" id="BM5-JA-0Hk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUf-OI-WOd">
+                                <rect key="frame" x="214" y="347" width="172" height="98"/>
+                                <color key="backgroundColor" red="0.90185032249999997" green="0.81628803979999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="5Iz-uR-BrG"/>
+                                    <constraint firstAttribute="height" constant="98" id="Fjm-Pt-lsE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="41"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButton:" destination="3L9-h4-VX7" eventType="touchUpInside" id="geQ-qA-188"/>
+                                    <action selector="startButton:" destination="lYM-Gr-GDh" eventType="touchUpInside" id="wJt-J9-gqb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EUf-OI-WOd" firstAttribute="top" secondItem="3b0-Fw-bah" secondAttribute="bottom" constant="56" id="0Am-Yk-WnB"/>
                             <constraint firstItem="3b0-Fw-bah" firstAttribute="top" secondItem="tyq-zq-pgy" secondAttribute="bottom" constant="67" id="9rU-MJ-pLV"/>
                             <constraint firstAttribute="centerX" secondItem="zdf-ZZ-Stc" secondAttribute="centerX" constant="62.5" id="EIl-kf-xkv"/>
                             <constraint firstAttribute="centerX" secondItem="3b0-Fw-bah" secondAttribute="centerX" constant="-62.5" id="FXY-vX-ZVe"/>
@@ -247,11 +234,17 @@
                             <constraint firstItem="3b0-Fw-bah" firstAttribute="height" secondItem="zdf-ZZ-Stc" secondAttribute="height" id="Lje-TQ-Hz5"/>
                             <constraint firstAttribute="centerY" secondItem="tyq-zq-pgy" secondAttribute="centerY" constant="139.5" id="OZX-v2-opG"/>
                             <constraint firstItem="tyq-zq-pgy" firstAttribute="leading" secondItem="Nyg-q1-U1U" secondAttribute="leadingMargin" id="ZPx-OG-BPa"/>
+                            <constraint firstItem="EUf-OI-WOd" firstAttribute="top" secondItem="3b0-Fw-bah" secondAttribute="bottom" constant="54" id="aSN-iD-FVs"/>
                             <constraint firstItem="zdf-ZZ-Stc" firstAttribute="width" secondItem="3b0-Fw-bah" secondAttribute="width" id="bqH-wQ-gG2"/>
                             <constraint firstAttribute="centerY" secondItem="zdf-ZZ-Stc" secondAttribute="centerY" constant="35" id="ehV-k8-4di"/>
                             <constraint firstItem="tyq-zq-pgy" firstAttribute="trailing" secondItem="Nyg-q1-U1U" secondAttribute="trailingMargin" id="elR-fc-Yxo"/>
-                            <constraint firstAttribute="centerY" secondItem="EUf-OI-WOd" secondAttribute="centerY" constant="-65.5" id="kmL-wb-UfJ"/>
+                            <constraint firstAttribute="centerY" secondItem="EUf-OI-WOd" secondAttribute="centerY" constant="-96" id="kmL-wb-UfJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="aSN-iD-FVs"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="New Walk" id="p2i-HQ-pAg">
