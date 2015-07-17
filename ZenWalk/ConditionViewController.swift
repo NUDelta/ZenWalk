@@ -33,14 +33,18 @@ class ConditionViewController: UIViewController {
     @IBAction func tenMinButton(sender: UIButton) {
         self.meditationCondition = "A"
         sender.backgroundColor = selectColor
+        sender.setTitle("10 minutes", forState: UIControlState.Normal)
         fifteenMinButton.backgroundColor = UIColor.whiteColor()
+        fifteenMinButton.setTitle("15", forState: UIControlState.Normal)
         //performSegueWithIdentifier("toMeditation", sender: self)
     }
     
     @IBAction func fifteenMinButton(sender: UIButton) {
         self.meditationCondition = "B"
         sender.backgroundColor = selectColor
+        sender.setTitle("15 minutes", forState: UIControlState.Normal)
         tenMinButton.backgroundColor = UIColor.whiteColor()
+        tenMinButton.setTitle("10", forState: UIControlState.Normal)
         //performSegueWithIdentifier("toMeditation", sender: self)
     }
     
