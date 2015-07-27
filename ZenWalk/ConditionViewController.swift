@@ -11,12 +11,19 @@ import UIKit
 
 class ConditionViewController: UIViewController {
     
+    /*
+        Conditions
+        A: standing, walking (posture), observe trees, spin tree [21 min]
+        B:
+        C:
+
+    */
     
-    @IBOutlet weak var tenMinButton: UIButton!
-    @IBOutlet weak var fifteenMinButton: UIButton!
-    //@IBOutlet weak var twentyMinButton: UIButton!
+    @IBOutlet weak var shortButton: UIButton!
+    @IBOutlet weak var mediumButton: UIButton!
+    @IBOutlet weak var longButton: UIButton!
     
-    var meditationCondition: String = ""
+    var meditationCondition: String = "A"
     let defaults = NSUserDefaults.standardUserDefaults()
     var selectColor:UIColor = UIColor.lightGrayColor()
     
@@ -24,44 +31,66 @@ class ConditionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //twentyMinButton.hidden = true
-        self.navigationController!.setNavigationBarHidden(false, animated:  true)
-        self.navigationItem.setHidesBackButton(true, animated: false)
-        tenMinButton.backgroundColor = selectColor
+        self.navigationController!.setNavigationBarHidden(false, animated: true)
+        self.navigationItem.setHidesBackButton(false, animated: false)
+        shortButton.backgroundColor = selectColor
     }
     
-    @IBAction func tenMinButton(sender: UIButton) {
+    @IBAction func shortButton(sender: UIButton) {
+        // 20 min
         self.meditationCondition = "A"
-        sender.backgroundColor = selectColor
-        sender.setTitle("10 minutes", forState: UIControlState.Normal)
-        fifteenMinButton.backgroundColor = UIColor.whiteColor()
-        fifteenMinButton.setTitle("15", forState: UIControlState.Normal)
-        //performSegueWithIdentifier("toMeditation", sender: self)
+        chooseButton(sender, text: "20 min")
+        resetMediumButton()
+        resetLongButton()
     }
     
-    @IBAction func fifteenMinButton(sender: UIButton) {
+    @IBAction func mediumButton(sender: UIButton) {
+        // 30 min
         self.meditationCondition = "B"
-        sender.backgroundColor = selectColor
-        sender.setTitle("15 minutes", forState: UIControlState.Normal)
-        tenMinButton.backgroundColor = UIColor.whiteColor()
-        tenMinButton.setTitle("10", forState: UIControlState.Normal)
-        //performSegueWithIdentifier("toMeditation", sender: self)
+        chooseButton(sender, text: "30 min")
+        resetShortButton()
+        resetLongButton()
     }
     
-    @IBAction func twentyMinButton(sender: UIButton) {
+    @IBAction func LongButton(sender: UIButton) {
+        // 40 min
         self.meditationCondition = "C"
-        //performSegueWithIdentifier("toMeditation", sender: self)
+        chooseButton(sender, text: "40 min")
+        resetShortButton()
+        resetMediumButton()
     }
+    
+    
+    func chooseButton(sender: UIButton, text: String) {
+        sender.backgroundColor = selectColor
+        sender.setTitle(text, forState: UIControlState.Normal)
+    }
+    
+    
+    func resetShortButton() {
+        self.shortButton.backgroundColor = UIColor.whiteColor()
+        self.shortButton.setTitle("20", forState: UIControlState.Normal)
+    }
+    
+    func resetMediumButton() {
+        self.mediumButton.backgroundColor = UIColor.whiteColor()
+        self.mediumButton.setTitle("30", forState: UIControlState.Normal)
+    }
+    
+    func resetLongButton() {
+        self.longButton.backgroundColor = UIColor.whiteColor()
+        self.longButton.setTitle("40", forState: UIControlState.Normal)
+    }
+    
     
     @IBAction func startButton(sender: UIButton) {
         // If no time was selected, alert
-        if tenMinButton.backgroundColor != selectColor && fifteenMinButton.backgroundColor != selectColor {
+        /*if shortButton.backgroundColor != selectColor && mediumButton.backgroundColor != selectColor {
             let alertController = UIAlertController(title: "Select an amount of time", message: "", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alertController, animated: true, completion: nil)
-        } else {
-            performSegueWithIdentifier("toMeditation", sender: self)
-        }
+        } else {*/
+        performSegueWithIdentifier("toMeditation", sender: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,17 +101,17 @@ class ConditionViewController: UIViewController {
 
     @IBAction func logoutButton(sender: UIBarButtonItem) {
         PFUser.logOut()
-        performSegueWithIdentifier("toLogin", sender: self)
+        var storyboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        var vc = storyboard.instantiateViewControllerWithIdentifier("SignUpInViewController") as! SignUpInViewController
+        self.showViewController(vc, sender: self)
     }
-   
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toMeditation" {
             var svc = segue.destinationViewController as! MeditationViewController
             svc.condition = self.meditationCondition
-        }
-        if segue.identifier == "toLogin" {
-            var svc = segue.destinationViewController as! SignUpInViewController
+            println("svc condition \(svc.condition)")
         }
     }
 

@@ -30,6 +30,10 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
     var avPlayer3:AVPlayerItem!
     var avPlayer4:AVPlayerItem!
     var avPlayer5:AVPlayerItem!
+    var avPlayer6:AVPlayerItem!
+    var avPlayer7:AVPlayerItem!
+    var avPlayer8:AVPlayerItem!
+    var avPlayer9:AVPlayerItem!
     var avPlayerEnd:AVPlayerItem!
     
     var currentStage:NSString = "Not Started"
@@ -43,8 +47,10 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
     var sphinxController : OEPocketsphinxController = OEPocketsphinxController.sharedInstance()
     var currentHypothesis: String = ""
     
-    var manager: CLLocationManager!
-    var myLocations: [CLLocation] = []
+    var manager:CLLocationManager!
+    var myLocations:[CLLocation] = []
+    
+    var meditationIsFinished:Bool = false // only used right now for handling back bar button to previous screen (commented out)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +63,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         println(condition)
         
         // Set up the audio players
-        let fileURL:NSURL = NSBundle.mainBundle().URLForResource("1", withExtension: "mp3")!
+        let fileURL:NSURL = NSBundle.mainBundle().URLForResource("Standing_1", withExtension: "mp3")!
         var error: NSError?
         avPlayer1 = AVPlayerItem(URL: fileURL)
         if avPlayer1 == nil {
@@ -66,7 +72,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             }
         }
         
-        let fileURL2:NSURL = NSBundle.mainBundle().URLForResource("2", withExtension: "mp3")!
+        let fileURL2:NSURL = NSBundle.mainBundle().URLForResource("WalkingPosture1_2", withExtension: "mp3")!
         var error2: NSError?
         avPlayer2 = AVPlayerItem(URL: fileURL2)
         if avPlayer2 == nil {
@@ -75,7 +81,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             }
         }
         
-        let fileURL3:NSURL = NSBundle.mainBundle().URLForResource("3", withExtension: "mp3")!
+        let fileURL3:NSURL = NSBundle.mainBundle().URLForResource("WalkingPosture2_2", withExtension: "mp3")!
         var error3: NSError?
         avPlayer3 = AVPlayerItem(URL: fileURL3)
         if avPlayer3 == nil {
@@ -84,20 +90,21 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             }
         }
         
-        let fileURL4Tree:NSURL = NSBundle.mainBundle().URLForResource("4a", withExtension: "mp3")!
-        var error4Tree: NSError?
-        avPlayer4 = AVPlayerItem(URL: fileURL4Tree)
-        if avPlayer4 == nil {
-            if let e = error4Tree {
-                println(e.localizedDescription)
-            }
-        }
-
-        
-        // Condition A: Walk around tree in a loop
+        // Condition A: 20 min
         if self.condition == "A" {
-            println("Condition A")
-            let fileURL5:NSURL = NSBundle.mainBundle().URLForResource("5a", withExtension: "mp3")!
+            
+            // Observe trees
+            let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("ObserveTrees", withExtension: "mp3")!
+            var error4: NSError?
+            avPlayer4 = AVPlayerItem(URL: fileURL4)
+            if avPlayer4 == nil {
+                if let e = error4 {
+                    println(e.localizedDescription)
+                }
+            }
+            
+            // Spin self near tree
+            let fileURL5:NSURL = NSBundle.mainBundle().URLForResource("TreeSpin", withExtension: "mp3")!
             var error5: NSError?
             avPlayer5 = AVPlayerItem(URL: fileURL5)
             if avPlayer5 == nil {
@@ -107,10 +114,20 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             }
         }
         
-        // Condition B: Spin self next to tree
+        // Condition B: 30 min
         else if self.condition == "B" {
-            println("Condition B")
-            let fileURL5:NSURL = NSBundle.mainBundle().URLForResource("5b", withExtension: "mp3")!
+            // Observe surroundings
+            let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("WalkingAwarenessOfSurroundings", withExtension: "mp3")!
+            var error4: NSError?
+            avPlayer4 = AVPlayerItem(URL: fileURL4)
+            if avPlayer4 == nil {
+                if let e = error4 {
+                    println(e.localizedDescription)
+                }
+            }
+            
+            // Observe trees
+            let fileURL5:NSURL = NSBundle.mainBundle().URLForResource("ObserveTrees", withExtension: "mp3")!
             var error5: NSError?
             avPlayer5 = AVPlayerItem(URL: fileURL5)
             if avPlayer5 == nil {
@@ -118,12 +135,83 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
                     println(e.localizedDescription)
                 }
             }
+            
+            // Circle tree
+            let fileURL6:NSURL = NSBundle.mainBundle().URLForResource("TreeCircle", withExtension: "mp3")!
+            var error6: NSError?
+            avPlayer6 = AVPlayerItem(URL: fileURL5)
+            if avPlayer6 == nil {
+                if let e = error5 {
+                    println(e.localizedDescription)
+                }
+            }
+            
         }
         
-        // Condition C: Observing colors of flowers
-        /*else if self.condition == "C" {
-            // do stuff
-        }*/
+        // Condition C: 40 min
+        else if self.condition == "C" {
+            // Walking, feelings
+            let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("WalkingObserveFeelings", withExtension: "mp3")!
+            var error4: NSError?
+            avPlayer4 = AVPlayerItem(URL: fileURL4)
+            if avPlayer4 == nil {
+                if let e = error4 {
+                    println(e.localizedDescription)
+                }
+            }
+
+            // Walking, emotions
+            let fileURL5:NSURL = NSBundle.mainBundle().URLForResource("WalkingObserveEmotions", withExtension: "mp3")!
+            var error5: NSError?
+            avPlayer5 = AVPlayerItem(URL: fileURL5)
+            if avPlayer5 == nil {
+                if let e = error5 {
+                    println(e.localizedDescription)
+                }
+            }
+
+            // Walking, objects of consciousness
+            let fileURL6:NSURL = NSBundle.mainBundle().URLForResource("WalkingObjectsofConsciousness", withExtension: "mp3")!
+            var error6: NSError?
+            avPlayer6 = AVPlayerItem(URL: fileURL6)
+            if avPlayer6 == nil {
+                if let e = error6 {
+                    println(e.localizedDescription)
+                }
+            }
+            
+            // Walking awareness of surroundings
+            let fileURL7:NSURL = NSBundle.mainBundle().URLForResource("WalkingAwarenessOfSurroundings", withExtension: "mp3")!
+            var error7: NSError?
+            avPlayer7 = AVPlayerItem(URL: fileURL7)
+            if avPlayer7 == nil {
+                if let e = error7 {
+                    println(e.localizedDescription)
+                }
+            }
+
+            // Observe trees
+            let fileURL8:NSURL = NSBundle.mainBundle().URLForResource("ObserveTrees", withExtension: "mp3")!
+            var error8: NSError?
+            avPlayer8 = AVPlayerItem(URL: fileURL8)
+            if avPlayer8 == nil {
+                if let e = error8 {
+                    println(e.localizedDescription)
+                }
+            }
+
+            // Tree circle
+            let fileURL9:NSURL = NSBundle.mainBundle().URLForResource("TreeCircle", withExtension: "mp3")!
+            var error9: NSError?
+            avPlayer9 = AVPlayerItem(URL: fileURL9)
+            if avPlayer9 == nil {
+                if let e = error9 {
+                    println(e.localizedDescription)
+                }
+            }
+
+        }
+        
         
         // End
         let fileURLEnd:NSURL = NSBundle.mainBundle().URLForResource("End", withExtension: "mp3")!
@@ -154,13 +242,25 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         
         // Check if audio route changed
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "routeChanged", name: "AVAudioSessionRouteChangeNotification", object: nil)
-        
+        //Check if the meditation is done playing
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "meditationFinished", name: "AVPlayerItemDidPlayToEndTimeNotification", object:avPlayerEnd)
         
         manager.startUpdatingLocation()
         queue.play()
-        
-        
     }
+    
+    /*func createAVPlayerItem(filename: String) -> AVPlayerItem {
+        let fileURL:NSURL = NSBundle.mainBundle().URLForResource(filename, withExtension: "mp3")!
+        var error: NSError?
+        var player: AVPlayerItem = AVPlayerItem(URL: fileURL)
+        if player == nil {
+            if let e = error {
+                println(e.localizedDescription)
+            }
+        } else {
+            return player
+        }
+    }*/
     
     func routeChanged() {
         // If the audio route changed, pause
@@ -172,6 +272,45 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         println("route changed")
         //queue.play()
         //self.playPauseButton.setTitle("Pause", forState: UIControlState.Normal)
+    }
+    
+    func meditationFinished() {
+        
+        self.meditationIsFinished = true
+        
+        // Save session to Parse
+        let session = PFObject(className: "CompletedSession")
+        session["user"] = defaults.stringForKey("username")
+        //session["date"] = NSDate() //getCurrentTimestampString()
+        
+        session.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            //println("Object has been saved.")
+        }
+        
+        // Update streak
+        var streak: Int = 0
+        
+        var query = PFQuery(className: "CompletedSession")
+        query.limit = 1000
+        query.whereKey("user", equalTo: "kpl976")
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            if error != nil {
+                println("Error")
+            } else {
+                if let objects = objects as? [PFObject] {
+                    for obj in objects {
+                            println(obj.valueForKey("createdAt"))
+                    }
+                }
+                streak = objects!.count
+                println("found \(streak) objects")
+            }
+        }
+        defaults.setObject(streak, forKey: "streak")
+        // Segue to end
+        performSegueWithIdentifier("toEnd", sender: self)
     }
     
     override func didMoveToParentViewController(parent: UIViewController?) {
@@ -194,8 +333,13 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         return formatter.stringFromDate(date)
     }
     
+    func getDate(date: NSDate?) {
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.ShortStyle
+    }
 
     func setUpAVQueuePlayer() {
+        println("In meditation loading condition is \(self.condition)")
         if queue != nil {
             queue.removeAllItems()
         }
@@ -204,27 +348,30 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         queue.insertItem(avPlayer2, afterItem: nil)
         queue.insertItem(avPlayer3, afterItem: nil)
         
-        // Walk around tree in a circle
+        // 20 min -- spin
         if self.condition == "A" {
             queue.insertItem(avPlayer4, afterItem: nil)
             queue.insertItem(avPlayer5, afterItem: nil)
         }
             
-        // Spin yourself around near tree
+        // 30 min -- circle
         else if self.condition == "B" {
             queue.insertItem(avPlayer4, afterItem: nil)
             queue.insertItem(avPlayer5, afterItem: nil)
+            queue.insertItem(avPlayer6, afterItem: nil)
         }
         
-        // Color thing
-        /*else if self.condition == "C" {
-            //queue.insertItem(avPlayer4Rock, afterItem: nil)
-            //queue.insertItem(avPlayer5GreyRock, afterItem: nil)
-            //queue.insertItem(avPlayer5Rocks, afterItem: nil)
-        }*/
+        // 40 min -- circle
+        else if self.condition == "C" {
+            queue.insertItem(avPlayer4, afterItem: nil)
+            queue.insertItem(avPlayer5, afterItem: nil)
+            queue.insertItem(avPlayer6, afterItem: nil)
+            queue.insertItem(avPlayer7, afterItem: nil)
+            queue.insertItem(avPlayer8, afterItem: nil)
+            queue.insertItem(avPlayer9, afterItem: nil)
+        }
         
         queue.insertItem(avPlayerEnd, afterItem: nil)
-        
         queue.seekToTime(CMTimeMake(0, 1))
         
         
@@ -288,8 +435,8 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             loc["latitude"] = c2.latitude
             loc["longitude"] = c2.longitude
             loc["user"] = defaults.stringForKey("username")
-            loc["date"] = self.timeStamp
             loc["session"] = defaults.stringForKey("username")! + self.timeStamp
+            loc["condition"] = self.condition
             
             // which stage are we at?
             if queue.currentItem != nil {
@@ -305,6 +452,9 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             loc["x"] = self.x
             loc["y"] = self.y
             loc["z"] = self.z
+            
+            // Save gyroscope data to Parse
+            
             
             // Save the color data to Parse
             loc["color"] = self.currentHypothesis
@@ -410,19 +560,41 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
     
     @IBAction func logoutButton(sender: UIBarButtonItem) {
         PFUser.logOut()
-        performSegueWithIdentifier("toLogin", sender: self)
+        var storyboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        var vc = storyboard.instantiateViewControllerWithIdentifier("SignUpInViewController") as! SignUpInViewController
+        self.showViewController(vc, sender: self)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "toLogin" {
-            var svc = segue.destinationViewController as! SignUpInViewController
+    /*@IBAction func backButton(sender: UIBarButtonItem) {
+        if !meditationIsFinished {
+            // If user isn't done walking, warn them
+            let alertController = UIAlertController(title: "This will end your walk before it is completed.", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+            var stopAction = UIAlertAction(title: "End Walk", style: UIAlertActionStyle.Default) {
+                UIAlertAction in
+                self.segueToCondition()
+            }
+            var continueAction = UIAlertAction(title: "Keep Walking", style: UIAlertActionStyle.Default, handler: nil)
+            alertController.addAction(stopAction)
+            alertController.addAction(continueAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
+        } else {
+            performSegueWithIdentifier("toCondition", sender: self)
         }
     }
-
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func segueToCondition() {
+        var storyboard: UIStoryboard = UIStoryboard(name: "Walk", bundle: nil)
+        var vc = storyboard.instantiateViewControllerWithIdentifier("ConditionViewController") as! ConditionViewController
+        self.showViewController(vc, sender: self)
+    }*/
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toEnd" {
+            var svc = segue.destinationViewController as! EndViewController
+        }
+        if segue.identifier == "toCondition" {
+            var svc = segue.destinationViewController as! ConditionViewController
+        }
     }
     
 }
