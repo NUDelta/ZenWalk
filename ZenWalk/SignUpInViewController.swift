@@ -38,7 +38,7 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
         rememberTextField.hidden = true
         
         if (PFUser.currentUser() != nil) {
-            self.performSegueWithIdentifier("toCondition", sender: self)
+            self.performSegueWithIdentifier("toHome", sender: self)
         }
         
         usernameTextField.delegate = self
@@ -68,7 +68,7 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
                     self.message.hidden = true
                     self.defaults.setObject(userUsername, forKey: "username")
                     dispatch_async(dispatch_get_main_queue()) {
-                        self.performSegueWithIdentifier("toCondition", sender: self)
+                        self.segueToHome()
                     }
                 } else {
                     self.activityIndicator.stopAnimating()
@@ -93,7 +93,7 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
                     self.message.hidden = true
                     self.defaults.setObject(userUsername, forKey: "username")
                     dispatch_async(dispatch_get_main_queue()) {
-                        self.performSegueWithIdentifier("toCondition", sender: self)
+                        self.segueToHome()
                     }
                 } else {
                     self.activityIndicator.stopAnimating()
@@ -105,6 +105,12 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
+    }
+    
+    func segueToHome() {
+        var storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        var vc = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
+        self.showViewController(vc, sender: self)
     }
 
     @IBAction func toggleLogInSignIn(sender: UIButton) {
@@ -126,10 +132,7 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "toCondition" {
-            var svc = segue.destinationViewController as! ConditionViewController
-            svc.navigationItem.setHidesBackButton(true, animated: false)
-        }
+        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

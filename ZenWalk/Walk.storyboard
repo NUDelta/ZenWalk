@@ -18,9 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzw-5q-5i1">
-                                <rect key="frame" x="134" y="238" width="107" height="55"/>
+                                <rect key="frame" x="148" y="238" width="93" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="107" id="B89-RY-AAP"/>
+                                    <constraint firstAttribute="width" constant="93" id="B89-RY-AAP"/>
                                     <constraint firstAttribute="height" constant="55" id="acP-xE-ys7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -83,25 +83,20 @@
                             <constraint firstAttribute="centerX" secondItem="l7c-SY-noe" secondAttribute="centerX" id="04E-S1-AGt"/>
                             <constraint firstAttribute="centerY" secondItem="i8v-dr-iot" secondAttribute="centerY" constant="139.5" id="1Be-A2-rEb"/>
                             <constraint firstItem="l7c-SY-noe" firstAttribute="leading" secondItem="Jzw-5q-5i1" secondAttribute="trailing" constant="19" id="7fg-2t-z4j"/>
-                            <constraint firstItem="l7c-SY-noe" firstAttribute="height" secondItem="Jzw-5q-5i1" secondAttribute="height" id="7vb-5Y-9mh"/>
                             <constraint firstItem="i8v-dr-iot" firstAttribute="leading" secondItem="8JY-ng-qTx" secondAttribute="leadingMargin" id="A21-D2-ihA"/>
                             <constraint firstItem="l7c-SY-noe" firstAttribute="width" secondItem="LJR-mc-hE1" secondAttribute="width" id="C41-Hg-84g"/>
                             <constraint firstAttribute="centerY" secondItem="p16-1R-64D" secondAttribute="centerY" constant="-96" id="DWy-CI-SKN"/>
                             <constraint firstItem="l7c-SY-noe" firstAttribute="width" secondItem="LJR-mc-hE1" secondAttribute="width" constant="-15" id="DZ1-Hp-Uyb"/>
                             <constraint firstAttribute="centerY" secondItem="Jzw-5q-5i1" secondAttribute="centerY" constant="35" id="I1U-jy-Sje"/>
-                            <constraint firstItem="l7c-SY-noe" firstAttribute="height" secondItem="Jzw-5q-5i1" secondAttribute="height" id="NTI-hu-Ia9"/>
-                            <constraint firstItem="l7c-SY-noe" firstAttribute="height" secondItem="Jzw-5q-5i1" secondAttribute="height" id="Njy-vG-Ma7"/>
                             <constraint firstAttribute="centerX" secondItem="p16-1R-64D" secondAttribute="centerX" id="PvB-2d-a0B"/>
-                            <constraint firstItem="l7c-SY-noe" firstAttribute="height" secondItem="Jzw-5q-5i1" secondAttribute="height" id="a32-vE-GQC"/>
                             <constraint firstAttribute="centerY" secondItem="l7c-SY-noe" secondAttribute="centerY" constant="34.5" id="c8M-Vk-vtv"/>
-                            <constraint firstAttribute="centerX" secondItem="Jzw-5q-5i1" secondAttribute="centerX" constant="112.5" id="cSl-8f-xOY"/>
+                            <constraint firstAttribute="centerX" secondItem="Jzw-5q-5i1" secondAttribute="centerX" constant="105.5" id="cSl-8f-xOY"/>
                             <constraint firstItem="LJR-mc-hE1" firstAttribute="leading" secondItem="l7c-SY-noe" secondAttribute="trailing" constant="21" id="cbd-HK-SDn"/>
                             <constraint firstItem="l7c-SY-noe" firstAttribute="height" secondItem="LJR-mc-hE1" secondAttribute="height" id="dn2-pc-0HY"/>
                             <constraint firstItem="l7c-SY-noe" firstAttribute="height" secondItem="Jzw-5q-5i1" secondAttribute="height" id="ffu-Qm-4q3"/>
                             <constraint firstAttribute="centerY" secondItem="LJR-mc-hE1" secondAttribute="centerY" constant="34.5" id="l0p-Vf-Pcg"/>
-                            <constraint firstItem="l7c-SY-noe" firstAttribute="width" secondItem="Jzw-5q-5i1" secondAttribute="width" constant="-21" id="opc-Yo-dum"/>
+                            <constraint firstItem="l7c-SY-noe" firstAttribute="width" secondItem="Jzw-5q-5i1" secondAttribute="width" constant="-7" id="opc-Yo-dum"/>
                             <constraint firstAttribute="centerY" secondItem="l7c-SY-noe" secondAttribute="centerY" constant="34.5" id="rI4-Tv-hBM"/>
-                            <constraint firstItem="l7c-SY-noe" firstAttribute="height" secondItem="LJR-mc-hE1" secondAttribute="height" id="sff-9b-1Vo"/>
                             <constraint firstAttribute="centerX" secondItem="l7c-SY-noe" secondAttribute="centerX" id="zeP-tL-24f"/>
                             <constraint firstItem="i8v-dr-iot" firstAttribute="trailing" secondItem="8JY-ng-qTx" secondAttribute="trailingMargin" id="zkm-Fy-zuM"/>
                         </constraints>
@@ -226,7 +221,16 @@
                             <constraint firstAttribute="centerY" secondItem="wBn-A0-nef" secondAttribute="centerY" id="oel-ld-Szp"/>
                         </constraints>
                     </view>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem id="ozI-5j-iNT"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="ZPB-o2-5lk">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="Ndi-Ke-cLa">
+                            <connections>
+                                <action selector="homeButton:" destination="tBt-oz-QDl" id="3du-Mk-fJb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="streakLabel" destination="wBn-A0-nef" id="ygz-bn-nlI"/>
                     </connections>

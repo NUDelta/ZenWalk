@@ -111,7 +111,7 @@ class ConditionViewController: UIViewController {
         if segue.identifier == "toMeditation" {
             var svc = segue.destinationViewController as! MeditationViewController
             svc.condition = self.meditationCondition
-            println("svc condition \(svc.condition)")
+            //println("svc condition \(svc.condition)")
         }
     }
 

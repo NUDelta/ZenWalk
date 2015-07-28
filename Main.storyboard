@@ -1,7 +1,106 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Bwz-dB-Lvr">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="a8U-VB-qGw">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="ssl-RQ-9PR" customClass="HomeViewController" customModule="ZenWalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xR6-FG-JpG"/>
+                        <viewControllerLayoutGuide type="bottom" id="hay-1G-ksi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zbF-6F-oWp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVV-Hh-Mx5">
+                                <rect key="frame" x="216" y="217" width="169" height="72"/>
+                                <color key="backgroundColor" red="0.84757174980000005" green="1" blue="0.66159436800000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="502-fx-JsM"/>
+                                    <constraint firstAttribute="width" constant="169" id="Fvc-gQ-CiB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="24"/>
+                                <state key="normal" title="My Profile">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="myAccountButton:" destination="ssl-RQ-9PR" eventType="touchUpInside" id="ovU-oR-fl4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCG-b5-ucy">
+                                <rect key="frame" x="216" y="329" width="169" height="72"/>
+                                <color key="backgroundColor" red="1" green="0.80193094769999995" blue="0.56205342849999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="24"/>
+                                <state key="normal" title="Start walking">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startWalkingButton:" destination="ssl-RQ-9PR" eventType="touchUpInside" id="qCc-SK-vZX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZenWalk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUH-0B-4QK">
+                                <rect key="frame" x="16" y="102" width="568" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="IUH-0B-4QK" secondAttribute="centerX" id="6rR-ml-ntj"/>
+                            <constraint firstAttribute="centerY" secondItem="wVV-Hh-Mx5" secondAttribute="centerY" constant="47" id="HlT-fD-Qc0"/>
+                            <constraint firstAttribute="centerX" secondItem="wVV-Hh-Mx5" secondAttribute="centerX" id="Ily-UJ-J0z"/>
+                            <constraint firstItem="WCG-b5-ucy" firstAttribute="top" secondItem="wVV-Hh-Mx5" secondAttribute="bottom" constant="41" id="K5q-mv-2Xn"/>
+                            <constraint firstItem="IUH-0B-4QK" firstAttribute="leading" secondItem="zbF-6F-oWp" secondAttribute="leadingMargin" id="Ohu-QC-WIJ"/>
+                            <constraint firstItem="IUH-0B-4QK" firstAttribute="trailing" secondItem="zbF-6F-oWp" secondAttribute="trailingMargin" id="T4L-4G-v6J"/>
+                            <constraint firstAttribute="centerY" secondItem="WCG-b5-ucy" secondAttribute="centerY" constant="-65" id="Z4j-wH-Wq4"/>
+                            <constraint firstAttribute="centerX" secondItem="WCG-b5-ucy" secondAttribute="centerX" id="b6M-Um-QvU"/>
+                            <constraint firstAttribute="centerY" secondItem="IUH-0B-4QK" secondAttribute="centerY" constant="177.5" id="gwK-6M-UxG"/>
+                            <constraint firstItem="WCG-b5-ucy" firstAttribute="width" secondItem="wVV-Hh-Mx5" secondAttribute="width" id="kL7-oq-rB1"/>
+                            <constraint firstItem="wVV-Hh-Mx5" firstAttribute="height" secondItem="WCG-b5-ucy" secondAttribute="height" id="l87-Ph-ej5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="K5q-mv-2Xn"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="uMI-S1-PbQ">
+                        <barButtonItem key="rightBarButtonItem" title="Log out" id="Uq5-TW-rGP">
+                            <connections>
+                                <action selector="logoutButton:" destination="ssl-RQ-9PR" id="xXw-mQ-N3D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z1g-OR-UDT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5066" y="416"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lRH-LT-S0L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bwz-dB-Lvr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GVs-sp-0f2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ssl-RQ-9PR" kind="relationship" relationship="rootViewController" id="3Cr-TI-MuV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C39-b4-7Xm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4254" y="416"/>
+        </scene>
+    </scenes>
 </document>

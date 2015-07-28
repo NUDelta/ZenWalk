@@ -6,30 +6,69 @@
 //  Copyright (c) 2015 Scott Cambo. All rights reserved.
 //
 
+import Parse
 import UIKit
 
-class UserProfileViewController: UIViewController {
-
+class UserProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    let defaults = NSUserDefaults.standardUserDefaults()
+    let textCellIdentifier = "TextCell"
+    var username:String = ""
+    var walkHistoryArray:[String] = []
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var walksTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.username = defaults.stringForKey("username")!
+        usernameLabel.text = self.username
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        walksTableView.delegate = self
+        walksTableView.dataSource = self
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func logoutButton(sender: AnyObject) {
+        PFUser.logOut()
+        var storyboard:UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        var vc = storyboard.instantiateViewControllerWithIdentifier("SignUpInViewController") as! SignUpInViewController
+        self.showViewController(vc, sender: self)
     }
-    */
+    
+    func getDateString(date: NSDate) -> String {
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        formatter.timeStyle = .ShortStyle
+        
+        return formatter.stringFromDate(date)
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        var walkHistoryArray:[String] = defaults.objectForKey("walkHistory") as! [String]
+        return walkHistoryArray.count
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = walksTableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        
+        var walkHistoryArray:[String] = defaults.objectForKey("walkHistory") as! [String]
+        let row = indexPath.row
+        if walkHistoryArray.count == 0 {
+            println("no walks yet")
+            cell.textLabel?.text = "No walks yet!"
+        } else {
+            cell.textLabel?.text = walkHistoryArray[row]
+        }
+        
+        return cell
+    }
 
 }

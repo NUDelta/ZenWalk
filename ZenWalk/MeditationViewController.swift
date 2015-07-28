@@ -42,6 +42,9 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
     var x:NSString = "No X"
     var y:NSString = "No Y"
     var z:NSString = "No Z"
+    var rotationX:NSString = "No rotationX"
+    var rotationY:NSString = "No rotationY"
+    var rotationZ:NSString = "No rotation Z"
     
     var openEarsEventsObserver: OEEventsObserver = OEEventsObserver()
     var sphinxController : OEPocketsphinxController = OEPocketsphinxController.sharedInstance()
@@ -54,13 +57,14 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController!.setNavigationBarHidden(false, animated:  true)
         self.timeStamp = getCurrentTimestampString()
         queue = AVQueuePlayer()
         audioSession = AVAudioSession()
         audioSession.setCategory(AVAudioSessionCategoryPlayback, error: nil)
         audioSession.setActive(true, error: nil)
-        println(condition)
+        //println(condition)
         
         // Set up the audio players
         let fileURL:NSURL = NSBundle.mainBundle().URLForResource("Standing_1", withExtension: "mp3")!
@@ -223,10 +227,10 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             }
         }
         
-        // Set up Core Motion
+        // Set up Core Motion (accelerometer and gyroscope)
         if motionManager.accelerometerAvailable {
             let q = NSOperationQueue()
-            motionManager.accelerometerUpdateInterval = 0.2
+            motionManager.accelerometerUpdateInterval = 0.1
             motionManager.startAccelerometerUpdatesToQueue(q, withHandler: {(data: CMAccelerometerData!, error:NSError!) in
                 if data != nil {
                     self.x = String(format:"%f", data.acceleration.x)
@@ -236,6 +240,22 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             })
         } else {
             println("Accelerometer is not available")
+        }
+        
+        if motionManager.gyroAvailable {
+            let queue = NSOperationQueue()
+            motionManager.gyroUpdateInterval = 0.1
+            motionManager.deviceMotionUpdateInterval = 0.01
+            motionManager.startGyroUpdatesToQueue(queue, withHandler: {(data: CMGyroData!, error:NSError!) in
+                if data != nil {
+                    // Gyro data here
+                    self.rotationX = String(format:"%f", data.rotationRate.x)
+                    self.rotationY = String(format:"%f", data.rotationRate.y)
+                    self.rotationZ = String(format:"%f", data.rotationRate.z)
+                }
+            })
+        } else {
+            println("Gyroscope is not available")
         }
         
         setUpAVQueuePlayer()
@@ -328,7 +348,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         formatter.dateStyle = NSDateFormatterStyle.ShortStyle
         formatter.timeStyle = .ShortStyle
         
-        println(formatter.stringFromDate(date))
+        //println(formatter.stringFromDate(date))
         
         return formatter.stringFromDate(date)
     }
@@ -339,7 +359,6 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
     }
 
     func setUpAVQueuePlayer() {
-        println("In meditation loading condition is \(self.condition)")
         if queue != nil {
             queue.removeAllItems()
         }
@@ -454,8 +473,10 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             loc["z"] = self.z
             
             // Save gyroscope data to Parse
-            
-            
+            loc["rotX"] = self.rotationX
+            loc["rotY"] = self.rotationY
+            loc["rotZ"] = self.rotationZ
+
             // Save the color data to Parse
             loc["color"] = self.currentHypothesis
             self.currentHypothesis = ""
@@ -506,7 +527,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
     
     // OEEventsObserver delegate methods
     func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
-        println("The received hypothesis is " + hypothesis + " with a score of " + recognitionScore + "and an ID of " + utteranceID)
+        //println("The received hypothesis is " + hypothesis + " with a score of " + recognitionScore + "and an ID of " + utteranceID)
         // if score is a certain certainty
         self.currentHypothesis = hypothesis
         // add the hypothesis to wherever you wanna store it
