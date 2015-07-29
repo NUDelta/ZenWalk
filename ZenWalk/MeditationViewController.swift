@@ -66,36 +66,89 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         audioSession.setActive(true, error: nil)
         //println(condition)
         
-        // Set up the audio players
-        let fileURL:NSURL = NSBundle.mainBundle().URLForResource("Standing_1", withExtension: "mp3")!
-        var error: NSError?
-        avPlayer1 = AVPlayerItem(URL: fileURL)
-        if avPlayer1 == nil {
-            if let e = error {
-                println(e.localizedDescription)
-            }
-        }
-        
-        let fileURL2:NSURL = NSBundle.mainBundle().URLForResource("WalkingPosture1_2", withExtension: "mp3")!
-        var error2: NSError?
-        avPlayer2 = AVPlayerItem(URL: fileURL2)
-        if avPlayer2 == nil {
-            if let e = error2 {
-                println(e.localizedDescription)
-            }
-        }
-        
-        let fileURL3:NSURL = NSBundle.mainBundle().URLForResource("WalkingPosture2_2", withExtension: "mp3")!
-        var error3: NSError?
-        avPlayer3 = AVPlayerItem(URL: fileURL3)
-        if avPlayer3 == nil {
-            if let e = error3 {
-                println(e.localizedDescription)
-            }
-        }
-        
-        // Condition A: 20 min
+        // Condition A: 15 min
         if self.condition == "A" {
+            let fileURL:NSURL = NSBundle.mainBundle().URLForResource("ShortStanding_1", withExtension: "mp3")!
+            var error: NSError?
+            avPlayer1 = AVPlayerItem(URL: fileURL)
+            if avPlayer1 == nil {
+                if let e = error {
+                    println(e.localizedDescription)
+                }
+            }
+            
+            let fileURL2:NSURL = NSBundle.mainBundle().URLForResource("WalkingPostureShort_2", withExtension: "mp3")!
+            var error2: NSError?
+            avPlayer2 = AVPlayerItem(URL: fileURL2)
+            if avPlayer2 == nil {
+                if let e = error2 {
+                    println(e.localizedDescription)
+                }
+            }
+            
+            let fileURL3:NSURL = NSBundle.mainBundle().URLForResource("WalkingBreathingShort_3", withExtension: "mp3")!
+            var error3: NSError?
+            avPlayer3 = AVPlayerItem(URL: fileURL3)
+            if avPlayer3 == nil {
+                if let e = error3 {
+                    println(e.localizedDescription)
+                }
+            }
+
+            let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("ObserveTreesShort_4", withExtension: "mp3")!
+            var error4: NSError?
+            avPlayer4 = AVPlayerItem(URL: fileURL4)
+            if avPlayer4 == nil {
+                if let e = error4 {
+                    println(e.localizedDescription)
+                }
+            }
+            
+            // Spin self near tree
+            let fileURL5:NSURL = NSBundle.mainBundle().URLForResource("TreeSpin_5", withExtension: "mp3")!
+            var error5: NSError?
+            avPlayer5 = AVPlayerItem(URL: fileURL5)
+            if avPlayer5 == nil {
+                if let e = error5 {
+                    println(e.localizedDescription)
+                }
+            }
+        }
+        
+        
+        // Set up the audio players for conditions B,C,D
+        if self.condition != "A" {
+            let fileURL:NSURL = NSBundle.mainBundle().URLForResource("Standing_1", withExtension: "mp3")!
+            var error: NSError?
+            avPlayer1 = AVPlayerItem(URL: fileURL)
+            if avPlayer1 == nil {
+                if let e = error {
+                    println(e.localizedDescription)
+                }
+            }
+        
+            let fileURL2:NSURL = NSBundle.mainBundle().URLForResource("WalkingPosture1_2", withExtension: "mp3")!
+            var error2: NSError?
+            avPlayer2 = AVPlayerItem(URL: fileURL2)
+            if avPlayer2 == nil {
+                if let e = error2 {
+                    println(e.localizedDescription)
+                }
+            }
+        
+            let fileURL3:NSURL = NSBundle.mainBundle().URLForResource("WalkingPosture2_2", withExtension: "mp3")!
+            var error3: NSError?
+            avPlayer3 = AVPlayerItem(URL: fileURL3)
+            if avPlayer3 == nil {
+                if let e = error3 {
+                    println(e.localizedDescription)
+                }
+            }
+        }
+        
+            
+        // Condition B: 20 min
+        if self.condition == "B" {
             
             // Observe trees
             let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("ObserveTrees", withExtension: "mp3")!
@@ -118,8 +171,8 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             }
         }
         
-        // Condition B: 30 min
-        else if self.condition == "B" {
+        // Condition C: 30 min
+        else if self.condition == "C" {
             // Observe surroundings
             let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("WalkingAwarenessOfSurroundings", withExtension: "mp3")!
             var error4: NSError?
@@ -152,8 +205,8 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             
         }
         
-        // Condition C: 40 min
-        else if self.condition == "C" {
+        // Condition D: 40 min
+        else if self.condition == "D" {
             // Walking, feelings
             let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("WalkingObserveFeelings", withExtension: "mp3")!
             var error4: NSError?
@@ -367,21 +420,27 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         queue.insertItem(avPlayer2, afterItem: nil)
         queue.insertItem(avPlayer3, afterItem: nil)
         
-        // 20 min -- spin
+        // 15 min -- short spin
         if self.condition == "A" {
             queue.insertItem(avPlayer4, afterItem: nil)
             queue.insertItem(avPlayer5, afterItem: nil)
         }
             
-        // 30 min -- circle
+        // 20 min -- spin
         else if self.condition == "B" {
+            queue.insertItem(avPlayer4, afterItem: nil)
+            queue.insertItem(avPlayer5, afterItem: nil)
+        }
+            
+        // 30 min -- circle
+        else if self.condition == "C" {
             queue.insertItem(avPlayer4, afterItem: nil)
             queue.insertItem(avPlayer5, afterItem: nil)
             queue.insertItem(avPlayer6, afterItem: nil)
         }
         
         // 40 min -- circle
-        else if self.condition == "C" {
+        else if self.condition == "D" {
             queue.insertItem(avPlayer4, afterItem: nil)
             queue.insertItem(avPlayer5, afterItem: nil)
             queue.insertItem(avPlayer6, afterItem: nil)

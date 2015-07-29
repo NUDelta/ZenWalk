@@ -39,7 +39,7 @@ class ConditionViewController: UIViewController {
     @IBAction func shortButton(sender: UIButton) {
         // 20 min
         self.meditationCondition = "A"
-        chooseButton(sender, text: "20 min")
+        chooseButton(sender, text: "15 min")
         resetMediumButton()
         resetLongButton()
     }
@@ -47,7 +47,7 @@ class ConditionViewController: UIViewController {
     @IBAction func mediumButton(sender: UIButton) {
         // 30 min
         self.meditationCondition = "B"
-        chooseButton(sender, text: "30 min")
+        chooseButton(sender, text: "20 min")
         resetShortButton()
         resetLongButton()
     }
@@ -55,7 +55,7 @@ class ConditionViewController: UIViewController {
     @IBAction func LongButton(sender: UIButton) {
         // 40 min
         self.meditationCondition = "C"
-        chooseButton(sender, text: "40 min")
+        chooseButton(sender, text: "30 min")
         resetShortButton()
         resetMediumButton()
     }
@@ -69,17 +69,17 @@ class ConditionViewController: UIViewController {
     
     func resetShortButton() {
         self.shortButton.backgroundColor = UIColor.whiteColor()
-        self.shortButton.setTitle("20", forState: UIControlState.Normal)
+        self.shortButton.setTitle("15", forState: UIControlState.Normal)
     }
     
     func resetMediumButton() {
         self.mediumButton.backgroundColor = UIColor.whiteColor()
-        self.mediumButton.setTitle("30", forState: UIControlState.Normal)
+        self.mediumButton.setTitle("20", forState: UIControlState.Normal)
     }
     
     func resetLongButton() {
         self.longButton.backgroundColor = UIColor.whiteColor()
-        self.longButton.setTitle("40", forState: UIControlState.Normal)
+        self.longButton.setTitle("30", forState: UIControlState.Normal)
     }
     
     
