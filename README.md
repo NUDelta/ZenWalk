@@ -1,45 +1,49 @@
 # ZenWalk
 Mindfulness promotion and Citizen Science iOS app
 
+All files (number at end of filename indicates stage):
+* Standing_1 (5:00)
+* ShortStanding_1 (3:00)
+* WalkingPosture 1_2 + WalkingPosture2_2 (3:30 and 4:00)
+* WalkingPostureShort_2 (1:47)
+* WalkingBreathingShort_3 (1:55)
+* WalkingFeelings_3 (2:00)
+* WalkingEmotions_3 (4:30)
+* WalkingObjofConsciousness_3 (2:30)
+* WalkingAwarenessofSurroundings_3 (3:00)
+* ObserveTreesShort_4 (2:54)
+* ObserveTrees_4(5:30)
+* TreeSpin_5 (4:00)
+* TreeSpin_5 (3:00)
+* End (3:00)
 
-Audio files:
+Condition A: 15 min
+* Stage 1: Standing (short)
+* Stage 2: Walking, observing posture (short)
+* Stage 3: Walking, observing breathing and emotions (short)
+* Stage 4: Walking, observing trees (short)
+* Stage 5: Spinning self near tree interaction
 
+Condition B: 20 min
+* Stage 1: Standing
+* Stage 2: Walking, observing posture
+* Stage 3: none
+* Stage 4: Walking, observing trees
+* Stage 5: Spinning self near tree interaction
+* End: Reflection
 
-Meditation Option A: Walk around tree in a circle
-* 1: standing
-* 2: walking -- focus on posture
-* 3: walking -- focus on breath, emotions
-* 4a: observe a tree
-* 5a: circle the tree
+Condition C: 30 min
+* Stage 1: Standing
+* Stage 2: Walking, observing posture
+* Stage 3: Walking, observing surroundings
+* Stage 4: Walking, observing trees
+* Stage 5: Tree circling interaction
+* End: Reflection
 
-Meditation Option B: Spin yourself around near tree
-* 1: standing
-* 2: walking -- focus on posture
-* 3: walking -- focus on breath, emotions
-* 4a: observe a tree
-* 5b: spin yourself while standing near a tree
-
-Meditation Option C: Observe a known grey rock on Lakefill
-* 1: standing
-* 2: walking -- focus on posture
-* 3: walking -- focus on breath, emotions
-* 4b: observe rocks
-* 5c: identify and move to a known grey rock
-* 5d: observe color, words, pictures on the known grey rock
-
-Meditation Option D: Observe painted rocks on Lakefill
-* 1: standing
-* 2: walking -- focus on posture
-* 3: walking -- focus on breath, emotions
-* 4b: observing rocks
-* 5d: observe color, words, pictures on an interesting rock
-
-Meditation Option E: Chant colors on Lakefill
-* 1: standing
-* 2: walking -- focus on posture
-* 3: walking -- focus on breath, emotions
-* 4b: observing rocks
-* 5e: observe color on an interesting rock
-* 5f: chant color
-* 5g: ending
-
+Condition D: 40 min
+* Stage 1: Standing
+* Stage 2: Walking, observing posture
+* Stage 3: Walking, observing feelings, emotions, obj of consciousness, surroundings
+* Stage 4: Walking, observing trees
+* Stage 5: Tree circling interaction
+* End: Reflection
