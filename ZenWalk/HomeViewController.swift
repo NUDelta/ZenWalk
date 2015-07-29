@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     let defaults = NSUserDefaults.standardUserDefaults()
     var username:String = ""
     var walkHistoryArray:[String] = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,7 @@ class HomeViewController: UIViewController {
                     if let objects = objects as? [PFObject] {
                         for obj in objects {
                             let date:NSDate = obj.valueForKey("createdAt") as! NSDate
-                            println(self.getDateString(date))
+                            //println(self.getDateString(date))
                             self.walkHistoryArray.insert(self.getDateString(date), atIndex: 0)
                         }
                     }

@@ -68,7 +68,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         
         // Condition A: 15 min
         if self.condition == "A" {
-            let fileURL:NSURL = NSBundle.mainBundle().URLForResource("ShortStanding_1", withExtension: "mp3")!
+            let fileURL:NSURL = NSBundle.mainBundle().URLForResource("StandingShort_1", withExtension: "mp3")!
             var error: NSError?
             avPlayer1 = AVPlayerItem(URL: fileURL)
             if avPlayer1 == nil {
@@ -95,7 +95,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
                 }
             }
 
-            let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("ObserveTreesShort_4", withExtension: "mp3")!
+            let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("ObserveTrees_4", withExtension: "mp3")!
             var error4: NSError?
             avPlayer4 = AVPlayerItem(URL: fileURL4)
             if avPlayer4 == nil {
@@ -151,7 +151,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         if self.condition == "B" {
             
             // Observe trees
-            let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("ObserveTrees", withExtension: "mp3")!
+            let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("ObserveTrees_4", withExtension: "mp3")!
             var error4: NSError?
             avPlayer4 = AVPlayerItem(URL: fileURL4)
             if avPlayer4 == nil {
@@ -161,7 +161,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             }
             
             // Spin self near tree
-            let fileURL5:NSURL = NSBundle.mainBundle().URLForResource("TreeSpin", withExtension: "mp3")!
+            let fileURL5:NSURL = NSBundle.mainBundle().URLForResource("TreeSpin_5", withExtension: "mp3")!
             var error5: NSError?
             avPlayer5 = AVPlayerItem(URL: fileURL5)
             if avPlayer5 == nil {
@@ -174,7 +174,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         // Condition C: 30 min
         else if self.condition == "C" {
             // Observe surroundings
-            let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("WalkingAwarenessOfSurroundings", withExtension: "mp3")!
+            let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("WalkingAwarenessofSurroundings_3", withExtension: "mp3")!
             var error4: NSError?
             avPlayer4 = AVPlayerItem(URL: fileURL4)
             if avPlayer4 == nil {
@@ -184,7 +184,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             }
             
             // Observe trees
-            let fileURL5:NSURL = NSBundle.mainBundle().URLForResource("ObserveTrees", withExtension: "mp3")!
+            let fileURL5:NSURL = NSBundle.mainBundle().URLForResource("ObserveTrees_4", withExtension: "mp3")!
             var error5: NSError?
             avPlayer5 = AVPlayerItem(URL: fileURL5)
             if avPlayer5 == nil {
@@ -194,7 +194,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             }
             
             // Circle tree
-            let fileURL6:NSURL = NSBundle.mainBundle().URLForResource("TreeCircle", withExtension: "mp3")!
+            let fileURL6:NSURL = NSBundle.mainBundle().URLForResource("TreeCircle_5", withExtension: "mp3")!
             var error6: NSError?
             avPlayer6 = AVPlayerItem(URL: fileURL5)
             if avPlayer6 == nil {
@@ -208,7 +208,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         // Condition D: 40 min
         else if self.condition == "D" {
             // Walking, feelings
-            let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("WalkingObserveFeelings", withExtension: "mp3")!
+            let fileURL4:NSURL = NSBundle.mainBundle().URLForResource("WalkingFeelings_3", withExtension: "mp3")!
             var error4: NSError?
             avPlayer4 = AVPlayerItem(URL: fileURL4)
             if avPlayer4 == nil {
@@ -218,7 +218,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             }
 
             // Walking, emotions
-            let fileURL5:NSURL = NSBundle.mainBundle().URLForResource("WalkingObserveEmotions", withExtension: "mp3")!
+            let fileURL5:NSURL = NSBundle.mainBundle().URLForResource("WalkingEmotions_3", withExtension: "mp3")!
             var error5: NSError?
             avPlayer5 = AVPlayerItem(URL: fileURL5)
             if avPlayer5 == nil {
@@ -228,7 +228,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             }
 
             // Walking, objects of consciousness
-            let fileURL6:NSURL = NSBundle.mainBundle().URLForResource("WalkingObjectsofConsciousness", withExtension: "mp3")!
+            let fileURL6:NSURL = NSBundle.mainBundle().URLForResource("WalkingObjofConsciousness_3", withExtension: "mp3")!
             var error6: NSError?
             avPlayer6 = AVPlayerItem(URL: fileURL6)
             if avPlayer6 == nil {
@@ -238,7 +238,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             }
             
             // Walking awareness of surroundings
-            let fileURL7:NSURL = NSBundle.mainBundle().URLForResource("WalkingAwarenessOfSurroundings", withExtension: "mp3")!
+            let fileURL7:NSURL = NSBundle.mainBundle().URLForResource("WalkingAwarenessofSurroundings_3", withExtension: "mp3")!
             var error7: NSError?
             avPlayer7 = AVPlayerItem(URL: fileURL7)
             if avPlayer7 == nil {
@@ -248,7 +248,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             }
 
             // Observe trees
-            let fileURL8:NSURL = NSBundle.mainBundle().URLForResource("ObserveTrees", withExtension: "mp3")!
+            let fileURL8:NSURL = NSBundle.mainBundle().URLForResource("ObserveTrees_4", withExtension: "mp3")!
             var error8: NSError?
             avPlayer8 = AVPlayerItem(URL: fileURL8)
             if avPlayer8 == nil {
@@ -258,7 +258,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             }
 
             // Tree circle
-            let fileURL9:NSURL = NSBundle.mainBundle().URLForResource("TreeCircle", withExtension: "mp3")!
+            let fileURL9:NSURL = NSBundle.mainBundle().URLForResource("TreeCircle_5", withExtension: "mp3")!
             var error9: NSError?
             avPlayer9 = AVPlayerItem(URL: fileURL9)
             if avPlayer9 == nil {
@@ -342,7 +342,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         isPlaying = false
         
         // jk If audio route changes, keep playing
-        println("route changed")
+        //println("route changed")
         //queue.play()
         //self.playPauseButton.setTitle("Pause", forState: UIControlState.Normal)
     }
@@ -498,7 +498,8 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         var newRegion = MKCoordinateRegion(center: theMap.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
         theMap.setRegion(newRegion, animated: true)
         
-        if (myLocations.count > 1) {
+        // 5 because it jumps around at first?
+        if (myLocations.count > 5) {
             var sourceIndex = myLocations.count - 1
             var destinationIndex = myLocations.count - 2
             

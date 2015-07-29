@@ -94,7 +94,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         
                 
         // Set up the audio players
-        let fileURL:NSURL = NSBundle.mainBundle().URLForResource("Part 1", withExtension: "mp3")!
+        let fileURL:NSURL = NSBundle.mainBundle().URLForResource("1", withExtension: "mp3")!
         var error: NSError?
         avPlayer1 = AVPlayerItem(URL: fileURL)
         if avPlayer1 == nil {
@@ -103,7 +103,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
-        let fileURL2:NSURL = NSBundle.mainBundle().URLForResource("Part 2", withExtension: "mp3")!
+        let fileURL2:NSURL = NSBundle.mainBundle().URLForResource("2", withExtension: "mp3")!
         var error2: NSError?
         avPlayer2 = AVPlayerItem(URL: fileURL2)
         if avPlayer2 == nil {
@@ -112,7 +112,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
-        let fileURL3:NSURL = NSBundle.mainBundle().URLForResource("Part 3", withExtension: "mp3")!
+        let fileURL3:NSURL = NSBundle.mainBundle().URLForResource("3", withExtension: "mp3")!
         var error3: NSError?
         avPlayer3 = AVPlayerItem(URL: fileURL3)
         if avPlayer3 == nil {
@@ -121,7 +121,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
-        let fileURL4Tree:NSURL = NSBundle.mainBundle().URLForResource("Part 4 Tree", withExtension: "mp3")!
+        let fileURL4Tree:NSURL = NSBundle.mainBundle().URLForResource("4a", withExtension: "mp3")!
         var error4Tree: NSError?
         avPlayer4Tree = AVPlayerItem(URL: fileURL4Tree)
         if avPlayer4Tree == nil {
@@ -130,7 +130,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
-        let fileURL4Rocks:NSURL = NSBundle.mainBundle().URLForResource("Part 4 Rocks", withExtension: "mp3")!
+        let fileURL4Rocks:NSURL = NSBundle.mainBundle().URLForResource("4b", withExtension: "mp3")!
         var error4Rocks: NSError?
         avPlayer4Rock = AVPlayerItem(URL: fileURL4Rocks)
         if avPlayer4Rock == nil {
@@ -139,7 +139,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
-        let fileURL5TreeCircle:NSURL = NSBundle.mainBundle().URLForResource("Part 5 Tree Circle", withExtension: "mp3")!
+        let fileURL5TreeCircle:NSURL = NSBundle.mainBundle().URLForResource("5a", withExtension: "mp3")!
         var error5TreeCircle: NSError?
         avPlayer5TreeCircle = AVPlayerItem(URL: fileURL5TreeCircle)
         if avPlayer5TreeCircle == nil {
@@ -148,7 +148,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
-        let fileURL5TreeSpin:NSURL = NSBundle.mainBundle().URLForResource("Part 5 Tree Spin", withExtension: "mp3")!
+        let fileURL5TreeSpin:NSURL = NSBundle.mainBundle().URLForResource("5b", withExtension: "mp3")!
         var error5TreeSpin: NSError?
         avPlayer5TreeSpin = AVPlayerItem(URL: fileURL5TreeSpin)
         if avPlayer5TreeSpin == nil {
@@ -157,7 +157,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
-        let fileURL5GreyRock:NSURL = NSBundle.mainBundle().URLForResource("Part 5 Grey Rock", withExtension: "mp3")!
+        let fileURL5GreyRock:NSURL = NSBundle.mainBundle().URLForResource("5c", withExtension: "mp3")!
         var error5gr: NSError?
         avPlayer5GreyRock = AVPlayerItem(URL: fileURL5GreyRock)
         if avPlayer5GreyRock == nil {
@@ -166,7 +166,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
-        let fileURL5Rocks:NSURL = NSBundle.mainBundle().URLForResource("Part 5 Rocks", withExtension: "mp3")!
+        let fileURL5Rocks:NSURL = NSBundle.mainBundle().URLForResource("5d", withExtension: "mp3")!
         var error5rock: NSError?
         avPlayer5Rocks = AVPlayerItem(URL: fileURL5Rocks)
         if avPlayer5Rocks == nil {
@@ -175,7 +175,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
-        let fileURL5ColorRocks1:NSURL = NSBundle.mainBundle().URLForResource("ColorRock1", withExtension: "mp3")!
+        let fileURL5ColorRocks1:NSURL = NSBundle.mainBundle().URLForResource("5e", withExtension: "mp3")!
         var error5color: NSError?
         avPlayer5ColorRocks1 = AVPlayerItem(URL: fileURL5ColorRocks1)
         if avPlayer5ColorRocks1 == nil {
@@ -184,7 +184,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
-        let fileURL5ColorRocks2:NSURL = NSBundle.mainBundle().URLForResource("ColorRock2", withExtension: "mp3")!
+        let fileURL5ColorRocks2:NSURL = NSBundle.mainBundle().URLForResource("5f", withExtension: "mp3")!
         var error5color2: NSError?
         avPlayer5ColorRocks2 = AVPlayerItem(URL: fileURL5ColorRocks2)
         if avPlayer5ColorRocks2 == nil {
@@ -194,7 +194,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         }
 
         
-        let fileURL5ColorRocks3:NSURL = NSBundle.mainBundle().URLForResource("ColorRock3", withExtension: "mp3")!
+        let fileURL5ColorRocks3:NSURL = NSBundle.mainBundle().URLForResource("5g", withExtension: "mp3")!
         var error5color3: NSError?
         avPlayer5ColorRocks3 = AVPlayerItem(URL: fileURL5ColorRocks3)
         if avPlayer5ColorRocks3 == nil {
@@ -209,13 +209,15 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         if motionManager.accelerometerAvailable {
             let queue = NSOperationQueue()
             
+            motionManager.accelerometerUpdateInterval = 0.1
             motionManager.startAccelerometerUpdatesToQueue(queue, withHandler:
                 {(data: CMAccelerometerData!, error: NSError!) in
                     
-                    if self.motionManager.accelerometerData != nil {
-                        println("X = \(data.acceleration.x)")
-                        println("Y = \(data.acceleration.y)")
-                        println("Z = \(data.acceleration.z)")
+                    if data != nil {
+                        //println("X = \(data.acceleration.x)")
+                        //println("Y = \(data.acceleration.y)")
+                        //println("Z = \(data.acceleration.z)")
+                        //self.x = String(data.acceleration.x)
                         self.x = String(format:"%f", data.acceleration.x)
                         self.y = String(format:"%f", data.acceleration.y)
                         self.z = String(format:"%f", data.acceleration.z)
@@ -351,7 +353,8 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             // which stage are we at?
             if queue.currentItem != nil {
                 currentStage = queue.currentItem.description
-                loc["stage"] = currentStage.substringFromIndex(currentStage.length - 20)
+                currentStage = currentStage.substringFromIndex(currentStage.length-8)
+                loc["stage"] = currentStage.substringToIndex(2)
             } else {
                 currentStage = "none"
                 loc["stage"] = currentStage
@@ -404,34 +407,34 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     // OEEventsObserver delegate methods
     
     func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
-        println("The received hypothesis is " + hypothesis + " with a score of " + recognitionScore + "and an ID of " + utteranceID)
+        //println("The received hypothesis is " + hypothesis + " with a score of " + recognitionScore + "and an ID of " + utteranceID)
         // if score is a certain certainty
         self.currentHypothesis = hypothesis
         // add the hypothesis to wherever you wanna store it
     }
     
     func pocketsphinxDidStartListening() {
-        println("Pocketsphinx is now listening.")
+        //println("Pocketsphinx is now listening.")
     }
     
     func pocketsphinxDidDetectSpeech() {
-        println("Pocketsphinx has detected speech.")
+        //println("Pocketsphinx has detected speech.")
     }
     
     func pocketsphinxDidDetectFinishedSpeech() {
-        println("Pocketsphinx has detected a period of silence, concluding an utterance.")
+        //println("Pocketsphinx has detected a period of silence, concluding an utterance.")
     }
     
     func pocketsphinxDidStopListening() {
-        println("Pocketsphinx has stopped listening.")
+        //println("Pocketsphinx has stopped listening.")
     }
     
     func pocketsphinxDidSuspendRecognition() {
-        println("Pocketsphinx has suspended recognition")
+        //println("Pocketsphinx has suspended recognition")
     }
     
     func pocketsphinxDidResumeRecognition() {
-        println("Pocketsphinx has resumed recognition")
+        //println("Pocketsphinx has resumed recognition")
     }
     
     func pocketsphinxDidChangeLanguageModelToFile(newLanguageModelPathAsString: String!, andDictionary newDictionaryPathAsString: String!) {
