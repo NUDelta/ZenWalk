@@ -12,7 +12,6 @@
 		52D9F1A01AF9181A00C3DCF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9F19F1AF9181A00C3DCF3 /* AppDelegate.swift */; };
 		52D9F1A31AF9181A00C3DCF3 /* ZenWalk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52D9F1A11AF9181A00C3DCF3 /* ZenWalk.xcdatamodeld */; };
 		52D9F1A51AF9181A00C3DCF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9F1A41AF9181A00C3DCF3 /* ViewController.swift */; };
-		52D9F1A81AF9181B00C3DCF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D9F1A61AF9181B00C3DCF3 /* Main.storyboard */; };
 		52D9F1AA1AF9181B00C3DCF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D9F1A91AF9181B00C3DCF3 /* Images.xcassets */; };
 		52D9F1AD1AF9181B00C3DCF3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D9F1AB1AF9181B00C3DCF3 /* LaunchScreen.xib */; };
 		52D9F1B91AF9181B00C3DCF3 /* ZenWalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9F1B81AF9181B00C3DCF3 /* ZenWalkTests.swift */; };
@@ -36,18 +35,32 @@
 		641469791B43BC7E00F70AB8 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 641469751B43BC7E00F70AB8 /* AcousticModelSpanish.bundle */; };
 		6414697A1B43BC7E00F70AB8 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641469761B43BC7E00F70AB8 /* OpenEars.framework */; };
 		6414697B1B43BC7E00F70AB8 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641469771B43BC7E00F70AB8 /* Slt.framework */; };
-		64A2561B1B389D0C00A3C041 /* Part 4 Rocks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64A256181B389D0C00A3C041 /* Part 4 Rocks.mp3 */; };
-		64A2561C1B389D0C00A3C041 /* Part 5 Grey Rock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64A256191B389D0C00A3C041 /* Part 5 Grey Rock.mp3 */; };
-		64A2561D1B389D0C00A3C041 /* Part 5 Rocks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64A2561A1B389D0C00A3C041 /* Part 5 Rocks.mp3 */; };
-		64E9ABEC1B1CF5DA007B5197 /* Part 4 Tree.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABE91B1CF5DA007B5197 /* Part 4 Tree.mp3 */; };
-		64E9ABED1B1CF5DA007B5197 /* Part 5 Tree Circle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABEA1B1CF5DA007B5197 /* Part 5 Tree Circle.mp3 */; };
-		64E9ABEE1B1CF5DA007B5197 /* Part 5 Tree Spin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ABEB1B1CF5DA007B5197 /* Part 5 Tree Spin.mp3 */; };
-		64F16C8F1B4429F600AA563C /* ColorRock1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64F16C8C1B4429F500AA563C /* ColorRock1.mp3 */; };
-		64F16C901B4429F600AA563C /* ColorRock2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64F16C8D1B4429F500AA563C /* ColorRock2.mp3 */; };
-		64F16C911B4429F600AA563C /* ColorRock3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64F16C8E1B4429F500AA563C /* ColorRock3.mp3 */; };
-		64F62ED71B1E582E006E7A53 /* Part 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64F62ED41B1E582E006E7A53 /* Part 1.mp3 */; };
-		64F62ED81B1E582E006E7A53 /* Part 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64F62ED51B1E582E006E7A53 /* Part 2.mp3 */; };
-		64F62ED91B1E582E006E7A53 /* Part 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64F62ED61B1E582E006E7A53 /* Part 3.mp3 */; };
+		64CBDBBD1B557A04000354EB /* SignUpInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CBDBBC1B557A04000354EB /* SignUpInViewController.swift */; };
+		64CBDBC11B559EFD000354EB /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CBDBBF1B559EFD000354EB /* MeditationViewController.swift */; };
+		64CBDBC31B559F33000354EB /* ConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CBDBC21B559F33000354EB /* ConditionViewController.swift */; };
+		64D687571B693F2F00E9CAF5 /* End.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687481B693F2F00E9CAF5 /* End.mp3 */; };
+		64D687581B693F2F00E9CAF5 /* ObserveTrees_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687491B693F2F00E9CAF5 /* ObserveTrees_4.mp3 */; };
+		64D687591B693F2F00E9CAF5 /* ObserveTreesShort_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D6874A1B693F2F00E9CAF5 /* ObserveTreesShort_4.mp3 */; };
+		64D6875B1B693F2F00E9CAF5 /* Standing_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D6874C1B693F2F00E9CAF5 /* Standing_1.mp3 */; };
+		64D6875C1B693F2F00E9CAF5 /* TreeCircle_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D6874D1B693F2F00E9CAF5 /* TreeCircle_5.mp3 */; };
+		64D6875D1B693F2F00E9CAF5 /* TreeSpin_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D6874E1B693F2F00E9CAF5 /* TreeSpin_5.mp3 */; };
+		64D6875E1B693F2F00E9CAF5 /* WalkingAwarenessofSurroundings_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D6874F1B693F2F00E9CAF5 /* WalkingAwarenessofSurroundings_3.mp3 */; };
+		64D6875F1B693F2F00E9CAF5 /* WalkingBreathingShort_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687501B693F2F00E9CAF5 /* WalkingBreathingShort_3.mp3 */; };
+		64D687601B693F2F00E9CAF5 /* WalkingEmotions_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687511B693F2F00E9CAF5 /* WalkingEmotions_3.mp3 */; };
+		64D687611B693F2F00E9CAF5 /* WalkingFeelings_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687521B693F2F00E9CAF5 /* WalkingFeelings_3.mp3 */; };
+		64D687621B693F2F00E9CAF5 /* WalkingObjofConsciousness_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687531B693F2F00E9CAF5 /* WalkingObjofConsciousness_3.mp3 */; };
+		64D687631B693F2F00E9CAF5 /* WalkingPosture1_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687541B693F2F00E9CAF5 /* WalkingPosture1_2.mp3 */; };
+		64D687641B693F2F00E9CAF5 /* WalkingPosture2_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687551B693F2F00E9CAF5 /* WalkingPosture2_2.mp3 */; };
+		64D687651B693F2F00E9CAF5 /* WalkingPostureShort_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687561B693F2F00E9CAF5 /* WalkingPostureShort_2.mp3 */; };
+		64D687671B69629000E9CAF5 /* StandingShort_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687661B69628F00E9CAF5 /* StandingShort_1.mp3 */; };
+		64DC05B81B5ECB5E00D4CDF6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DC05B71B5ECB5E00D4CDF6 /* Login.storyboard */; };
+		64DC05BA1B5ECBE000D4CDF6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC05B91B5ECBE000D4CDF6 /* HomeViewController.swift */; };
+		64DC05BF1B5ECD1900D4CDF6 /* Walk.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DC05BE1B5ECD1900D4CDF6 /* Walk.storyboard */; };
+		64DC05C11B5F128A00D4CDF6 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC05C01B5F128A00D4CDF6 /* UserProfileViewController.swift */; };
+		64DC05C31B5F12B600D4CDF6 /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DC05C21B5F12B600D4CDF6 /* UserInfo.storyboard */; };
+		64DC05C51B5F146800D4CDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DC05C41B5F146800D4CDF6 /* Main.storyboard */; };
+		64E7D4C11B5D744B00FCF61B /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E7D4C01B5D744B00FCF61B /* EndViewController.swift */; };
+		64F740A91B5CBB370024D45D /* WalksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F740A81B5CBB370024D45D /* WalksListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +81,6 @@
 		52D9F19F1AF9181A00C3DCF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52D9F1A21AF9181A00C3DCF3 /* ZenWalk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZenWalk.xcdatamodel; sourceTree = "<group>"; };
 		52D9F1A41AF9181A00C3DCF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		52D9F1A71AF9181B00C3DCF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52D9F1A91AF9181B00C3DCF3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		52D9F1AC1AF9181B00C3DCF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		52D9F1B21AF9181B00C3DCF3 /* ZenWalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZenWalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,18 +107,32 @@
 		641469761B43BC7E00F70AB8 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
 		641469771B43BC7E00F70AB8 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
 		6414697C1B43BCEC00F70AB8 /* OEBridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OEBridging-Header.h"; sourceTree = "<group>"; };
-		64A256181B389D0C00A3C041 /* Part 4 Rocks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 4 Rocks.mp3"; sourceTree = "<group>"; };
-		64A256191B389D0C00A3C041 /* Part 5 Grey Rock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 5 Grey Rock.mp3"; sourceTree = "<group>"; };
-		64A2561A1B389D0C00A3C041 /* Part 5 Rocks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 5 Rocks.mp3"; sourceTree = "<group>"; };
-		64E9ABE91B1CF5DA007B5197 /* Part 4 Tree.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 4 Tree.mp3"; sourceTree = "<group>"; };
-		64E9ABEA1B1CF5DA007B5197 /* Part 5 Tree Circle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 5 Tree Circle.mp3"; sourceTree = "<group>"; };
-		64E9ABEB1B1CF5DA007B5197 /* Part 5 Tree Spin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 5 Tree Spin.mp3"; sourceTree = "<group>"; };
-		64F16C8C1B4429F500AA563C /* ColorRock1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ColorRock1.mp3; sourceTree = "<group>"; };
-		64F16C8D1B4429F500AA563C /* ColorRock2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ColorRock2.mp3; sourceTree = "<group>"; };
-		64F16C8E1B4429F500AA563C /* ColorRock3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ColorRock3.mp3; sourceTree = "<group>"; };
-		64F62ED41B1E582E006E7A53 /* Part 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 1.mp3"; sourceTree = "<group>"; };
-		64F62ED51B1E582E006E7A53 /* Part 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 2.mp3"; sourceTree = "<group>"; };
-		64F62ED61B1E582E006E7A53 /* Part 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Part 3.mp3"; sourceTree = "<group>"; };
+		64CBDBBC1B557A04000354EB /* SignUpInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInViewController.swift; sourceTree = "<group>"; };
+		64CBDBBF1B559EFD000354EB /* MeditationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
+		64CBDBC21B559F33000354EB /* ConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionViewController.swift; sourceTree = "<group>"; };
+		64D687481B693F2F00E9CAF5 /* End.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = End.mp3; sourceTree = "<group>"; };
+		64D687491B693F2F00E9CAF5 /* ObserveTrees_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ObserveTrees_4.mp3; sourceTree = "<group>"; };
+		64D6874A1B693F2F00E9CAF5 /* ObserveTreesShort_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ObserveTreesShort_4.mp3; sourceTree = "<group>"; };
+		64D6874C1B693F2F00E9CAF5 /* Standing_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Standing_1.mp3; sourceTree = "<group>"; };
+		64D6874D1B693F2F00E9CAF5 /* TreeCircle_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TreeCircle_5.mp3; sourceTree = "<group>"; };
+		64D6874E1B693F2F00E9CAF5 /* TreeSpin_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TreeSpin_5.mp3; sourceTree = "<group>"; };
+		64D6874F1B693F2F00E9CAF5 /* WalkingAwarenessofSurroundings_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingAwarenessofSurroundings_3.mp3; sourceTree = "<group>"; };
+		64D687501B693F2F00E9CAF5 /* WalkingBreathingShort_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingBreathingShort_3.mp3; sourceTree = "<group>"; };
+		64D687511B693F2F00E9CAF5 /* WalkingEmotions_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingEmotions_3.mp3; sourceTree = "<group>"; };
+		64D687521B693F2F00E9CAF5 /* WalkingFeelings_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingFeelings_3.mp3; sourceTree = "<group>"; };
+		64D687531B693F2F00E9CAF5 /* WalkingObjofConsciousness_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingObjofConsciousness_3.mp3; sourceTree = "<group>"; };
+		64D687541B693F2F00E9CAF5 /* WalkingPosture1_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingPosture1_2.mp3; sourceTree = "<group>"; };
+		64D687551B693F2F00E9CAF5 /* WalkingPosture2_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingPosture2_2.mp3; sourceTree = "<group>"; };
+		64D687561B693F2F00E9CAF5 /* WalkingPostureShort_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingPostureShort_2.mp3; sourceTree = "<group>"; };
+		64D687661B69628F00E9CAF5 /* StandingShort_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = StandingShort_1.mp3; path = ZenWalk/StandingShort_1.mp3; sourceTree = "<group>"; };
+		64DC05B71B5ECB5E00D4CDF6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = ../Login.storyboard; sourceTree = "<group>"; };
+		64DC05B91B5ECBE000D4CDF6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		64DC05BE1B5ECD1900D4CDF6 /* Walk.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walk.storyboard; sourceTree = "<group>"; };
+		64DC05C01B5F128A00D4CDF6 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		64DC05C21B5F12B600D4CDF6 /* UserInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UserInfo.storyboard; path = ../UserInfo.storyboard; sourceTree = "<group>"; };
+		64DC05C41B5F146800D4CDF6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		64E7D4C01B5D744B00FCF61B /* EndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
+		64F740A81B5CBB370024D45D /* WalksListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalksListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D9F1E21AF91C4500C3DCF3 /* Security.framework in Frameworks */,
 				6414697B1B43BC7E00F70AB8 /* Slt.framework in Frameworks */,
 				524C27161AF92CB30083AB5A /* Accounts.framework in Frameworks */,
 				524C27141AF92CAB0083AB5A /* Social.framework in Frameworks */,
@@ -125,7 +152,6 @@
 				52D9F1DF1AF91C4500C3DCF3 /* libz.dylib in Frameworks */,
 				52D9F1E01AF91C4500C3DCF3 /* MobileCoreServices.framework in Frameworks */,
 				52D9F1E11AF91C4500C3DCF3 /* QuartzCore.framework in Frameworks */,
-				52D9F1E21AF91C4500C3DCF3 /* Security.framework in Frameworks */,
 				52D9F1E41AF91C4500C3DCF3 /* SystemConfiguration.framework in Frameworks */,
 				52D9F1CA1AF91B8D00C3DCF3 /* ParseUI.framework in Frameworks */,
 				6414697A1B43BC7E00F70AB8 /* OpenEars.framework in Frameworks */,
@@ -150,6 +176,21 @@
 		52D9F1911AF9181A00C3DCF3 = {
 			isa = PBXGroup;
 			children = (
+				64D687481B693F2F00E9CAF5 /* End.mp3 */,
+				64D687491B693F2F00E9CAF5 /* ObserveTrees_4.mp3 */,
+				64D6874A1B693F2F00E9CAF5 /* ObserveTreesShort_4.mp3 */,
+				64D687661B69628F00E9CAF5 /* StandingShort_1.mp3 */,
+				64D6874C1B693F2F00E9CAF5 /* Standing_1.mp3 */,
+				64D6874D1B693F2F00E9CAF5 /* TreeCircle_5.mp3 */,
+				64D6874E1B693F2F00E9CAF5 /* TreeSpin_5.mp3 */,
+				64D6874F1B693F2F00E9CAF5 /* WalkingAwarenessofSurroundings_3.mp3 */,
+				64D687501B693F2F00E9CAF5 /* WalkingBreathingShort_3.mp3 */,
+				64D687511B693F2F00E9CAF5 /* WalkingEmotions_3.mp3 */,
+				64D687521B693F2F00E9CAF5 /* WalkingFeelings_3.mp3 */,
+				64D687531B693F2F00E9CAF5 /* WalkingObjofConsciousness_3.mp3 */,
+				64D687541B693F2F00E9CAF5 /* WalkingPosture1_2.mp3 */,
+				64D687551B693F2F00E9CAF5 /* WalkingPosture2_2.mp3 */,
+				64D687561B693F2F00E9CAF5 /* WalkingPostureShort_2.mp3 */,
 				524C27151AF92CB30083AB5A /* Accounts.framework */,
 				524C27131AF92CAB0083AB5A /* Social.framework */,
 				52D9F19C1AF9181A00C3DCF3 /* ZenWalk */,
@@ -172,21 +213,12 @@
 			children = (
 				641469731B43BC7E00F70AB8 /* Framework */,
 				52D9F1CE1AF91B9B00C3DCF3 /* Frameworks */,
-				52D9F19F1AF9181A00C3DCF3 /* AppDelegate.swift */,
-				64F62ED41B1E582E006E7A53 /* Part 1.mp3 */,
-				64F62ED51B1E582E006E7A53 /* Part 2.mp3 */,
-				64F62ED61B1E582E006E7A53 /* Part 3.mp3 */,
-				64A256181B389D0C00A3C041 /* Part 4 Rocks.mp3 */,
-				64A256191B389D0C00A3C041 /* Part 5 Grey Rock.mp3 */,
-				64A2561A1B389D0C00A3C041 /* Part 5 Rocks.mp3 */,
-				64E9ABE91B1CF5DA007B5197 /* Part 4 Tree.mp3 */,
-				64E9ABEA1B1CF5DA007B5197 /* Part 5 Tree Circle.mp3 */,
-				64E9ABEB1B1CF5DA007B5197 /* Part 5 Tree Spin.mp3 */,
+				64DC05BD1B5ECC9600D4CDF6 /* UserInfo */,
+				64DC05BB1B5ECBFC00D4CDF6 /* Login */,
+				64DC05BC1B5ECC1500D4CDF6 /* Walk */,
+				64DC05C41B5F146800D4CDF6 /* Main.storyboard */,
+				64DC05B91B5ECBE000D4CDF6 /* HomeViewController.swift */,
 				52D9F1A41AF9181A00C3DCF3 /* ViewController.swift */,
-				64F16C8C1B4429F500AA563C /* ColorRock1.mp3 */,
-				64F16C8D1B4429F500AA563C /* ColorRock2.mp3 */,
-				64F16C8E1B4429F500AA563C /* ColorRock3.mp3 */,
-				52D9F1A61AF9181B00C3DCF3 /* Main.storyboard */,
 				6414697C1B43BCEC00F70AB8 /* OEBridging-Header.h */,
 				52D9F1A91AF9181B00C3DCF3 /* Images.xcassets */,
 				52D9F1AB1AF9181B00C3DCF3 /* LaunchScreen.xib */,
@@ -199,6 +231,7 @@
 		52D9F19D1AF9181A00C3DCF3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				52D9F19F1AF9181A00C3DCF3 /* AppDelegate.swift */,
 				52D9F19E1AF9181A00C3DCF3 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -253,6 +286,36 @@
 				641469771B43BC7E00F70AB8 /* Slt.framework */,
 			);
 			path = Framework;
+			sourceTree = "<group>";
+		};
+		64DC05BB1B5ECBFC00D4CDF6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				64DC05B71B5ECB5E00D4CDF6 /* Login.storyboard */,
+				64CBDBBC1B557A04000354EB /* SignUpInViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		64DC05BC1B5ECC1500D4CDF6 /* Walk */ = {
+			isa = PBXGroup;
+			children = (
+				64DC05BE1B5ECD1900D4CDF6 /* Walk.storyboard */,
+				64CBDBC21B559F33000354EB /* ConditionViewController.swift */,
+				64CBDBBF1B559EFD000354EB /* MeditationViewController.swift */,
+				64E7D4C01B5D744B00FCF61B /* EndViewController.swift */,
+			);
+			name = Walk;
+			sourceTree = "<group>";
+		};
+		64DC05BD1B5ECC9600D4CDF6 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				64DC05C21B5F12B600D4CDF6 /* UserInfo.storyboard */,
+				64DC05C01B5F128A00D4CDF6 /* UserProfileViewController.swift */,
+				64F740A81B5CBB370024D45D /* WalksListViewController.swift */,
+			);
+			name = UserInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,23 +407,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64D687571B693F2F00E9CAF5 /* End.mp3 in Resources */,
+				64D6875B1B693F2F00E9CAF5 /* Standing_1.mp3 in Resources */,
+				64D687611B693F2F00E9CAF5 /* WalkingFeelings_3.mp3 in Resources */,
+				64D687591B693F2F00E9CAF5 /* ObserveTreesShort_4.mp3 in Resources */,
+				64DC05C51B5F146800D4CDF6 /* Main.storyboard in Resources */,
+				64D687631B693F2F00E9CAF5 /* WalkingPosture1_2.mp3 in Resources */,
 				641469781B43BC7E00F70AB8 /* AcousticModelEnglish.bundle in Resources */,
-				64A2561D1B389D0C00A3C041 /* Part 5 Rocks.mp3 in Resources */,
-				64A2561B1B389D0C00A3C041 /* Part 4 Rocks.mp3 in Resources */,
+				64D6875F1B693F2F00E9CAF5 /* WalkingBreathingShort_3.mp3 in Resources */,
+				64D687581B693F2F00E9CAF5 /* ObserveTrees_4.mp3 in Resources */,
+				64D687621B693F2F00E9CAF5 /* WalkingObjofConsciousness_3.mp3 in Resources */,
+				64DC05B81B5ECB5E00D4CDF6 /* Login.storyboard in Resources */,
 				641469791B43BC7E00F70AB8 /* AcousticModelSpanish.bundle in Resources */,
-				64A2561C1B389D0C00A3C041 /* Part 5 Grey Rock.mp3 in Resources */,
-				64F16C8F1B4429F600AA563C /* ColorRock1.mp3 in Resources */,
-				64F62ED81B1E582E006E7A53 /* Part 2.mp3 in Resources */,
-				64E9ABED1B1CF5DA007B5197 /* Part 5 Tree Circle.mp3 in Resources */,
-				52D9F1A81AF9181B00C3DCF3 /* Main.storyboard in Resources */,
-				64E9ABEE1B1CF5DA007B5197 /* Part 5 Tree Spin.mp3 in Resources */,
+				64DC05BF1B5ECD1900D4CDF6 /* Walk.storyboard in Resources */,
+				64D6875D1B693F2F00E9CAF5 /* TreeSpin_5.mp3 in Resources */,
 				52D9F1AD1AF9181B00C3DCF3 /* LaunchScreen.xib in Resources */,
-				64F16C911B4429F600AA563C /* ColorRock3.mp3 in Resources */,
-				64E9ABEC1B1CF5DA007B5197 /* Part 4 Tree.mp3 in Resources */,
-				64F16C901B4429F600AA563C /* ColorRock2.mp3 in Resources */,
+				64D687641B693F2F00E9CAF5 /* WalkingPosture2_2.mp3 in Resources */,
+				64D687601B693F2F00E9CAF5 /* WalkingEmotions_3.mp3 in Resources */,
+				64D6875C1B693F2F00E9CAF5 /* TreeCircle_5.mp3 in Resources */,
 				52D9F1AA1AF9181B00C3DCF3 /* Images.xcassets in Resources */,
-				64F62ED71B1E582E006E7A53 /* Part 1.mp3 in Resources */,
-				64F62ED91B1E582E006E7A53 /* Part 3.mp3 in Resources */,
+				64DC05C31B5F12B600D4CDF6 /* UserInfo.storyboard in Resources */,
+				64D6875E1B693F2F00E9CAF5 /* WalkingAwarenessofSurroundings_3.mp3 in Resources */,
+				64D687671B69629000E9CAF5 /* StandingShort_1.mp3 in Resources */,
+				64D687651B693F2F00E9CAF5 /* WalkingPostureShort_2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,8 +447,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E7D4C11B5D744B00FCF61B /* EndViewController.swift in Sources */,
+				64DC05C11B5F128A00D4CDF6 /* UserProfileViewController.swift in Sources */,
 				52D9F1A51AF9181A00C3DCF3 /* ViewController.swift in Sources */,
+				64F740A91B5CBB370024D45D /* WalksListViewController.swift in Sources */,
+				64CBDBBD1B557A04000354EB /* SignUpInViewController.swift in Sources */,
+				64CBDBC31B559F33000354EB /* ConditionViewController.swift in Sources */,
+				64DC05BA1B5ECBE000D4CDF6 /* HomeViewController.swift in Sources */,
 				52D9F1A31AF9181A00C3DCF3 /* ZenWalk.xcdatamodeld in Sources */,
+				64CBDBC11B559EFD000354EB /* MeditationViewController.swift in Sources */,
 				52D9F1A01AF9181A00C3DCF3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,14 +479,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		52D9F1A61AF9181B00C3DCF3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				52D9F1A71AF9181B00C3DCF3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		52D9F1AB1AF9181B00C3DCF3 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
