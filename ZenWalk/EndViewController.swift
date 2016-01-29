@@ -21,24 +21,24 @@ class EndViewController: UIViewController {
     }
     
     @IBAction func homeButton(sender: UIBarButtonItem) {
-        var storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var vc = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
         self.showViewController(vc, sender: self)
     }
     
     
     func calculateStreak() {
         let username:String = defaults.stringForKey("username")!
-        var query = PFQuery(className: "Location")
+        let query = PFQuery(className: "Location")
         query.whereKey("user", equalTo: username)
         query.findObjectsInBackgroundWithBlock {
-            (objects: [AnyObject]?, error: NSError?) -> Void in
+            (objects, error) -> Void in
             
             if error == nil {
                 // Found successfully
-                println("found \(objects!.count) objects")
+                print("found \(objects!.count) objects")
             } else {
-                println("Error: \(error!) \(error!.userInfo!)")
+                print("Error: \(error!) \(error!.userInfo)")
             }
         }
     }

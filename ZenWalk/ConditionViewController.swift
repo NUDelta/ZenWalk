@@ -55,6 +55,8 @@ class ConditionViewController: UIViewController {
     @IBAction func LongButton(sender: UIButton) {
         // 40 min
         self.meditationCondition = "C"
+        // SHORT AUDIO FILES FOR TESTING:
+        //self.meditationCondition = "test"
         chooseButton(sender, text: "30 min")
         resetShortButton()
         resetMediumButton()
@@ -90,7 +92,7 @@ class ConditionViewController: UIViewController {
             alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alertController, animated: true, completion: nil)
         } else {*/
-        performSegueWithIdentifier("toMeditation", sender: self)
+        performSegueWithIdentifier("toWalk", sender: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -101,17 +103,18 @@ class ConditionViewController: UIViewController {
 
     @IBAction func logoutButton(sender: UIBarButtonItem) {
         PFUser.logOut()
-        var storyboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
-        var vc = storyboard.instantiateViewControllerWithIdentifier("SignUpInViewController") as! SignUpInViewController
+        let storyboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("SignUpInViewController") as! SignUpInViewController
         self.showViewController(vc, sender: self)
     }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "toMeditation" {
-            var svc = segue.destinationViewController as! MeditationViewController
+        if segue.identifier == "toWalk" {
+            let svc = segue.destinationViewController as! WalkViewController
+        
             svc.condition = self.meditationCondition
-            //println("svc condition \(svc.condition)")
+            //print("svc condition \(svc.condition)")
         }
     }
 

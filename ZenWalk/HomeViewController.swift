@@ -37,18 +37,18 @@ class HomeViewController: UIViewController {
             var query = PFQuery(className: "CompletedSession")
             query.whereKey("user", equalTo: self.username)
             query.findObjectsInBackgroundWithBlock {
-                (objects: [AnyObject]?, error: NSError?) -> Void in
+                (objects, error) -> Void in
                 
                 if error == nil {
-                    if let objects = objects as? [PFObject] {
+                    if let objects = objects {
                         for obj in objects {
                             let date:NSDate = obj.valueForKey("createdAt") as! NSDate
-                            //println(self.getDateString(date))
+                            //print(self.getDateString(date))
                             self.walkHistoryArray.insert(self.getDateString(date), atIndex: 0)
                         }
                     }
                 } else {
-                    println("Error: \(error!) \(error!.userInfo!)")
+                    print("Error: \(error!) \(error!.userInfo)")
                 }
             }
         }

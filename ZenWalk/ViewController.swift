@@ -66,7 +66,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         self.selectedCondition = selectedSegmentText!
         
         setUpAVQueuePlayer()
-        println("Segment \(selectedSegmentIndex) with text" + " of \(selectedSegmentText) is selected")
+        print("Segment \(selectedSegmentIndex) with text" + " of \(selectedSegmentText) is selected")
         
     }
         
@@ -88,7 +88,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         let action = UIAlertAction(
                 title: "Done",
                 style: UIAlertActionStyle.Default,
-                handler: {(paramAction:UIAlertAction!) in println("Tried to start ZenWalk without session or condition")
+                handler: {(paramAction:UIAlertAction!) in print("Tried to start ZenWalk without session or condition")
                 })
         controller!.addAction(action)
         
@@ -99,7 +99,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         avPlayer1 = AVPlayerItem(URL: fileURL)
         if avPlayer1 == nil {
             if let e = error {
-                println(e.localizedDescription)
+                print(e.localizedDescription)
             }
         }
         
@@ -108,7 +108,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         avPlayer2 = AVPlayerItem(URL: fileURL2)
         if avPlayer2 == nil {
             if let e = error2 {
-                println(e.localizedDescription)
+                print(e.localizedDescription)
             }
         }
         
@@ -117,7 +117,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         avPlayer3 = AVPlayerItem(URL: fileURL3)
         if avPlayer3 == nil {
             if let e = error3 {
-                println(e.localizedDescription)
+                print(e.localizedDescription)
             }
         }
         
@@ -126,7 +126,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         avPlayer4Tree = AVPlayerItem(URL: fileURL4Tree)
         if avPlayer4Tree == nil {
             if let e = error4Tree {
-                println(e.localizedDescription)
+                print(e.localizedDescription)
             }
         }
         
@@ -135,7 +135,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         avPlayer4Rock = AVPlayerItem(URL: fileURL4Rocks)
         if avPlayer4Rock == nil {
             if let e = error4Rocks {
-                println(e.localizedDescription)
+                print(e.localizedDescription)
             }
         }
         
@@ -144,7 +144,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         avPlayer5TreeCircle = AVPlayerItem(URL: fileURL5TreeCircle)
         if avPlayer5TreeCircle == nil {
             if let e = error5TreeCircle {
-                println(e.localizedDescription)
+                print(e.localizedDescription)
             }
         }
         
@@ -153,7 +153,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         avPlayer5TreeSpin = AVPlayerItem(URL: fileURL5TreeSpin)
         if avPlayer5TreeSpin == nil {
             if let e = error5TreeSpin {
-                println(e.localizedDescription)
+                print(e.localizedDescription)
             }
         }
         
@@ -162,7 +162,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         avPlayer5GreyRock = AVPlayerItem(URL: fileURL5GreyRock)
         if avPlayer5GreyRock == nil {
             if let e = error5gr {
-                println(e.localizedDescription)
+                print(e.localizedDescription)
             }
         }
         
@@ -171,7 +171,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         avPlayer5Rocks = AVPlayerItem(URL: fileURL5Rocks)
         if avPlayer5Rocks == nil {
             if let e = error5rock {
-                println(e.localizedDescription)
+                print(e.localizedDescription)
             }
         }
         
@@ -180,7 +180,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         avPlayer5ColorRocks1 = AVPlayerItem(URL: fileURL5ColorRocks1)
         if avPlayer5ColorRocks1 == nil {
             if let e = error5color {
-                println(e.localizedDescription)
+                print(e.localizedDescription)
             }
         }
         
@@ -189,7 +189,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         avPlayer5ColorRocks2 = AVPlayerItem(URL: fileURL5ColorRocks2)
         if avPlayer5ColorRocks2 == nil {
             if let e = error5color2 {
-                println(e.localizedDescription)
+                print(e.localizedDescription)
             }
         }
 
@@ -199,7 +199,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         avPlayer5ColorRocks3 = AVPlayerItem(URL: fileURL5ColorRocks3)
         if avPlayer5ColorRocks3 == nil {
             if let e = error5color3 {
-                println(e.localizedDescription)
+                print(e.localizedDescription)
             }
         }
 
@@ -210,24 +210,29 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             let queue = NSOperationQueue()
             
             motionManager.accelerometerUpdateInterval = 0.1
-            motionManager.startAccelerometerUpdatesToQueue(queue, withHandler:
-                {(data: CMAccelerometerData!, error: NSError!) in
-                    
-                    if data != nil {
-                        //println("X = \(data.acceleration.x)")
-                        //println("Y = \(data.acceleration.y)")
-                        //println("Z = \(data.acceleration.z)")
-                        //self.x = String(data.acceleration.x)
-                        self.x = String(format:"%f", data.acceleration.x)
-                        self.y = String(format:"%f", data.acceleration.y)
-                        self.z = String(format:"%f", data.acceleration.z)
-                    }
-                    
+            
+            
+            
+            
+            motionManager.startAccelerometerUpdatesToQueue(queue, withHandler: { (data, error) -> Void in
+                
+                
+                if let data = data {
+                    //print("X = \(data.acceleration.x)")
+                    //print("Y = \(data.acceleration.y)")
+                    //print("Z = \(data.acceleration.z)")
+                    //self.x = String(data.acceleration.x)
+                    self.x = String(format:"%f", data.acceleration.x)
+                    self.y = String(format:"%f", data.acceleration.y)
+                    self.z = String(format:"%f", data.acceleration.z)
                 }
-            )
+                
+            })
+            
+
             
         } else {
-            println("Accelerometer is not available")
+            print("Accelerometer is not available")
         }
         
         setUpAVQueuePlayer()
@@ -238,7 +243,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         
         if queue != nil {
             queue.removeAllItems()
-            println("removing items")
+            print("removing items")
         }
         
         queue.insertItem(avPlayer1, afterItem: nil)
@@ -250,13 +255,13 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         if self.selectedCondition == "A" {
             queue.insertItem(avPlayer4Tree, afterItem: nil)
             queue.insertItem(avPlayer5TreeCircle, afterItem: nil)
-            println("A")
+            print("A")
         }
         // Spin yourself around near tree
         else if self.selectedCondition == "B" {
             queue.insertItem(avPlayer4Tree, afterItem: nil)
             queue.insertItem(avPlayer5TreeSpin, afterItem: nil)
-            println("B")
+            print("B")
         
         }
         // Identify known grey rock
@@ -264,13 +269,13 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             queue.insertItem(avPlayer4Rock, afterItem: nil)
             queue.insertItem(avPlayer5GreyRock, afterItem: nil)
             queue.insertItem(avPlayer5Rocks, afterItem: nil)
-            println("C")
+            print("C")
         }
         // Observe rocks
         else if self.selectedCondition == "D" {
             queue.insertItem(avPlayer4Rock, afterItem: nil)
             queue.insertItem(avPlayer5Rocks, afterItem: nil)
-            println("D")
+            print("D")
         }
         
         // Observe colors of rocks
@@ -279,7 +284,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             queue.insertItem(avPlayer5ColorRocks1, afterItem: nil)
             queue.insertItem(avPlayer5ColorRocks2, afterItem: nil)
             queue.insertItem(avPlayer5ColorRocks3, afterItem: nil)
-            println("E")
+            print("E")
         }
         
         queue.seekToTime(CMTimeMake(0, 1))
@@ -312,21 +317,24 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             dicPath = lmGenerator.pathToSuccessfullyGeneratedDictionaryWithRequestedName(name)
             
         } else {
-            println(error.localizedDescription)
+            print(error.localizedDescription)
         }
         
-        var sphinxController : OEPocketsphinxController = OEPocketsphinxController.sharedInstance()
-        sphinxController.setActive(true, error: nil)
-        sphinxController.startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"), languageModelIsJSGF: false)
+        let sphinxController : OEPocketsphinxController = OEPocketsphinxController.sharedInstance()
         
-        openEarsEventsObserver.delegate = self
-
+        do {
+            try sphinxController.setActive(true)
+            try sphinxController.startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"), languageModelIsJSGF: false)
+            try openEarsEventsObserver.delegate = self
+        } catch let error as NSError {
+            print(error.description)
+        }
         
     }
     
-    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]!) {
+    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
         //theLabel.text = "\(locations[0])"
-        myLocations.append(locations[0] as! CLLocation)
+        myLocations.append(locations[0])
         
         let spanX = 0.007
         let spanY = 0.007
@@ -351,8 +359,8 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             loc["session"] = sessionName.text
             
             // which stage are we at?
-            if queue.currentItem != nil {
-                currentStage = queue.currentItem.description
+            if let currentItem = queue.currentItem {
+                currentStage = currentItem.description
                 currentStage = currentStage.substringFromIndex(currentStage.length-8)
                 loc["stage"] = currentStage.substringToIndex(2)
             } else {
@@ -370,10 +378,10 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             // Save the color data to Parse
             loc["color"] = self.currentHypothesis
             self.currentHypothesis = ""
-            println(self.currentHypothesis)
+            print(self.currentHypothesis)
             
             loc.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                println("Object has been saved.")
+                print("Object has been saved.")
             }
             
         }
@@ -407,50 +415,50 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     // OEEventsObserver delegate methods
     
     func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
-        //println("The received hypothesis is " + hypothesis + " with a score of " + recognitionScore + "and an ID of " + utteranceID)
+        //print("The received hypothesis is " + hypothesis + " with a score of " + recognitionScore + "and an ID of " + utteranceID)
         // if score is a certain certainty
         self.currentHypothesis = hypothesis
         // add the hypothesis to wherever you wanna store it
     }
     
     func pocketsphinxDidStartListening() {
-        //println("Pocketsphinx is now listening.")
+        //print("Pocketsphinx is now listening.")
     }
     
     func pocketsphinxDidDetectSpeech() {
-        //println("Pocketsphinx has detected speech.")
+        //print("Pocketsphinx has detected speech.")
     }
     
     func pocketsphinxDidDetectFinishedSpeech() {
-        //println("Pocketsphinx has detected a period of silence, concluding an utterance.")
+        //print("Pocketsphinx has detected a period of silence, concluding an utterance.")
     }
     
     func pocketsphinxDidStopListening() {
-        //println("Pocketsphinx has stopped listening.")
+        //print("Pocketsphinx has stopped listening.")
     }
     
     func pocketsphinxDidSuspendRecognition() {
-        //println("Pocketsphinx has suspended recognition")
+        //print("Pocketsphinx has suspended recognition")
     }
     
     func pocketsphinxDidResumeRecognition() {
-        //println("Pocketsphinx has resumed recognition")
+        //print("Pocketsphinx has resumed recognition")
     }
     
     func pocketsphinxDidChangeLanguageModelToFile(newLanguageModelPathAsString: String!, andDictionary newDictionaryPathAsString: String!) {
-        println("Pocketsphinx is now using the following language model: " + newLanguageModelPathAsString + " and the following dictionary: " + newDictionaryPathAsString)
+        print("Pocketsphinx is now using the following language model: " + newLanguageModelPathAsString + " and the following dictionary: " + newDictionaryPathAsString)
     }
     
     func pocketSphinxContinuousSetupDidFailWithReason(reasonForFailure: String!) {
-        println("Listening setup wasn't successful and returned the failure reason " + reasonForFailure)
+        print("Listening setup wasn't successful and returned the failure reason " + reasonForFailure)
     }
     
     func pocketSphinxContinuousTeardownDidFailWithReason(reasonForFailure: String!) {
-        println("Listening teardown wasn't successful and returned with the following failure reason: " + reasonForFailure)
+        print("Listening teardown wasn't successful and returned with the following failure reason: " + reasonForFailure)
     }
     
     func testRecognitionCompleted() {
-        println("A test file that was submitted for recognition is now compete")
+        print("A test file that was submitted for recognition is now compete")
     }
 
     
@@ -475,7 +483,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             // Start updating location
             if sender.titleLabel!!.text == "Start" {
                 manager.startUpdatingLocation()
-                println("updating location")
+                print("updating location")
             }
         
             // start playing for this condition

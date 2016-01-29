@@ -29,23 +29,23 @@ class WalksListViewController: UIViewController/*, UITableViewDelegate, UITableV
         var query = PFQuery(className: "CompletedSession")
         query.whereKey("user", equalTo: username)
         query.findObjectsInBackgroundWithBlock {
-            (objects: [AnyObject]?, error: NSError?) -> Void in
+            (objects, error) -> Void in
             
-            if error == nil {
+            if let error = error {
+                print("Error: \(error.userInfo)")
                 // Success
-                if let objects = objects as? [PFObject] {
+
+            } else if let objects = objects {
                     self.numWalks = objects.count
                     for obj in objects {
                         let date:NSDate = obj.valueForKey("createdAt") as! NSDate
-                        println(self.getDateString(date))
+                        print(self.getDateString(date))
                         self.walks.insert(obj.valueForKey("createdAt") as! NSDate, atIndex: 0)
                     }
-                }
-            } else {
-                println("Error: \(error!) \(error!.userInfo!)")
             }
+            
         }
-        println(self.numWalks)
+        print(self.numWalks)
     }
     
     func getDateString(date: NSDate) -> String {

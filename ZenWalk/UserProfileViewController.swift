@@ -34,8 +34,8 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBAction func logoutButton(sender: AnyObject) {
         PFUser.logOut()
-        var storyboard:UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
-        var vc = storyboard.instantiateViewControllerWithIdentifier("SignUpInViewController") as! SignUpInViewController
+        let storyboard:UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("SignUpInViewController") as! SignUpInViewController
         self.showViewController(vc, sender: self)
     }
     
@@ -48,7 +48,7 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var walkHistoryArray:[String] = defaults.objectForKey("walkHistory") as! [String]
+        let walkHistoryArray:[String] = defaults.objectForKey("walkHistory") as! [String]
         return walkHistoryArray.count
     }
     
@@ -62,7 +62,7 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
         var walkHistoryArray:[String] = defaults.objectForKey("walkHistory") as! [String]
         let row = indexPath.row
         if walkHistoryArray.count == 0 {
-            println("no walks yet")
+            print("no walks yet")
             cell.textLabel?.text = "No walks yet!"
         } else {
             cell.textLabel?.text = walkHistoryArray[row]

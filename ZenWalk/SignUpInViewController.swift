@@ -53,7 +53,7 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBAction func logInSignUpButton(sender: UIButton) {
-        var userUsername = usernameTextField.text.lowercaseString
+        var userUsername = usernameTextField.text!.lowercaseString
         var userPassword = passwordTextField.text
         
         // Start activity indicator
@@ -61,7 +61,7 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
         activityIndicator.startAnimating()
         
         if loggingIn {
-            PFUser.logInWithUsernameInBackground(userUsername, password:userPassword) {
+            PFUser.logInWithUsernameInBackground(userUsername, password:userPassword!) {
                 (user: PFUser?, error: NSError?) -> Void in
                 if user != nil {
                     self.activityIndicator.stopAnimating()
@@ -72,7 +72,7 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
                     }
                 } else {
                     self.activityIndicator.stopAnimating()
-                    if let message: AnyObject = error!.userInfo!["error"] {
+                    if let message: AnyObject = error!.userInfo["error"] {
                         self.message.hidden = false
                         self.message.textColor = UIColor.redColor()
                         self.message.text = "\(message)!"
@@ -97,7 +97,7 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
                     }
                 } else {
                     self.activityIndicator.stopAnimating()
-                    if let message: AnyObject = error!.userInfo!["error"] {
+                    if let message: AnyObject = error!.userInfo["error"] {
                         self.message.hidden = false
                         self.message.textColor = UIColor.redColor()
                         self.message.text = "\(message)!"

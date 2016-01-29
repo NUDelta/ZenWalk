@@ -15,12 +15,6 @@
 		52D9F1AA1AF9181B00C3DCF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D9F1A91AF9181B00C3DCF3 /* Images.xcassets */; };
 		52D9F1AD1AF9181B00C3DCF3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D9F1AB1AF9181B00C3DCF3 /* LaunchScreen.xib */; };
 		52D9F1B91AF9181B00C3DCF3 /* ZenWalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9F1B81AF9181B00C3DCF3 /* ZenWalkTests.swift */; };
-		52D9F1C81AF91B8D00C3DCF3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1C21AF91B8D00C3DCF3 /* Bolts.framework */; };
-		52D9F1C91AF91B8D00C3DCF3 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1C31AF91B8D00C3DCF3 /* ParseCrashReporting.framework */; };
-		52D9F1CA1AF91B8D00C3DCF3 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1C41AF91B8D00C3DCF3 /* ParseUI.framework */; };
-		52D9F1CB1AF91B8D00C3DCF3 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1C51AF91B8D00C3DCF3 /* ParseFacebookUtilsV4.framework */; };
-		52D9F1CC1AF91B8D00C3DCF3 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1C61AF91B8D00C3DCF3 /* ParseFacebookUtils.framework */; };
-		52D9F1CD1AF91B8D00C3DCF3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1C71AF91B8D00C3DCF3 /* Parse.framework */; };
 		52D9F1DA1AF91C4500C3DCF3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1CF1AF91C4400C3DCF3 /* AudioToolbox.framework */; };
 		52D9F1DB1AF91C4500C3DCF3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D01AF91C4400C3DCF3 /* CFNetwork.framework */; };
 		52D9F1DC1AF91C4500C3DCF3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D11AF91C4400C3DCF3 /* CoreGraphics.framework */; };
@@ -31,28 +25,69 @@
 		52D9F1E11AF91C4500C3DCF3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D61AF91C4500C3DCF3 /* QuartzCore.framework */; };
 		52D9F1E21AF91C4500C3DCF3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D71AF91C4500C3DCF3 /* Security.framework */; };
 		52D9F1E41AF91C4500C3DCF3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D91AF91C4500C3DCF3 /* SystemConfiguration.framework */; };
-		641469781B43BC7E00F70AB8 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 641469741B43BC7E00F70AB8 /* AcousticModelEnglish.bundle */; };
-		641469791B43BC7E00F70AB8 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 641469751B43BC7E00F70AB8 /* AcousticModelSpanish.bundle */; };
 		6414697A1B43BC7E00F70AB8 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641469761B43BC7E00F70AB8 /* OpenEars.framework */; };
 		6414697B1B43BC7E00F70AB8 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641469771B43BC7E00F70AB8 /* Slt.framework */; };
+		6429C25B1C4EA86300E845F9 /* test1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6429C2571C4EA86300E845F9 /* test1.mp3 */; };
+		6429C25C1C4EA86300E845F9 /* test2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6429C2581C4EA86300E845F9 /* test2.mp3 */; };
+		6429C25D1C4EA86300E845F9 /* test3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6429C2591C4EA86300E845F9 /* test3.mp3 */; };
+		6429C25E1C4EA86300E845F9 /* test4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6429C25A1C4EA86300E845F9 /* test4.mp3 */; };
+		643706A61C497C0600B3F463 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706841C497C0600B3F463 /* DataManager.swift */; };
+		643706A71C497C0600B3F463 /* ExperienceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706851C497C0600B3F463 /* ExperienceManager.swift */; };
+		643706A81C497C0600B3F463 /* Interim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706871C497C0600B3F463 /* Interim.swift */; };
+		643706A91C497C0600B3F463 /* KnockListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706881C497C0600B3F463 /* KnockListener.swift */; };
+		643706AA1C497C0600B3F463 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706891C497C0600B3F463 /* Moment.swift */; };
+		643706AB1C497C0600B3F463 /* SensorCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437068A1C497C0600B3F463 /* SensorCollector.swift */; };
+		643706AC1C497C0600B3F463 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437068B1C497C0600B3F463 /* Sound.swift */; };
+		643706AD1C497C0600B3F463 /* SpeechListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437068C1C497C0600B3F463 /* SpeechListener.swift */; };
+		643706AE1C497C0600B3F463 /* TriggerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437068D1C497C0600B3F463 /* TriggerListener.swift */; };
+		643706AF1C497C0600B3F463 /* WaitForDoubleKnock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437068E1C497C0600B3F463 /* WaitForDoubleKnock.swift */; };
+		643706B01C497C0600B3F463 /* WaitForWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437068F1C497C0600B3F463 /* WaitForWord.swift */; };
+		643706B11C497C0600B3F463 /* OpportunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706901C497C0600B3F463 /* OpportunityManager.swift */; };
+		643706B21C497C0600B3F463 /* DataEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706921C497C0600B3F463 /* DataEvent.swift */; };
+		643706B31C497C0600B3F463 /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706931C497C0600B3F463 /* Experience.swift */; };
+		643706B41C497C0600B3F463 /* LocationUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706941C497C0600B3F463 /* LocationUpdate.swift */; };
+		643706B51C497C0600B3F463 /* PointOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706951C497C0600B3F463 /* PointOfInterest.swift */; };
+		643706B61C497C0600B3F463 /* SensorMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706961C497C0600B3F463 /* SensorMoment.swift */; };
+		643706B71C497C0600B3F463 /* Requirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706971C497C0600B3F463 /* Requirement.swift */; };
+		643706B81C497C0600B3F463 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706981C497C0600B3F463 /* Stage.swift */; };
+		643706B91C497C0600B3F463 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437069A1C497C0600B3F463 /* Extensions.swift */; };
+		643706BA1C497C0600B3F463 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437069C1C497C0600B3F463 /* Events.swift */; };
+		643706BB1C497C0600B3F463 /* ARAudioRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 643706A01C497C0600B3F463 /* ARAudioRecognizer.m */; };
+		643706BC1C497C0600B3F463 /* TSCoreMotionListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 643706A31C497C0600B3F463 /* TSCoreMotionListener.m */; };
+		643706BD1C497C0600B3F463 /* TSTapDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 643706A51C497C0600B3F463 /* TSTapDetector.m */; };
+		643706C11C49849E00B3F463 /* ActuationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706C01C49849E00B3F463 /* ActuationController.swift */; };
+		643706C31C4984F900B3F463 /* Interaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706C21C4984F900B3F463 /* Interaction.swift */; };
+		643706C51C49852F00B3F463 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706C41C49852F00B3F463 /* Context.swift */; };
+		6455107D1C4E8DC700BB1C4C /* TriggerListenerWithSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6455107C1C4E8DC700BB1C4C /* TriggerListenerWithSound.swift */; };
+		6455107F1C4E8E2700BB1C4C /* CollectorWithSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6455107E1C4E8E2700BB1C4C /* CollectorWithSound.swift */; };
+		645510AF1C4E99FA00BB1C4C /* End.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510A01C4E99FA00BB1C4C /* End.mp3 */; };
+		645510B01C4E99FA00BB1C4C /* ObserveTrees_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510A11C4E99FA00BB1C4C /* ObserveTrees_4.mp3 */; };
+		645510B11C4E99FA00BB1C4C /* ObserveTreesShort_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510A21C4E99FA00BB1C4C /* ObserveTreesShort_4.mp3 */; };
+		645510B21C4E99FA00BB1C4C /* Standing_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510A31C4E99FA00BB1C4C /* Standing_1.mp3 */; };
+		645510B31C4E99FA00BB1C4C /* StandingShort_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510A41C4E99FA00BB1C4C /* StandingShort_1.mp3 */; };
+		645510B41C4E99FA00BB1C4C /* TreeCircle_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510A51C4E99FA00BB1C4C /* TreeCircle_5.mp3 */; };
+		645510B51C4E99FA00BB1C4C /* TreeSpin_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510A61C4E99FA00BB1C4C /* TreeSpin_5.mp3 */; };
+		645510B61C4E99FA00BB1C4C /* WalkingAwarenessofSurroundings_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510A71C4E99FA00BB1C4C /* WalkingAwarenessofSurroundings_3.mp3 */; };
+		645510B71C4E99FA00BB1C4C /* WalkingBreathingShort_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510A81C4E99FA00BB1C4C /* WalkingBreathingShort_3.mp3 */; };
+		645510B81C4E99FA00BB1C4C /* WalkingEmotions_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510A91C4E99FA00BB1C4C /* WalkingEmotions_3.mp3 */; };
+		645510B91C4E99FA00BB1C4C /* WalkingFeelings_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510AA1C4E99FA00BB1C4C /* WalkingFeelings_3.mp3 */; };
+		645510BA1C4E99FA00BB1C4C /* WalkingObjofConsciousness_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510AB1C4E99FA00BB1C4C /* WalkingObjofConsciousness_3.mp3 */; };
+		645510BB1C4E99FA00BB1C4C /* WalkingPosture1_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510AC1C4E99FA00BB1C4C /* WalkingPosture1_2.mp3 */; };
+		645510BC1C4E99FA00BB1C4C /* WalkingPosture2_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510AD1C4E99FA00BB1C4C /* WalkingPosture2_2.mp3 */; };
+		645510BD1C4E99FA00BB1C4C /* WalkingPostureShort_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510AE1C4E99FA00BB1C4C /* WalkingPostureShort_2.mp3 */; };
+		6458E5B81C5BF1BA00989783 /* Standing_2min.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6458E5B71C5BF1BA00989783 /* Standing_2min.mp3 */; };
+		6458E5BA1C5BFA0B00989783 /* ObservingTrees_3-20min.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6458E5B91C5BFA0B00989783 /* ObservingTrees_3-20min.mp3 */; };
+		6494AB151C4986D600705320 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6494AB0F1C4986D600705320 /* ParseFacebookUtils.framework */; };
+		6494AB161C4986D600705320 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6494AB101C4986D600705320 /* ParseFacebookUtilsV4.framework */; };
+		6494AB171C4986D600705320 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6494AB111C4986D600705320 /* ParseTwitterUtils.framework */; };
+		6494AB181C4986D600705320 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6494AB121C4986D600705320 /* ParseUI.framework */; };
+		6494AB191C4986D600705320 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6494AB131C4986D600705320 /* Bolts.framework */; };
+		6494AB1A1C4986D600705320 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6494AB141C4986D600705320 /* Parse.framework */; };
+		6494AB1C1C498B1800705320 /* WalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6494AB1B1C498B1800705320 /* WalkViewController.swift */; };
+		6494AB1E1C49A15300705320 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6494AB1D1C49A15300705320 /* AudioManager.swift */; };
 		64CBDBBD1B557A04000354EB /* SignUpInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CBDBBC1B557A04000354EB /* SignUpInViewController.swift */; };
 		64CBDBC11B559EFD000354EB /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CBDBBF1B559EFD000354EB /* MeditationViewController.swift */; };
 		64CBDBC31B559F33000354EB /* ConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CBDBC21B559F33000354EB /* ConditionViewController.swift */; };
-		64D687571B693F2F00E9CAF5 /* End.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687481B693F2F00E9CAF5 /* End.mp3 */; };
-		64D687581B693F2F00E9CAF5 /* ObserveTrees_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687491B693F2F00E9CAF5 /* ObserveTrees_4.mp3 */; };
-		64D687591B693F2F00E9CAF5 /* ObserveTreesShort_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D6874A1B693F2F00E9CAF5 /* ObserveTreesShort_4.mp3 */; };
-		64D6875B1B693F2F00E9CAF5 /* Standing_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D6874C1B693F2F00E9CAF5 /* Standing_1.mp3 */; };
-		64D6875C1B693F2F00E9CAF5 /* TreeCircle_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D6874D1B693F2F00E9CAF5 /* TreeCircle_5.mp3 */; };
-		64D6875D1B693F2F00E9CAF5 /* TreeSpin_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D6874E1B693F2F00E9CAF5 /* TreeSpin_5.mp3 */; };
-		64D6875E1B693F2F00E9CAF5 /* WalkingAwarenessofSurroundings_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D6874F1B693F2F00E9CAF5 /* WalkingAwarenessofSurroundings_3.mp3 */; };
-		64D6875F1B693F2F00E9CAF5 /* WalkingBreathingShort_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687501B693F2F00E9CAF5 /* WalkingBreathingShort_3.mp3 */; };
-		64D687601B693F2F00E9CAF5 /* WalkingEmotions_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687511B693F2F00E9CAF5 /* WalkingEmotions_3.mp3 */; };
-		64D687611B693F2F00E9CAF5 /* WalkingFeelings_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687521B693F2F00E9CAF5 /* WalkingFeelings_3.mp3 */; };
-		64D687621B693F2F00E9CAF5 /* WalkingObjofConsciousness_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687531B693F2F00E9CAF5 /* WalkingObjofConsciousness_3.mp3 */; };
-		64D687631B693F2F00E9CAF5 /* WalkingPosture1_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687541B693F2F00E9CAF5 /* WalkingPosture1_2.mp3 */; };
-		64D687641B693F2F00E9CAF5 /* WalkingPosture2_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687551B693F2F00E9CAF5 /* WalkingPosture2_2.mp3 */; };
-		64D687651B693F2F00E9CAF5 /* WalkingPostureShort_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687561B693F2F00E9CAF5 /* WalkingPostureShort_2.mp3 */; };
-		64D687671B69629000E9CAF5 /* StandingShort_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64D687661B69628F00E9CAF5 /* StandingShort_1.mp3 */; };
 		64DC05B81B5ECB5E00D4CDF6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DC05B71B5ECB5E00D4CDF6 /* Login.storyboard */; };
 		64DC05BA1B5ECBE000D4CDF6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC05B91B5ECBE000D4CDF6 /* HomeViewController.swift */; };
 		64DC05BF1B5ECD1900D4CDF6 /* Walk.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DC05BE1B5ECD1900D4CDF6 /* Walk.storyboard */; };
@@ -86,12 +121,6 @@
 		52D9F1B21AF9181B00C3DCF3 /* ZenWalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZenWalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D9F1B71AF9181B00C3DCF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52D9F1B81AF9181B00C3DCF3 /* ZenWalkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenWalkTests.swift; sourceTree = "<group>"; };
-		52D9F1C21AF91B8D00C3DCF3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		52D9F1C31AF91B8D00C3DCF3 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
-		52D9F1C41AF91B8D00C3DCF3 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
-		52D9F1C51AF91B8D00C3DCF3 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
-		52D9F1C61AF91B8D00C3DCF3 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		52D9F1C71AF91B8D00C3DCF3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		52D9F1CF1AF91C4400C3DCF3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		52D9F1D01AF91C4400C3DCF3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		52D9F1D11AF91C4400C3DCF3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -102,29 +131,74 @@
 		52D9F1D61AF91C4500C3DCF3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		52D9F1D71AF91C4500C3DCF3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		52D9F1D91AF91C4500C3DCF3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		641469741B43BC7E00F70AB8 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
-		641469751B43BC7E00F70AB8 /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelSpanish.bundle; sourceTree = "<group>"; };
-		641469761B43BC7E00F70AB8 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
-		641469771B43BC7E00F70AB8 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		641469761B43BC7E00F70AB8 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenEars.framework; path = Framework/OpenEars.framework; sourceTree = "<group>"; };
+		641469771B43BC7E00F70AB8 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Slt.framework; path = Framework/Slt.framework; sourceTree = "<group>"; };
 		6414697C1B43BCEC00F70AB8 /* OEBridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OEBridging-Header.h"; sourceTree = "<group>"; };
+		6429C2571C4EA86300E845F9 /* test1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test1.mp3; sourceTree = "<group>"; };
+		6429C2581C4EA86300E845F9 /* test2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test2.mp3; sourceTree = "<group>"; };
+		6429C2591C4EA86300E845F9 /* test3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test3.mp3; sourceTree = "<group>"; };
+		6429C25A1C4EA86300E845F9 /* test4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test4.mp3; sourceTree = "<group>"; };
+		643706841C497C0600B3F463 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		643706851C497C0600B3F463 /* ExperienceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceManager.swift; sourceTree = "<group>"; };
+		643706871C497C0600B3F463 /* Interim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interim.swift; sourceTree = "<group>"; };
+		643706881C497C0600B3F463 /* KnockListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnockListener.swift; sourceTree = "<group>"; };
+		643706891C497C0600B3F463 /* Moment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
+		6437068A1C497C0600B3F463 /* SensorCollector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorCollector.swift; sourceTree = "<group>"; };
+		6437068B1C497C0600B3F463 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		6437068C1C497C0600B3F463 /* SpeechListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechListener.swift; sourceTree = "<group>"; };
+		6437068D1C497C0600B3F463 /* TriggerListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerListener.swift; sourceTree = "<group>"; };
+		6437068E1C497C0600B3F463 /* WaitForDoubleKnock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitForDoubleKnock.swift; sourceTree = "<group>"; };
+		6437068F1C497C0600B3F463 /* WaitForWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitForWord.swift; sourceTree = "<group>"; };
+		643706901C497C0600B3F463 /* OpportunityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityManager.swift; sourceTree = "<group>"; };
+		643706921C497C0600B3F463 /* DataEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEvent.swift; sourceTree = "<group>"; };
+		643706931C497C0600B3F463 /* Experience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experience.swift; sourceTree = "<group>"; };
+		643706941C497C0600B3F463 /* LocationUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationUpdate.swift; sourceTree = "<group>"; };
+		643706951C497C0600B3F463 /* PointOfInterest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointOfInterest.swift; sourceTree = "<group>"; };
+		643706961C497C0600B3F463 /* SensorMoment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorMoment.swift; sourceTree = "<group>"; };
+		643706971C497C0600B3F463 /* Requirement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requirement.swift; sourceTree = "<group>"; };
+		643706981C497C0600B3F463 /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
+		6437069A1C497C0600B3F463 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6437069C1C497C0600B3F463 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		6437069F1C497C0600B3F463 /* ARAudioRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAudioRecognizer.h; sourceTree = "<group>"; };
+		643706A01C497C0600B3F463 /* ARAudioRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAudioRecognizer.m; sourceTree = "<group>"; };
+		643706A11C497C0600B3F463 /* ARAudioRecognizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAudioRecognizerDelegate.h; sourceTree = "<group>"; };
+		643706A21C497C0600B3F463 /* TSCoreMotionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCoreMotionListener.h; sourceTree = "<group>"; };
+		643706A31C497C0600B3F463 /* TSCoreMotionListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCoreMotionListener.m; sourceTree = "<group>"; };
+		643706A41C497C0600B3F463 /* TSTapDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTapDetector.h; sourceTree = "<group>"; };
+		643706A51C497C0600B3F463 /* TSTapDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTapDetector.m; sourceTree = "<group>"; };
+		643706C01C49849E00B3F463 /* ActuationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActuationController.swift; sourceTree = "<group>"; };
+		643706C21C4984F900B3F463 /* Interaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Interaction.swift; path = ../Interaction.swift; sourceTree = "<group>"; };
+		643706C41C49852F00B3F463 /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		6455107C1C4E8DC700BB1C4C /* TriggerListenerWithSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerListenerWithSound.swift; sourceTree = "<group>"; };
+		6455107E1C4E8E2700BB1C4C /* CollectorWithSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectorWithSound.swift; sourceTree = "<group>"; };
+		645510A01C4E99FA00BB1C4C /* End.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = End.mp3; sourceTree = "<group>"; };
+		645510A11C4E99FA00BB1C4C /* ObserveTrees_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ObserveTrees_4.mp3; sourceTree = "<group>"; };
+		645510A21C4E99FA00BB1C4C /* ObserveTreesShort_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ObserveTreesShort_4.mp3; sourceTree = "<group>"; };
+		645510A31C4E99FA00BB1C4C /* Standing_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Standing_1.mp3; sourceTree = "<group>"; };
+		645510A41C4E99FA00BB1C4C /* StandingShort_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StandingShort_1.mp3; sourceTree = "<group>"; };
+		645510A51C4E99FA00BB1C4C /* TreeCircle_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TreeCircle_5.mp3; sourceTree = "<group>"; };
+		645510A61C4E99FA00BB1C4C /* TreeSpin_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TreeSpin_5.mp3; sourceTree = "<group>"; };
+		645510A71C4E99FA00BB1C4C /* WalkingAwarenessofSurroundings_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingAwarenessofSurroundings_3.mp3; sourceTree = "<group>"; };
+		645510A81C4E99FA00BB1C4C /* WalkingBreathingShort_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingBreathingShort_3.mp3; sourceTree = "<group>"; };
+		645510A91C4E99FA00BB1C4C /* WalkingEmotions_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingEmotions_3.mp3; sourceTree = "<group>"; };
+		645510AA1C4E99FA00BB1C4C /* WalkingFeelings_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingFeelings_3.mp3; sourceTree = "<group>"; };
+		645510AB1C4E99FA00BB1C4C /* WalkingObjofConsciousness_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingObjofConsciousness_3.mp3; sourceTree = "<group>"; };
+		645510AC1C4E99FA00BB1C4C /* WalkingPosture1_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingPosture1_2.mp3; sourceTree = "<group>"; };
+		645510AD1C4E99FA00BB1C4C /* WalkingPosture2_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingPosture2_2.mp3; sourceTree = "<group>"; };
+		645510AE1C4E99FA00BB1C4C /* WalkingPostureShort_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingPostureShort_2.mp3; sourceTree = "<group>"; };
+		6458E5B71C5BF1BA00989783 /* Standing_2min.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Standing_2min.mp3; sourceTree = "<group>"; };
+		6458E5B91C5BFA0B00989783 /* ObservingTrees_3-20min.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ObservingTrees_3-20min.mp3"; sourceTree = "<group>"; };
+		6494AB0F1C4986D600705320 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = ../ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		6494AB101C4986D600705320 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = ../ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		6494AB111C4986D600705320 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = ../ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		6494AB121C4986D600705320 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = ../ParseUI.framework; sourceTree = "<group>"; };
+		6494AB131C4986D600705320 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Bolts.framework; sourceTree = "<group>"; };
+		6494AB141C4986D600705320 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Parse.framework; sourceTree = "<group>"; };
+		6494AB1B1C498B1800705320 /* WalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkViewController.swift; sourceTree = "<group>"; };
+		6494AB1D1C49A15300705320 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		64CBDBBC1B557A04000354EB /* SignUpInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInViewController.swift; sourceTree = "<group>"; };
 		64CBDBBF1B559EFD000354EB /* MeditationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		64CBDBC21B559F33000354EB /* ConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionViewController.swift; sourceTree = "<group>"; };
-		64D687481B693F2F00E9CAF5 /* End.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = End.mp3; sourceTree = "<group>"; };
-		64D687491B693F2F00E9CAF5 /* ObserveTrees_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ObserveTrees_4.mp3; sourceTree = "<group>"; };
-		64D6874A1B693F2F00E9CAF5 /* ObserveTreesShort_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ObserveTreesShort_4.mp3; sourceTree = "<group>"; };
-		64D6874C1B693F2F00E9CAF5 /* Standing_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Standing_1.mp3; sourceTree = "<group>"; };
-		64D6874D1B693F2F00E9CAF5 /* TreeCircle_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TreeCircle_5.mp3; sourceTree = "<group>"; };
-		64D6874E1B693F2F00E9CAF5 /* TreeSpin_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TreeSpin_5.mp3; sourceTree = "<group>"; };
-		64D6874F1B693F2F00E9CAF5 /* WalkingAwarenessofSurroundings_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingAwarenessofSurroundings_3.mp3; sourceTree = "<group>"; };
-		64D687501B693F2F00E9CAF5 /* WalkingBreathingShort_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingBreathingShort_3.mp3; sourceTree = "<group>"; };
-		64D687511B693F2F00E9CAF5 /* WalkingEmotions_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingEmotions_3.mp3; sourceTree = "<group>"; };
-		64D687521B693F2F00E9CAF5 /* WalkingFeelings_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingFeelings_3.mp3; sourceTree = "<group>"; };
-		64D687531B693F2F00E9CAF5 /* WalkingObjofConsciousness_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingObjofConsciousness_3.mp3; sourceTree = "<group>"; };
-		64D687541B693F2F00E9CAF5 /* WalkingPosture1_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingPosture1_2.mp3; sourceTree = "<group>"; };
-		64D687551B693F2F00E9CAF5 /* WalkingPosture2_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingPosture2_2.mp3; sourceTree = "<group>"; };
-		64D687561B693F2F00E9CAF5 /* WalkingPostureShort_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingPostureShort_2.mp3; sourceTree = "<group>"; };
-		64D687661B69628F00E9CAF5 /* StandingShort_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = StandingShort_1.mp3; path = ZenWalk/StandingShort_1.mp3; sourceTree = "<group>"; };
 		64DC05B71B5ECB5E00D4CDF6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = ../Login.storyboard; sourceTree = "<group>"; };
 		64DC05B91B5ECBE000D4CDF6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		64DC05BE1B5ECD1900D4CDF6 /* Walk.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walk.storyboard; sourceTree = "<group>"; };
@@ -140,6 +214,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6494AB181C4986D600705320 /* ParseUI.framework in Frameworks */,
+				6494AB191C4986D600705320 /* Bolts.framework in Frameworks */,
 				52D9F1E21AF91C4500C3DCF3 /* Security.framework in Frameworks */,
 				6414697B1B43BC7E00F70AB8 /* Slt.framework in Frameworks */,
 				524C27161AF92CB30083AB5A /* Accounts.framework in Frameworks */,
@@ -148,18 +224,16 @@
 				52D9F1DB1AF91C4500C3DCF3 /* CFNetwork.framework in Frameworks */,
 				52D9F1DC1AF91C4500C3DCF3 /* CoreGraphics.framework in Frameworks */,
 				52D9F1DD1AF91C4500C3DCF3 /* CoreLocation.framework in Frameworks */,
+				6494AB151C4986D600705320 /* ParseFacebookUtils.framework in Frameworks */,
 				52D9F1DE1AF91C4500C3DCF3 /* libsqlite3.dylib in Frameworks */,
+				6494AB161C4986D600705320 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				52D9F1DF1AF91C4500C3DCF3 /* libz.dylib in Frameworks */,
+				6494AB1A1C4986D600705320 /* Parse.framework in Frameworks */,
 				52D9F1E01AF91C4500C3DCF3 /* MobileCoreServices.framework in Frameworks */,
 				52D9F1E11AF91C4500C3DCF3 /* QuartzCore.framework in Frameworks */,
+				6494AB171C4986D600705320 /* ParseTwitterUtils.framework in Frameworks */,
 				52D9F1E41AF91C4500C3DCF3 /* SystemConfiguration.framework in Frameworks */,
-				52D9F1CA1AF91B8D00C3DCF3 /* ParseUI.framework in Frameworks */,
 				6414697A1B43BC7E00F70AB8 /* OpenEars.framework in Frameworks */,
-				52D9F1C81AF91B8D00C3DCF3 /* Bolts.framework in Frameworks */,
-				52D9F1CB1AF91B8D00C3DCF3 /* ParseFacebookUtilsV4.framework in Frameworks */,
-				52D9F1CC1AF91B8D00C3DCF3 /* ParseFacebookUtils.framework in Frameworks */,
-				52D9F1CD1AF91B8D00C3DCF3 /* Parse.framework in Frameworks */,
-				52D9F1C91AF91B8D00C3DCF3 /* ParseCrashReporting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,23 +250,6 @@
 		52D9F1911AF9181A00C3DCF3 = {
 			isa = PBXGroup;
 			children = (
-				64D687481B693F2F00E9CAF5 /* End.mp3 */,
-				64D687491B693F2F00E9CAF5 /* ObserveTrees_4.mp3 */,
-				64D6874A1B693F2F00E9CAF5 /* ObserveTreesShort_4.mp3 */,
-				64D687661B69628F00E9CAF5 /* StandingShort_1.mp3 */,
-				64D6874C1B693F2F00E9CAF5 /* Standing_1.mp3 */,
-				64D6874D1B693F2F00E9CAF5 /* TreeCircle_5.mp3 */,
-				64D6874E1B693F2F00E9CAF5 /* TreeSpin_5.mp3 */,
-				64D6874F1B693F2F00E9CAF5 /* WalkingAwarenessofSurroundings_3.mp3 */,
-				64D687501B693F2F00E9CAF5 /* WalkingBreathingShort_3.mp3 */,
-				64D687511B693F2F00E9CAF5 /* WalkingEmotions_3.mp3 */,
-				64D687521B693F2F00E9CAF5 /* WalkingFeelings_3.mp3 */,
-				64D687531B693F2F00E9CAF5 /* WalkingObjofConsciousness_3.mp3 */,
-				64D687541B693F2F00E9CAF5 /* WalkingPosture1_2.mp3 */,
-				64D687551B693F2F00E9CAF5 /* WalkingPosture2_2.mp3 */,
-				64D687561B693F2F00E9CAF5 /* WalkingPostureShort_2.mp3 */,
-				524C27151AF92CB30083AB5A /* Accounts.framework */,
-				524C27131AF92CAB0083AB5A /* Social.framework */,
 				52D9F19C1AF9181A00C3DCF3 /* ZenWalk */,
 				52D9F1B51AF9181B00C3DCF3 /* ZenWalkTests */,
 				52D9F19B1AF9181A00C3DCF3 /* Products */,
@@ -211,7 +268,8 @@
 		52D9F19C1AF9181A00C3DCF3 /* ZenWalk */ = {
 			isa = PBXGroup;
 			children = (
-				641469731B43BC7E00F70AB8 /* Framework */,
+				6455109F1C4E99FA00BB1C4C /* Audio */,
+				643706831C497C0600B3F463 /* ExperienceKit */,
 				52D9F1CE1AF91B9B00C3DCF3 /* Frameworks */,
 				64DC05BD1B5ECC9600D4CDF6 /* UserInfo */,
 				64DC05BB1B5ECBFC00D4CDF6 /* Login */,
@@ -220,6 +278,7 @@
 				64DC05B91B5ECBE000D4CDF6 /* HomeViewController.swift */,
 				52D9F1A41AF9181A00C3DCF3 /* ViewController.swift */,
 				6414697C1B43BCEC00F70AB8 /* OEBridging-Header.h */,
+				643706C01C49849E00B3F463 /* ActuationController.swift */,
 				52D9F1A91AF9181B00C3DCF3 /* Images.xcassets */,
 				52D9F1AB1AF9181B00C3DCF3 /* LaunchScreen.xib */,
 				52D9F1A11AF9181A00C3DCF3 /* ZenWalk.xcdatamodeld */,
@@ -257,6 +316,16 @@
 		52D9F1CE1AF91B9B00C3DCF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6494AB0F1C4986D600705320 /* ParseFacebookUtils.framework */,
+				6494AB101C4986D600705320 /* ParseFacebookUtilsV4.framework */,
+				6494AB111C4986D600705320 /* ParseTwitterUtils.framework */,
+				6494AB121C4986D600705320 /* ParseUI.framework */,
+				6494AB131C4986D600705320 /* Bolts.framework */,
+				6494AB141C4986D600705320 /* Parse.framework */,
+				524C27151AF92CB30083AB5A /* Accounts.framework */,
+				524C27131AF92CAB0083AB5A /* Social.framework */,
+				641469771B43BC7E00F70AB8 /* Slt.framework */,
+				641469761B43BC7E00F70AB8 /* OpenEars.framework */,
 				52D9F1CF1AF91C4400C3DCF3 /* AudioToolbox.framework */,
 				52D9F1D01AF91C4400C3DCF3 /* CFNetwork.framework */,
 				52D9F1D11AF91C4400C3DCF3 /* CoreGraphics.framework */,
@@ -267,25 +336,123 @@
 				52D9F1D61AF91C4500C3DCF3 /* QuartzCore.framework */,
 				52D9F1D71AF91C4500C3DCF3 /* Security.framework */,
 				52D9F1D91AF91C4500C3DCF3 /* SystemConfiguration.framework */,
-				52D9F1C21AF91B8D00C3DCF3 /* Bolts.framework */,
-				52D9F1C31AF91B8D00C3DCF3 /* ParseCrashReporting.framework */,
-				52D9F1C41AF91B8D00C3DCF3 /* ParseUI.framework */,
-				52D9F1C51AF91B8D00C3DCF3 /* ParseFacebookUtilsV4.framework */,
-				52D9F1C61AF91B8D00C3DCF3 /* ParseFacebookUtils.framework */,
-				52D9F1C71AF91B8D00C3DCF3 /* Parse.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		641469731B43BC7E00F70AB8 /* Framework */ = {
+		643706831C497C0600B3F463 /* ExperienceKit */ = {
 			isa = PBXGroup;
 			children = (
-				641469741B43BC7E00F70AB8 /* AcousticModelEnglish.bundle */,
-				641469751B43BC7E00F70AB8 /* AcousticModelSpanish.bundle */,
-				641469761B43BC7E00F70AB8 /* OpenEars.framework */,
-				641469771B43BC7E00F70AB8 /* Slt.framework */,
+				643706841C497C0600B3F463 /* DataManager.swift */,
+				643706851C497C0600B3F463 /* ExperienceManager.swift */,
+				643706861C497C0600B3F463 /* moments */,
+				643706901C497C0600B3F463 /* OpportunityManager.swift */,
+				643706911C497C0600B3F463 /* Parse */,
+				643706971C497C0600B3F463 /* Requirement.swift */,
+				643706981C497C0600B3F463 /* Stage.swift */,
+				643706C21C4984F900B3F463 /* Interaction.swift */,
+				643706C41C49852F00B3F463 /* Context.swift */,
+				643706991C497C0600B3F463 /* utilities */,
 			);
-			path = Framework;
+			path = ExperienceKit;
+			sourceTree = "<group>";
+		};
+		643706861C497C0600B3F463 /* moments */ = {
+			isa = PBXGroup;
+			children = (
+				643706871C497C0600B3F463 /* Interim.swift */,
+				6455107E1C4E8E2700BB1C4C /* CollectorWithSound.swift */,
+				643706881C497C0600B3F463 /* KnockListener.swift */,
+				643706891C497C0600B3F463 /* Moment.swift */,
+				6437068A1C497C0600B3F463 /* SensorCollector.swift */,
+				6437068B1C497C0600B3F463 /* Sound.swift */,
+				6437068C1C497C0600B3F463 /* SpeechListener.swift */,
+				6455107C1C4E8DC700BB1C4C /* TriggerListenerWithSound.swift */,
+				6437068D1C497C0600B3F463 /* TriggerListener.swift */,
+				6437068E1C497C0600B3F463 /* WaitForDoubleKnock.swift */,
+				6437068F1C497C0600B3F463 /* WaitForWord.swift */,
+			);
+			path = moments;
+			sourceTree = "<group>";
+		};
+		643706911C497C0600B3F463 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				643706921C497C0600B3F463 /* DataEvent.swift */,
+				643706931C497C0600B3F463 /* Experience.swift */,
+				643706941C497C0600B3F463 /* LocationUpdate.swift */,
+				643706951C497C0600B3F463 /* PointOfInterest.swift */,
+				643706961C497C0600B3F463 /* SensorMoment.swift */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
+		643706991C497C0600B3F463 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6437069A1C497C0600B3F463 /* Extensions.swift */,
+				6437069B1C497C0600B3F463 /* third_party */,
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
+		6437069B1C497C0600B3F463 /* third_party */ = {
+			isa = PBXGroup;
+			children = (
+				6437069C1C497C0600B3F463 /* Events.swift */,
+				6437069D1C497C0600B3F463 /* TapShare */,
+			);
+			path = third_party;
+			sourceTree = "<group>";
+		};
+		6437069D1C497C0600B3F463 /* TapShare */ = {
+			isa = PBXGroup;
+			children = (
+				6437069E1C497C0600B3F463 /* ARAudioRecognizer */,
+				643706A21C497C0600B3F463 /* TSCoreMotionListener.h */,
+				643706A31C497C0600B3F463 /* TSCoreMotionListener.m */,
+				643706A41C497C0600B3F463 /* TSTapDetector.h */,
+				643706A51C497C0600B3F463 /* TSTapDetector.m */,
+			);
+			path = TapShare;
+			sourceTree = "<group>";
+		};
+		6437069E1C497C0600B3F463 /* ARAudioRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				6437069F1C497C0600B3F463 /* ARAudioRecognizer.h */,
+				643706A01C497C0600B3F463 /* ARAudioRecognizer.m */,
+				643706A11C497C0600B3F463 /* ARAudioRecognizerDelegate.h */,
+			);
+			path = ARAudioRecognizer;
+			sourceTree = "<group>";
+		};
+		6455109F1C4E99FA00BB1C4C /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				6458E5B91C5BFA0B00989783 /* ObservingTrees_3-20min.mp3 */,
+				6458E5B71C5BF1BA00989783 /* Standing_2min.mp3 */,
+				6429C2571C4EA86300E845F9 /* test1.mp3 */,
+				6429C2581C4EA86300E845F9 /* test2.mp3 */,
+				6429C2591C4EA86300E845F9 /* test3.mp3 */,
+				6429C25A1C4EA86300E845F9 /* test4.mp3 */,
+				645510A01C4E99FA00BB1C4C /* End.mp3 */,
+				645510A11C4E99FA00BB1C4C /* ObserveTrees_4.mp3 */,
+				645510A21C4E99FA00BB1C4C /* ObserveTreesShort_4.mp3 */,
+				645510A31C4E99FA00BB1C4C /* Standing_1.mp3 */,
+				645510A41C4E99FA00BB1C4C /* StandingShort_1.mp3 */,
+				645510A51C4E99FA00BB1C4C /* TreeCircle_5.mp3 */,
+				645510A61C4E99FA00BB1C4C /* TreeSpin_5.mp3 */,
+				645510A71C4E99FA00BB1C4C /* WalkingAwarenessofSurroundings_3.mp3 */,
+				645510A81C4E99FA00BB1C4C /* WalkingBreathingShort_3.mp3 */,
+				645510A91C4E99FA00BB1C4C /* WalkingEmotions_3.mp3 */,
+				645510AA1C4E99FA00BB1C4C /* WalkingFeelings_3.mp3 */,
+				645510AB1C4E99FA00BB1C4C /* WalkingObjofConsciousness_3.mp3 */,
+				645510AC1C4E99FA00BB1C4C /* WalkingPosture1_2.mp3 */,
+				645510AD1C4E99FA00BB1C4C /* WalkingPosture2_2.mp3 */,
+				645510AE1C4E99FA00BB1C4C /* WalkingPostureShort_2.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		64DC05BB1B5ECBFC00D4CDF6 /* Login */ = {
@@ -301,7 +468,9 @@
 			isa = PBXGroup;
 			children = (
 				64DC05BE1B5ECD1900D4CDF6 /* Walk.storyboard */,
+				6494AB1D1C49A15300705320 /* AudioManager.swift */,
 				64CBDBC21B559F33000354EB /* ConditionViewController.swift */,
+				6494AB1B1C498B1800705320 /* WalkViewController.swift */,
 				64CBDBBF1B559EFD000354EB /* MeditationViewController.swift */,
 				64E7D4C01B5D744B00FCF61B /* EndViewController.swift */,
 			);
@@ -362,6 +531,7 @@
 		52D9F1921AF9181A00C3DCF3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Scott Cambo";
 				TargetAttributes = {
@@ -407,29 +577,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64D687571B693F2F00E9CAF5 /* End.mp3 in Resources */,
-				64D6875B1B693F2F00E9CAF5 /* Standing_1.mp3 in Resources */,
-				64D687611B693F2F00E9CAF5 /* WalkingFeelings_3.mp3 in Resources */,
-				64D687591B693F2F00E9CAF5 /* ObserveTreesShort_4.mp3 in Resources */,
+				645510B81C4E99FA00BB1C4C /* WalkingEmotions_3.mp3 in Resources */,
 				64DC05C51B5F146800D4CDF6 /* Main.storyboard in Resources */,
-				64D687631B693F2F00E9CAF5 /* WalkingPosture1_2.mp3 in Resources */,
-				641469781B43BC7E00F70AB8 /* AcousticModelEnglish.bundle in Resources */,
-				64D6875F1B693F2F00E9CAF5 /* WalkingBreathingShort_3.mp3 in Resources */,
-				64D687581B693F2F00E9CAF5 /* ObserveTrees_4.mp3 in Resources */,
-				64D687621B693F2F00E9CAF5 /* WalkingObjofConsciousness_3.mp3 in Resources */,
+				6458E5B81C5BF1BA00989783 /* Standing_2min.mp3 in Resources */,
+				6429C25D1C4EA86300E845F9 /* test3.mp3 in Resources */,
 				64DC05B81B5ECB5E00D4CDF6 /* Login.storyboard in Resources */,
-				641469791B43BC7E00F70AB8 /* AcousticModelSpanish.bundle in Resources */,
 				64DC05BF1B5ECD1900D4CDF6 /* Walk.storyboard in Resources */,
-				64D6875D1B693F2F00E9CAF5 /* TreeSpin_5.mp3 in Resources */,
+				645510B31C4E99FA00BB1C4C /* StandingShort_1.mp3 in Resources */,
+				645510BB1C4E99FA00BB1C4C /* WalkingPosture1_2.mp3 in Resources */,
+				6429C25E1C4EA86300E845F9 /* test4.mp3 in Resources */,
 				52D9F1AD1AF9181B00C3DCF3 /* LaunchScreen.xib in Resources */,
-				64D687641B693F2F00E9CAF5 /* WalkingPosture2_2.mp3 in Resources */,
-				64D687601B693F2F00E9CAF5 /* WalkingEmotions_3.mp3 in Resources */,
-				64D6875C1B693F2F00E9CAF5 /* TreeCircle_5.mp3 in Resources */,
+				645510B11C4E99FA00BB1C4C /* ObserveTreesShort_4.mp3 in Resources */,
+				645510BD1C4E99FA00BB1C4C /* WalkingPostureShort_2.mp3 in Resources */,
+				645510B01C4E99FA00BB1C4C /* ObserveTrees_4.mp3 in Resources */,
 				52D9F1AA1AF9181B00C3DCF3 /* Images.xcassets in Resources */,
+				645510B61C4E99FA00BB1C4C /* WalkingAwarenessofSurroundings_3.mp3 in Resources */,
+				645510B91C4E99FA00BB1C4C /* WalkingFeelings_3.mp3 in Resources */,
+				645510B71C4E99FA00BB1C4C /* WalkingBreathingShort_3.mp3 in Resources */,
+				645510B41C4E99FA00BB1C4C /* TreeCircle_5.mp3 in Resources */,
+				645510AF1C4E99FA00BB1C4C /* End.mp3 in Resources */,
+				6458E5BA1C5BFA0B00989783 /* ObservingTrees_3-20min.mp3 in Resources */,
+				645510B21C4E99FA00BB1C4C /* Standing_1.mp3 in Resources */,
+				645510BA1C4E99FA00BB1C4C /* WalkingObjofConsciousness_3.mp3 in Resources */,
+				645510BC1C4E99FA00BB1C4C /* WalkingPosture2_2.mp3 in Resources */,
+				6429C25C1C4EA86300E845F9 /* test2.mp3 in Resources */,
+				645510B51C4E99FA00BB1C4C /* TreeSpin_5.mp3 in Resources */,
+				6429C25B1C4EA86300E845F9 /* test1.mp3 in Resources */,
 				64DC05C31B5F12B600D4CDF6 /* UserInfo.storyboard in Resources */,
-				64D6875E1B693F2F00E9CAF5 /* WalkingAwarenessofSurroundings_3.mp3 in Resources */,
-				64D687671B69629000E9CAF5 /* StandingShort_1.mp3 in Resources */,
-				64D687651B693F2F00E9CAF5 /* WalkingPostureShort_2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,15 +621,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6455107D1C4E8DC700BB1C4C /* TriggerListenerWithSound.swift in Sources */,
+				643706B61C497C0600B3F463 /* SensorMoment.swift in Sources */,
 				64E7D4C11B5D744B00FCF61B /* EndViewController.swift in Sources */,
+				643706AB1C497C0600B3F463 /* SensorCollector.swift in Sources */,
+				643706BC1C497C0600B3F463 /* TSCoreMotionListener.m in Sources */,
 				64DC05C11B5F128A00D4CDF6 /* UserProfileViewController.swift in Sources */,
+				6494AB1C1C498B1800705320 /* WalkViewController.swift in Sources */,
+				643706B31C497C0600B3F463 /* Experience.swift in Sources */,
 				52D9F1A51AF9181A00C3DCF3 /* ViewController.swift in Sources */,
+				643706B51C497C0600B3F463 /* PointOfInterest.swift in Sources */,
+				643706AF1C497C0600B3F463 /* WaitForDoubleKnock.swift in Sources */,
 				64F740A91B5CBB370024D45D /* WalksListViewController.swift in Sources */,
+				643706AD1C497C0600B3F463 /* SpeechListener.swift in Sources */,
+				6494AB1E1C49A15300705320 /* AudioManager.swift in Sources */,
+				643706B11C497C0600B3F463 /* OpportunityManager.swift in Sources */,
+				643706BB1C497C0600B3F463 /* ARAudioRecognizer.m in Sources */,
+				6455107F1C4E8E2700BB1C4C /* CollectorWithSound.swift in Sources */,
+				643706B21C497C0600B3F463 /* DataEvent.swift in Sources */,
+				643706AC1C497C0600B3F463 /* Sound.swift in Sources */,
+				643706B01C497C0600B3F463 /* WaitForWord.swift in Sources */,
 				64CBDBBD1B557A04000354EB /* SignUpInViewController.swift in Sources */,
+				643706B41C497C0600B3F463 /* LocationUpdate.swift in Sources */,
+				643706A71C497C0600B3F463 /* ExperienceManager.swift in Sources */,
 				64CBDBC31B559F33000354EB /* ConditionViewController.swift in Sources */,
+				643706B81C497C0600B3F463 /* Stage.swift in Sources */,
 				64DC05BA1B5ECBE000D4CDF6 /* HomeViewController.swift in Sources */,
+				643706BD1C497C0600B3F463 /* TSTapDetector.m in Sources */,
+				643706AA1C497C0600B3F463 /* Moment.swift in Sources */,
+				643706C31C4984F900B3F463 /* Interaction.swift in Sources */,
+				643706C51C49852F00B3F463 /* Context.swift in Sources */,
+				643706C11C49849E00B3F463 /* ActuationController.swift in Sources */,
+				643706A81C497C0600B3F463 /* Interim.swift in Sources */,
+				643706B71C497C0600B3F463 /* Requirement.swift in Sources */,
 				52D9F1A31AF9181A00C3DCF3 /* ZenWalk.xcdatamodeld in Sources */,
+				643706A91C497C0600B3F463 /* KnockListener.swift in Sources */,
+				643706B91C497C0600B3F463 /* Extensions.swift in Sources */,
+				643706A61C497C0600B3F463 /* DataManager.swift in Sources */,
+				643706BA1C497C0600B3F463 /* Events.swift in Sources */,
 				64CBDBC11B559EFD000354EB /* MeditationViewController.swift in Sources */,
+				643706AE1C497C0600B3F463 /* TriggerListener.swift in Sources */,
 				52D9F1A01AF9181A00C3DCF3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,16 +782,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZenWalk",
 					"$(PROJECT_DIR)/ZenWalk/Framework",
+					"$(PROJECT_DIR)/ZenWalk/Framework/AcousticModelEnglish.bundle",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ZenWalk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4aadcea9-3094-46a9-8ead-57c6d76cadce";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ZenWalk/OEBridging-Header.h";
 			};
 			name = Debug;
@@ -595,18 +803,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Northwestern University";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZenWalk",
 					"$(PROJECT_DIR)/ZenWalk/Framework",
+					"$(PROJECT_DIR)/ZenWalk/Framework/AcousticModelEnglish.bundle",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ZenWalk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4aadcea9-3094-46a9-8ead-57c6d76cadce";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ZenWalk/OEBridging-Header.h";
 			};
 			name = Release;

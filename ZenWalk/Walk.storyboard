@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qnr-PC-t2E"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8JY-ng-qTx">
-                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzw-5q-5i1">
@@ -32,7 +33,7 @@
                                     <action selector="shortButton:" destination="jZB-IC-zyV" eventType="touchUpInside" id="dlu-Dn-A8l"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long do you want to walk?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8v-dr-iot">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How long do you want to walk?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8v-dr-iot">
                                 <rect key="frame" x="16" y="150" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -120,7 +121,7 @@
                         <outlet property="longButton" destination="LJR-mc-hE1" id="hKV-du-8DJ"/>
                         <outlet property="mediumButton" destination="l7c-SY-noe" id="20r-TX-6Om"/>
                         <outlet property="shortButton" destination="Jzw-5q-5i1" id="foL-SQ-fJg"/>
-                        <segue destination="3ZB-rs-7jK" kind="show" identifier="toMeditation" id="8rQ-mf-2iD"/>
+                        <segue destination="3ZB-rs-7jK" kind="show" identifier="toWalk" id="8rQ-mf-2iD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoK-sH-UjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -130,13 +131,13 @@
         <!--Current Walk-->
         <scene sceneID="rZh-W0-aun">
             <objects>
-                <viewController id="3ZB-rs-7jK" customClass="MeditationViewController" customModule="ZenWalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3ZB-rs-7jK" customClass="WalkViewController" customModule="ZenWalk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MrO-5m-c70"/>
                         <viewControllerLayoutGuide type="bottom" id="Pem-Zr-Pxb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RdC-k3-Fg5">
-                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiU-XI-B03">
@@ -151,10 +152,10 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playButton:" destination="3ZB-rs-7jK" eventType="touchUpInside" id="e81-Ik-4IX"/>
+                                    <action selector="controlPlayPause:" destination="3ZB-rs-7jK" eventType="touchUpInside" id="5Os-gr-K2l"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zsF-qf-gbV">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zsF-qf-gbV">
                                 <rect key="frame" x="9" y="28" width="583" height="443"/>
                             </mapView>
                         </subviews>
@@ -176,8 +177,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="playPauseButton" destination="hiU-XI-B03" id="hVV-bk-v1x"/>
-                        <outlet property="theMap" destination="zsF-qf-gbV" id="YmI-08-hXo"/>
+                        <outlet property="mapView" destination="zsF-qf-gbV" id="hFm-Um-1Kn"/>
+                        <outlet property="playButton" destination="hiU-XI-B03" id="4vs-Um-br3"/>
                         <segue destination="tBt-oz-QDl" kind="show" identifier="toEnd" id="3zw-lr-9ZE"/>
                     </connections>
                 </viewController>
@@ -197,7 +198,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finished!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBn-A0-nef">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Finished!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBn-A0-nef">
                                 <rect key="frame" x="183" y="247" width="235" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="MYF-mY-Q2D"/>

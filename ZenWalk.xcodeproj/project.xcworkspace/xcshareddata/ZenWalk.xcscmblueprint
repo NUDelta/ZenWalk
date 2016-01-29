@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "CAFFA39B772EEC801E312F6FC791EBFC31ABE9C3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CAFFA39B772EEC801E312F6FC791EBFC31ABE9C3" : 0,
+    "15DAD7C98F95B44952429EC0D6EBA3E38FA8A53C" : 0,
+    "15CCBE0AF2B9E1CD1FA22E00BDBF6BF8D4B2F44B" : 0,
+    "457D28FD56DD55FA328DAD09332FEB26A97AAE19" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DEE5D897-CFD1-4500-8E3E-1761F68D9D8B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CAFFA39B772EEC801E312F6FC791EBFC31ABE9C3" : "ZenWalk\/",
+    "15DAD7C98F95B44952429EC0D6EBA3E38FA8A53C" : "ZenWalk\/3_Junior%20Year\/EECS%20330\/team-eggplant\/",
+    "15CCBE0AF2B9E1CD1FA22E00BDBF6BF8D4B2F44B" : "ZenWalk\/ZenWalk\/HabitSourceArchitecture\/",
+    "457D28FD56DD55FA328DAD09332FEB26A97AAE19" : "ZenWalk\/3_Junior%20Year\/EECS%20349\/Project\/Web%20Page\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ZenWalk",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ZenWalk.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/NUDelta\/HabitSourceArchitecture.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "15CCBE0AF2B9E1CD1FA22E00BDBF6BF8D4B2F44B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nicolezhu\/team-eggplant.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "15DAD7C98F95B44952429EC0D6EBA3E38FA8A53C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/katherinepamina\/katherinepamina.github.io.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "457D28FD56DD55FA328DAD09332FEB26A97AAE19"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/NUDelta\/ZenWalk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CAFFA39B772EEC801E312F6FC791EBFC31ABE9C3"
+    }
+  ]
+}
