@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Pamina Lin. All rights reserved.
 //
 
+// OLD - NOT USED ANYMORE
 
 import AudioToolbox
 import AVFoundation
@@ -62,9 +63,15 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         self.timeStamp = getCurrentTimestampString()
         queue = AVQueuePlayer()
         audioSession = AVAudioSession()
-        audioSession.setCategory(AVAudioSessionCategoryPlayback, error: nil)
-        audioSession.setActive(true, error: nil)
-        //println(condition)
+        do {
+            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+            try audioSession.setActive(true)
+        } catch let error as NSError {
+            print(error.description)
+        }
+        
+    
+        //print(condition)
         
         // Condition A: 15 min
         if self.condition == "A" {
@@ -73,7 +80,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer1 = AVPlayerItem(URL: fileURL)
             if avPlayer1 == nil {
                 if let e = error {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
             
@@ -82,7 +89,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer2 = AVPlayerItem(URL: fileURL2)
             if avPlayer2 == nil {
                 if let e = error2 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
             
@@ -91,7 +98,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer3 = AVPlayerItem(URL: fileURL3)
             if avPlayer3 == nil {
                 if let e = error3 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
 
@@ -100,7 +107,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer4 = AVPlayerItem(URL: fileURL4)
             if avPlayer4 == nil {
                 if let e = error4 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
             
@@ -110,7 +117,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer5 = AVPlayerItem(URL: fileURL5)
             if avPlayer5 == nil {
                 if let e = error5 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
         }
@@ -123,7 +130,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer1 = AVPlayerItem(URL: fileURL)
             if avPlayer1 == nil {
                 if let e = error {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
         
@@ -132,7 +139,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer2 = AVPlayerItem(URL: fileURL2)
             if avPlayer2 == nil {
                 if let e = error2 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
         
@@ -141,7 +148,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer3 = AVPlayerItem(URL: fileURL3)
             if avPlayer3 == nil {
                 if let e = error3 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
         }
@@ -156,7 +163,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer4 = AVPlayerItem(URL: fileURL4)
             if avPlayer4 == nil {
                 if let e = error4 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
             
@@ -166,7 +173,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer5 = AVPlayerItem(URL: fileURL5)
             if avPlayer5 == nil {
                 if let e = error5 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
         }
@@ -179,7 +186,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer4 = AVPlayerItem(URL: fileURL4)
             if avPlayer4 == nil {
                 if let e = error4 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
             
@@ -189,7 +196,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer5 = AVPlayerItem(URL: fileURL5)
             if avPlayer5 == nil {
                 if let e = error5 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
             
@@ -199,7 +206,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer6 = AVPlayerItem(URL: fileURL5)
             if avPlayer6 == nil {
                 if let e = error5 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
             
@@ -213,7 +220,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer4 = AVPlayerItem(URL: fileURL4)
             if avPlayer4 == nil {
                 if let e = error4 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
 
@@ -223,7 +230,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer5 = AVPlayerItem(URL: fileURL5)
             if avPlayer5 == nil {
                 if let e = error5 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
 
@@ -233,7 +240,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer6 = AVPlayerItem(URL: fileURL6)
             if avPlayer6 == nil {
                 if let e = error6 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
             
@@ -243,7 +250,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer7 = AVPlayerItem(URL: fileURL7)
             if avPlayer7 == nil {
                 if let e = error7 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
 
@@ -253,7 +260,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer8 = AVPlayerItem(URL: fileURL8)
             if avPlayer8 == nil {
                 if let e = error8 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
 
@@ -263,7 +270,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             avPlayer9 = AVPlayerItem(URL: fileURL9)
             if avPlayer9 == nil {
                 if let e = error9 {
-                    println(e.localizedDescription)
+                    print(e.localizedDescription)
                 }
             }
 
@@ -276,7 +283,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         avPlayerEnd = AVPlayerItem(URL: fileURLEnd)
         if avPlayerEnd == nil {
             if let e = errorEnd {
-                println(e.localizedDescription)
+                print(e.localizedDescription)
             }
         }
         
@@ -284,23 +291,24 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         if motionManager.accelerometerAvailable {
             let q = NSOperationQueue()
             motionManager.accelerometerUpdateInterval = 0.1
-            motionManager.startAccelerometerUpdatesToQueue(q, withHandler: {(data: CMAccelerometerData!, error:NSError!) in
-                if data != nil {
+
+            motionManager.startAccelerometerUpdatesToQueue(q, withHandler: {(data, error) in
+                if let data = data {
                     self.x = String(format:"%f", data.acceleration.x)
                     self.y = String(format:"%f", data.acceleration.y)
                     self.z = String(format:"%f", data.acceleration.z)
                 }
             })
         } else {
-            println("Accelerometer is not available")
+            print("Accelerometer is not available")
         }
         
         if motionManager.gyroAvailable {
             let queue = NSOperationQueue()
             motionManager.gyroUpdateInterval = 0.1
             motionManager.deviceMotionUpdateInterval = 0.01
-            motionManager.startGyroUpdatesToQueue(queue, withHandler: {(data: CMGyroData!, error:NSError!) in
-                if data != nil {
+            motionManager.startGyroUpdatesToQueue(queue, withHandler: {(data, error) in
+                if let data = data {
                     // Gyro data here
                     self.rotationX = String(format:"%f", data.rotationRate.x)
                     self.rotationY = String(format:"%f", data.rotationRate.y)
@@ -308,7 +316,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
                 }
             })
         } else {
-            println("Gyroscope is not available")
+            print("Gyroscope is not available")
         }
         
         setUpAVQueuePlayer()
@@ -328,7 +336,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         var player: AVPlayerItem = AVPlayerItem(URL: fileURL)
         if player == nil {
             if let e = error {
-                println(e.localizedDescription)
+                print(e.localizedDescription)
             }
         } else {
             return player
@@ -342,7 +350,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         isPlaying = false
         
         // jk If audio route changes, keep playing
-        //println("route changed")
+        //print("route changed")
         //queue.play()
         //self.playPauseButton.setTitle("Pause", forState: UIControlState.Normal)
     }
@@ -358,7 +366,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         
         session.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
-            //println("Object has been saved.")
+            //print("Object has been saved.")
         }
         
         // Update streak
@@ -368,17 +376,17 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         query.limit = 1000
         query.whereKey("user", equalTo: "kpl976")
         query.findObjectsInBackgroundWithBlock {
-            (objects: [AnyObject]?, error: NSError?) -> Void in
+            (objects, error) -> Void in
             if error != nil {
-                println("Error")
+                print("Error")
             } else {
-                if let objects = objects as? [PFObject] {
+                if let objects = objects {
                     for obj in objects {
-                            println(obj.valueForKey("createdAt"))
+                            print(obj.valueForKey("createdAt"))
                     }
                 }
                 streak = objects!.count
-                println("found \(streak) objects")
+                print("found \(streak) objects")
             }
         }
         defaults.setObject(streak, forKey: "streak")
@@ -401,7 +409,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         formatter.dateStyle = NSDateFormatterStyle.ShortStyle
         formatter.timeStyle = .ShortStyle
         
-        //println(formatter.stringFromDate(date))
+        //print(formatter.stringFromDate(date))
         
         return formatter.stringFromDate(date)
     }
@@ -477,10 +485,14 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             lmPath = lmGenerator.pathToSuccessfullyGeneratedLanguageModelWithRequestedName(name)
             dicPath = lmGenerator.pathToSuccessfullyGeneratedDictionaryWithRequestedName(name)
         } else {
-            println(error.localizedDescription)
+            print(error.localizedDescription)
         }
         
-        sphinxController.setActive(true, error: nil)
+        do {
+            try sphinxController.setActive(true)
+        } catch let error as NSError {
+            print(error.description)
+        }
         sphinxController.doNotWarnAboutPermissions = true
         sphinxController.startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"), languageModelIsJSGF: false)
         
@@ -489,19 +501,19 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
 
     }
     
-    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]!) {
+    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]!) {
         //theLabel.text = "\(locations[0])"
-        myLocations.append(locations[0] as! CLLocation)
+        myLocations.append(locations[0])
         
         let spanX = 0.007
         let spanY = 0.007
-        var newRegion = MKCoordinateRegion(center: theMap.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
+        let newRegion = MKCoordinateRegion(center: theMap.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
         theMap.setRegion(newRegion, animated: true)
         
         // 5 because it jumps around at first?
         if (myLocations.count > 5) {
-            var sourceIndex = myLocations.count - 1
-            var destinationIndex = myLocations.count - 2
+            let sourceIndex = myLocations.count - 1
+            let destinationIndex = myLocations.count - 2
             
             let c1 = myLocations[sourceIndex].coordinate
             let c2 = myLocations[destinationIndex].coordinate
@@ -518,8 +530,8 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             loc["condition"] = self.condition
             
             // which stage are we at?
-            if queue.currentItem != nil {
-                currentStage = queue.currentItem.description
+            if let currentItem = queue.currentItem {
+                currentStage = currentItem.description
                 currentStage = currentStage.substringFromIndex(currentStage.length-8)
                 loc["stage"] = currentStage.substringToIndex(2)
             } else {
@@ -540,10 +552,10 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
             // Save the color data to Parse
             loc["color"] = self.currentHypothesis
             self.currentHypothesis = ""
-            //println(self.currentHypothesis)
+            //print(self.currentHypothesis)
             
             loc.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                //println("Object has been saved.")
+                //print("Object has been saved.")
             }
 
             
@@ -567,7 +579,7 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         // Start updating location
         /*if sender.titleLabel!.text == "Start" {
             manager.startUpdatingLocation()
-            println("updating location")
+            print("updating location")
         }
         */
         
@@ -587,50 +599,50 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
     
     // OEEventsObserver delegate methods
     func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
-        //println("The received hypothesis is " + hypothesis + " with a score of " + recognitionScore + "and an ID of " + utteranceID)
+        //print("The received hypothesis is " + hypothesis + " with a score of " + recognitionScore + "and an ID of " + utteranceID)
         // if score is a certain certainty
         self.currentHypothesis = hypothesis
         // add the hypothesis to wherever you wanna store it
     }
     
     func pocketsphinxDidStartListening() {
-        //println("Pocketsphinx is now listening.")
+        //print("Pocketsphinx is now listening.")
     }
     
     func pocketsphinxDidDetectSpeech() {
-        //println("Pocketsphinx has detected speech.")
+        //print("Pocketsphinx has detected speech.")
     }
     
     func pocketsphinxDidDetectFinishedSpeech() {
-        //println("Pocketsphinx has detected a period of silence, concluding an utterance.")
+        //print("Pocketsphinx has detected a period of silence, concluding an utterance.")
     }
     
     func pocketsphinxDidStopListening() {
-        //println("Pocketsphinx has stopped listening.")
+        //print("Pocketsphinx has stopped listening.")
     }
     
     func pocketsphinxDidSuspendRecognition() {
-        //println("Pocketsphinx has suspended recognition")
+        //print("Pocketsphinx has suspended recognition")
     }
     
     func pocketsphinxDidResumeRecognition() {
-        //println("Pocketsphinx has resumed recognition")
+        //print("Pocketsphinx has resumed recognition")
     }
     
     func pocketsphinxDidChangeLanguageModelToFile(newLanguageModelPathAsString: String!, andDictionary newDictionaryPathAsString: String!) {
-        println("Pocketsphinx is now using the following language model: " + newLanguageModelPathAsString + " and the following dictionary: " + newDictionaryPathAsString)
+        print("Pocketsphinx is now using the following language model: " + newLanguageModelPathAsString + " and the following dictionary: " + newDictionaryPathAsString)
     }
     
     func pocketSphinxContinuousSetupDidFailWithReason(reasonForFailure: String!) {
-        println("Listening setup wasn't successful and returned the failure reason " + reasonForFailure)
+        print("Listening setup wasn't successful and returned the failure reason " + reasonForFailure)
     }
     
     func pocketSphinxContinuousTeardownDidFailWithReason(reasonForFailure: String!) {
-        println("Listening teardown wasn't successful and returned with the following failure reason: " + reasonForFailure)
+        print("Listening teardown wasn't successful and returned with the following failure reason: " + reasonForFailure)
     }
     
     func testRecognitionCompleted() {
-        println("A test file that was submitted for recognition is now compete")
+        print("A test file that was submitted for recognition is now compete")
     }
 
 

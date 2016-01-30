@@ -14,4 +14,11 @@
 #import <OpenEars/OEPocketsphinxController.h>
 #import <OpenEars/OEEventsObserver.h>
 
+
+// TapDetector
+#import "TSCoreMotionListener.h"
+#import "TSTapDetector.h"
+#import "ARAudioRecognizer.h"
+#import "ARAudioRecognizerDelegate.h"
+
 #endif
