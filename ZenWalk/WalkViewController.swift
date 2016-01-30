@@ -25,6 +25,7 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
     @IBOutlet weak var playButton: UIButton!
     
     var condition:String! // the meditation condition
+    //var myLocations:[CLLocation] = []
     
     let defaults = NSUserDefaults.standardUserDefaults()
     
@@ -41,7 +42,7 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
         let test2 = CollectorWithSound(fileNames: ["test3", "test4"], title: "Test", dataLabel: "test", sensors: [.Location])
 
         
-        let conditionA_1 = Sound(fileNames: ["StandingShort_1", "WalkingPostureShort_2", "WalkingBreathingShort_3"])
+        let conditionA_1 = Sound(fileNames: ["Standing_1-16min", "WalkObservingBody_1-16min", "WalkingBreathingShort_3"])
         let conditionA_2 = CollectorWithSound(fileNames: ["ObservingTrees_3-20min", "TreeCircle_5"], title: "Circle around tree A", dataLabel: "tree", sensors: [.Location, .Accel])
         let conditionA_end = Sound(fileNames: ["End"])
         
@@ -114,17 +115,7 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
     
     
     // MARK: Actions
-    
-//    @IBAction func playPause(sender: UIButton) {
-//        if self.playButton.titleLabel!.text == "Resume" {
-//            self.experienceManager.play()
-//            self.playButton.setTitle("Pause", forState: .Normal)
-//        }
-//        else {
-//            self.experienceManager.pause()
-//            self.playButton.setTitle("Resume", forState: .Normal)
-//        }
-//    }
+
     
     @IBAction func controlPlayPause(sender: UIButton) {
         if self.playButton.titleLabel!.text == "Resume" {
@@ -140,6 +131,7 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
     
     func back(sender: UIBarButtonItem) {
         self.navigationController?.popViewControllerAnimated(true)
+        self.experienceManager.pause()
     }
     
     // ExperienceManagerDelegate methods
@@ -151,12 +143,25 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
     
     func didFinishExperience() {
         if let navController = self.navigationController {
-            navController.popViewControllerAnimated(true)
+            //navController.popViewControllerAnimated(true)
+            // change to segue to "FINISHED" view
+            performSegueWithIdentifier("toEnd", sender: self)
         }
     }
     
     func didAddDestination(destLocation: CLLocationCoordinate2D, destinationName: String) {
         //addObjectToMap(destLocation, annotationTitle: destinationName)
+    }
+    
+    // Segue
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toEnd" {
+            let svc = segue.destinationViewController as! EndViewController
+        }
+        if segue.identifier == "toCondition" {
+            let svc = segue.destinationViewController as! ConditionViewController
+        }
     }
     
 

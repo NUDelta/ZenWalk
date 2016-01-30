@@ -77,6 +77,8 @@
 		645510BD1C4E99FA00BB1C4C /* WalkingPostureShort_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510AE1C4E99FA00BB1C4C /* WalkingPostureShort_2.mp3 */; };
 		6458E5B81C5BF1BA00989783 /* Standing_2min.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6458E5B71C5BF1BA00989783 /* Standing_2min.mp3 */; };
 		6458E5BA1C5BFA0B00989783 /* ObservingTrees_3-20min.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6458E5B91C5BFA0B00989783 /* ObservingTrees_3-20min.mp3 */; };
+		6458E5BD1C5C481D00989783 /* WalkObservingBody_1-16min.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6458E5BB1C5C481D00989783 /* WalkObservingBody_1-16min.mp3 */; };
+		6458E5BE1C5C481D00989783 /* Standing_1-16min.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6458E5BC1C5C481D00989783 /* Standing_1-16min.mp3 */; };
 		6494AB151C4986D600705320 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6494AB0F1C4986D600705320 /* ParseFacebookUtils.framework */; };
 		6494AB161C4986D600705320 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6494AB101C4986D600705320 /* ParseFacebookUtilsV4.framework */; };
 		6494AB171C4986D600705320 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6494AB111C4986D600705320 /* ParseTwitterUtils.framework */; };
@@ -188,6 +190,8 @@
 		645510AE1C4E99FA00BB1C4C /* WalkingPostureShort_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WalkingPostureShort_2.mp3; sourceTree = "<group>"; };
 		6458E5B71C5BF1BA00989783 /* Standing_2min.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Standing_2min.mp3; sourceTree = "<group>"; };
 		6458E5B91C5BFA0B00989783 /* ObservingTrees_3-20min.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ObservingTrees_3-20min.mp3"; sourceTree = "<group>"; };
+		6458E5BB1C5C481D00989783 /* WalkObservingBody_1-16min.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "WalkObservingBody_1-16min.mp3"; sourceTree = "<group>"; };
+		6458E5BC1C5C481D00989783 /* Standing_1-16min.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Standing_1-16min.mp3"; sourceTree = "<group>"; };
 		6494AB0F1C4986D600705320 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = ../ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		6494AB101C4986D600705320 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = ../ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		6494AB111C4986D600705320 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = ../ParseTwitterUtils.framework; sourceTree = "<group>"; };
@@ -430,6 +434,8 @@
 		6455109F1C4E99FA00BB1C4C /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				6458E5BB1C5C481D00989783 /* WalkObservingBody_1-16min.mp3 */,
+				6458E5BC1C5C481D00989783 /* Standing_1-16min.mp3 */,
 				6458E5B91C5BFA0B00989783 /* ObservingTrees_3-20min.mp3 */,
 				6458E5B71C5BF1BA00989783 /* Standing_2min.mp3 */,
 				6429C2571C4EA86300E845F9 /* test1.mp3 */,
@@ -580,6 +586,7 @@
 				645510B81C4E99FA00BB1C4C /* WalkingEmotions_3.mp3 in Resources */,
 				64DC05C51B5F146800D4CDF6 /* Main.storyboard in Resources */,
 				6458E5B81C5BF1BA00989783 /* Standing_2min.mp3 in Resources */,
+				6458E5BE1C5C481D00989783 /* Standing_1-16min.mp3 in Resources */,
 				6429C25D1C4EA86300E845F9 /* test3.mp3 in Resources */,
 				64DC05B81B5ECB5E00D4CDF6 /* Login.storyboard in Resources */,
 				64DC05BF1B5ECD1900D4CDF6 /* Walk.storyboard in Resources */,
@@ -592,6 +599,7 @@
 				645510B01C4E99FA00BB1C4C /* ObserveTrees_4.mp3 in Resources */,
 				52D9F1AA1AF9181B00C3DCF3 /* Images.xcassets in Resources */,
 				645510B61C4E99FA00BB1C4C /* WalkingAwarenessofSurroundings_3.mp3 in Resources */,
+				6458E5BD1C5C481D00989783 /* WalkObservingBody_1-16min.mp3 in Resources */,
 				645510B91C4E99FA00BB1C4C /* WalkingFeelings_3.mp3 in Resources */,
 				645510B71C4E99FA00BB1C4C /* WalkingBreathingShort_3.mp3 in Resources */,
 				645510B41C4E99FA00BB1C4C /* TreeCircle_5.mp3 in Resources */,

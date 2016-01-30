@@ -54,9 +54,9 @@ class ConditionViewController: UIViewController {
     
     @IBAction func LongButton(sender: UIButton) {
         // 40 min
-        self.meditationCondition = "C"
+        //self.meditationCondition = "C"
         // SHORT AUDIO FILES FOR TESTING:
-        //self.meditationCondition = "test"
+        self.meditationCondition = "test"
         chooseButton(sender, text: "30 min")
         resetShortButton()
         resetMediumButton()
