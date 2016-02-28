@@ -3,4 +3,4 @@
 
 xcodebuild clean -project ZenWalk -configuration Release -alltargets
 xcodebuild archive -project ZenWalk.xcodeproj -scheme ZenWalk -archivePath ZenWalk.xcarchive
-xcodebuild -exportArchive -archivePath ZenWalk.xcarchive -exportPath ZenWalk -exportFormat ipa -exportProvisioningProfile "Delta Lab"
+xcodebuild -exportArchive -archivePath ZenWalk.xcarchive -exportPath ZenWalk -exportFormat ipa -exportProvisioningProfile "Delta"

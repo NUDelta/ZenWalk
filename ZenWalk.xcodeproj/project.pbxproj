@@ -96,6 +96,14 @@
 		64DC05C11B5F128A00D4CDF6 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC05C01B5F128A00D4CDF6 /* UserProfileViewController.swift */; };
 		64DC05C31B5F12B600D4CDF6 /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DC05C21B5F12B600D4CDF6 /* UserInfo.storyboard */; };
 		64DC05C51B5F146800D4CDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DC05C41B5F146800D4CDF6 /* Main.storyboard */; };
+		64E168DB1C724AC300855524 /* End_3-03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E168D71C724AC300855524 /* End_3-03.mp3 */; };
+		64E168DC1C724AC300855524 /* Standing_3-20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E168D81C724AC300855524 /* Standing_3-20.mp3 */; };
+		64E168DD1C724AC300855524 /* FindAnotherTree_1-05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E168D91C724AC300855524 /* FindAnotherTree_1-05.mp3 */; };
+		64E168DE1C724AC300855524 /* CircleFirstTree_2-48.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E168DA1C724AC300855524 /* CircleFirstTree_2-48.mp3 */; };
+		64E168E01C724C0300855524 /* CircleNextTree_2-33.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E168DF1C724C0300855524 /* CircleNextTree_2-33.mp3 */; };
+		64E3991C1C839FBA00E99C53 /* WalkingBreathingLong_1-42.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E399191C839FBA00E99C53 /* WalkingBreathingLong_1-42.mp3 */; };
+		64E3991D1C839FBA00E99C53 /* WalkingPosture_5-37.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E3991A1C839FBA00E99C53 /* WalkingPosture_5-37.mp3 */; };
+		64E3991E1C839FBA00E99C53 /* WalkingObserveSurroundings_4-00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E3991B1C839FBA00E99C53 /* WalkingObserveSurroundings_4-00.mp3 */; };
 		64E7D4C11B5D744B00FCF61B /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E7D4C01B5D744B00FCF61B /* EndViewController.swift */; };
 		64F740A91B5CBB370024D45D /* WalksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F740A81B5CBB370024D45D /* WalksListViewController.swift */; };
 /* End PBXBuildFile section */
@@ -209,6 +217,14 @@
 		64DC05C01B5F128A00D4CDF6 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		64DC05C21B5F12B600D4CDF6 /* UserInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UserInfo.storyboard; path = ../UserInfo.storyboard; sourceTree = "<group>"; };
 		64DC05C41B5F146800D4CDF6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		64E168D71C724AC300855524 /* End_3-03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "End_3-03.mp3"; sourceTree = "<group>"; };
+		64E168D81C724AC300855524 /* Standing_3-20.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Standing_3-20.mp3"; sourceTree = "<group>"; };
+		64E168D91C724AC300855524 /* FindAnotherTree_1-05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "FindAnotherTree_1-05.mp3"; sourceTree = "<group>"; };
+		64E168DA1C724AC300855524 /* CircleFirstTree_2-48.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "CircleFirstTree_2-48.mp3"; sourceTree = "<group>"; };
+		64E168DF1C724C0300855524 /* CircleNextTree_2-33.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "CircleNextTree_2-33.mp3"; sourceTree = "<group>"; };
+		64E399191C839FBA00E99C53 /* WalkingBreathingLong_1-42.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "WalkingBreathingLong_1-42.mp3"; sourceTree = "<group>"; };
+		64E3991A1C839FBA00E99C53 /* WalkingPosture_5-37.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "WalkingPosture_5-37.mp3"; sourceTree = "<group>"; };
+		64E3991B1C839FBA00E99C53 /* WalkingObserveSurroundings_4-00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "WalkingObserveSurroundings_4-00.mp3"; sourceTree = "<group>"; };
 		64E7D4C01B5D744B00FCF61B /* EndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
 		64F740A81B5CBB370024D45D /* WalksListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalksListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -434,6 +450,10 @@
 		6455109F1C4E99FA00BB1C4C /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				64E399191C839FBA00E99C53 /* WalkingBreathingLong_1-42.mp3 */,
+				64E3991A1C839FBA00E99C53 /* WalkingPosture_5-37.mp3 */,
+				64E3991B1C839FBA00E99C53 /* WalkingObserveSurroundings_4-00.mp3 */,
+				64E168DF1C724C0300855524 /* CircleNextTree_2-33.mp3 */,
 				6458E5BB1C5C481D00989783 /* WalkObservingBody_1-16min.mp3 */,
 				6458E5BC1C5C481D00989783 /* Standing_1-16min.mp3 */,
 				6458E5B91C5BFA0B00989783 /* ObservingTrees_3-20min.mp3 */,
@@ -456,6 +476,10 @@
 				645510AB1C4E99FA00BB1C4C /* WalkingObjofConsciousness_3.mp3 */,
 				645510AC1C4E99FA00BB1C4C /* WalkingPosture1_2.mp3 */,
 				645510AD1C4E99FA00BB1C4C /* WalkingPosture2_2.mp3 */,
+				64E168D71C724AC300855524 /* End_3-03.mp3 */,
+				64E168D81C724AC300855524 /* Standing_3-20.mp3 */,
+				64E168D91C724AC300855524 /* FindAnotherTree_1-05.mp3 */,
+				64E168DA1C724AC300855524 /* CircleFirstTree_2-48.mp3 */,
 				645510AE1C4E99FA00BB1C4C /* WalkingPostureShort_2.mp3 */,
 			);
 			path = Audio;
@@ -543,7 +567,6 @@
 				TargetAttributes = {
 					52D9F1991AF9181A00C3DCF3 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = W4E2C6X642;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -586,7 +609,9 @@
 				645510B81C4E99FA00BB1C4C /* WalkingEmotions_3.mp3 in Resources */,
 				64DC05C51B5F146800D4CDF6 /* Main.storyboard in Resources */,
 				6458E5B81C5BF1BA00989783 /* Standing_2min.mp3 in Resources */,
+				64E168DB1C724AC300855524 /* End_3-03.mp3 in Resources */,
 				6458E5BE1C5C481D00989783 /* Standing_1-16min.mp3 in Resources */,
+				64E168DC1C724AC300855524 /* Standing_3-20.mp3 in Resources */,
 				6429C25D1C4EA86300E845F9 /* test3.mp3 in Resources */,
 				64DC05B81B5ECB5E00D4CDF6 /* Login.storyboard in Resources */,
 				64DC05BF1B5ECD1900D4CDF6 /* Walk.storyboard in Resources */,
@@ -596,7 +621,9 @@
 				52D9F1AD1AF9181B00C3DCF3 /* LaunchScreen.xib in Resources */,
 				645510B11C4E99FA00BB1C4C /* ObserveTreesShort_4.mp3 in Resources */,
 				645510BD1C4E99FA00BB1C4C /* WalkingPostureShort_2.mp3 in Resources */,
+				64E3991D1C839FBA00E99C53 /* WalkingPosture_5-37.mp3 in Resources */,
 				645510B01C4E99FA00BB1C4C /* ObserveTrees_4.mp3 in Resources */,
+				64E168E01C724C0300855524 /* CircleNextTree_2-33.mp3 in Resources */,
 				52D9F1AA1AF9181B00C3DCF3 /* Images.xcassets in Resources */,
 				645510B61C4E99FA00BB1C4C /* WalkingAwarenessofSurroundings_3.mp3 in Resources */,
 				6458E5BD1C5C481D00989783 /* WalkObservingBody_1-16min.mp3 in Resources */,
@@ -605,11 +632,15 @@
 				645510B41C4E99FA00BB1C4C /* TreeCircle_5.mp3 in Resources */,
 				645510AF1C4E99FA00BB1C4C /* End.mp3 in Resources */,
 				6458E5BA1C5BFA0B00989783 /* ObservingTrees_3-20min.mp3 in Resources */,
+				64E168DE1C724AC300855524 /* CircleFirstTree_2-48.mp3 in Resources */,
 				645510B21C4E99FA00BB1C4C /* Standing_1.mp3 in Resources */,
 				645510BA1C4E99FA00BB1C4C /* WalkingObjofConsciousness_3.mp3 in Resources */,
+				64E168DD1C724AC300855524 /* FindAnotherTree_1-05.mp3 in Resources */,
 				645510BC1C4E99FA00BB1C4C /* WalkingPosture2_2.mp3 in Resources */,
 				6429C25C1C4EA86300E845F9 /* test2.mp3 in Resources */,
 				645510B51C4E99FA00BB1C4C /* TreeSpin_5.mp3 in Resources */,
+				64E3991C1C839FBA00E99C53 /* WalkingBreathingLong_1-42.mp3 in Resources */,
+				64E3991E1C839FBA00E99C53 /* WalkingObserveSurroundings_4-00.mp3 in Resources */,
 				6429C25B1C4EA86300E845F9 /* test1.mp3 in Resources */,
 				64DC05C31B5F12B600D4CDF6 /* UserInfo.storyboard in Resources */,
 			);
@@ -799,10 +830,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ZenWalk/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "228df4d3-4dc3-45b4-9b57-f30e5c4da934";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ZenWalk/OEBridging-Header.h";
 			};
 			name = Debug;
@@ -811,8 +842,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Northwestern University";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Northwestern University";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -822,10 +853,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ZenWalk/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "228df4d3-4dc3-45b4-9b57-f30e5c4da934";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ZenWalk/OEBridging-Header.h";
 			};
 			name = Release;
