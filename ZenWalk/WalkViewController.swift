@@ -74,28 +74,6 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
         var stages: [Stage] = []
         
         switch condition {
-            case "A":
-                let stage1 = Stage(moments: [conditionA_1], title: "Condition A 1")
-                let stage2 = Stage(moments: [conditionA_2], title: "Condition A 2")
-                let stage3 = Stage(moments: [conditionA_end], title: "Condition A 3")
-                stages = [stage1, stage2, stage3]
-                experienceManager = ExperienceManager(title: "condition A", stages: stages)
-                break
-            case "B":
-                let stage1 = Stage(moments: [conditionB_1], title: "Condition B 1")
-                let stage2 = Stage(moments: [conditionB_2], title: "Condition B 2")
-                let stage3 = Stage(moments: [conditionB_3], title: "Condition B 3")
-                let stage4 = Stage(moments: [conditionB_end], title: "Condition B 4")
-                stages = [stage1, stage2, stage3, stage4]
-                experienceManager = ExperienceManager(title: "condition B", stages: stages)
-                break
-            case "C":
-                let stage1 = Stage(moments: [conditionC_1], title: "Condition C 1")
-                let stage2 = Stage(moments: [conditionC_2], title: "Condition C 2")
-                let stage3 = Stage(moments: [conditionC_end], title: "Condition C 3")
-                stages = [stage1, stage2, stage3]
-                experienceManager = ExperienceManager(title: "condition C", stages: stages)
-                break
             case "X":
                 let stage1 = Stage(moments: [conditionX_1], title: "Version X")
                 let stage2 = Stage(moments: [conditionX_2], title: "Version X")
@@ -108,12 +86,6 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
                 let stage1 = Stage(moments: [conditionY_1], title: "Version Y")
                 stages = [stage1]
                 experienceManager = ExperienceManager(title: "Version Y", stages: stages)
-                break
-            case "test":
-                let stage1 = Stage(moments: [test], title: "Test Stage 1")
-                let stage2 = Stage(moments: [test2], title: "Test Stage 2")
-                stages = [stage1, stage2]
-                experienceManager = ExperienceManager(title: "test", stages: stages)
                 break
             default:
                 experienceManager = ExperienceManager(title: "no condition", stages: stages)
@@ -167,6 +139,15 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
     func didFinishExperience() {
         if let navController = self.navigationController {
             //navController.popViewControllerAnimated(true)
+            // update the test condition information
+            if let u = PFUser.currentUser() {
+                if self.condition == "X" {
+                    u["completedX"] = true
+                }
+                else if self.condition == "Y" {
+                    u["completedY"] = true
+                }
+            }
             // change to segue to "FINISHED" view
             performSegueWithIdentifier("toEnd", sender: self)
         }

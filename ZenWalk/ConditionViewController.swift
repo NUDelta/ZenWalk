@@ -40,19 +40,21 @@ class ConditionViewController: UIViewController {
                         if (firstVersionIsX && !completedX) || (!firstVersionIsX && completedY) {
                             self.testCondition = "X"
                         } else {
+                            print("condition Y")
                             self.testCondition = "Y"
                         }
                 } else {
                     print("User not found")
                 }
+                if self.testCondition == "X" {
+                    print("label condition X")
+                    self.testConditionLabel.text = "Condition X"
+                }
+                else if self.testCondition == "Y" {
+                    print("label condition Y")
+                    self.testConditionLabel.text = "Condition Y"
+                }
             })
-        }
-        
-        if testCondition == "X" {
-            self.testConditionLabel.text = "Condition X"
-        }
-        else if testCondition == "Y" {
-            self.testConditionLabel.text = "Condition Y"
         }
     }
     

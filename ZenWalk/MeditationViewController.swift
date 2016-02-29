@@ -473,10 +473,10 @@ class MeditationViewController: UIViewController, AVAudioPlayerDelegate,CLLocati
         theMap.showsUserLocation = true
         
         // Set up the language model
-        var lmGenerator : OELanguageModelGenerator = OELanguageModelGenerator()
-        var words : [String] = ["light", "dark", "medium", "brown", "lime", "black", "red", "orange", "yellow", "green", "blue", "purple", "turquoise", "pink", "white", "magenta", "violet", "maroon", "gray", "rainbow"]
-        var name = "languageModelFiles"
-        var error = lmGenerator.generateLanguageModelFromArray(words, withFilesNamed: name, forAcousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"))
+        let lmGenerator : OELanguageModelGenerator = OELanguageModelGenerator()
+        let words : [String] = ["light", "dark", "medium", "brown", "lime", "black", "red", "orange", "yellow", "green", "blue", "purple", "turquoise", "pink", "white", "magenta", "violet", "maroon", "gray", "rainbow"]
+        let name = "languageModelFiles"
+        let error = lmGenerator.generateLanguageModelFromArray(words, withFilesNamed: name, forAcousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"))
         
         var lmPath : String = String()
         var dicPath : String = String()
