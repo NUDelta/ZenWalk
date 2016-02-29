@@ -1,6 +1,6 @@
 //
 //  DataManager.swift
-//  ZombieRunX
+//  Zombies Interactive
 //
 //  Created by Henry Spindell on 10/2/15.
 //  Copyright © 2015 Scott Cambo. All rights reserved.
@@ -17,14 +17,15 @@ enum Sensor: String {
     case Location = "location",
         Accel = "accel",
         Altitude = "altitude",
-        Speed = "speed"
+        Speed = "speed",
+        MotionActivity = "motion_activity"
 }
 
 class DataManager : NSObject, CLLocationManagerDelegate {
     
     var experience: Experience?
-//    var motionManager = CMMotionManager()
     var locationManager = CLLocationManager()
+    var motionActivityManager = CMMotionActivityManager()
     var dataEvent: DataEvent?
     var currentLocation: CLLocation?
     
@@ -40,19 +41,21 @@ class DataManager : NSObject, CLLocationManagerDelegate {
         self.locationManager.requestAlwaysAuthorization()
     }
     
-    func recordPointOfInterest(information: Any?) {
-        
-        print("  Recording point of interest")
-        let pointOfInterest = PointOfInterest()
-        if let infoDict = information as? [String : String] {
-            pointOfInterest.trigger = infoDict["trigger"]
-            pointOfInterest.label = infoDict["label"]
-            pointOfInterest.interaction = infoDict["interaction"]
-        }
-        pointOfInterest.experience = experience
-        pointOfInterest.location = PFGeoPoint(location: locationManager.location)
-        pointOfInterest.saveInBackground()
-    }
+    // TODO: why is this function running for no reason sometimes..?
+//    func recordWorldObject(information: Any?) {
+//        print(information)
+//        print("  datamanager->recording world object")
+//        let worldObject = WorldObject()
+//        if let infoDict = information as? [String : String] {
+//            worldObject.trigger = infoDict["trigger"]
+//            worldObject.label = infoDict["label"]
+//            worldObject.interaction = infoDict["interaction"]
+//        }
+//        worldObject.experience = experience
+//        worldObject.location = PFGeoPoint(location: locationManager.location)
+//        worldObject.verified = true
+//        worldObject.saveInBackground()
+//    }
     
     
     func startCollecting(information:Any?){
@@ -80,6 +83,19 @@ class DataManager : NSObject, CLLocationManagerDelegate {
                     print("  recording \(sensor)")
                 case Sensor.Speed.rawValue:
                     print("  recording \(sensor)")
+                case Sensor.MotionActivity.rawValue:
+                    print(" recording \(sensor)")
+                    
+                    if(CMMotionActivityManager.isActivityAvailable()) {
+                        self.motionActivityManager.startActivityUpdatesToQueue(NSOperationQueue.mainQueue()) { data in
+                            if let data = data {
+                                dispatch_async(dispatch_get_main_queue()) {
+                                    self.saveMotionActivityUpdate(data)
+                                }
+                            }
+                        }
+                    }
+                    
                 default:
                     print("  data type \(sensor) does not exist")
                 }
@@ -89,11 +105,11 @@ class DataManager : NSObject, CLLocationManagerDelegate {
     
     
     func stopCollecting(){
+        print("  stopped recording data")
+        self.motionActivityManager.stopActivityUpdates()
         self.dataEvent?.endDate = NSDate()
         self.dataEvent?.saveInBackground()
     }
-    
-    
     
     func startUpdatingLocation() {
         self.locationManager.startUpdatingLocation()
@@ -114,5 +130,30 @@ class DataManager : NSObject, CLLocationManagerDelegate {
         locationUpdate.speed = currentLocation!.speed
         locationUpdate.saveInBackground()
     }
+    
+    func saveMotionActivityUpdate(data:CMMotionActivity) {
+        var activityState = "other"
+        if(data.stationary == true) {
+            activityState = "stationary"
+        } else if (data.walking == true) {
+            activityState = "walking"
+        } else if (data.running == true) {
+            activityState = "running"
+        } else if (data.automotive == true) {
+            activityState = "automotive"
+        } else if (data.cycling == true) {
+            activityState = "cycling"
+        } else if data.unknown == true {
+            activityState = "unknown"
+        }
+        
+        let motionActivityUpdate = MotionActivityUpdate()
+        motionActivityUpdate.experience = self.experience
+        motionActivityUpdate.location = PFGeoPoint(location: locationManager.location)
+        motionActivityUpdate.state = activityState
+        motionActivityUpdate.confidence = data.confidence.rawValue
+        motionActivityUpdate.saveInBackground()
+    }
+    
 
 }

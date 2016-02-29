@@ -1,6 +1,6 @@
 //
-//  PointOfInterest.swift
-//  ZombieRunX
+//  WorldObject.swift
+//  Zombies Interactive
 //
 //  Created by Henry Spindell on 10/16/15.
 //  Copyright © 2015 Scott Cambo, Henry Spindell, & Delta Lab NU. All rights reserved.
@@ -9,13 +9,18 @@
 import Foundation
 import Parse
 
-class PointOfInterest : PFObject, PFSubclassing {
+class WorldObject : PFObject, PFSubclassing {
     
     @NSManaged var experience: Experience?
     @NSManaged var location: PFGeoPoint?
     @NSManaged var trigger: String?
     @NSManaged var label: String?
     @NSManaged var interaction: String?
+    
+    var verified: Bool {
+        get { return self["verified"] as! Bool }
+        set { self["verified"] = newValue }
+    }
     
     override class func initialize() {
         struct Static {
@@ -27,7 +32,7 @@ class PointOfInterest : PFObject, PFSubclassing {
     }
     
     static func parseClassName() -> String {
-        return "PointOfInterest"
+        return "WorldObject"
     }
     
 }

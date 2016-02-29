@@ -17,6 +17,10 @@ import MediaPlayer
 @objc protocol ExperienceManagerDelegate {
     optional func didBeginMoment()
     optional func didFinishMoment()
+    optional func didBeginInterim()
+    optional func didFinishInterim()
+    optional func didBeginSound()
+    optional func didFinishSound()
     optional func didBeginStage()
     optional func didFinishStage()
     optional func didFinishExperience()
@@ -37,8 +41,6 @@ class ExperienceManager: NSObject, OpportunityManagerDelegate {
     var experienceStarted = false
     var experience: Experience?
     var delegate: ExperienceManagerDelegate?
-    
-    var audioSession: AVAudioSession = AVAudioSession.sharedInstance()
     
     var opportunityTimer = NSTimer()
     
@@ -74,50 +76,49 @@ class ExperienceManager: NSObject, OpportunityManagerDelegate {
             stage.eventManager.listenTo("stageFinished", action: nextStage)
             stage.eventManager.listenTo("startingInterim", action: handleInterimStart)
             stage.eventManager.listenTo("startingSound", action: handleSoundStart)
+            stage.eventManager.listenTo("choseRandomInteraction", action: updateInteractionPool)
             
             if let dataManager = dataManager {
                 stage.eventManager.listenTo("sensorCollectorStarted", action: dataManager.startCollecting)
                 stage.eventManager.listenTo("sensorCollectorEnded", action: dataManager.stopCollecting)
                 
-                stage.eventManager.listenTo("foundPointOfInterest", action: dataManager.recordPointOfInterest)
+//                stage.eventManager.listenTo("foundWorldObject", action: dataManager.recordWorldObject)
             }
         }
-        
-        // Temporary fix because loading of mission view controller stops music
-        do {
-            try self.audioSession.setCategory(AVAudioSessionCategoryPlayback, withOptions: .MixWithOthers)
-            try self.audioSession.setActive(false, withOptions: .NotifyOthersOnDeactivation)
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
+
     
     }
     
     func handleInterimStart(information: Any?) {
-        setAVSessionForSilence()
+        delegate?.didBeginInterim?()
+        
         if let _ = opportunityManager {
             resetOpportunityTimer(information)
         }
     }
     
     func handleSoundStart(information: Any?) {
-        setAVSessionForSound()
-    }
-
-    // move some of this music logic to view controller, will likely be different for each app
-    func setAVSessionForSilence() {
-        // don't try to play the system player if it's in simulator
-        #if (arch(i386) || arch(x86_64)) && os(iOS)
-        #else
-        MPMusicPlayerController.systemMusicPlayer().play()
-        #endif
+        delegate?.didBeginSound?()
     }
     
-    func setAVSessionForSound() {
-        if self.audioSession.otherAudioPlaying {
-            MPMusicPlayerController.systemMusicPlayer().pause()
+    func updateInteractionPool(information: Any?) {
+
+        if let infoDict = information as? [String : String],
+            interactionTitle = infoDict["interactionTitle"] {
+            print("  removing \(interactionTitle) from pool")
+                
+            // remove this interaction from potentially being included in  future stages
+            for stage in stages {
+                if let idx = stage.interactionPool?.indexOf({ (interaction) -> Bool in
+                    return interaction.title == interactionTitle
+                }) {
+                    stage.interactionPool?.removeAtIndex(idx)
+                }
+            }
+        
         }
     }
+
     
     func start() {
         print("\nExperience started")
@@ -173,18 +174,20 @@ class ExperienceManager: NSObject, OpportunityManagerDelegate {
         self.experience?.completed = true
         self.experience?.saveInBackground()
         
-        do {
-            try AVAudioSession.sharedInstance().setActive(false, withOptions: .NotifyOthersOnDeactivation)
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
+        if experience?.title == "Version X" {
+            if let u = PFUser.currentUser() {
+                u["completedX"] = true
+                u.saveInBackground()
+            }
+        } else if experience?.title == "Version Y" {
+            if let u = PFUser.currentUser() {
+                u["completedY"] = true
+                u.saveInBackground()
+            }
         
+        }
+  
         delegate?.didFinishExperience?()
-        
-        let systemPlayer = MPMusicPlayerController.systemMusicPlayer()
-        if let _ = systemPlayer.nowPlayingItem {
-            systemPlayer.play()
-        }
     }
     
     

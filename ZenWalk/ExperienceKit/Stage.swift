@@ -1,6 +1,6 @@
 //
 //  Stage.swift
-//  ZombieRunX
+//  Zombies Interactive
 //
 //  Created by Scott Cambo on 8/19/15.
 //  Copyright (c) 2015 Scott Cambo. All rights reserved.
@@ -46,7 +46,7 @@ class Stage: NSObject{
             moment.eventManager.listenTo("nextMoment", action: nextMoment)
             moment.eventManager.listenTo("startingInterim", action: startingInterim)
             moment.eventManager.listenTo("startingSound", action: startingSound)
-            moment.eventManager.listenTo("foundPointOfInterest", action: recordPointOfInterest)
+            moment.eventManager.listenTo("foundWorldObject", action: recordWorldObject)
         }
     }
     
@@ -100,7 +100,10 @@ class Stage: NSObject{
     
     func nextMoment() {
         
+        // TODO this is sloppy checking types, fix this
         if let _ = self.currentMoment as? SensorCollector {
+            self.eventManager.trigger("sensorCollectorEnded")
+        } else if let _ = self.currentMoment as? CollectorWithSound {
             self.eventManager.trigger("sensorCollectorEnded")
         }
         
@@ -109,6 +112,9 @@ class Stage: NSObject{
         
         if self.currentMomentIdx < moments.count {
             if let currentMoment = self.currentMoment as? SensorCollector {
+                self.eventManager.trigger("sensorCollectorStarted",
+                    information: ["sensors": currentMoment.sensors.rawValues, "label": currentMoment.dataLabel, "interaction": currentMoment.title])
+            } else if let currentMoment = self.currentMoment as? CollectorWithSound {
                 self.eventManager.trigger("sensorCollectorStarted",
                     information: ["sensors": currentMoment.sensors.rawValues, "label": currentMoment.dataLabel, "interaction": currentMoment.title])
             }
@@ -124,8 +130,9 @@ class Stage: NSObject{
         self.nextMoment()
     }
     
-    func recordPointOfInterest(information: Any?) {
-        self.eventManager.trigger("foundPointOfInterest", information: information)
+    func recordWorldObject(information: Any?) {
+        print(" stage.recordWorldObject called")
+        self.eventManager.trigger("foundWorldObject", information: information)
     }
     
     func insertMomentsAtIndex(insertedMoments:[Moment], idx:Int) {
@@ -134,7 +141,7 @@ class Stage: NSObject{
             moment.eventManager.listenTo("nextMoment", action: self.nextMoment)
             moment.eventManager.listenTo("startingInterim", action: self.startingInterim)
             moment.eventManager.listenTo("startingSound", action: self.startingSound)
-            moment.eventManager.listenTo("foundPointOfInterest", action: self.recordPointOfInterest)
+            moment.eventManager.listenTo("foundWorldObject", action: self.recordWorldObject)
         }
         
         self.moments = self.moments[0..<idx] + insertedMoments + self.moments[idx..<self.moments.count]

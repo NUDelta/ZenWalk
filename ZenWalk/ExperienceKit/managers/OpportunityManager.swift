@@ -1,6 +1,6 @@
 //
 //  OpportunityManager.swift
-//  ZombieRunX
+//  Zombies Interactive
 //
 //  Created by Henry Spindell on 11/7/15.
 //  Copyright © 2015 Scott Cambo, Henry Spindell, & Delta Lab NU. All rights reserved.
@@ -89,11 +89,6 @@ class OpportunityManager: NSObject {
                 where region.containsCoordinate(userLocation) == false {
                     return 0
                 }
-                break
-                
-            default:
-                // some condition is not handled, we'll assume it isn't met
-                return 0
                 break
             
             }

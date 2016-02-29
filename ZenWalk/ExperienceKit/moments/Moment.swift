@@ -1,6 +1,6 @@
 //
 //  Moment.swift
-//  ZombieRunX
+//  Zombies Interactive
 //
 //  Created by Henry Spindell on 10/2/15.
 //  Copyright © 2015 Scott Cambo. All rights reserved.
