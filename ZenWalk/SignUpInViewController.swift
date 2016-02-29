@@ -53,8 +53,11 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBAction func logInSignUpButton(sender: UIButton) {
-        var userUsername = usernameTextField.text!.lowercaseString
-        var userPassword = passwordTextField.text
+        let userUsername = usernameTextField.text!.lowercaseString
+        let userPassword = passwordTextField.text
+        
+        /* for test, just user the same invisible password for everyone
+        */
         
         // Start activity indicator
         activityIndicator.hidden = false
@@ -81,10 +84,10 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
             }
         } else {
             // Create the user
-            var user = PFUser()
+            let user = PFUser()
             user.username = userUsername
             user.password = userPassword
-            // user.email =
+            // user.email = (optional)
             
             user.signUpInBackgroundWithBlock {
                 (succeeded: Bool, error: NSError?) -> Void in
@@ -108,8 +111,8 @@ class SignUpInViewController: UIViewController, UITextFieldDelegate {
     }
     
     func segueToHome() {
-        var storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var vc = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
         self.showViewController(vc, sender: self)
     }
 

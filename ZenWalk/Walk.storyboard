@@ -18,27 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzw-5q-5i1">
-                                <rect key="frame" x="148" y="238" width="93" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="93" id="B89-RY-AAP"/>
-                                    <constraint firstAttribute="height" constant="55" id="acP-xE-ys7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="15 min">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="shortButton:" destination="jZB-IC-zyV" eventType="touchUpInside" id="dlu-Dn-A8l"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How long do you want to walk?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8v-dr-iot">
-                                <rect key="frame" x="16" y="150" width="568" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p16-1R-64D">
                                 <rect key="frame" x="214" y="347" width="172" height="98"/>
                                 <color key="backgroundColor" red="0.90185032249999997" green="0.81628803979999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,57 +35,20 @@
                                     <action selector="startButton:" destination="jZB-IC-zyV" eventType="touchUpInside" id="gaf-z2-dZG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7c-SY-noe">
-                                <rect key="frame" x="257" y="238" width="86" height="55"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="20">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="mediumButton:" destination="jZB-IC-zyV" eventType="touchUpInside" id="XmH-9S-iCY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJR-mc-hE1">
-                                <rect key="frame" x="364" y="238" width="86" height="55"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="30">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="LongButton:" destination="jZB-IC-zyV" eventType="touchUpInside" id="TFC-BY-dTg"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="ConditionA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d47-oc-EVK">
+                                <rect key="frame" x="188" y="227" width="226" height="85"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="37"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="l7c-SY-noe" secondAttribute="centerX" id="04E-S1-AGt"/>
-                            <constraint firstAttribute="centerY" secondItem="i8v-dr-iot" secondAttribute="centerY" constant="139.5" id="1Be-A2-rEb"/>
-                            <constraint firstItem="l7c-SY-noe" firstAttribute="leading" secondItem="Jzw-5q-5i1" secondAttribute="trailing" constant="19" id="7fg-2t-z4j"/>
-                            <constraint firstItem="i8v-dr-iot" firstAttribute="leading" secondItem="8JY-ng-qTx" secondAttribute="leadingMargin" id="A21-D2-ihA"/>
-                            <constraint firstItem="l7c-SY-noe" firstAttribute="width" secondItem="LJR-mc-hE1" secondAttribute="width" id="C41-Hg-84g"/>
+                            <constraint firstItem="d47-oc-EVK" firstAttribute="centerX" secondItem="8JY-ng-qTx" secondAttribute="centerX" id="73D-bg-cEj"/>
                             <constraint firstAttribute="centerY" secondItem="p16-1R-64D" secondAttribute="centerY" constant="-96" id="DWy-CI-SKN"/>
-                            <constraint firstItem="l7c-SY-noe" firstAttribute="width" secondItem="LJR-mc-hE1" secondAttribute="width" constant="-15" id="DZ1-Hp-Uyb"/>
-                            <constraint firstAttribute="centerY" secondItem="Jzw-5q-5i1" secondAttribute="centerY" constant="35" id="I1U-jy-Sje"/>
                             <constraint firstAttribute="centerX" secondItem="p16-1R-64D" secondAttribute="centerX" id="PvB-2d-a0B"/>
-                            <constraint firstAttribute="centerY" secondItem="l7c-SY-noe" secondAttribute="centerY" constant="34.5" id="c8M-Vk-vtv"/>
-                            <constraint firstAttribute="centerX" secondItem="Jzw-5q-5i1" secondAttribute="centerX" constant="105.5" id="cSl-8f-xOY"/>
-                            <constraint firstItem="LJR-mc-hE1" firstAttribute="leading" secondItem="l7c-SY-noe" secondAttribute="trailing" constant="21" id="cbd-HK-SDn"/>
-                            <constraint firstItem="l7c-SY-noe" firstAttribute="height" secondItem="LJR-mc-hE1" secondAttribute="height" id="dn2-pc-0HY"/>
-                            <constraint firstItem="l7c-SY-noe" firstAttribute="height" secondItem="Jzw-5q-5i1" secondAttribute="height" id="ffu-Qm-4q3"/>
-                            <constraint firstAttribute="centerY" secondItem="LJR-mc-hE1" secondAttribute="centerY" constant="34.5" id="l0p-Vf-Pcg"/>
-                            <constraint firstItem="l7c-SY-noe" firstAttribute="width" secondItem="Jzw-5q-5i1" secondAttribute="width" constant="-7" id="opc-Yo-dum"/>
-                            <constraint firstAttribute="centerY" secondItem="l7c-SY-noe" secondAttribute="centerY" constant="34.5" id="rI4-Tv-hBM"/>
-                            <constraint firstAttribute="centerX" secondItem="l7c-SY-noe" secondAttribute="centerX" id="zeP-tL-24f"/>
-                            <constraint firstItem="i8v-dr-iot" firstAttribute="trailing" secondItem="8JY-ng-qTx" secondAttribute="trailingMargin" id="zkm-Fy-zuM"/>
+                            <constraint firstItem="d47-oc-EVK" firstAttribute="width" secondItem="8JY-ng-qTx" secondAttribute="width" id="qtP-gP-d6x"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="7fg-2t-z4j"/>
-                                <exclude reference="DZ1-Hp-Uyb"/>
-                            </mask>
-                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="New Walk" id="nvJ-px-aDZ">
@@ -118,9 +60,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="longButton" destination="LJR-mc-hE1" id="hKV-du-8DJ"/>
-                        <outlet property="mediumButton" destination="l7c-SY-noe" id="20r-TX-6Om"/>
-                        <outlet property="shortButton" destination="Jzw-5q-5i1" id="foL-SQ-fJg"/>
+                        <outlet property="testConditionLabel" destination="d47-oc-EVK" id="YOJ-aU-bj9"/>
                         <segue destination="3ZB-rs-7jK" kind="show" identifier="toWalk" id="8rQ-mf-2iD"/>
                     </connections>
                 </viewController>

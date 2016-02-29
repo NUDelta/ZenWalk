@@ -23,7 +23,7 @@ class WaitForWord: Interim{
     
     init(wordsToRecognize: [String], lengthInSeconds: Float, interruptable:Bool=false, title:String?=nil){
         openEarsController = OpenEarsController(wordsToRecognize: wordsToRecognize)
-        super.init(lengthInSeconds: lengthInSeconds, interruptable:interruptable, title: title ?? "Wait For \(wordsToRecognize)")
+        super.init(isInterruptable:interruptable, title: title ?? "Wait For \(wordsToRecognize)", lengthInSeconds: lengthInSeconds)
         openEarsController.events.listenTo("heardWord", action: self.heard)
     }
     

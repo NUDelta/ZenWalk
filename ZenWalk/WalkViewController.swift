@@ -48,10 +48,6 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
         let conditionA_end = Sound(fileNames: ["End"])
         
         
-        // 20 min
-//        let conditionB_1 = Sound(fileNames: ["Standing_2min", "WalkingPosture1_2", "WalkingPosture2_2"])
-//        let conditionB_2 = CollectorWithSound(fileNames: ["ObserveTrees_4", "TreeSpin_5"], title: "Spin next to tree B", dataLabel: "tree", sensors: [.Location, .Accel])
-//        let conditionB_end = Sound(fileNames: ["End"])
         let conditionB_1 = Sound(fileNames: ["Standing_3-20", "WalkObservingBody_1-16min", "WalkingBreathingShort_3"])
         let conditionB_2 = CollectorWithSound(fileNames: ["ObservingTrees_3-20min", "CircleFirstTree_2-48"], title: "Circle around tree B", dataLabel: "tree", sensors: [.Location, .Accel])
         let conditionB_3 = CollectorWithSound(fileNames: ["FindAnotherTree_1-05", "CircleNextTree_2-33"], title: "Circle around another B", dataLabel: "tree", sensors: [.Location, .Accel])
@@ -62,11 +58,6 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
         let conditionC_2 = CollectorWithSound(fileNames: ["ObserveTrees_4", "TreeCircle_5"], title: "Walk in Circle Around Tree C", dataLabel: "tree", sensors: [.Location])
         let conditionC_end = Sound(fileNames: ["End"])
 
-        /*
-        let conditionD_1 = Sound(fileNames: ["Standing_1", "WalkingPosture1_2", "WalkingPosture2_2", "WalkingFeelings_3", "WalkingEmotion_3", "WalkingObjofConsciousness_3", "WalkingAwarenessofSurroundings_3"])
-        let conditionD_2 = CollectorWithSound(fileNames: ["ObserveTrees_4", "TreeCircle_5"], title: "Walk in Circle Around Tree C", dataLabel: "tree", sensors: [.Location])
-        let conditionD_end = Sound(fileNames: ["End"])
-        */
         
         /* USER STUDY CONDITIONS:
         * X - Interactive
@@ -106,17 +97,17 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
                 experienceManager = ExperienceManager(title: "condition C", stages: stages)
                 break
             case "X":
-                let stage1 = Stage(moments: [conditionX_1], title: "Condition X 1")
-                let stage2 = Stage(moments: [conditionX_2], title: "Condition X 2")
-                let stage3 = Stage(moments: [conditionX_3], title: "Condition X 3")
-                let stage4 = Stage(moments: [conditionX_end], title: "Condition X 4")
+                let stage1 = Stage(moments: [conditionX_1], title: "Version X")
+                let stage2 = Stage(moments: [conditionX_2], title: "Version X")
+                let stage3 = Stage(moments: [conditionX_3], title: "Version X")
+                let stage4 = Stage(moments: [conditionX_end], title: "Version X")
                 stages = [stage1, stage2, stage3, stage4]
-                experienceManager = ExperienceManager(title: "condition X", stages: stages)
+                experienceManager = ExperienceManager(title: "Version X", stages: stages)
                 break
             case "Y":
-                let stage1 = Stage(moments: [conditionY_1], title: "Condition Y")
+                let stage1 = Stage(moments: [conditionY_1], title: "Version Y")
                 stages = [stage1]
-                experienceManager = ExperienceManager(title: "condition Y", stages: stages)
+                experienceManager = ExperienceManager(title: "Version Y", stages: stages)
                 break
             case "test":
                 let stage1 = Stage(moments: [test], title: "Test Stage 1")

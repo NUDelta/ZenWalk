@@ -12,92 +12,58 @@ import UIKit
 class ConditionViewController: UIViewController {
     
     /*
-        Conditions
-        A: standing, walking (posture), observe trees, spin tree [21 min]
-        B:
-        C:
+        Testing Conditions
+        Will show one of X or Y
 
     */
     
-    @IBOutlet weak var shortButton: UIButton!
-    @IBOutlet weak var mediumButton: UIButton!
-    @IBOutlet weak var longButton: UIButton!
     
-    var meditationCondition: String = "A"
+    var testCondition: String = "X"
     let defaults = NSUserDefaults.standardUserDefaults()
     var selectColor:UIColor = UIColor.lightGrayColor()
-    
+    @IBOutlet weak var testConditionLabel: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.setNavigationBarHidden(false, animated: true)
         self.navigationItem.setHidesBackButton(false, animated: false)
-        shortButton.backgroundColor = selectColor
+        
+        // Get the user's test condition
+        if let q = PFUser.query(), u = PFUser.currentUser(), username = u.username {
+            q.whereKey("username", equalTo: username)
+            q.findObjectsInBackgroundWithBlock({(objects, error) -> Void in
+                if let objs = objects, user = objs.first as? PFUser,
+                    firstVersionIsX = user["firstVersionIsX"] as? Bool,
+                    completedX = user["completedX"] as? Bool,
+                    completedY = user["completedY"] as? Bool {
+                        if (firstVersionIsX && !completedX) || (!firstVersionIsX && completedY) {
+                            self.testCondition = "X"
+                        } else {
+                            self.testCondition = "Y"
+                        }
+                } else {
+                    print("User not found")
+                }
+            })
+        }
+        
+        if testCondition == "X" {
+            self.testConditionLabel.text = "Condition X"
+        }
+        else if testCondition == "Y" {
+            self.testConditionLabel.text = "Condition Y"
+        }
     }
     
-    @IBAction func shortButton(sender: UIButton) {
-        // 20 min
-        self.meditationCondition = "A"
-        chooseButton(sender, text: "15 min")
-        resetMediumButton()
-        resetLongButton()
-    }
-    
-    @IBAction func mediumButton(sender: UIButton) {
-        // 30 min
-        self.meditationCondition = "B"
-        chooseButton(sender, text: "20 min")
-        resetShortButton()
-        resetLongButton()
-    }
-    
-    @IBAction func LongButton(sender: UIButton) {
-        // 40 min
-        //self.meditationCondition = "C"
-        // SHORT AUDIO FILES FOR TESTING:
-        self.meditationCondition = "test"
-        chooseButton(sender, text: "30 min")
-        resetShortButton()
-        resetMediumButton()
-    }
-    
-    
-    func chooseButton(sender: UIButton, text: String) {
-        sender.backgroundColor = selectColor
-        sender.setTitle(text, forState: UIControlState.Normal)
-    }
-    
-    
-    func resetShortButton() {
-        self.shortButton.backgroundColor = UIColor.whiteColor()
-        self.shortButton.setTitle("15", forState: UIControlState.Normal)
-    }
-    
-    func resetMediumButton() {
-        self.mediumButton.backgroundColor = UIColor.whiteColor()
-        self.mediumButton.setTitle("20", forState: UIControlState.Normal)
-    }
-    
-    func resetLongButton() {
-        self.longButton.backgroundColor = UIColor.whiteColor()
-        self.longButton.setTitle("30", forState: UIControlState.Normal)
-    }
     
     
     @IBAction func startButton(sender: UIButton) {
-        // If no time was selected, alert
-        /*if shortButton.backgroundColor != selectColor && mediumButton.backgroundColor != selectColor {
-            let alertController = UIAlertController(title: "Select an amount of time", message: "", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
-        } else {*/
         performSegueWithIdentifier("toWalk", sender: self)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
@@ -113,7 +79,7 @@ class ConditionViewController: UIViewController {
         if segue.identifier == "toWalk" {
             let svc = segue.destinationViewController as! WalkViewController
         
-            svc.condition = self.meditationCondition
+            svc.condition = self.testCondition
             //print("svc condition \(svc.condition)")
         }
     }

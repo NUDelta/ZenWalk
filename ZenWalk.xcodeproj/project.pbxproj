@@ -51,6 +51,8 @@
 		6458E5BA1C5BFA0B00989783 /* ObservingTrees_3-20min.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6458E5B91C5BFA0B00989783 /* ObservingTrees_3-20min.mp3 */; };
 		6458E5BD1C5C481D00989783 /* WalkObservingBody_1-16min.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6458E5BB1C5C481D00989783 /* WalkObservingBody_1-16min.mp3 */; };
 		6458E5BE1C5C481D00989783 /* Standing_1-16min.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6458E5BC1C5C481D00989783 /* Standing_1-16min.mp3 */; };
+		6458E6711C83E17E00E077B5 /* MotionActivityUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6458E66F1C83E17E00E077B5 /* MotionActivityUpdate.swift */; };
+		6458E6721C83E17E00E077B5 /* WorldObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6458E6701C83E17E00E077B5 /* WorldObject.swift */; };
 		6494AB151C4986D600705320 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6494AB0F1C4986D600705320 /* ParseFacebookUtils.framework */; };
 		6494AB161C4986D600705320 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6494AB101C4986D600705320 /* ParseFacebookUtilsV4.framework */; };
 		6494AB171C4986D600705320 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6494AB111C4986D600705320 /* ParseTwitterUtils.framework */; };
@@ -167,6 +169,8 @@
 		6458E5B91C5BFA0B00989783 /* ObservingTrees_3-20min.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ObservingTrees_3-20min.mp3"; sourceTree = "<group>"; };
 		6458E5BB1C5C481D00989783 /* WalkObservingBody_1-16min.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "WalkObservingBody_1-16min.mp3"; sourceTree = "<group>"; };
 		6458E5BC1C5C481D00989783 /* Standing_1-16min.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Standing_1-16min.mp3"; sourceTree = "<group>"; };
+		6458E66F1C83E17E00E077B5 /* MotionActivityUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotionActivityUpdate.swift; path = ZenWalk/ExperienceKit/Parse/MotionActivityUpdate.swift; sourceTree = "<group>"; };
+		6458E6701C83E17E00E077B5 /* WorldObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorldObject.swift; path = ZenWalk/ExperienceKit/Parse/WorldObject.swift; sourceTree = "<group>"; };
 		6494AB0F1C4986D600705320 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = ../ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		6494AB101C4986D600705320 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = ../ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		6494AB111C4986D600705320 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = ../ParseTwitterUtils.framework; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 		52D9F1911AF9181A00C3DCF3 = {
 			isa = PBXGroup;
 			children = (
+				6458E66F1C83E17E00E077B5 /* MotionActivityUpdate.swift */,
+				6458E6701C83E17E00E077B5 /* WorldObject.swift */,
 				52D9F19C1AF9181A00C3DCF3 /* ZenWalk */,
 				52D9F1B51AF9181B00C3DCF3 /* ZenWalkTests */,
 				52D9F19B1AF9181A00C3DCF3 /* Products */,
@@ -669,6 +675,7 @@
 				64AD6DF71C83A44900F2F800 /* WaitForWord.swift in Sources */,
 				64AD6DF41C83A44900F2F800 /* TriggerListener.swift in Sources */,
 				64AD6DEE1C83A44900F2F800 /* Interim.swift in Sources */,
+				6458E6711C83E17E00E077B5 /* MotionActivityUpdate.swift in Sources */,
 				64E7D4C11B5D744B00FCF61B /* EndViewController.swift in Sources */,
 				64AD6DFF1C83A44900F2F800 /* Events.swift in Sources */,
 				64AD6DF31C83A44900F2F800 /* SpeechListener.swift in Sources */,
@@ -705,6 +712,7 @@
 				64AD6DEC1C83A44900F2F800 /* OpportunityManager.swift in Sources */,
 				64CBDBC11B559EFD000354EB /* MeditationViewController.swift in Sources */,
 				52D9F1A01AF9181A00C3DCF3 /* AppDelegate.swift in Sources */,
+				6458E6721C83E17E00E077B5 /* WorldObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
