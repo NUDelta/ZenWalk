@@ -130,6 +130,10 @@ class DataManager : NSObject, CLLocationManagerDelegate {
         locationUpdate.speed = currentLocation!.speed
         locationUpdate.horizontalAccuracy = currentLocation!.horizontalAccuracy
         locationUpdate.saveInBackground()
+        
+        if UIApplication.sharedApplication().applicationState == .Active {
+            //mapView.showAnnotations(locations, animated: true)
+        }
     }
     
     func saveMotionActivityUpdate(data:CMMotionActivity) {

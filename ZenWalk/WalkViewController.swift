@@ -43,33 +43,27 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
         
         // Create Moments
 
-        /* USER STUDY CONDITIONS:
-        * X - Interactive
-        * Y - Noninteractive
+        /* DATA STUDY CONDITIONS:
+        * Circle 4 trees
         */
         
-        let conditionX_1 = Sound(fileNames: ["Standing_3-20", "WalkObservingBody_1-16min", "WalkingBreathingShort_3"])
-        let conditionX_2 = CollectorWithSound(fileNames: ["ObservingTrees_3-20min", "CircleFirstTree_2-48"], title: "Circle around tree X", dataLabel: "tree", sensors: [.Location])
-        let conditionX_3 = CollectorWithSound(fileNames: ["FindAnotherTree_1-05", "CircleNextTree_2-33"], title: "Circle around another X", dataLabel: "tree", sensors: [.Location])
-        let conditionX_end = Sound(fileNames: ["End_3-03"])
+        let condition_Data1 = CollectorWithSound(fileNames: ["FindLargeTree_1-23", "CircleLargeTree_3-01"], title: "Tree 1", dataLabel: "tree", sensors: [.Location])
+        let condition_Data2 = CollectorWithSound(fileNames: ["FindAnotherLargeTree_1-00", "CircleAnotherLargeTree_2-40"], title: "Tree 2", dataLabel: "tree", sensors: [.Location])
+        let condition_Data3 = CollectorWithSound(fileNames: ["FindAnotherLargeTree_1-00", "CircleAnotherLargeTree_2-40"], title: "Tree 3", dataLabel: "tree", sensors: [.Location])
         
-        let conditionY_1 = Sound(fileNames: ["Standing_3-20", "WalkObservingBody_1-16min", "WalkingBreathingLong_1-42", "WalkingPosture_5-37", "WalkingObserveSurroundings_4-00", "End_3-03"])
+        let condition_Data4 = Sound(fileNames: ["End_DataStudy"])
+        
         
         var stages: [Stage] = []
         
         switch condition {
-            case "X":
-                let stage1 = Stage(moments: [conditionX_1], title: "Version X")
-                let stage2 = Stage(moments: [conditionX_2], title: "Version X")
-                let stage3 = Stage(moments: [conditionX_3], title: "Version X")
-                let stage4 = Stage(moments: [conditionX_end], title: "Version X")
+            case "data":
+                let stage1 = Stage(moments: [condition_Data1], title: "Data Tree 1")
+                let stage2 = Stage(moments: [condition_Data2], title: "Data Tree 2")
+                let stage3 = Stage(moments: [condition_Data3], title: "Data Tree 3")
+                let stage4 = Stage(moments: [condition_Data4], title: "Data Tree 4")
                 stages = [stage1, stage2, stage3, stage4]
-                experienceManager = ExperienceManager(title: "Version X", stages: stages)
-                break
-            case "Y":
-                let stage1 = Stage(moments: [conditionY_1], title: "Version Y")
-                stages = [stage1]
-                experienceManager = ExperienceManager(title: "Version Y", stages: stages)
+                experienceManager = ExperienceManager(title: "DataStudy", stages: stages)
                 break
             default:
                 experienceManager = ExperienceManager(title: "no condition", stages: stages)
@@ -139,6 +133,13 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
     
     func didAddDestination(destLocation: CLLocationCoordinate2D, destinationName: String) {
         //addObjectToMap(destLocation, annotationTitle: destinationName)
+    }
+    
+    @IBAction func logoutButton(sender: UIBarButtonItem) {
+        PFUser.logOut()
+        let storyboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("SignUpInViewController") as! SignUpInViewController
+        self.showViewController(vc, sender: self)
     }
     
     // Segue

@@ -97,6 +97,11 @@
 		64DC05C11B5F128A00D4CDF6 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC05C01B5F128A00D4CDF6 /* UserProfileViewController.swift */; };
 		64DC05C31B5F12B600D4CDF6 /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DC05C21B5F12B600D4CDF6 /* UserInfo.storyboard */; };
 		64DC05C51B5F146800D4CDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DC05C41B5F146800D4CDF6 /* Main.storyboard */; };
+		64DC53BB1C8FF3C900DEDA15 /* End_DataStudy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64DC53B61C8FF3C900DEDA15 /* End_DataStudy.mp3 */; };
+		64DC53BC1C8FF3C900DEDA15 /* CircleAnotherLargeTree_2-40.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64DC53B71C8FF3C900DEDA15 /* CircleAnotherLargeTree_2-40.mp3 */; };
+		64DC53BD1C8FF3C900DEDA15 /* FindAnotherLargeTree_1-00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64DC53B81C8FF3C900DEDA15 /* FindAnotherLargeTree_1-00.mp3 */; };
+		64DC53BE1C8FF3C900DEDA15 /* CircleLargeTree_3-01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64DC53B91C8FF3C900DEDA15 /* CircleLargeTree_3-01.mp3 */; };
+		64DC53BF1C8FF3C900DEDA15 /* FindLargeTree_1-23.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64DC53BA1C8FF3C900DEDA15 /* FindLargeTree_1-23.mp3 */; };
 		64E168DB1C724AC300855524 /* End_3-03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E168D71C724AC300855524 /* End_3-03.mp3 */; };
 		64E168DC1C724AC300855524 /* Standing_3-20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E168D81C724AC300855524 /* Standing_3-20.mp3 */; };
 		64E168DD1C724AC300855524 /* FindAnotherTree_1-05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E168D91C724AC300855524 /* FindAnotherTree_1-05.mp3 */; };
@@ -219,6 +224,11 @@
 		64DC05C01B5F128A00D4CDF6 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		64DC05C21B5F12B600D4CDF6 /* UserInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UserInfo.storyboard; path = ../UserInfo.storyboard; sourceTree = "<group>"; };
 		64DC05C41B5F146800D4CDF6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		64DC53B61C8FF3C900DEDA15 /* End_DataStudy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = End_DataStudy.mp3; sourceTree = "<group>"; };
+		64DC53B71C8FF3C900DEDA15 /* CircleAnotherLargeTree_2-40.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "CircleAnotherLargeTree_2-40.mp3"; sourceTree = "<group>"; };
+		64DC53B81C8FF3C900DEDA15 /* FindAnotherLargeTree_1-00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "FindAnotherLargeTree_1-00.mp3"; sourceTree = "<group>"; };
+		64DC53B91C8FF3C900DEDA15 /* CircleLargeTree_3-01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "CircleLargeTree_3-01.mp3"; sourceTree = "<group>"; };
+		64DC53BA1C8FF3C900DEDA15 /* FindLargeTree_1-23.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "FindLargeTree_1-23.mp3"; sourceTree = "<group>"; };
 		64E168D71C724AC300855524 /* End_3-03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "End_3-03.mp3"; sourceTree = "<group>"; };
 		64E168D81C724AC300855524 /* Standing_3-20.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Standing_3-20.mp3"; sourceTree = "<group>"; };
 		64E168D91C724AC300855524 /* FindAnotherTree_1-05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "FindAnotherTree_1-05.mp3"; sourceTree = "<group>"; };
@@ -398,6 +408,11 @@
 				64E168D91C724AC300855524 /* FindAnotherTree_1-05.mp3 */,
 				64E168DA1C724AC300855524 /* CircleFirstTree_2-48.mp3 */,
 				645510AE1C4E99FA00BB1C4C /* WalkingPostureShort_2.mp3 */,
+				64DC53B61C8FF3C900DEDA15 /* End_DataStudy.mp3 */,
+				64DC53B71C8FF3C900DEDA15 /* CircleAnotherLargeTree_2-40.mp3 */,
+				64DC53B81C8FF3C900DEDA15 /* FindAnotherLargeTree_1-00.mp3 */,
+				64DC53B91C8FF3C900DEDA15 /* CircleLargeTree_3-01.mp3 */,
+				64DC53BA1C8FF3C900DEDA15 /* FindLargeTree_1-23.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -617,6 +632,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64DC53BF1C8FF3C900DEDA15 /* FindLargeTree_1-23.mp3 in Resources */,
 				645510B81C4E99FA00BB1C4C /* WalkingEmotions_3.mp3 in Resources */,
 				64DC05C51B5F146800D4CDF6 /* Main.storyboard in Resources */,
 				6458E5B81C5BF1BA00989783 /* Standing_2min.mp3 in Resources */,
@@ -633,10 +649,12 @@
 				645510B11C4E99FA00BB1C4C /* ObserveTreesShort_4.mp3 in Resources */,
 				645510BD1C4E99FA00BB1C4C /* WalkingPostureShort_2.mp3 in Resources */,
 				64E3991D1C839FBA00E99C53 /* WalkingPosture_5-37.mp3 in Resources */,
+				64DC53BB1C8FF3C900DEDA15 /* End_DataStudy.mp3 in Resources */,
 				645510B01C4E99FA00BB1C4C /* ObserveTrees_4.mp3 in Resources */,
 				64E168E01C724C0300855524 /* CircleNextTree_2-33.mp3 in Resources */,
 				52D9F1AA1AF9181B00C3DCF3 /* Images.xcassets in Resources */,
 				645510B61C4E99FA00BB1C4C /* WalkingAwarenessofSurroundings_3.mp3 in Resources */,
+				64DC53BD1C8FF3C900DEDA15 /* FindAnotherLargeTree_1-00.mp3 in Resources */,
 				6458E5BD1C5C481D00989783 /* WalkObservingBody_1-16min.mp3 in Resources */,
 				645510B91C4E99FA00BB1C4C /* WalkingFeelings_3.mp3 in Resources */,
 				645510B71C4E99FA00BB1C4C /* WalkingBreathingShort_3.mp3 in Resources */,
@@ -648,9 +666,11 @@
 				645510BA1C4E99FA00BB1C4C /* WalkingObjofConsciousness_3.mp3 in Resources */,
 				64E168DD1C724AC300855524 /* FindAnotherTree_1-05.mp3 in Resources */,
 				645510BC1C4E99FA00BB1C4C /* WalkingPosture2_2.mp3 in Resources */,
+				64DC53BE1C8FF3C900DEDA15 /* CircleLargeTree_3-01.mp3 in Resources */,
 				6429C25C1C4EA86300E845F9 /* test2.mp3 in Resources */,
 				645510B51C4E99FA00BB1C4C /* TreeSpin_5.mp3 in Resources */,
 				64E3991C1C839FBA00E99C53 /* WalkingBreathingLong_1-42.mp3 in Resources */,
+				64DC53BC1C8FF3C900DEDA15 /* CircleAnotherLargeTree_2-40.mp3 in Resources */,
 				64E3991E1C839FBA00E99C53 /* WalkingObserveSurroundings_4-00.mp3 in Resources */,
 				6429C25B1C4EA86300E845F9 /* test1.mp3 in Resources */,
 				64DC05C31B5F12B600D4CDF6 /* UserInfo.storyboard in Resources */,
