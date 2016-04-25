@@ -25,6 +25,14 @@
 		52D9F1E11AF91C4500C3DCF3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D61AF91C4500C3DCF3 /* QuartzCore.framework */; };
 		52D9F1E21AF91C4500C3DCF3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D71AF91C4500C3DCF3 /* Security.framework */; };
 		52D9F1E41AF91C4500C3DCF3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D91AF91C4500C3DCF3 /* SystemConfiguration.framework */; };
+		641050A21CCE7813005B7EED /* allow_your_awareness_2-30.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6410509A1CCE7813005B7EED /* allow_your_awareness_2-30.mp3 */; };
+		641050A31CCE7813005B7EED /* as_you_begin_to_walk_1-05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6410509B1CCE7813005B7EED /* as_you_begin_to_walk_1-05.mp3 */; };
+		641050A41CCE7813005B7EED /* as_you_walk_4-00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6410509C1CCE7813005B7EED /* as_you_walk_4-00.mp3 */; };
+		641050A51CCE7813005B7EED /* continue_to_walk_3-00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6410509D1CCE7813005B7EED /* continue_to_walk_3-00.mp3 */; };
+		641050A61CCE7813005B7EED /* continue_walking_naturally_3-00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6410509E1CCE7813005B7EED /* continue_walking_naturally_3-00.mp3 */; };
+		641050A71CCE7813005B7EED /* now_as_we_come_to_the_end_3-00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6410509F1CCE7813005B7EED /* now_as_we_come_to_the_end_3-00.mp3 */; };
+		641050A81CCE7813005B7EED /* once_you're_near_the_tree_4-20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 641050A01CCE7813005B7EED /* once_you're_near_the_tree_4-20.mp3 */; };
+		641050A91CCE7813005B7EED /* once_you're_near_the_tree_just_walk_4-05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 641050A11CCE7813005B7EED /* once_you're_near_the_tree_just_walk_4-05.mp3 */; };
 		6414697A1B43BC7E00F70AB8 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641469761B43BC7E00F70AB8 /* OpenEars.framework */; };
 		6414697B1B43BC7E00F70AB8 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641469771B43BC7E00F70AB8 /* Slt.framework */; };
 		6429C25B1C4EA86300E845F9 /* test1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6429C2571C4EA86300E845F9 /* test1.mp3 */; };
@@ -141,6 +149,14 @@
 		52D9F1D61AF91C4500C3DCF3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		52D9F1D71AF91C4500C3DCF3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		52D9F1D91AF91C4500C3DCF3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6410509A1CCE7813005B7EED /* allow_your_awareness_2-30.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "allow_your_awareness_2-30.mp3"; sourceTree = "<group>"; };
+		6410509B1CCE7813005B7EED /* as_you_begin_to_walk_1-05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "as_you_begin_to_walk_1-05.mp3"; sourceTree = "<group>"; };
+		6410509C1CCE7813005B7EED /* as_you_walk_4-00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "as_you_walk_4-00.mp3"; sourceTree = "<group>"; };
+		6410509D1CCE7813005B7EED /* continue_to_walk_3-00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "continue_to_walk_3-00.mp3"; sourceTree = "<group>"; };
+		6410509E1CCE7813005B7EED /* continue_walking_naturally_3-00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "continue_walking_naturally_3-00.mp3"; sourceTree = "<group>"; };
+		6410509F1CCE7813005B7EED /* now_as_we_come_to_the_end_3-00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "now_as_we_come_to_the_end_3-00.mp3"; sourceTree = "<group>"; };
+		641050A01CCE7813005B7EED /* once_you're_near_the_tree_4-20.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "once_you're_near_the_tree_4-20.mp3"; sourceTree = "<group>"; };
+		641050A11CCE7813005B7EED /* once_you're_near_the_tree_just_walk_4-05.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "once_you're_near_the_tree_just_walk_4-05.mp3"; sourceTree = "<group>"; };
 		641469761B43BC7E00F70AB8 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenEars.framework; path = Framework/OpenEars.framework; sourceTree = "<group>"; };
 		641469771B43BC7E00F70AB8 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Slt.framework; path = Framework/Slt.framework; sourceTree = "<group>"; };
 		6414697C1B43BCEC00F70AB8 /* OEBridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OEBridging-Header.h"; sourceTree = "<group>"; };
@@ -450,6 +466,14 @@
 		6455109F1C4E99FA00BB1C4C /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				6410509A1CCE7813005B7EED /* allow_your_awareness_2-30.mp3 */,
+				6410509B1CCE7813005B7EED /* as_you_begin_to_walk_1-05.mp3 */,
+				6410509C1CCE7813005B7EED /* as_you_walk_4-00.mp3 */,
+				6410509D1CCE7813005B7EED /* continue_to_walk_3-00.mp3 */,
+				6410509E1CCE7813005B7EED /* continue_walking_naturally_3-00.mp3 */,
+				6410509F1CCE7813005B7EED /* now_as_we_come_to_the_end_3-00.mp3 */,
+				641050A01CCE7813005B7EED /* once_you're_near_the_tree_4-20.mp3 */,
+				641050A11CCE7813005B7EED /* once_you're_near_the_tree_just_walk_4-05.mp3 */,
 				64E399191C839FBA00E99C53 /* WalkingBreathingLong_1-42.mp3 */,
 				64E3991A1C839FBA00E99C53 /* WalkingPosture_5-37.mp3 */,
 				64E3991B1C839FBA00E99C53 /* WalkingObserveSurroundings_4-00.mp3 */,
@@ -607,11 +631,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				645510B81C4E99FA00BB1C4C /* WalkingEmotions_3.mp3 in Resources */,
+				641050A81CCE7813005B7EED /* once_you're_near_the_tree_4-20.mp3 in Resources */,
+				641050A21CCE7813005B7EED /* allow_your_awareness_2-30.mp3 in Resources */,
 				64DC05C51B5F146800D4CDF6 /* Main.storyboard in Resources */,
 				6458E5B81C5BF1BA00989783 /* Standing_2min.mp3 in Resources */,
 				64E168DB1C724AC300855524 /* End_3-03.mp3 in Resources */,
 				6458E5BE1C5C481D00989783 /* Standing_1-16min.mp3 in Resources */,
 				64E168DC1C724AC300855524 /* Standing_3-20.mp3 in Resources */,
+				641050A31CCE7813005B7EED /* as_you_begin_to_walk_1-05.mp3 in Resources */,
+				641050A51CCE7813005B7EED /* continue_to_walk_3-00.mp3 in Resources */,
 				6429C25D1C4EA86300E845F9 /* test3.mp3 in Resources */,
 				64DC05B81B5ECB5E00D4CDF6 /* Login.storyboard in Resources */,
 				64DC05BF1B5ECD1900D4CDF6 /* Walk.storyboard in Resources */,
@@ -620,13 +648,16 @@
 				6429C25E1C4EA86300E845F9 /* test4.mp3 in Resources */,
 				52D9F1AD1AF9181B00C3DCF3 /* LaunchScreen.xib in Resources */,
 				645510B11C4E99FA00BB1C4C /* ObserveTreesShort_4.mp3 in Resources */,
+				641050A41CCE7813005B7EED /* as_you_walk_4-00.mp3 in Resources */,
 				645510BD1C4E99FA00BB1C4C /* WalkingPostureShort_2.mp3 in Resources */,
 				64E3991D1C839FBA00E99C53 /* WalkingPosture_5-37.mp3 in Resources */,
+				641050A71CCE7813005B7EED /* now_as_we_come_to_the_end_3-00.mp3 in Resources */,
 				645510B01C4E99FA00BB1C4C /* ObserveTrees_4.mp3 in Resources */,
 				64E168E01C724C0300855524 /* CircleNextTree_2-33.mp3 in Resources */,
 				52D9F1AA1AF9181B00C3DCF3 /* Images.xcassets in Resources */,
 				645510B61C4E99FA00BB1C4C /* WalkingAwarenessofSurroundings_3.mp3 in Resources */,
 				6458E5BD1C5C481D00989783 /* WalkObservingBody_1-16min.mp3 in Resources */,
+				641050A91CCE7813005B7EED /* once_you're_near_the_tree_just_walk_4-05.mp3 in Resources */,
 				645510B91C4E99FA00BB1C4C /* WalkingFeelings_3.mp3 in Resources */,
 				645510B71C4E99FA00BB1C4C /* WalkingBreathingShort_3.mp3 in Resources */,
 				645510B41C4E99FA00BB1C4C /* TreeCircle_5.mp3 in Resources */,
@@ -634,6 +665,7 @@
 				6458E5BA1C5BFA0B00989783 /* ObservingTrees_3-20min.mp3 in Resources */,
 				64E168DE1C724AC300855524 /* CircleFirstTree_2-48.mp3 in Resources */,
 				645510B21C4E99FA00BB1C4C /* Standing_1.mp3 in Resources */,
+				641050A61CCE7813005B7EED /* continue_walking_naturally_3-00.mp3 in Resources */,
 				645510BA1C4E99FA00BB1C4C /* WalkingObjofConsciousness_3.mp3 in Resources */,
 				64E168DD1C724AC300855524 /* FindAnotherTree_1-05.mp3 in Resources */,
 				645510BC1C4E99FA00BB1C4C /* WalkingPosture2_2.mp3 in Resources */,

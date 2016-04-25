@@ -15,6 +15,7 @@ import UIKit
 
 class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManagerDelegate {
 
+    
 
     // MARK: Properties
     
@@ -35,12 +36,15 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
         let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "back:")
         self.navigationItem.leftBarButtonItem = newBackButton
         
-        CLLocationManager().requestAlwaysAuthorization()
         
-        // Create Moments
-        let test = CollectorWithSound(fileNames: ["test1", "test2"], title: "Test", dataLabel: "test", sensors: [.Location])
-        let test2 = CollectorWithSound(fileNames: ["test3", "test4"], title: "Test", dataLabel: "test", sensors: [.Location])
-
+        // TTS test
+//        let mystring = "Hello World!  Find a place to stand for a little bit, before you begin to walk."
+//        let utterance = AVSpeechUtterance(string: mystring)
+//        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+//        let synthesizer = AVSpeechSynthesizer()
+//        synthesizer.speakUtterance(utterance)
+        
+        CLLocationManager().requestAlwaysAuthorization()
         
         // 15 min
         let conditionA_1 = Sound(fileNames: ["Standing_1-16min", "WalkObservingBody_1-16min", "WalkingBreathingShort_3"])
@@ -80,22 +84,33 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
         
         let conditionY_1 = Sound(fileNames: ["Standing_3-20", "WalkObservingBody_1-16min", "WalkingBreathingLong_1-42", "WalkingPosture_5-37", "WalkingObserveSurroundings_4-00", "End_3-03"])
         
+        
+        let moment1 = Sound(fileNames: ["as_you_begin_to_walk_1-05", "as_you_walk_4-00", "continue_walking_naturally_3-00", "allow_your_awareness_2-30"])
+       
+        // Condition A (21 min) - Stand at tree
+        let moment2a = CollectorWithSound(fileNames: ["once_you're_near_the_tree_4-20"], dataLabel: "tree", sensors: [.Location])
+        
+        // Condition B (21 min) - Walk back and forth in front of tree
+        let moment2b = CollectorWithSound(fileNames: ["once_you're_near_the_tree_just_walk_4-05"], dataLabel: "tree", sensors: [.Location])
+
+        let moment3 = Sound(fileNames: ["now_as_we_come_to_the_end_3-00"])
+
+        
         var stages: [Stage] = []
         
         switch condition {
             case "A":
-                let stage1 = Stage(moments: [conditionA_1], title: "Condition A 1")
-                let stage2 = Stage(moments: [conditionA_2], title: "Condition A 2")
-                let stage3 = Stage(moments: [conditionA_end], title: "Condition A 3")
+                let stage1 = Stage(moments: [moment1], title: "Beginning")
+                let stage2 = Stage(moments: [moment2a], title: "Stand in front of tree")
+                let stage3 = Stage(moments: [moment3], title: "End")
                 stages = [stage1, stage2, stage3]
                 experienceManager = ExperienceManager(title: "condition A", stages: stages)
                 break
             case "B":
-                let stage1 = Stage(moments: [conditionB_1], title: "Condition B 1")
-                let stage2 = Stage(moments: [conditionB_2], title: "Condition B 2")
-                let stage3 = Stage(moments: [conditionB_3], title: "Condition B 3")
-                let stage4 = Stage(moments: [conditionB_end], title: "Condition B 4")
-                stages = [stage1, stage2, stage3, stage4]
+                let stage1 = Stage(moments: [moment1], title: "Beginning")
+                let stage2 = Stage(moments: [moment2b], title: "Walk in front of tree")
+                let stage3 = Stage(moments: [moment3], title: "End")
+                stages = [stage1, stage2, stage3]
                 experienceManager = ExperienceManager(title: "condition B", stages: stages)
                 break
             case "C":
@@ -117,12 +132,6 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
                 let stage1 = Stage(moments: [conditionY_1], title: "Condition Y")
                 stages = [stage1]
                 experienceManager = ExperienceManager(title: "condition Y", stages: stages)
-                break
-            case "test":
-                let stage1 = Stage(moments: [test], title: "Test Stage 1")
-                let stage2 = Stage(moments: [test2], title: "Test Stage 2")
-                stages = [stage1, stage2]
-                experienceManager = ExperienceManager(title: "test", stages: stages)
                 break
             default:
                 experienceManager = ExperienceManager(title: "no condition", stages: stages)

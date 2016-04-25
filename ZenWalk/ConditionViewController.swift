@@ -13,8 +13,8 @@ class ConditionViewController: UIViewController {
     
     /*
         Conditions
-        A: standing, walking (posture), observe trees, spin tree [21 min]
-        B:
+        A: standing in front of tree [21 min]
+        B: walk back and forth in front of tree [21]
         C:
 
     */
@@ -39,7 +39,7 @@ class ConditionViewController: UIViewController {
     @IBAction func shortButton(sender: UIButton) {
         // 20 min
         self.meditationCondition = "A"
-        chooseButton(sender, text: "15 min")
+        chooseButton(sender, text: "A")
         resetMediumButton()
         resetLongButton()
     }
@@ -47,7 +47,7 @@ class ConditionViewController: UIViewController {
     @IBAction func mediumButton(sender: UIButton) {
         // 30 min
         self.meditationCondition = "B"
-        chooseButton(sender, text: "20 min")
+        chooseButton(sender, text: "B")
         resetShortButton()
         resetLongButton()
     }
@@ -56,8 +56,8 @@ class ConditionViewController: UIViewController {
         // 40 min
         //self.meditationCondition = "C"
         // SHORT AUDIO FILES FOR TESTING:
-        self.meditationCondition = "test"
-        chooseButton(sender, text: "30 min")
+        self.meditationCondition = "A"
+        chooseButton(sender, text: "_ min")
         resetShortButton()
         resetMediumButton()
     }
@@ -71,17 +71,17 @@ class ConditionViewController: UIViewController {
     
     func resetShortButton() {
         self.shortButton.backgroundColor = UIColor.whiteColor()
-        self.shortButton.setTitle("15", forState: UIControlState.Normal)
+        self.shortButton.setTitle("A", forState: UIControlState.Normal)
     }
     
     func resetMediumButton() {
         self.mediumButton.backgroundColor = UIColor.whiteColor()
-        self.mediumButton.setTitle("20", forState: UIControlState.Normal)
+        self.mediumButton.setTitle("B", forState: UIControlState.Normal)
     }
     
     func resetLongButton() {
         self.longButton.backgroundColor = UIColor.whiteColor()
-        self.longButton.setTitle("30", forState: UIControlState.Normal)
+        self.longButton.setTitle("_", forState: UIControlState.Normal)
     }
     
     
