@@ -46,8 +46,8 @@ class ConditionViewController: UIViewController {
     
     @IBAction func mediumButton(sender: UIButton) {
         // 30 min
-        self.meditationCondition = "B"
-        chooseButton(sender, text: "B")
+        self.meditationCondition = "test"
+        chooseButton(sender, text: "test")
         resetShortButton()
         resetLongButton()
     }

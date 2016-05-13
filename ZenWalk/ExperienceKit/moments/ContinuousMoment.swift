@@ -18,7 +18,7 @@ class ContinuousMoment: Moment {
     var conditionFunc: ()->Bool
     var _timer: NSTimer?
     
-    init(fileNames: [String]=[], title:String?=nil, conditionFunc:()->Bool, dataLabel:String, sensors:[Sensor]){
+    init(fileNames: [String]=[], title:String?=nil, conditionFunc:()->Bool, dataLabel:String="", sensors:[Sensor]=[]){
         self.sensors = sensors
         self.dataLabel = dataLabel
         self.conditionFunc = conditionFunc

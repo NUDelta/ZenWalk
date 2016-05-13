@@ -50,13 +50,17 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
         let moment1 = Sound(fileNames: ["what_is_mindfulness_1-45", "body_and_posture_awareness_2-00", "allow_mind_to_be_free_2-30"])
        
         
-        // Condition A (21 min) - Stand at tree
+        // Condition A (~15 min) - stand or walk around tree for as long as you want
         let moment2a = CollectorWithSound(fileNames: ["focus_on_environment_3-00"], dataLabel: "tree", sensors: [.Location])
         let moment2b = CollectorWithSound(fileNames: ["near_the_tree_2-00"], dataLabel: "tree", sensors: [.Location])
         let moment2c = ContinuousMoment(conditionFunc: movedAway, dataLabel: "tree", sensors: [.Location])
-        // Condition B (21 min) - Walk back and forth in front of tree
         let moment2d = CollectorWithSound(fileNames: ["as_before_observe_tree_1-10"], dataLabel: "tree", sensors: [.Location])
         let moment3 = Sound(fileNames: ["reflect_3-20"])
+        
+        // Testing condition
+        let moment_test1 = Sound(fileNames: ["test_cat"])
+        let moment_test2 = ContinuousMoment(conditionFunc: movedAway, dataLabel: "test", sensors: [.Location])
+        let moment_test3 = Sound(fileNames: ["test_banjo"])
 
         
         var stages: [MomentBlock] = []
@@ -71,6 +75,11 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
                 let stage6 = MomentBlock(moments: [moment3], title: "End")
                 stages = [stage1, stage2, stage3, stage4, stage5, stage4, stage6]
                 experienceManager = ExperienceManager(title: "condition A", momentBlocks: stages)
+                break
+            case "test":
+                let stage1 = MomentBlock(moments: [moment_test1, moment_test2, moment_test3], title: "Test")
+                stages = [stage1]
+                experienceManager = ExperienceManager(title: "test", momentBlocks: stages)
                 break
             default:
                 experienceManager = ExperienceManager(title: "no condition", momentBlocks: stages)
@@ -104,12 +113,17 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
         }
     }
     
+    // TODO: request all location permissions before the thing starts
     func movedAway() -> Bool {
         // Get user's current location
         let startingLocation = experienceManager.dataManager!.locationManager.location;
+        var currentLocation = startingLocation!
+        
         // While user is within 15 meters of the initial location, return false
-        while (startingLocation!.distanceFromLocation(experienceManager.dataManager!.locationManager.location!) < 15) {
-            continue
+        while (currentLocation.distanceFromLocation(startingLocation!) < 15) {
+            currentLocation = experienceManager.dataManager!.locationManager.location!
+            print(currentLocation.coordinate)
+            print(currentLocation.distanceFromLocation(startingLocation!))
         }
         return true
     }
