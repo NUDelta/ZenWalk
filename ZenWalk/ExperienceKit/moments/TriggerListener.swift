@@ -1,6 +1,6 @@
 //
 //  Listener.swift
-//  ZombieRunX
+//  Zombies Interactive
 //
 //  Created by Henry Spindell on 11/2/15.
 //  Copyright © 2015 Scott Cambo, Henry Spindell, & Delta Lab NU. All rights reserved.
@@ -47,7 +47,7 @@ class TriggerListener: Interim {
 
     func didReceiveTrigger() {
         print("  received \(trigger) trigger")
-        self.eventManager.trigger("foundPointOfInterest", information: ["trigger": trigger.rawValue, "label": dataLabel, "interaction": title])
+        self.eventManager.trigger("foundWorldObject", information: ["trigger": trigger.rawValue, "label": dataLabel, "MomentBlockSimple": title])
         if recordMultiple == false {
             self.finished()
         }

@@ -10,7 +10,7 @@ import Foundation
 
 class WaitForWord: Interim{
     /* simple actuation moment that does not call finished()
-    until "yes" has been said in the interaction stage
+    until "yes" has been said in the MomentBlockSimple MomentBlock
     
     the "length" parameter now acts as a timing out function
     in case the user does not respond
@@ -23,7 +23,7 @@ class WaitForWord: Interim{
     
     init(wordsToRecognize: [String], lengthInSeconds: Float, interruptable:Bool=false, title:String?=nil){
         openEarsController = OpenEarsController(wordsToRecognize: wordsToRecognize)
-        super.init(isInterruptable:interruptable, title: title ?? "Wait For \(wordsToRecognize)", lengthInSeconds: lengthInSeconds)
+        super.init(title: title ?? "Wait For \(wordsToRecognize)", isInterruptable:interruptable, lengthInSeconds: lengthInSeconds)
         openEarsController.events.listenTo("heardWord", action: self.heard)
     }
     

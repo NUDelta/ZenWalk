@@ -1,6 +1,6 @@
 //
 //  LocationUpdate.swift
-//  ZombieRunX
+//  Zombies Interactive
 //
 //  Created by Henry Spindell on 10/5/15.
 //  Copyright © 2015 Scott Cambo. All rights reserved.
@@ -15,6 +15,7 @@ class LocationUpdate : PFObject, PFSubclassing {
     @NSManaged var location: PFGeoPoint?
     @NSManaged var altitude: NSNumber?
     @NSManaged var speed: NSNumber?
+    @NSManaged var horizontalAccuracy: NSNumber?
     
     override class func initialize() {
         struct Static {

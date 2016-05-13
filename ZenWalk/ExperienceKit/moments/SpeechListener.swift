@@ -1,6 +1,6 @@
 //
 //  SpeechListener.swift
-//  ZombieRunX
+//  Zombies Interactive
 //
 //  Created by Henry Spindell on 11/3/15.
 //  Copyright © 2015 Scott Cambo, Henry Spindell, & Delta Lab NU. All rights reserved.
@@ -10,7 +10,7 @@ import Foundation
 
 class SpeechListener: TriggerListener {
     
-    var openEarsController : OpenEarsController 
+    var openEarsController : OpenEarsController
     
     init(title:String?=nil, isInterruptable:Bool=false, lengthInSeconds: Float, dataLabel:String, recordMultiple:Bool=false, wordsToRecognize: [String]){
         self.openEarsController = OpenEarsController(wordsToRecognize: wordsToRecognize)

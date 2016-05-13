@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import MediaPlayer
 
 /// A moment that collects device data throughout its duration, and
-/// does not try to make sense of it in real time. Saves an associated DataEvent in Parse.
+/// does not try to make sense of it in real time. Saves an associated sensorMoment in Parse.
 /// Also plays audio, like the Sound class.
 class CollectorWithSound : Sound {
     /// The types of data that should be collected for the duration (i.e. Location, Motion).
@@ -41,8 +42,10 @@ class CollectorWithSound : Sound {
         if numFilesPlayed == fileNames.count {
             
             if additionalTime > 0 {
-                timer = NSTimer.scheduledTimerWithTimeInterval(additionalTime, target: self, selector: Selector("finished"), userInfo: nil, repeats: false)
-            
+                timer = NSTimer.scheduledTimerWithTimeInterval(additionalTime, target: self, selector: #selector(finished), userInfo: nil, repeats: false)
+                fileNames.append("silence")
+                setupNextAudioFile()
+                self.player?.play()
             } else {
                 super.finished()
             }

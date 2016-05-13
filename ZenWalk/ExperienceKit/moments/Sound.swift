@@ -1,6 +1,6 @@
 //
 //  Sound.swift
-//  ZombieRunX
+//  Zombies Interactive
 //
 //  Created by Henry Spindell on 10/11/15.
 //  Copyright © 2015 Scott Cambo, Henry Spindell, & Delta Lab NU. All rights reserved.
@@ -16,12 +16,12 @@ class Sound: Moment, AVAudioPlayerDelegate{
     var fileNames:[String]
     
     var player:AVAudioPlayer?
-    var audioSession:AVAudioSession = AVAudioSession.sharedInstance()
     var numFilesPlayed:Int = 0
     
-    init(fileNames: [String], isInterruptable:Bool=false, title:String?=nil){
+    init(fileNames: [String], isInterruptable:Bool=false, title:String?=nil, canEvaluateOpportunity:Bool=false){
         self.fileNames = fileNames
-        super.init(title: title ?? fileNames.joinWithSeparator(">"), isInterruptable: isInterruptable)
+        //[ Sound title is basically set to all the file names ] 
+        super.init(title: title ?? fileNames.joinWithSeparator(">"), isInterruptable: isInterruptable, canEvaluateOpportunity: canEvaluateOpportunity)
         self.duration = calculateAudioDuration()
         
         setupNextAudioFile()
@@ -29,9 +29,11 @@ class Sound: Moment, AVAudioPlayerDelegate{
     
     func calculateAudioDuration() -> Float {
         var totalDuration:Float = 0
+        print(fileNames)
         
         for path in fileNames {
             let asset = AVURLAsset(URL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(path, ofType: "mp3")!), options: nil)
+            //print("loading asset:\(asset)")
             let audioDuration = asset.duration
             totalDuration += Float(CMTimeGetSeconds(audioDuration))
         }

@@ -1,6 +1,6 @@
 //
 //  SensorMoment.swift
-//  ZombieRunX
+//  Zombies Interactive
 //
 //  Created by Henry Spindell on 11/3/15.
 //  Copyright © 2015 Scott Cambo, Henry Spindell, & Delta Lab NU. All rights reserved.
@@ -17,7 +17,7 @@ class SensorMoment : PFObject, PFSubclassing {
     @NSManaged var endDate: NSDate?
     @NSManaged var sensors: [String]?
     @NSManaged var label: String?
-    @NSManaged var interaction: String?
+    @NSManaged var MomentBlockSimple: String?
     
     override class func initialize() {
         struct Static {

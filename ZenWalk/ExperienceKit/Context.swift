@@ -1,6 +1,6 @@
 //
 //  Context.swift
-//  ZombieRunX
+//  Zombies Interactive
 //
 //  Created by Henry Spindell on 12/8/15.
 //  Copyright © 2015 Scott Cambo, Henry Spindell, & Delta Lab NU. All rights reserved.
@@ -14,4 +14,5 @@ struct Context {
     var timeRemaining: NSTimeInterval?
     var speed: CLLocationSpeed?
     var location: CLLocationCoordinate2D?
+    var heading: CLLocationDirection?
 }

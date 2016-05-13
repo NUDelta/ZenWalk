@@ -12,7 +12,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nN3D+V+AnEv2IywKm2PAm8w1A74=
+			goUeoIH6b8WDRPC5CVkz2keYZFg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -39,59 +39,59 @@
 		</data>
 		<key>Frameworks/libswiftAVFoundation.dylib</key>
 		<data>
-		Dk4doOQnpjbOlHTXb+92qJ1WO0s=
+		5WPqDyfxTmpMkKQl/w8iEunkEUE=
 		</data>
 		<key>Frameworks/libswiftContacts.dylib</key>
 		<data>
-		GXkzhrmS9GPFgpSvZ9xHpmt9o2M=
+		YhCg48fE5tIteJxABoIw7IwEiYE=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
-		A8kOAQzjvqoeiEXNrN1OJQ9oWsI=
+		Bsd9CqF1Mbw0dEdsXwx/R359H7k=
 		</data>
 		<key>Frameworks/libswiftCoreAudio.dylib</key>
 		<data>
-		OTz0kaey9l9aGeWeZcwzqtqX30A=
+		Zy/hj9w98hh46Z19Ex5E7tt67LE=
 		</data>
 		<key>Frameworks/libswiftCoreData.dylib</key>
 		<data>
-		FanTrhhxPqlJcskzBY4c9EQAkHg=
+		YsmxJzYKlxXAW/+Xr+284olAlG0=
 		</data>
 		<key>Frameworks/libswiftCoreGraphics.dylib</key>
 		<data>
-		g75dIFYiiRuwzpXf4j3+TDwBq0A=
+		5pFYOOjxO5LCKeZflnZkmH5q0pE=
 		</data>
 		<key>Frameworks/libswiftCoreImage.dylib</key>
 		<data>
-		Y1wxHiGWbmPydiySLgHcrpQT7ZU=
+		cX5yZyLnJPdWzuw9VUGuITcb+Z4=
 		</data>
 		<key>Frameworks/libswiftCoreLocation.dylib</key>
 		<data>
-		GIP2EXDpXqtxG2925Ke1FCyaZFA=
+		J4uC73mYyzURlwqbB6cNNa6Z/Oc=
 		</data>
 		<key>Frameworks/libswiftCoreMedia.dylib</key>
 		<data>
-		EORMXhEy7YafR5nA6QBIqDuraSg=
+		bjQEioSdXOimo+QyJe3D301Uums=
 		</data>
 		<key>Frameworks/libswiftDarwin.dylib</key>
 		<data>
-		bP8lmJ83jOHKODPfLnEKZTP2Kow=
+		j1ppkIZF117RkYbc+70Dhw1H0as=
 		</data>
 		<key>Frameworks/libswiftDispatch.dylib</key>
 		<data>
-		SoTmEDiyqezNTizFn0EvBoycMz4=
+		zTbIuYzPfzdUvIcMk3YJsb5agOU=
 		</data>
 		<key>Frameworks/libswiftFoundation.dylib</key>
 		<data>
-		U3oWlawdvm8C1b5jazlNhuD3SbE=
+		7MeLWSTaeHpZ9Lg52YZ3IYwsLJw=
 		</data>
 		<key>Frameworks/libswiftObjectiveC.dylib</key>
 		<data>
-		TAb1qloleANIdWBbDiG+upWSTm0=
+		6USvUW+dmtA8cxSEQRAEINIS760=
 		</data>
 		<key>Frameworks/libswiftUIKit.dylib</key>
 		<data>
-		fOKtTeULhrXbM/MqDraJk2HxFPw=
+		Rtwd0Ujs2siGoLZdJ0R8uKhwF+4=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -103,27 +103,27 @@
 		</data>
 		<key>Login.storyboardc/SignUpInViewController.nib</key>
 		<data>
-		zN7HbPJR3l7DcZMzZKdCStMONv0=
+		BBZ0l8Ku8IZ7lrv9ZTYq/9TSTRk=
 		</data>
 		<key>Login.storyboardc/s6V-0X-rQ7-view-GPl-Lg-QXy.nib</key>
 		<data>
-		SwulWpul/64FaCmnC6GvrtzM/l0=
+		gXSsoVo3vapqr7eJWTAl4Tb22BM=
 		</data>
 		<key>Main.storyboardc/HomeViewController.nib</key>
 		<data>
-		75fgh2z4oolXwyuheafrAYqeAKc=
+		R4hTfXO08mYzJemt3YBi0dDZxe0=
 		</data>
 		<key>Main.storyboardc/Info.plist</key>
 		<data>
-		Zh5GNSQODk+hYJoTnb/NQfkiucg=
+		Q2ATQyQatwxe06rnTn8TfSxl+zA=
 		</data>
 		<key>Main.storyboardc/UINavigationController-Bwz-dB-Lvr.nib</key>
 		<data>
-		UrynD/0KEYklSaIIFxSY/kjMwak=
+		B7XUJPz1g+aPFXmYV18tTB7VDsM=
 		</data>
 		<key>Main.storyboardc/ssl-RQ-9PR-view-zbF-6F-oWp.nib</key>
 		<data>
-		1YB+NSYxJnEiALX/HXzAwLA5ufU=
+		o7v0j3dRYZV9wA/NHAsPnkkzfOA=
 		</data>
 		<key>ObserveTreesShort_4.mp3</key>
 		<data>
@@ -171,7 +171,7 @@
 		</data>
 		<key>UserInfo.storyboardc/4sM-Wh-Jds-view-2p7-hi-EaR.nib</key>
 		<data>
-		eLAr1ySMVMsZa7hfqbnCNeDLuMk=
+		cec+erWOTa73fvYlVn2WHWY8wzE=
 		</data>
 		<key>UserInfo.storyboardc/Info.plist</key>
 		<data>
@@ -179,15 +179,15 @@
 		</data>
 		<key>UserInfo.storyboardc/UserProfileViewController.nib</key>
 		<data>
-		7xjw+6NGgG3ax4rDGIeZEm5lCkQ=
+		TzcaCjk59AadVZ+9/s+UWtJTd1g=
 		</data>
 		<key>Walk.storyboardc/3ZB-rs-7jK-view-RdC-k3-Fg5.nib</key>
 		<data>
-		RDKYPnM6PxOj/0xANwBKVSO0Izw=
+		MHvi/Mf5arz5crwZOzs1hOWTf6M=
 		</data>
 		<key>Walk.storyboardc/ConditionViewController.nib</key>
 		<data>
-		6R3wVq6dw3Fo1T+Q2/QEiJNDZeQ=
+		Wcq1/c8tmh5qR2XQlpwdN8k59Lw=
 		</data>
 		<key>Walk.storyboardc/Info.plist</key>
 		<data>
@@ -195,23 +195,23 @@
 		</data>
 		<key>Walk.storyboardc/UIViewController-3ZB-rs-7jK.nib</key>
 		<data>
-		MeMCbPvS6j3N083wcOaOJYPwLaU=
+		oEII+Bco6PqgZ6O3YoD15Y5hlck=
 		</data>
 		<key>Walk.storyboardc/UIViewController-tBt-oz-QDl.nib</key>
 		<data>
-		YtN1wk783Xo9SVYISq+lQp+G+fk=
+		xYob9/p2e/ZocrEakrmB0aSrfo0=
 		</data>
 		<key>Walk.storyboardc/WalkNavigationController.nib</key>
 		<data>
-		4N7D5GmRuzN9F24eNr98NFoZpu0=
+		K80Vr+XPKg7AOPoycn9UDl37hjY=
 		</data>
 		<key>Walk.storyboardc/jZB-IC-zyV-view-8JY-ng-qTx.nib</key>
 		<data>
-		W8KPLtudFPGnlOOdTDDnO5G0Ero=
+		uaWUgul7qdbYHUO134r8xnlC0cc=
 		</data>
 		<key>Walk.storyboardc/tBt-oz-QDl-view-nxC-d0-XwV.nib</key>
 		<data>
-		P+NkwcQfBLUzH+Jwk3ABLGP3PLY=
+		q01rr5sEZiRAL/Kpt+wOcZMxCYQ=
 		</data>
 		<key>WalkObservingBody_1-16min.mp3</key>
 		<data>
@@ -340,7 +340,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nN3D+V+AnEv2IywKm2PAm8w1A74=
+			goUeoIH6b8WDRPC5CVkz2keYZFg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -367,59 +367,59 @@
 		</data>
 		<key>Frameworks/libswiftAVFoundation.dylib</key>
 		<data>
-		Dk4doOQnpjbOlHTXb+92qJ1WO0s=
+		5WPqDyfxTmpMkKQl/w8iEunkEUE=
 		</data>
 		<key>Frameworks/libswiftContacts.dylib</key>
 		<data>
-		GXkzhrmS9GPFgpSvZ9xHpmt9o2M=
+		YhCg48fE5tIteJxABoIw7IwEiYE=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
-		A8kOAQzjvqoeiEXNrN1OJQ9oWsI=
+		Bsd9CqF1Mbw0dEdsXwx/R359H7k=
 		</data>
 		<key>Frameworks/libswiftCoreAudio.dylib</key>
 		<data>
-		OTz0kaey9l9aGeWeZcwzqtqX30A=
+		Zy/hj9w98hh46Z19Ex5E7tt67LE=
 		</data>
 		<key>Frameworks/libswiftCoreData.dylib</key>
 		<data>
-		FanTrhhxPqlJcskzBY4c9EQAkHg=
+		YsmxJzYKlxXAW/+Xr+284olAlG0=
 		</data>
 		<key>Frameworks/libswiftCoreGraphics.dylib</key>
 		<data>
-		g75dIFYiiRuwzpXf4j3+TDwBq0A=
+		5pFYOOjxO5LCKeZflnZkmH5q0pE=
 		</data>
 		<key>Frameworks/libswiftCoreImage.dylib</key>
 		<data>
-		Y1wxHiGWbmPydiySLgHcrpQT7ZU=
+		cX5yZyLnJPdWzuw9VUGuITcb+Z4=
 		</data>
 		<key>Frameworks/libswiftCoreLocation.dylib</key>
 		<data>
-		GIP2EXDpXqtxG2925Ke1FCyaZFA=
+		J4uC73mYyzURlwqbB6cNNa6Z/Oc=
 		</data>
 		<key>Frameworks/libswiftCoreMedia.dylib</key>
 		<data>
-		EORMXhEy7YafR5nA6QBIqDuraSg=
+		bjQEioSdXOimo+QyJe3D301Uums=
 		</data>
 		<key>Frameworks/libswiftDarwin.dylib</key>
 		<data>
-		bP8lmJ83jOHKODPfLnEKZTP2Kow=
+		j1ppkIZF117RkYbc+70Dhw1H0as=
 		</data>
 		<key>Frameworks/libswiftDispatch.dylib</key>
 		<data>
-		SoTmEDiyqezNTizFn0EvBoycMz4=
+		zTbIuYzPfzdUvIcMk3YJsb5agOU=
 		</data>
 		<key>Frameworks/libswiftFoundation.dylib</key>
 		<data>
-		U3oWlawdvm8C1b5jazlNhuD3SbE=
+		7MeLWSTaeHpZ9Lg52YZ3IYwsLJw=
 		</data>
 		<key>Frameworks/libswiftObjectiveC.dylib</key>
 		<data>
-		TAb1qloleANIdWBbDiG+upWSTm0=
+		6USvUW+dmtA8cxSEQRAEINIS760=
 		</data>
 		<key>Frameworks/libswiftUIKit.dylib</key>
 		<data>
-		fOKtTeULhrXbM/MqDraJk2HxFPw=
+		Rtwd0Ujs2siGoLZdJ0R8uKhwF+4=
 		</data>
 		<key>Login.storyboardc/Info.plist</key>
 		<data>
@@ -427,27 +427,27 @@
 		</data>
 		<key>Login.storyboardc/SignUpInViewController.nib</key>
 		<data>
-		zN7HbPJR3l7DcZMzZKdCStMONv0=
+		BBZ0l8Ku8IZ7lrv9ZTYq/9TSTRk=
 		</data>
 		<key>Login.storyboardc/s6V-0X-rQ7-view-GPl-Lg-QXy.nib</key>
 		<data>
-		SwulWpul/64FaCmnC6GvrtzM/l0=
+		gXSsoVo3vapqr7eJWTAl4Tb22BM=
 		</data>
 		<key>Main.storyboardc/HomeViewController.nib</key>
 		<data>
-		75fgh2z4oolXwyuheafrAYqeAKc=
+		R4hTfXO08mYzJemt3YBi0dDZxe0=
 		</data>
 		<key>Main.storyboardc/Info.plist</key>
 		<data>
-		Zh5GNSQODk+hYJoTnb/NQfkiucg=
+		Q2ATQyQatwxe06rnTn8TfSxl+zA=
 		</data>
 		<key>Main.storyboardc/UINavigationController-Bwz-dB-Lvr.nib</key>
 		<data>
-		UrynD/0KEYklSaIIFxSY/kjMwak=
+		B7XUJPz1g+aPFXmYV18tTB7VDsM=
 		</data>
 		<key>Main.storyboardc/ssl-RQ-9PR-view-zbF-6F-oWp.nib</key>
 		<data>
-		1YB+NSYxJnEiALX/HXzAwLA5ufU=
+		o7v0j3dRYZV9wA/NHAsPnkkzfOA=
 		</data>
 		<key>ObserveTreesShort_4.mp3</key>
 		<data>
@@ -491,7 +491,7 @@
 		</data>
 		<key>UserInfo.storyboardc/4sM-Wh-Jds-view-2p7-hi-EaR.nib</key>
 		<data>
-		eLAr1ySMVMsZa7hfqbnCNeDLuMk=
+		cec+erWOTa73fvYlVn2WHWY8wzE=
 		</data>
 		<key>UserInfo.storyboardc/Info.plist</key>
 		<data>
@@ -499,15 +499,15 @@
 		</data>
 		<key>UserInfo.storyboardc/UserProfileViewController.nib</key>
 		<data>
-		7xjw+6NGgG3ax4rDGIeZEm5lCkQ=
+		TzcaCjk59AadVZ+9/s+UWtJTd1g=
 		</data>
 		<key>Walk.storyboardc/3ZB-rs-7jK-view-RdC-k3-Fg5.nib</key>
 		<data>
-		RDKYPnM6PxOj/0xANwBKVSO0Izw=
+		MHvi/Mf5arz5crwZOzs1hOWTf6M=
 		</data>
 		<key>Walk.storyboardc/ConditionViewController.nib</key>
 		<data>
-		6R3wVq6dw3Fo1T+Q2/QEiJNDZeQ=
+		Wcq1/c8tmh5qR2XQlpwdN8k59Lw=
 		</data>
 		<key>Walk.storyboardc/Info.plist</key>
 		<data>
@@ -515,23 +515,23 @@
 		</data>
 		<key>Walk.storyboardc/UIViewController-3ZB-rs-7jK.nib</key>
 		<data>
-		MeMCbPvS6j3N083wcOaOJYPwLaU=
+		oEII+Bco6PqgZ6O3YoD15Y5hlck=
 		</data>
 		<key>Walk.storyboardc/UIViewController-tBt-oz-QDl.nib</key>
 		<data>
-		YtN1wk783Xo9SVYISq+lQp+G+fk=
+		xYob9/p2e/ZocrEakrmB0aSrfo0=
 		</data>
 		<key>Walk.storyboardc/WalkNavigationController.nib</key>
 		<data>
-		4N7D5GmRuzN9F24eNr98NFoZpu0=
+		K80Vr+XPKg7AOPoycn9UDl37hjY=
 		</data>
 		<key>Walk.storyboardc/jZB-IC-zyV-view-8JY-ng-qTx.nib</key>
 		<data>
-		W8KPLtudFPGnlOOdTDDnO5G0Ero=
+		uaWUgul7qdbYHUO134r8xnlC0cc=
 		</data>
 		<key>Walk.storyboardc/tBt-oz-QDl-view-nxC-d0-XwV.nib</key>
 		<data>
-		P+NkwcQfBLUzH+Jwk3ABLGP3PLY=
+		q01rr5sEZiRAL/Kpt+wOcZMxCYQ=
 		</data>
 		<key>WalkObservingBody_1-16min.mp3</key>
 		<data>

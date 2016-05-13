@@ -1,6 +1,6 @@
 //
 //  Extensions.swift
-//  ZombieRunX
+//  Zombies Interactive
 //
 //  Created by Henry Spindell on 10/8/15.
 //  Copyright © 2015 Scott Cambo. All rights reserved.
@@ -10,6 +10,10 @@ import Foundation
 
 extension Double {
     var minutesToSeconds : Float { return Float(self * 60) }
+}
+
+extension NSNumber {
+    var toMiles : Double { return Double(self)/1609.34}
 }
 
 extension Array {

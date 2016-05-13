@@ -33,7 +33,7 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
-        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "back:")
+        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(WalkViewController.back(_:)))
         self.navigationItem.leftBarButtonItem = newBackButton
         
         
@@ -88,53 +88,53 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
         let moment1 = Sound(fileNames: ["as_you_begin_to_walk_1-05", "as_you_walk_4-00", "continue_walking_naturally_3-00", "allow_your_awareness_2-30"])
        
         // Condition A (21 min) - Stand at tree
-        let moment2a = CollectorWithSound(fileNames: ["once_you're_near_the_tree_4-20"], dataLabel: "tree", sensors: [.Location])
+        let moment2a = CollectorWithSound(fileNames: ["continue_to_walk_3-00", "once_you're_near_the_tree_4-20"], dataLabel: "tree", sensors: [.Location])
         
         // Condition B (21 min) - Walk back and forth in front of tree
-        let moment2b = CollectorWithSound(fileNames: ["once_you're_near_the_tree_just_walk_4-05"], dataLabel: "tree", sensors: [.Location])
+        let moment2b = CollectorWithSound(fileNames: ["continue_to_walk_3-00", "once_you're_near_the_tree_just_walk_4-05"], dataLabel: "tree", sensors: [.Location])
 
         let moment3 = Sound(fileNames: ["now_as_we_come_to_the_end_3-00"])
 
         
-        var stages: [Stage] = []
+        var stages: [MomentBlock] = []
         
         switch condition {
             case "A":
-                let stage1 = Stage(moments: [moment1], title: "Beginning")
-                let stage2 = Stage(moments: [moment2a], title: "Stand in front of tree")
-                let stage3 = Stage(moments: [moment3], title: "End")
+                let stage1 = MomentBlock(moments: [moment1], title: "Beginning")
+                let stage2 = MomentBlock(moments: [moment2a], title: "Stand in front of tree")
+                let stage3 = MomentBlock(moments: [moment3], title: "End")
                 stages = [stage1, stage2, stage3]
-                experienceManager = ExperienceManager(title: "condition A", stages: stages)
+                experienceManager = ExperienceManager(title: "condition A", momentBlocks: stages)
                 break
             case "B":
-                let stage1 = Stage(moments: [moment1], title: "Beginning")
-                let stage2 = Stage(moments: [moment2b], title: "Walk in front of tree")
-                let stage3 = Stage(moments: [moment3], title: "End")
+                let stage1 = MomentBlock(moments: [moment1], title: "Beginning")
+                let stage2 = MomentBlock(moments: [moment2b], title: "Walk in front of tree")
+                let stage3 = MomentBlock(moments: [moment3], title: "End")
                 stages = [stage1, stage2, stage3]
-                experienceManager = ExperienceManager(title: "condition B", stages: stages)
+                experienceManager = ExperienceManager(title: "condition B", momentBlocks: stages)
                 break
             case "C":
-                let stage1 = Stage(moments: [conditionC_1], title: "Condition C 1")
-                let stage2 = Stage(moments: [conditionC_2], title: "Condition C 2")
-                let stage3 = Stage(moments: [conditionC_end], title: "Condition C 3")
+                let stage1 = MomentBlock(moments: [conditionC_1], title: "Condition C 1")
+                let stage2 = MomentBlock(moments: [conditionC_2], title: "Condition C 2")
+                let stage3 = MomentBlock(moments: [conditionC_end], title: "Condition C 3")
                 stages = [stage1, stage2, stage3]
-                experienceManager = ExperienceManager(title: "condition C", stages: stages)
+                experienceManager = ExperienceManager(title: "condition C", momentBlocks: stages)
                 break
             case "X":
-                let stage1 = Stage(moments: [conditionX_1], title: "Condition X 1")
-                let stage2 = Stage(moments: [conditionX_2], title: "Condition X 2")
-                let stage3 = Stage(moments: [conditionX_3], title: "Condition X 3")
-                let stage4 = Stage(moments: [conditionX_end], title: "Condition X 4")
+                let stage1 = MomentBlock(moments: [conditionX_1], title: "Condition X 1")
+                let stage2 = MomentBlock(moments: [conditionX_2], title: "Condition X 2")
+                let stage3 = MomentBlock(moments: [conditionX_3], title: "Condition X 3")
+                let stage4 = MomentBlock(moments: [conditionX_end], title: "Condition X 4")
                 stages = [stage1, stage2, stage3, stage4]
-                experienceManager = ExperienceManager(title: "condition X", stages: stages)
+                experienceManager = ExperienceManager(title: "condition X", momentBlocks: stages)
                 break
             case "Y":
-                let stage1 = Stage(moments: [conditionY_1], title: "Condition Y")
+                let stage1 = MomentBlock(moments: [conditionY_1], title: "Condition Y")
                 stages = [stage1]
-                experienceManager = ExperienceManager(title: "condition Y", stages: stages)
+                experienceManager = ExperienceManager(title: "condition Y", momentBlocks: stages)
                 break
             default:
-                experienceManager = ExperienceManager(title: "no condition", stages: stages)
+                experienceManager = ExperienceManager(title: "no condition", momentBlocks: stages)
                 break
         }
         
@@ -183,7 +183,7 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
     }
     
     func didFinishExperience() {
-        if let navController = self.navigationController {
+        if self.navigationController != nil {
             //navController.popViewControllerAnimated(true)
             // change to segue to "FINISHED" view
             performSegueWithIdentifier("toEnd", sender: self)
