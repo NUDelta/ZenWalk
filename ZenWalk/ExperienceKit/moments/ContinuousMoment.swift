@@ -10,11 +10,17 @@ import Foundation
 //conditional branching of moments based upon a true/false function
 //condition function is triggered every second
 //reason: so that location data, etc. has a chance to update
-class ContinuousMoment: SilentMoment {
+class ContinuousMoment: Moment {
+    /// The types of data that should be collected for the duration (i.e. Location, Motion).
+    var sensors: [Sensor]
+    /// The thing you hope to find by recording data.
+    var dataLabel: String
     var conditionFunc: ()->Bool
     var _timer: NSTimer?
     
-    init(title:String?=nil, conditionFunc:()->Bool){
+    init(fileNames: [String]=[], title:String?=nil, conditionFunc:()->Bool, dataLabel:String, sensors:[Sensor]){
+        self.sensors = sensors
+        self.dataLabel = dataLabel
         self.conditionFunc = conditionFunc
         super.init(title: title ?? "continuous-moment")
     }
