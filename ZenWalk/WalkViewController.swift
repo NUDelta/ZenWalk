@@ -59,6 +59,7 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
         
         // Testing condition
         let moment_test1 = Sound(fileNames: ["test_cat"])
+        let moment_test1b = FunctionMoment(execFunc: {()-> Void in self.experienceManager.saveCurrentContext() })
         let moment_test2 = ContinuousMoment(conditionFunc: movedAway, dataLabel: "test", sensors: [.Location])
         let moment_test3 = Sound(fileNames: ["test_banjo"])
 
@@ -77,7 +78,7 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
                 experienceManager = ExperienceManager(title: "condition A", momentBlocks: stages)
                 break
             case "test":
-                let stage1 = MomentBlock(moments: [moment_test1, moment_test2, moment_test3], title: "Test")
+                let stage1 = MomentBlock(moments: [moment_test1, moment_test1b, moment_test2, moment_test3], title: "Test")
                 stages = [stage1]
                 experienceManager = ExperienceManager(title: "test", momentBlocks: stages)
                 break
@@ -115,19 +116,24 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
     
     // TODO: request all location permissions before the thing starts
     func movedAway() -> Bool {
-        // Get user's current location
-        let startingLocation = experienceManager.dataManager!.locationManager.location;
-        var currentLocation = startingLocation!
-        
-        // While user is within 15 meters of the initial location, return false
-        while (currentLocation.distanceFromLocation(startingLocation!) < 15) {
-            currentLocation = experienceManager.dataManager!.locationManager.location!
-            print(currentLocation.coordinate)
-            print(currentLocation.distanceFromLocation(startingLocation!))
-        }
+        /*
+         // Get user's start location
+         //var startingLocation = experienceManager.getCurrentSavedContext()!.location;
+         
+         // While user is within 15 meters of the initial location, return false
+         let loc_start = MKMapPointForCoordinate(experienceManager.getCurrentSavedContext()!.location!)
+         let loc_cur = MKMapPointForCoordinate(experienceManager.currentContext.location!)
+         let dis = MKMetersBetweenMapPoints(loc_start, loc_cur)
+         
+         if (dis <= 15) {
+         print(dis)
+         return true
+         } else {
+         return false
+         }*/
         return true
     }
-    
+
     
     func back(sender: UIBarButtonItem) {
         self.navigationController?.popViewControllerAnimated(true)
