@@ -18,7 +18,14 @@
 	<key>ArchiveVersion</key>
 	<integer>2</integer>
 	<key>CreationDate</key>
-	<date>2016-05-01T14:11:15Z</date>
+	<date>2016-05-16T14:27:49Z</date>
+	<key>DefaultToolchainInfo</key>
+	<dict>
+		<key>DisplayName</key>
+		<string>Xcode 7.3.1 Default</string>
+		<key>Identifier</key>
+		<string>com.apple.dt.toolchain.XcodeDefault</string>
+	</dict>
 	<key>Name</key>
 	<string>ZenWalk</string>
 	<key>SchemeName</key>

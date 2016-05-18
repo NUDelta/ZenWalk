@@ -53,6 +53,7 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
         // Condition A (~15 min) - stand or walk around tree for as long as you want
         let moment2a = CollectorWithSound(fileNames: ["focus_on_environment_3-00"], dataLabel: "tree", sensors: [.Location])
         let moment2b = CollectorWithSound(fileNames: ["near_the_tree_2-00"], dataLabel: "tree", sensors: [.Location])
+        let moment2c_func = FunctionMoment(execFunc: {()-> Void in self.experienceManager.saveCurrentContext() })
         let moment2c = ContinuousMoment(conditionFunc: movedAway, dataLabel: "tree", sensors: [.Location])
         let moment2d = CollectorWithSound(fileNames: ["as_before_observe_tree_1-10"], dataLabel: "tree", sensors: [.Location])
         let moment3 = Sound(fileNames: ["reflect_3-20"])
@@ -71,7 +72,7 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
                 let stage1 = MomentBlock(moments: [moment1], title: "Introduction")
                 let stage2 = MomentBlock(moments: [moment2a], title: "Beginning to walk")
                 let stage3 = MomentBlock(moments: [moment2b], title: "Stand in front of tree")
-                let stage4 = MomentBlock(moments: [moment2c], title: "Interim at tree")
+                let stage4 = MomentBlock(moments: [moment2c_func, moment2c], title: "Interim at tree")
                 let stage5 = MomentBlock(moments: [moment2d], title: "Stand in front of second tree")
                 let stage6 = MomentBlock(moments: [moment3], title: "End")
                 stages = [stage1, stage2, stage3, stage4, stage5, stage4, stage6]
@@ -116,25 +117,17 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
     
     // TODO: request all location permissions before the thing starts
     func movedAway() -> Bool {
-        /*
-         // Get user's start location
-         //var startingLocation = experienceManager.getCurrentSavedContext()!.location;
-         
-         // While user is within 15 meters of the initial location, return false
-         let loc_start = MKMapPointForCoordinate(experienceManager.getCurrentSavedContext()!.location!)
-         let loc_cur = MKMapPointForCoordinate(experienceManager.currentContext.location!)
-         let dis = MKMetersBetweenMapPoints(loc_start, loc_cur)
-         
-         if (dis <= 15) {
-         print(dis)
-         return true
-         } else {
-         return false
-         }*/
-        return true
+        let startingLocation = experienceManager.getCurrentSavedContext()!.location!;
+        
+        // While user is within 15 meters of the initial location, return true
+        let loc_start = MKMapPointForCoordinate(startingLocation)
+        let loc_cur = MKMapPointForCoordinate(experienceManager.currentContext.location!)
+        
+        let dist = MKMetersBetweenMapPoints(loc_start, loc_cur)
+        print (dist)
+        return (dist <= 15)
     }
-
-    
+ 
     func back(sender: UIBarButtonItem) {
         self.navigationController?.popViewControllerAnimated(true)
         self.experienceManager.pause()

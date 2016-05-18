@@ -110,6 +110,9 @@
 		6494AB1A1C4986D600705320 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6494AB141C4986D600705320 /* Parse.framework */; };
 		6494AB1C1C498B1800705320 /* WalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6494AB1B1C498B1800705320 /* WalkViewController.swift */; };
 		6494AB1E1C49A15300705320 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6494AB1D1C49A15300705320 /* AudioManager.swift */; };
+		649DE21B1CE6653700EF8D55 /* test_banjo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 649DE2191CE6653700EF8D55 /* test_banjo.mp3 */; };
+		649DE21C1CE6653700EF8D55 /* test_cat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 649DE21A1CE6653700EF8D55 /* test_cat.mp3 */; };
+		649DE21E1CE66F2500EF8D55 /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 649DE21D1CE66F2500EF8D55 /* silence.mp3 */; };
 		64CBDBBD1B557A04000354EB /* SignUpInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CBDBBC1B557A04000354EB /* SignUpInViewController.swift */; };
 		64CBDBC11B559EFD000354EB /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CBDBBF1B559EFD000354EB /* MeditationViewController.swift */; };
 		64CBDBC31B559F33000354EB /* ConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CBDBC21B559F33000354EB /* ConditionViewController.swift */; };
@@ -254,6 +257,9 @@
 		6494AB141C4986D600705320 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Parse.framework; sourceTree = "<group>"; };
 		6494AB1B1C498B1800705320 /* WalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkViewController.swift; sourceTree = "<group>"; };
 		6494AB1D1C49A15300705320 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		649DE2191CE6653700EF8D55 /* test_banjo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test_banjo.mp3; sourceTree = "<group>"; };
+		649DE21A1CE6653700EF8D55 /* test_cat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test_cat.mp3; sourceTree = "<group>"; };
+		649DE21D1CE66F2500EF8D55 /* silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silence.mp3; sourceTree = "<group>"; };
 		64CBDBBC1B557A04000354EB /* SignUpInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInViewController.swift; sourceTree = "<group>"; };
 		64CBDBBF1B559EFD000354EB /* MeditationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		64CBDBC21B559F33000354EB /* ConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionViewController.swift; sourceTree = "<group>"; };
@@ -512,6 +518,9 @@
 		6455109F1C4E99FA00BB1C4C /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				649DE21D1CE66F2500EF8D55 /* silence.mp3 */,
+				649DE2191CE6653700EF8D55 /* test_banjo.mp3 */,
+				649DE21A1CE6653700EF8D55 /* test_cat.mp3 */,
 				64050F361CE6199A004F6435 /* body_and_posture_awareness_2-00.mp3 */,
 				64050F371CE6199A004F6435 /* what_is_mindfulness_1-45.mp3 */,
 				64050F381CE6199A004F6435 /* allow_mind_to_be_free_2-30.mp3 */,
@@ -692,8 +701,11 @@
 				6458E5BE1C5C481D00989783 /* Standing_1-16min.mp3 in Resources */,
 				64E168DC1C724AC300855524 /* Standing_3-20.mp3 in Resources */,
 				641050A31CCE7813005B7EED /* as_you_begin_to_walk_1-05.mp3 in Resources */,
+				649DE21C1CE6653700EF8D55 /* test_cat.mp3 in Resources */,
+				649DE21E1CE66F2500EF8D55 /* silence.mp3 in Resources */,
 				641050A51CCE7813005B7EED /* continue_to_walk_3-00.mp3 in Resources */,
 				6429C25D1C4EA86300E845F9 /* test3.mp3 in Resources */,
+				649DE21B1CE6653700EF8D55 /* test_banjo.mp3 in Resources */,
 				64DC05B81B5ECB5E00D4CDF6 /* Login.storyboard in Resources */,
 				64DC05BF1B5ECD1900D4CDF6 /* Walk.storyboard in Resources */,
 				645510B31C4E99FA00BB1C4C /* StandingShort_1.mp3 in Resources */,
@@ -933,7 +945,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "228df4d3-4dc3-45b4-9b57-f30e5c4da934";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ZenWalk/OEBridging-Header.h";
 			};
 			name = Debug;
