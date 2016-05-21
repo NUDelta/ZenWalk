@@ -78,10 +78,6 @@
 		641050A91CCE7813005B7EED /* once_you're_near_the_tree_just_walk_4-05.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 641050A11CCE7813005B7EED /* once_you're_near_the_tree_just_walk_4-05.mp3 */; };
 		6414697A1B43BC7E00F70AB8 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641469761B43BC7E00F70AB8 /* OpenEars.framework */; };
 		6414697B1B43BC7E00F70AB8 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641469771B43BC7E00F70AB8 /* Slt.framework */; };
-		6429C25B1C4EA86300E845F9 /* test1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6429C2571C4EA86300E845F9 /* test1.mp3 */; };
-		6429C25C1C4EA86300E845F9 /* test2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6429C2581C4EA86300E845F9 /* test2.mp3 */; };
-		6429C25D1C4EA86300E845F9 /* test3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6429C2591C4EA86300E845F9 /* test3.mp3 */; };
-		6429C25E1C4EA86300E845F9 /* test4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6429C25A1C4EA86300E845F9 /* test4.mp3 */; };
 		643706C11C49849E00B3F463 /* ActuationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643706C01C49849E00B3F463 /* ActuationController.swift */; };
 		645510AF1C4E99FA00BB1C4C /* End.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510A01C4E99FA00BB1C4C /* End.mp3 */; };
 		645510B01C4E99FA00BB1C4C /* ObserveTrees_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 645510A11C4E99FA00BB1C4C /* ObserveTrees_4.mp3 */; };
@@ -704,13 +700,11 @@
 				649DE21C1CE6653700EF8D55 /* test_cat.mp3 in Resources */,
 				649DE21E1CE66F2500EF8D55 /* silence.mp3 in Resources */,
 				641050A51CCE7813005B7EED /* continue_to_walk_3-00.mp3 in Resources */,
-				6429C25D1C4EA86300E845F9 /* test3.mp3 in Resources */,
 				649DE21B1CE6653700EF8D55 /* test_banjo.mp3 in Resources */,
 				64DC05B81B5ECB5E00D4CDF6 /* Login.storyboard in Resources */,
 				64DC05BF1B5ECD1900D4CDF6 /* Walk.storyboard in Resources */,
 				645510B31C4E99FA00BB1C4C /* StandingShort_1.mp3 in Resources */,
 				645510BB1C4E99FA00BB1C4C /* WalkingPosture1_2.mp3 in Resources */,
-				6429C25E1C4EA86300E845F9 /* test4.mp3 in Resources */,
 				52D9F1AD1AF9181B00C3DCF3 /* LaunchScreen.xib in Resources */,
 				64050F621CE6199A004F6435 /* what_is_mindfulness_1-45.mp3 in Resources */,
 				645510B11C4E99FA00BB1C4C /* ObserveTreesShort_4.mp3 in Resources */,
@@ -740,11 +734,9 @@
 				645510BA1C4E99FA00BB1C4C /* WalkingObjofConsciousness_3.mp3 in Resources */,
 				64E168DD1C724AC300855524 /* FindAnotherTree_1-05.mp3 in Resources */,
 				645510BC1C4E99FA00BB1C4C /* WalkingPosture2_2.mp3 in Resources */,
-				6429C25C1C4EA86300E845F9 /* test2.mp3 in Resources */,
 				645510B51C4E99FA00BB1C4C /* TreeSpin_5.mp3 in Resources */,
 				64E3991C1C839FBA00E99C53 /* WalkingBreathingLong_1-42.mp3 in Resources */,
 				64E3991E1C839FBA00E99C53 /* WalkingObserveSurroundings_4-00.mp3 in Resources */,
-				6429C25B1C4EA86300E845F9 /* test1.mp3 in Resources */,
 				64DC05C31B5F12B600D4CDF6 /* UserInfo.storyboard in Resources */,
 				64050F651CE6199A004F6435 /* near_the_tree_2-00.mp3 in Resources */,
 			);
