@@ -12,7 +12,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7R9N7XQsFt70/GCV/MVrFLaZ0mU=
+			0S3BFq+1qCNgZvourSuiMPQiZa0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -39,59 +39,59 @@
 		</data>
 		<key>Frameworks/libswiftAVFoundation.dylib</key>
 		<data>
-		kD7FTfCgjJYIbhX3rY2ZFzviTOs=
+		GM1Gi5aq5FN+b4tKnyuoQyF4tYw=
 		</data>
 		<key>Frameworks/libswiftContacts.dylib</key>
 		<data>
-		u37PCx52LSX2e59ovh5hOnLm4Ts=
+		+ABwnmB9qIA4ZofFB3fadceclGI=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
-		oqDrYsqnYRNnfwo/E6IRKf9ay64=
+		tKXF2H1kGoMzE4py5bR37IET82Y=
 		</data>
 		<key>Frameworks/libswiftCoreAudio.dylib</key>
 		<data>
-		Y/YyBKTcuSi2Yj54T7YCR9+PD1M=
+		zK+S8aP9RStAYbGTzitRgoJ9bRM=
 		</data>
 		<key>Frameworks/libswiftCoreData.dylib</key>
 		<data>
-		bRs+kmy4Dtjau/8VvZi9hLGQCSQ=
+		EvEcPB9lkbqCJKAIrT9QgK+eTI4=
 		</data>
 		<key>Frameworks/libswiftCoreGraphics.dylib</key>
 		<data>
-		qfU45A1de4yH/KQHu91WXkS0k+Y=
+		Lzn3tu8pcHyqqD97AQEiOMo6Ruo=
 		</data>
 		<key>Frameworks/libswiftCoreImage.dylib</key>
 		<data>
-		IockjouM7kJF6+n/4D/EAfCCJ+4=
+		glFXgK2a8E9aDc3w9/iyLR4Vwfs=
 		</data>
 		<key>Frameworks/libswiftCoreLocation.dylib</key>
 		<data>
-		2WR/tTmvJAgEmDQUNemCde/lSUQ=
+		NRNAWHU/uIo3eXpzxN2T1l3zFgM=
 		</data>
 		<key>Frameworks/libswiftCoreMedia.dylib</key>
 		<data>
-		pK7yyZk/dznJm01/Qb94IX2fpzc=
+		32kJGaA+/hR7mpo+yCvnEqNMfck=
 		</data>
 		<key>Frameworks/libswiftDarwin.dylib</key>
 		<data>
-		HQ1VzIqK/GQRH5xhXvlJAsjA6ro=
+		E/s//BBR6PkGL40JOHygJJAdPcs=
 		</data>
 		<key>Frameworks/libswiftDispatch.dylib</key>
 		<data>
-		+j1py5cf6UtRuCuTPUdWTu+WbCU=
+		lRTcKtAg1sqyLb6dW0nxACW+ODg=
 		</data>
 		<key>Frameworks/libswiftFoundation.dylib</key>
 		<data>
-		pYYU2ZBKj6bjeOAABEWHgqQ+KjY=
+		Zg2IzMw/IH52/Lfz5RGbpT9o0gU=
 		</data>
 		<key>Frameworks/libswiftObjectiveC.dylib</key>
 		<data>
-		nGeTWC0FZDGHEDyDAqESdl65hIM=
+		V/ASwQbOd5syT6FPgfKXL4utz6c=
 		</data>
 		<key>Frameworks/libswiftUIKit.dylib</key>
 		<data>
-		hJoUrRTXw07KgcQw/rZpDh0m2qY=
+		8owaG6DKhen7Ru3lRHrRQfOszIY=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -103,15 +103,15 @@
 		</data>
 		<key>Login.storyboardc/SignUpInViewController.nib</key>
 		<data>
-		Kzk39sfE4RAURcs8OV02sA4X0Ks=
+		AKLnsq2CS59PbIkplb8iySLzoWk=
 		</data>
 		<key>Login.storyboardc/s6V-0X-rQ7-view-GPl-Lg-QXy.nib</key>
 		<data>
-		RPhunzG/AAKUq2UTLYKZyU+BPMQ=
+		cWM7D0TOWAK1LzRyxOMeLeq7evg=
 		</data>
 		<key>Main.storyboardc/HomeViewController.nib</key>
 		<data>
-		0bks9Edjnvbo5euPQ8KbOmQSvcY=
+		S7rgAlZNvjK2m07LJXvElS2ES6M=
 		</data>
 		<key>Main.storyboardc/Info.plist</key>
 		<data>
@@ -119,11 +119,11 @@
 		</data>
 		<key>Main.storyboardc/UINavigationController-Bwz-dB-Lvr.nib</key>
 		<data>
-		2/qcoyo49of+A3LxNWfk/F48ahk=
+		t9vs3gLQ9ad0krPgmHJclf9es8E=
 		</data>
 		<key>Main.storyboardc/ssl-RQ-9PR-view-zbF-6F-oWp.nib</key>
 		<data>
-		b3yvEXe5JTai2XeJcS6EyUE5SLg=
+		UkQHZfB0PFbkV/G1i468WBDsCzk=
 		</data>
 		<key>ObserveTreesShort_4.mp3</key>
 		<data>
@@ -171,7 +171,7 @@
 		</data>
 		<key>UserInfo.storyboardc/4sM-Wh-Jds-view-2p7-hi-EaR.nib</key>
 		<data>
-		q3Q9ewqFl8Hn7xlpZ2zVzMFzVRQ=
+		Njutkb/cdahn71AJNNzz/z2wAkg=
 		</data>
 		<key>UserInfo.storyboardc/Info.plist</key>
 		<data>
@@ -179,39 +179,39 @@
 		</data>
 		<key>UserInfo.storyboardc/UserProfileViewController.nib</key>
 		<data>
-		JBMIM0euHi4FySSfC8w6PwFJb6U=
+		sMMGnIJn08ndpsx48uIBjop7MTs=
 		</data>
 		<key>Walk.storyboardc/3ZB-rs-7jK-view-RdC-k3-Fg5.nib</key>
 		<data>
-		uFkokmpf36ULPQ8ukPZM4H5UWuk=
+		TbAp6iqGEVDD2Q6wat3agBrpUjU=
 		</data>
 		<key>Walk.storyboardc/ConditionViewController.nib</key>
 		<data>
-		eds9ejGkDu4sXjjFlRpVv1Gl/44=
+		RxYMh/VRiB+8KoL9+Y7wiRMuelg=
 		</data>
 		<key>Walk.storyboardc/Info.plist</key>
 		<data>
-		BFuExsYv1YX7p6sInyiXEKrMgNY=
+		HwBEzSlwYWDFINCr9tBC0d4KVQw=
 		</data>
 		<key>Walk.storyboardc/UIViewController-3ZB-rs-7jK.nib</key>
 		<data>
-		Q8od2qDTLUAPBc45UPuokR5fn1s=
+		9zXnI45D6OuHh8vkSvFL42o+q/w=
 		</data>
 		<key>Walk.storyboardc/UIViewController-tBt-oz-QDl.nib</key>
 		<data>
-		cgHPD3bjnZ9jbPWD1NXefXoGIqw=
+		GE/XmFoUFMtUk4RKQJhcTkDnUpc=
 		</data>
 		<key>Walk.storyboardc/WalkNavigationController.nib</key>
 		<data>
-		iFsRIvQ5fbKm/JPnjCvx7PMmmc8=
+		9MvgPt+ikd4SiWIYO3aO+g4KmtM=
 		</data>
 		<key>Walk.storyboardc/jZB-IC-zyV-view-8JY-ng-qTx.nib</key>
 		<data>
-		MCzYx5MJi8Vs3TfpCaV/XgB7y/A=
+		t52GlPc4SX06jZMe19GrLJx2Kr4=
 		</data>
 		<key>Walk.storyboardc/tBt-oz-QDl-view-nxC-d0-XwV.nib</key>
 		<data>
-		h1NhY4U4xJEl7sGK9Z9fEJvtJYY=
+		SodcxdJhTUL8vlxBTKLU+jyWY90=
 		</data>
 		<key>WalkObservingBody_1-16min.mp3</key>
 		<data>
@@ -317,6 +317,14 @@
 		<data>
 		3BUV9ESeled1OdCGnwwtUdFJSwY=
 		</data>
+		<key>if_you_don't_see_a_tree_0-25.mp3</key>
+		<data>
+		HK1+QsS4A+DkC6wj/5HfgorV2zU=
+		</data>
+		<key>keep_breathing_0-25.mp3</key>
+		<data>
+		VcquV7t8wa9felEr8suAnhIVmeM=
+		</data>
 		<key>near_the_tree_2-00.mp3</key>
 		<data>
 		qoFYJdMhcpyxL78uGAV1iewImJI=
@@ -337,6 +345,10 @@
 		<data>
 		c98N/z1NreT88FIyVS1d7WZ1EEU=
 		</data>
+		<key>reminder_walk_up_to_tree_0-20.mp3</key>
+		<data>
+		G4peh9XaI8WAcHZ+DsKCWp0r1CM=
+		</data>
 		<key>silence.mp3</key>
 		<data>
 		WCTuvpMEDeSclQBNcfNiUCtGsv8=
@@ -348,6 +360,14 @@
 		<key>test_cat.mp3</key>
 		<data>
 		VwyoLY80ZoskA9Kue+kgGt5zNhk=
+		</data>
+		<key>walk_away_from_tree_0-45.mp3</key>
+		<data>
+		YWfyd8dPzmBMpd38wOTNK01GTak=
+		</data>
+		<key>walk_up_to_tree_0-50.mp3</key>
+		<data>
+		yCXLJiN9WRhacF0U6vMrfa/9G7o=
 		</data>
 		<key>what_is_mindfulness_1-45.mp3</key>
 		<data>
@@ -364,7 +384,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7R9N7XQsFt70/GCV/MVrFLaZ0mU=
+			0S3BFq+1qCNgZvourSuiMPQiZa0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -391,59 +411,59 @@
 		</data>
 		<key>Frameworks/libswiftAVFoundation.dylib</key>
 		<data>
-		kD7FTfCgjJYIbhX3rY2ZFzviTOs=
+		GM1Gi5aq5FN+b4tKnyuoQyF4tYw=
 		</data>
 		<key>Frameworks/libswiftContacts.dylib</key>
 		<data>
-		u37PCx52LSX2e59ovh5hOnLm4Ts=
+		+ABwnmB9qIA4ZofFB3fadceclGI=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
-		oqDrYsqnYRNnfwo/E6IRKf9ay64=
+		tKXF2H1kGoMzE4py5bR37IET82Y=
 		</data>
 		<key>Frameworks/libswiftCoreAudio.dylib</key>
 		<data>
-		Y/YyBKTcuSi2Yj54T7YCR9+PD1M=
+		zK+S8aP9RStAYbGTzitRgoJ9bRM=
 		</data>
 		<key>Frameworks/libswiftCoreData.dylib</key>
 		<data>
-		bRs+kmy4Dtjau/8VvZi9hLGQCSQ=
+		EvEcPB9lkbqCJKAIrT9QgK+eTI4=
 		</data>
 		<key>Frameworks/libswiftCoreGraphics.dylib</key>
 		<data>
-		qfU45A1de4yH/KQHu91WXkS0k+Y=
+		Lzn3tu8pcHyqqD97AQEiOMo6Ruo=
 		</data>
 		<key>Frameworks/libswiftCoreImage.dylib</key>
 		<data>
-		IockjouM7kJF6+n/4D/EAfCCJ+4=
+		glFXgK2a8E9aDc3w9/iyLR4Vwfs=
 		</data>
 		<key>Frameworks/libswiftCoreLocation.dylib</key>
 		<data>
-		2WR/tTmvJAgEmDQUNemCde/lSUQ=
+		NRNAWHU/uIo3eXpzxN2T1l3zFgM=
 		</data>
 		<key>Frameworks/libswiftCoreMedia.dylib</key>
 		<data>
-		pK7yyZk/dznJm01/Qb94IX2fpzc=
+		32kJGaA+/hR7mpo+yCvnEqNMfck=
 		</data>
 		<key>Frameworks/libswiftDarwin.dylib</key>
 		<data>
-		HQ1VzIqK/GQRH5xhXvlJAsjA6ro=
+		E/s//BBR6PkGL40JOHygJJAdPcs=
 		</data>
 		<key>Frameworks/libswiftDispatch.dylib</key>
 		<data>
-		+j1py5cf6UtRuCuTPUdWTu+WbCU=
+		lRTcKtAg1sqyLb6dW0nxACW+ODg=
 		</data>
 		<key>Frameworks/libswiftFoundation.dylib</key>
 		<data>
-		pYYU2ZBKj6bjeOAABEWHgqQ+KjY=
+		Zg2IzMw/IH52/Lfz5RGbpT9o0gU=
 		</data>
 		<key>Frameworks/libswiftObjectiveC.dylib</key>
 		<data>
-		nGeTWC0FZDGHEDyDAqESdl65hIM=
+		V/ASwQbOd5syT6FPgfKXL4utz6c=
 		</data>
 		<key>Frameworks/libswiftUIKit.dylib</key>
 		<data>
-		hJoUrRTXw07KgcQw/rZpDh0m2qY=
+		8owaG6DKhen7Ru3lRHrRQfOszIY=
 		</data>
 		<key>Login.storyboardc/Info.plist</key>
 		<data>
@@ -451,15 +471,15 @@
 		</data>
 		<key>Login.storyboardc/SignUpInViewController.nib</key>
 		<data>
-		Kzk39sfE4RAURcs8OV02sA4X0Ks=
+		AKLnsq2CS59PbIkplb8iySLzoWk=
 		</data>
 		<key>Login.storyboardc/s6V-0X-rQ7-view-GPl-Lg-QXy.nib</key>
 		<data>
-		RPhunzG/AAKUq2UTLYKZyU+BPMQ=
+		cWM7D0TOWAK1LzRyxOMeLeq7evg=
 		</data>
 		<key>Main.storyboardc/HomeViewController.nib</key>
 		<data>
-		0bks9Edjnvbo5euPQ8KbOmQSvcY=
+		S7rgAlZNvjK2m07LJXvElS2ES6M=
 		</data>
 		<key>Main.storyboardc/Info.plist</key>
 		<data>
@@ -467,11 +487,11 @@
 		</data>
 		<key>Main.storyboardc/UINavigationController-Bwz-dB-Lvr.nib</key>
 		<data>
-		2/qcoyo49of+A3LxNWfk/F48ahk=
+		t9vs3gLQ9ad0krPgmHJclf9es8E=
 		</data>
 		<key>Main.storyboardc/ssl-RQ-9PR-view-zbF-6F-oWp.nib</key>
 		<data>
-		b3yvEXe5JTai2XeJcS6EyUE5SLg=
+		UkQHZfB0PFbkV/G1i468WBDsCzk=
 		</data>
 		<key>ObserveTreesShort_4.mp3</key>
 		<data>
@@ -515,7 +535,7 @@
 		</data>
 		<key>UserInfo.storyboardc/4sM-Wh-Jds-view-2p7-hi-EaR.nib</key>
 		<data>
-		q3Q9ewqFl8Hn7xlpZ2zVzMFzVRQ=
+		Njutkb/cdahn71AJNNzz/z2wAkg=
 		</data>
 		<key>UserInfo.storyboardc/Info.plist</key>
 		<data>
@@ -523,39 +543,39 @@
 		</data>
 		<key>UserInfo.storyboardc/UserProfileViewController.nib</key>
 		<data>
-		JBMIM0euHi4FySSfC8w6PwFJb6U=
+		sMMGnIJn08ndpsx48uIBjop7MTs=
 		</data>
 		<key>Walk.storyboardc/3ZB-rs-7jK-view-RdC-k3-Fg5.nib</key>
 		<data>
-		uFkokmpf36ULPQ8ukPZM4H5UWuk=
+		TbAp6iqGEVDD2Q6wat3agBrpUjU=
 		</data>
 		<key>Walk.storyboardc/ConditionViewController.nib</key>
 		<data>
-		eds9ejGkDu4sXjjFlRpVv1Gl/44=
+		RxYMh/VRiB+8KoL9+Y7wiRMuelg=
 		</data>
 		<key>Walk.storyboardc/Info.plist</key>
 		<data>
-		BFuExsYv1YX7p6sInyiXEKrMgNY=
+		HwBEzSlwYWDFINCr9tBC0d4KVQw=
 		</data>
 		<key>Walk.storyboardc/UIViewController-3ZB-rs-7jK.nib</key>
 		<data>
-		Q8od2qDTLUAPBc45UPuokR5fn1s=
+		9zXnI45D6OuHh8vkSvFL42o+q/w=
 		</data>
 		<key>Walk.storyboardc/UIViewController-tBt-oz-QDl.nib</key>
 		<data>
-		cgHPD3bjnZ9jbPWD1NXefXoGIqw=
+		GE/XmFoUFMtUk4RKQJhcTkDnUpc=
 		</data>
 		<key>Walk.storyboardc/WalkNavigationController.nib</key>
 		<data>
-		iFsRIvQ5fbKm/JPnjCvx7PMmmc8=
+		9MvgPt+ikd4SiWIYO3aO+g4KmtM=
 		</data>
 		<key>Walk.storyboardc/jZB-IC-zyV-view-8JY-ng-qTx.nib</key>
 		<data>
-		MCzYx5MJi8Vs3TfpCaV/XgB7y/A=
+		t52GlPc4SX06jZMe19GrLJx2Kr4=
 		</data>
 		<key>Walk.storyboardc/tBt-oz-QDl-view-nxC-d0-XwV.nib</key>
 		<data>
-		h1NhY4U4xJEl7sGK9Z9fEJvtJYY=
+		SodcxdJhTUL8vlxBTKLU+jyWY90=
 		</data>
 		<key>WalkObservingBody_1-16min.mp3</key>
 		<data>
@@ -661,6 +681,14 @@
 		<data>
 		3BUV9ESeled1OdCGnwwtUdFJSwY=
 		</data>
+		<key>if_you_don't_see_a_tree_0-25.mp3</key>
+		<data>
+		HK1+QsS4A+DkC6wj/5HfgorV2zU=
+		</data>
+		<key>keep_breathing_0-25.mp3</key>
+		<data>
+		VcquV7t8wa9felEr8suAnhIVmeM=
+		</data>
 		<key>near_the_tree_2-00.mp3</key>
 		<data>
 		qoFYJdMhcpyxL78uGAV1iewImJI=
@@ -681,6 +709,10 @@
 		<data>
 		c98N/z1NreT88FIyVS1d7WZ1EEU=
 		</data>
+		<key>reminder_walk_up_to_tree_0-20.mp3</key>
+		<data>
+		G4peh9XaI8WAcHZ+DsKCWp0r1CM=
+		</data>
 		<key>silence.mp3</key>
 		<data>
 		WCTuvpMEDeSclQBNcfNiUCtGsv8=
@@ -692,6 +724,14 @@
 		<key>test_cat.mp3</key>
 		<data>
 		VwyoLY80ZoskA9Kue+kgGt5zNhk=
+		</data>
+		<key>walk_away_from_tree_0-45.mp3</key>
+		<data>
+		YWfyd8dPzmBMpd38wOTNK01GTak=
+		</data>
+		<key>walk_up_to_tree_0-50.mp3</key>
+		<data>
+		yCXLJiN9WRhacF0U6vMrfa/9G7o=
 		</data>
 		<key>what_is_mindfulness_1-45.mp3</key>
 		<data>

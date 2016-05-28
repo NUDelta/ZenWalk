@@ -9,13 +9,15 @@
 import Foundation
 class OpportunityPoller: SilentMoment {
  
+    var objectFilters: Any
     var _scaffoldingManager: ScaffoldingManager
     var _lengthInSeconds: Double
     var _pollEveryXSeconds: Double
     var _timerPolling: NSTimer?
     var _timerWholeMoment: NSTimer?
     
-    init(lengthInSeconds: Double, pollEveryXSeconds: Double, scaffoldingManager: ScaffoldingManager, title:String?=nil){
+    init(objectFilters:Any, lengthInSeconds: Double, pollEveryXSeconds: Double, scaffoldingManager: ScaffoldingManager, title:String?=nil){
+        self.objectFilters = objectFilters
         _lengthInSeconds = lengthInSeconds
         _pollEveryXSeconds = pollEveryXSeconds
         _scaffoldingManager = scaffoldingManager
@@ -30,7 +32,12 @@ class OpportunityPoller: SilentMoment {
     
     func checkOpportuntiy() {
         print("...checking opportunity")
-        _scaffoldingManager.getPossibleInsertion()
+        var insertableMomentBlock = _scaffoldingManager.getPossibleInsertion(objectFilters)
+        if insertableMomentBlock != nil {
+            _scaffoldingManager._experienceManager.insertMomentBlockSimple(insertableMomentBlock!)
+            print("--inserting opportuntistic MomentBlockSimple. ending current moment--")
+            self.finished()
+        }
     }
     
     override func pause(){

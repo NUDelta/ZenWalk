@@ -66,18 +66,40 @@ class DataManager : NSObject, CLLocationManagerDelegate {
 //        worldObject.saveInBackground()
 //    }
     
+    func updateWorldObject(object:PFObject, information:Any?, updateVerifiedTimes:Bool=false)
+    {
+        if updateVerifiedTimes {
+            object.incrementKey("verifiedTimes", byAmount: 1)
+        }
+        object.saveInBackground()
+    }
+    
     func pushWorldObject(information: Any?) {
         print("(DM::pushWorldObject): \(information)")
         let worldObject = WorldObject()
         if let infoDict = information as? [String : String] {
             //worldObject.trigger = infoDict["trigger"]
+            //worldObject.interaction = infoDict["interaction"]
             worldObject.label = infoDict["label"]
             //worldObject.MomentBlockSimple = infoDict["MomentBlockSimple"]
         }
-        worldObject.experience = experience
+        //worldObject.experience = experience
         worldObject.location = PFGeoPoint(location: locationManager.location)
         worldObject.verified = true
-        worldObject.saveInBackground()
+        //worldObject.verifiedTimes = 0
+        
+        //worldObject.saveInBackground()
+        
+        //certain conditions where error does occur, and maybe some not
+        //maybe locatinons are misssing parameters, etc. 
+        worldObject.saveInBackgroundWithBlock  {
+            (success, error) in
+            if success == true {
+                print("Score created with ID: \(worldObject.objectId)")
+            } else {
+                print(error)
+            }
+        }
     }
     
     
@@ -154,6 +176,8 @@ class DataManager : NSObject, CLLocationManagerDelegate {
         //this is where DataManager.currentLocation gets updated
         //required for OpportunityManager
         currentLocation = locations[0]
+        
+        //Check Parse if locations are pushing
         let locationUpdate = LocationUpdate() //intialise Parse object
         locationUpdate.experience = self.experience
         locationUpdate.location = PFGeoPoint(location: currentLocation)

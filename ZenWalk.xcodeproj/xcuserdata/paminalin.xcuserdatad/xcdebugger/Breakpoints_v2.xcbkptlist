@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZenWalk/WalkViewController.swift"
-            timestampString = "485099257.494477"
+            timestampString = "485801060.471871"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "movedAway()"
             landmarkType = "5">
          </BreakpointContent>
