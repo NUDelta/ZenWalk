@@ -116,6 +116,70 @@ class WalkViewController: UIViewController, MKMapViewDelegate, ExperienceManager
                 break
         }
         
+        //SCAFFOLDING MANAGER
+        var scaffoldingManager = ScaffoldingManager(
+            experienceManager: experienceManager)
+        
+        let momentblock_hydrant = MomentBlockSimple(moments: [
+            //instruction
+            SynthVoiceMoment(content: "there is a a fire hydrant 3 meters ahead"),
+            ], title: "scaffold_fire_hydrant",
+               requirement: Requirement(conditions:[Condition.InRegion, Condition.ExistsObject],
+                objectLabel: "fire_hydrant"))
+        let momentblock_tree = MomentBlockSimple(moments: [
+            //instruction
+            SynthVoiceMoment(content: "there is a a tree within 3 second walking distance. if you feel comfortable, walk to it and stand for 10 seconds. if you would rather not, continue your path"),
+            //wait for person to make decisive action
+            Interim(lengthInSeconds: 2),
+            //branch: stationary, then push location, if not
+            ConditionalMoment(
+                moment_true: SynthVoiceMoment(content: "detected stop - tree recorded"),
+                moment_false: SynthVoiceMoment(content: "you're moving - no tree I see"),
+                conditionFunc: {() -> Bool in
+                    if let speed = self.experienceManager.dataManager?.currentLocation?.speed
+                        //true condition: user is stationary
+                        where speed <= 1.2 {
+                        let curEvaluatingObject = scaffoldingManager.curPulledObject!
+                        self.experienceManager.dataManager?.updateWorldObject(curEvaluatingObject, information: [], validated: true)
+                        return true
+                    }
+                    //false condition: user keeps moving
+                    let curEvaluatingObject = scaffoldingManager.curPulledObject!
+                    self.experienceManager.dataManager?.updateWorldObject(curEvaluatingObject, information: [], validated: false)
+                    return false
+            }),
+            SynthVoiceMoment(content: "good job - now move on"),
+            ], title: "scaffold_tree",
+               requirement: Requirement(conditions:[Condition.InRegion, Condition.ExistsObject],
+                objectLabel: "tree"))
+        
+        
+        //[scaffolding: variation]
+        let momentblock_tree_var0 = MomentBlockSimple(moments: [
+            //instruction
+            SynthVoiceMoment(content: "there is a a tree 3 meters ahead. does it have green leaves?"),
+            ConditionalMoment(
+                moment_true: SynthVoiceMoment(content: "detected stop - green leaves recorded"),
+                moment_false: SynthVoiceMoment(content: "you're moving - no green leaves I see"),
+                conditionFunc: {() -> Bool in
+                    if let speed = self.experienceManager.dataManager?.currentLocation?.speed
+                        //true condition: user is stationary
+                        where speed <= 1.2 {
+                        self.experienceManager.dataManager?.pushWorldObject(["label": "tree_leaves_green", "interaction" : "scaffold_tree_leaves_green", "variation" : "1"])
+                        return true
+                    }
+                    //false condition: user keeps moving
+                    self.experienceManager.dataManager?.pushWorldObject(["label": "tree_leaves_green(false)", "interaction" : "scaffold_tree_leaves_green", "variation" : "1"])
+                    return false
+            }),
+            SynthVoiceMoment(content: "good job - now move on"),
+            ], title: "scaffold_tree_var0",
+               requirement: Requirement(conditions:[Condition.InRegion, Condition.ExistsObject],
+                objectLabel: "tree", variationNumber: 0))
+        
+        scaffoldingManager.insertableMomentBlocks = [momentblock_hydrant, momentblock_tree, momentblock_tree_var0]
+        
+        //SET DELEGATES
         experienceManager.delegate = self
         mapView.delegate = self
         mapView.mapType = MKMapType.Standard

@@ -66,10 +66,15 @@ class DataManager : NSObject, CLLocationManagerDelegate {
 //        worldObject.saveInBackground()
 //    }
     
-    func updateWorldObject(object:PFObject, information:Any?, updateVerifiedTimes:Bool=false)
+    func updateWorldObject(object:PFObject, information:Any?, validated:Bool?)
     {
-        if updateVerifiedTimes {
-            object.incrementKey("verifiedTimes", byAmount: 1)
+        if validated != nil {
+            if validated! == true {
+                object.incrementKey("validatedTimes", byAmount: 1)
+            }
+            else {
+                object.incrementKey("invalidatedTimes", byAmount: 1)
+            }
         }
         object.saveInBackground()
     }
@@ -79,14 +84,15 @@ class DataManager : NSObject, CLLocationManagerDelegate {
         let worldObject = WorldObject()
         if let infoDict = information as? [String : String] {
             //worldObject.trigger = infoDict["trigger"]
-            //worldObject.interaction = infoDict["interaction"]
+            worldObject.interaction = infoDict["interaction"]
             worldObject.label = infoDict["label"]
+            worldObject.variation = Int(infoDict["variation"] ?? "0") //default value:0
             //worldObject.MomentBlockSimple = infoDict["MomentBlockSimple"]
         }
         //worldObject.experience = experience
         worldObject.location = PFGeoPoint(location: locationManager.location)
         worldObject.verified = true
-        //worldObject.verifiedTimes = 0
+        worldObject.verifiedTimes = 0
         
         //worldObject.saveInBackground()
         

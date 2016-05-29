@@ -25,42 +25,6 @@
 		52D9F1E11AF91C4500C3DCF3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D61AF91C4500C3DCF3 /* QuartzCore.framework */; };
 		52D9F1E21AF91C4500C3DCF3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D71AF91C4500C3DCF3 /* Security.framework */; };
 		52D9F1E41AF91C4500C3DCF3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F1D91AF91C4500C3DCF3 /* SystemConfiguration.framework */; };
-		64050F3D1CE6199A004F6435 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F071CE6199A004F6435 /* Context.swift */; };
-		64050F3E1CE6199A004F6435 /* Interaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F081CE6199A004F6435 /* Interaction.swift */; };
-		64050F3F1CE6199A004F6435 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F0A1CE6199A004F6435 /* DataManager.swift */; };
-		64050F401CE6199A004F6435 /* ExperienceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F0B1CE6199A004F6435 /* ExperienceManager.swift */; };
-		64050F411CE6199A004F6435 /* OpportunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F0C1CE6199A004F6435 /* OpportunityManager.swift */; };
-		64050F421CE6199A004F6435 /* ScaffoldingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F0D1CE6199A004F6435 /* ScaffoldingManager.swift */; };
-		64050F431CE6199A004F6435 /* CollectorWithSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F0F1CE6199A004F6435 /* CollectorWithSound.swift */; };
-		64050F441CE6199A004F6435 /* ConditionalMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F101CE6199A004F6435 /* ConditionalMoment.swift */; };
-		64050F451CE6199A004F6435 /* ContinuousMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F111CE6199A004F6435 /* ContinuousMoment.swift */; };
-		64050F461CE6199A004F6435 /* FunctionMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F121CE6199A004F6435 /* FunctionMoment.swift */; };
-		64050F471CE6199A004F6435 /* Interim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F131CE6199A004F6435 /* Interim.swift */; };
-		64050F481CE6199A004F6435 /* KnockListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F141CE6199A004F6435 /* KnockListener.swift */; };
-		64050F491CE6199A004F6435 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F151CE6199A004F6435 /* Moment.swift */; };
-		64050F4A1CE6199A004F6435 /* OpportunityCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F161CE6199A004F6435 /* OpportunityCheck.swift */; };
-		64050F4B1CE6199A004F6435 /* OpportunityPollerMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F171CE6199A004F6435 /* OpportunityPollerMoment.swift */; };
-		64050F4C1CE6199A004F6435 /* SensorCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F181CE6199A004F6435 /* SensorCollector.swift */; };
-		64050F4D1CE6199A004F6435 /* SilentMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F191CE6199A004F6435 /* SilentMoment.swift */; };
-		64050F4E1CE6199A004F6435 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F1A1CE6199A004F6435 /* Sound.swift */; };
-		64050F4F1CE6199A004F6435 /* SpeechListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F1B1CE6199A004F6435 /* SpeechListener.swift */; };
-		64050F501CE6199A004F6435 /* SynthVoiceMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F1C1CE6199A004F6435 /* SynthVoiceMoment.swift */; };
-		64050F511CE6199A004F6435 /* TriggerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F1D1CE6199A004F6435 /* TriggerListener.swift */; };
-		64050F521CE6199A004F6435 /* TriggerListenerWithSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F1E1CE6199A004F6435 /* TriggerListenerWithSound.swift */; };
-		64050F531CE6199A004F6435 /* WaitForDoubleKnock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F1F1CE6199A004F6435 /* WaitForDoubleKnock.swift */; };
-		64050F541CE6199A004F6435 /* WaitForWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F201CE6199A004F6435 /* WaitForWord.swift */; };
-		64050F551CE6199A004F6435 /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F221CE6199A004F6435 /* Experience.swift */; };
-		64050F561CE6199A004F6435 /* LocationUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F231CE6199A004F6435 /* LocationUpdate.swift */; };
-		64050F571CE6199A004F6435 /* MotionActivityUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F241CE6199A004F6435 /* MotionActivityUpdate.swift */; };
-		64050F581CE6199A004F6435 /* SensorMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F251CE6199A004F6435 /* SensorMoment.swift */; };
-		64050F591CE6199A004F6435 /* WorldObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F261CE6199A004F6435 /* WorldObject.swift */; };
-		64050F5A1CE6199A004F6435 /* Requirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F271CE6199A004F6435 /* Requirement.swift */; };
-		64050F5B1CE6199A004F6435 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F281CE6199A004F6435 /* Stage.swift */; };
-		64050F5C1CE6199A004F6435 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F2A1CE6199A004F6435 /* Extensions.swift */; };
-		64050F5D1CE6199A004F6435 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64050F2C1CE6199A004F6435 /* Events.swift */; };
-		64050F5E1CE6199A004F6435 /* ARAudioRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 64050F301CE6199A004F6435 /* ARAudioRecognizer.m */; };
-		64050F5F1CE6199A004F6435 /* TSCoreMotionListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 64050F331CE6199A004F6435 /* TSCoreMotionListener.m */; };
-		64050F601CE6199A004F6435 /* TSTapDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 64050F351CE6199A004F6435 /* TSTapDetector.m */; };
 		64050F611CE6199A004F6435 /* body_and_posture_awareness_2-00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64050F361CE6199A004F6435 /* body_and_posture_awareness_2-00.mp3 */; };
 		64050F621CE6199A004F6435 /* what_is_mindfulness_1-45.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64050F371CE6199A004F6435 /* what_is_mindfulness_1-45.mp3 */; };
 		64050F631CE6199A004F6435 /* allow_mind_to_be_free_2-30.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64050F381CE6199A004F6435 /* allow_mind_to_be_free_2-30.mp3 */; };
@@ -133,6 +97,42 @@
 		64E3991E1C839FBA00E99C53 /* WalkingObserveSurroundings_4-00.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E3991B1C839FBA00E99C53 /* WalkingObserveSurroundings_4-00.mp3 */; };
 		64E7D4C11B5D744B00FCF61B /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E7D4C01B5D744B00FCF61B /* EndViewController.swift */; };
 		64F740A91B5CBB370024D45D /* WalksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F740A81B5CBB370024D45D /* WalksListViewController.swift */; };
+		D767F5F71CFB31700000A26B /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5C81CFB31700000A26B /* Context.swift */; };
+		D767F5F81CFB31700000A26B /* Interaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5C91CFB31700000A26B /* Interaction.swift */; };
+		D767F5F91CFB31700000A26B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5CB1CFB31700000A26B /* DataManager.swift */; };
+		D767F5FA1CFB31700000A26B /* ExperienceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5CC1CFB31700000A26B /* ExperienceManager.swift */; };
+		D767F5FB1CFB31700000A26B /* OpportunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5CD1CFB31700000A26B /* OpportunityManager.swift */; };
+		D767F5FC1CFB31700000A26B /* ScaffoldingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5CE1CFB31700000A26B /* ScaffoldingManager.swift */; };
+		D767F5FD1CFB31700000A26B /* CollectorWithSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5D01CFB31700000A26B /* CollectorWithSound.swift */; };
+		D767F5FE1CFB31700000A26B /* ConditionalMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5D11CFB31700000A26B /* ConditionalMoment.swift */; };
+		D767F5FF1CFB31700000A26B /* ContinuousMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5D21CFB31700000A26B /* ContinuousMoment.swift */; };
+		D767F6001CFB31700000A26B /* FunctionMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5D31CFB31700000A26B /* FunctionMoment.swift */; };
+		D767F6011CFB31700000A26B /* Interim.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5D41CFB31700000A26B /* Interim.swift */; };
+		D767F6021CFB31700000A26B /* KnockListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5D51CFB31700000A26B /* KnockListener.swift */; };
+		D767F6031CFB31700000A26B /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5D61CFB31700000A26B /* Moment.swift */; };
+		D767F6041CFB31700000A26B /* OpportunityCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5D71CFB31700000A26B /* OpportunityCheck.swift */; };
+		D767F6051CFB31700000A26B /* OpportunityPollerMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5D81CFB31700000A26B /* OpportunityPollerMoment.swift */; };
+		D767F6061CFB31700000A26B /* SensorCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5D91CFB31700000A26B /* SensorCollector.swift */; };
+		D767F6071CFB31700000A26B /* SilentMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5DA1CFB31700000A26B /* SilentMoment.swift */; };
+		D767F6081CFB31700000A26B /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5DB1CFB31700000A26B /* Sound.swift */; };
+		D767F6091CFB31700000A26B /* SpeechListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5DC1CFB31700000A26B /* SpeechListener.swift */; };
+		D767F60A1CFB31700000A26B /* SynthVoiceMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5DD1CFB31700000A26B /* SynthVoiceMoment.swift */; };
+		D767F60B1CFB31700000A26B /* TriggerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5DE1CFB31700000A26B /* TriggerListener.swift */; };
+		D767F60C1CFB31700000A26B /* TriggerListenerWithSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5DF1CFB31700000A26B /* TriggerListenerWithSound.swift */; };
+		D767F60D1CFB31700000A26B /* WaitForDoubleKnock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5E01CFB31700000A26B /* WaitForDoubleKnock.swift */; };
+		D767F60E1CFB31700000A26B /* WaitForWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5E11CFB31700000A26B /* WaitForWord.swift */; };
+		D767F60F1CFB31700000A26B /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5E31CFB31700000A26B /* Experience.swift */; };
+		D767F6101CFB31700000A26B /* LocationUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5E41CFB31700000A26B /* LocationUpdate.swift */; };
+		D767F6111CFB31700000A26B /* MotionActivityUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5E51CFB31700000A26B /* MotionActivityUpdate.swift */; };
+		D767F6121CFB31700000A26B /* SensorMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5E61CFB31700000A26B /* SensorMoment.swift */; };
+		D767F6131CFB31700000A26B /* WorldObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5E71CFB31700000A26B /* WorldObject.swift */; };
+		D767F6141CFB31700000A26B /* Requirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5E81CFB31700000A26B /* Requirement.swift */; };
+		D767F6151CFB31700000A26B /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5E91CFB31700000A26B /* Stage.swift */; };
+		D767F6161CFB31700000A26B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5EB1CFB31700000A26B /* Extensions.swift */; };
+		D767F6171CFB31700000A26B /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = D767F5ED1CFB31700000A26B /* Events.swift */; };
+		D767F6181CFB31700000A26B /* ARAudioRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = D767F5F11CFB31700000A26B /* ARAudioRecognizer.m */; };
+		D767F6191CFB31700000A26B /* TSCoreMotionListener.m in Sources */ = {isa = PBXBuildFile; fileRef = D767F5F41CFB31700000A26B /* TSCoreMotionListener.m */; };
+		D767F61A1CFB31700000A26B /* TSTapDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = D767F5F61CFB31700000A26B /* TSTapDetector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,46 +168,6 @@
 		52D9F1D61AF91C4500C3DCF3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		52D9F1D71AF91C4500C3DCF3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		52D9F1D91AF91C4500C3DCF3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		64050F071CE6199A004F6435 /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
-		64050F081CE6199A004F6435 /* Interaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interaction.swift; sourceTree = "<group>"; };
-		64050F0A1CE6199A004F6435 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		64050F0B1CE6199A004F6435 /* ExperienceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceManager.swift; sourceTree = "<group>"; };
-		64050F0C1CE6199A004F6435 /* OpportunityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityManager.swift; sourceTree = "<group>"; };
-		64050F0D1CE6199A004F6435 /* ScaffoldingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaffoldingManager.swift; sourceTree = "<group>"; };
-		64050F0F1CE6199A004F6435 /* CollectorWithSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectorWithSound.swift; sourceTree = "<group>"; };
-		64050F101CE6199A004F6435 /* ConditionalMoment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionalMoment.swift; sourceTree = "<group>"; };
-		64050F111CE6199A004F6435 /* ContinuousMoment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinuousMoment.swift; sourceTree = "<group>"; };
-		64050F121CE6199A004F6435 /* FunctionMoment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMoment.swift; sourceTree = "<group>"; };
-		64050F131CE6199A004F6435 /* Interim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interim.swift; sourceTree = "<group>"; };
-		64050F141CE6199A004F6435 /* KnockListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnockListener.swift; sourceTree = "<group>"; };
-		64050F151CE6199A004F6435 /* Moment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
-		64050F161CE6199A004F6435 /* OpportunityCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityCheck.swift; sourceTree = "<group>"; };
-		64050F171CE6199A004F6435 /* OpportunityPollerMoment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityPollerMoment.swift; sourceTree = "<group>"; };
-		64050F181CE6199A004F6435 /* SensorCollector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorCollector.swift; sourceTree = "<group>"; };
-		64050F191CE6199A004F6435 /* SilentMoment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SilentMoment.swift; sourceTree = "<group>"; };
-		64050F1A1CE6199A004F6435 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
-		64050F1B1CE6199A004F6435 /* SpeechListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechListener.swift; sourceTree = "<group>"; };
-		64050F1C1CE6199A004F6435 /* SynthVoiceMoment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthVoiceMoment.swift; sourceTree = "<group>"; };
-		64050F1D1CE6199A004F6435 /* TriggerListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerListener.swift; sourceTree = "<group>"; };
-		64050F1E1CE6199A004F6435 /* TriggerListenerWithSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerListenerWithSound.swift; sourceTree = "<group>"; };
-		64050F1F1CE6199A004F6435 /* WaitForDoubleKnock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitForDoubleKnock.swift; sourceTree = "<group>"; };
-		64050F201CE6199A004F6435 /* WaitForWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitForWord.swift; sourceTree = "<group>"; };
-		64050F221CE6199A004F6435 /* Experience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experience.swift; sourceTree = "<group>"; };
-		64050F231CE6199A004F6435 /* LocationUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationUpdate.swift; sourceTree = "<group>"; };
-		64050F241CE6199A004F6435 /* MotionActivityUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionActivityUpdate.swift; sourceTree = "<group>"; };
-		64050F251CE6199A004F6435 /* SensorMoment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorMoment.swift; sourceTree = "<group>"; };
-		64050F261CE6199A004F6435 /* WorldObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldObject.swift; sourceTree = "<group>"; };
-		64050F271CE6199A004F6435 /* Requirement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requirement.swift; sourceTree = "<group>"; };
-		64050F281CE6199A004F6435 /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
-		64050F2A1CE6199A004F6435 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		64050F2C1CE6199A004F6435 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
-		64050F2F1CE6199A004F6435 /* ARAudioRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAudioRecognizer.h; sourceTree = "<group>"; };
-		64050F301CE6199A004F6435 /* ARAudioRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAudioRecognizer.m; sourceTree = "<group>"; };
-		64050F311CE6199A004F6435 /* ARAudioRecognizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAudioRecognizerDelegate.h; sourceTree = "<group>"; };
-		64050F321CE6199A004F6435 /* TSCoreMotionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCoreMotionListener.h; sourceTree = "<group>"; };
-		64050F331CE6199A004F6435 /* TSCoreMotionListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCoreMotionListener.m; sourceTree = "<group>"; };
-		64050F341CE6199A004F6435 /* TSTapDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTapDetector.h; sourceTree = "<group>"; };
-		64050F351CE6199A004F6435 /* TSTapDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTapDetector.m; sourceTree = "<group>"; };
 		64050F361CE6199A004F6435 /* body_and_posture_awareness_2-00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "body_and_posture_awareness_2-00.mp3"; sourceTree = "<group>"; };
 		64050F371CE6199A004F6435 /* what_is_mindfulness_1-45.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "what_is_mindfulness_1-45.mp3"; sourceTree = "<group>"; };
 		64050F381CE6199A004F6435 /* allow_mind_to_be_free_2-30.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "allow_mind_to_be_free_2-30.mp3"; sourceTree = "<group>"; };
@@ -281,6 +241,46 @@
 		64E3991B1C839FBA00E99C53 /* WalkingObserveSurroundings_4-00.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "WalkingObserveSurroundings_4-00.mp3"; sourceTree = "<group>"; };
 		64E7D4C01B5D744B00FCF61B /* EndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
 		64F740A81B5CBB370024D45D /* WalksListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalksListViewController.swift; sourceTree = "<group>"; };
+		D767F5C81CFB31700000A26B /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		D767F5C91CFB31700000A26B /* Interaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interaction.swift; sourceTree = "<group>"; };
+		D767F5CB1CFB31700000A26B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		D767F5CC1CFB31700000A26B /* ExperienceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceManager.swift; sourceTree = "<group>"; };
+		D767F5CD1CFB31700000A26B /* OpportunityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityManager.swift; sourceTree = "<group>"; };
+		D767F5CE1CFB31700000A26B /* ScaffoldingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaffoldingManager.swift; sourceTree = "<group>"; };
+		D767F5D01CFB31700000A26B /* CollectorWithSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectorWithSound.swift; sourceTree = "<group>"; };
+		D767F5D11CFB31700000A26B /* ConditionalMoment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionalMoment.swift; sourceTree = "<group>"; };
+		D767F5D21CFB31700000A26B /* ContinuousMoment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinuousMoment.swift; sourceTree = "<group>"; };
+		D767F5D31CFB31700000A26B /* FunctionMoment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionMoment.swift; sourceTree = "<group>"; };
+		D767F5D41CFB31700000A26B /* Interim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interim.swift; sourceTree = "<group>"; };
+		D767F5D51CFB31700000A26B /* KnockListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnockListener.swift; sourceTree = "<group>"; };
+		D767F5D61CFB31700000A26B /* Moment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
+		D767F5D71CFB31700000A26B /* OpportunityCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityCheck.swift; sourceTree = "<group>"; };
+		D767F5D81CFB31700000A26B /* OpportunityPollerMoment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpportunityPollerMoment.swift; sourceTree = "<group>"; };
+		D767F5D91CFB31700000A26B /* SensorCollector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorCollector.swift; sourceTree = "<group>"; };
+		D767F5DA1CFB31700000A26B /* SilentMoment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SilentMoment.swift; sourceTree = "<group>"; };
+		D767F5DB1CFB31700000A26B /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		D767F5DC1CFB31700000A26B /* SpeechListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechListener.swift; sourceTree = "<group>"; };
+		D767F5DD1CFB31700000A26B /* SynthVoiceMoment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthVoiceMoment.swift; sourceTree = "<group>"; };
+		D767F5DE1CFB31700000A26B /* TriggerListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerListener.swift; sourceTree = "<group>"; };
+		D767F5DF1CFB31700000A26B /* TriggerListenerWithSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerListenerWithSound.swift; sourceTree = "<group>"; };
+		D767F5E01CFB31700000A26B /* WaitForDoubleKnock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitForDoubleKnock.swift; sourceTree = "<group>"; };
+		D767F5E11CFB31700000A26B /* WaitForWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitForWord.swift; sourceTree = "<group>"; };
+		D767F5E31CFB31700000A26B /* Experience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experience.swift; sourceTree = "<group>"; };
+		D767F5E41CFB31700000A26B /* LocationUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationUpdate.swift; sourceTree = "<group>"; };
+		D767F5E51CFB31700000A26B /* MotionActivityUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionActivityUpdate.swift; sourceTree = "<group>"; };
+		D767F5E61CFB31700000A26B /* SensorMoment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorMoment.swift; sourceTree = "<group>"; };
+		D767F5E71CFB31700000A26B /* WorldObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldObject.swift; sourceTree = "<group>"; };
+		D767F5E81CFB31700000A26B /* Requirement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requirement.swift; sourceTree = "<group>"; };
+		D767F5E91CFB31700000A26B /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
+		D767F5EB1CFB31700000A26B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D767F5ED1CFB31700000A26B /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		D767F5F01CFB31700000A26B /* ARAudioRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAudioRecognizer.h; sourceTree = "<group>"; };
+		D767F5F11CFB31700000A26B /* ARAudioRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAudioRecognizer.m; sourceTree = "<group>"; };
+		D767F5F21CFB31700000A26B /* ARAudioRecognizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAudioRecognizerDelegate.h; sourceTree = "<group>"; };
+		D767F5F31CFB31700000A26B /* TSCoreMotionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCoreMotionListener.h; sourceTree = "<group>"; };
+		D767F5F41CFB31700000A26B /* TSCoreMotionListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCoreMotionListener.m; sourceTree = "<group>"; };
+		D767F5F51CFB31700000A26B /* TSTapDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTapDetector.h; sourceTree = "<group>"; };
+		D767F5F61CFB31700000A26B /* TSTapDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTapDetector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,7 +342,7 @@
 		52D9F19C1AF9181A00C3DCF3 /* ZenWalk */ = {
 			isa = PBXGroup;
 			children = (
-				64050F061CE6199A004F6435 /* ExperienceKit */,
+				D767F5C71CFB31700000A26B /* ExperienceKit */,
 				6455109F1C4E99FA00BB1C4C /* Audio */,
 				52D9F1CE1AF91B9B00C3DCF3 /* Frameworks */,
 				64DC05BD1B5ECC9600D4CDF6 /* UserInfo */,
@@ -412,109 +412,6 @@
 				52D9F1D91AF91C4500C3DCF3 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		64050F061CE6199A004F6435 /* ExperienceKit */ = {
-			isa = PBXGroup;
-			children = (
-				64050F071CE6199A004F6435 /* Context.swift */,
-				64050F081CE6199A004F6435 /* Interaction.swift */,
-				64050F091CE6199A004F6435 /* managers */,
-				64050F0E1CE6199A004F6435 /* moments */,
-				64050F211CE6199A004F6435 /* Parse */,
-				64050F271CE6199A004F6435 /* Requirement.swift */,
-				64050F281CE6199A004F6435 /* Stage.swift */,
-				64050F291CE6199A004F6435 /* utilities */,
-			);
-			path = ExperienceKit;
-			sourceTree = "<group>";
-		};
-		64050F091CE6199A004F6435 /* managers */ = {
-			isa = PBXGroup;
-			children = (
-				64050F0A1CE6199A004F6435 /* DataManager.swift */,
-				64050F0B1CE6199A004F6435 /* ExperienceManager.swift */,
-				64050F0C1CE6199A004F6435 /* OpportunityManager.swift */,
-				64050F0D1CE6199A004F6435 /* ScaffoldingManager.swift */,
-			);
-			path = managers;
-			sourceTree = "<group>";
-		};
-		64050F0E1CE6199A004F6435 /* moments */ = {
-			isa = PBXGroup;
-			children = (
-				64050F0F1CE6199A004F6435 /* CollectorWithSound.swift */,
-				64050F101CE6199A004F6435 /* ConditionalMoment.swift */,
-				64050F111CE6199A004F6435 /* ContinuousMoment.swift */,
-				64050F121CE6199A004F6435 /* FunctionMoment.swift */,
-				64050F131CE6199A004F6435 /* Interim.swift */,
-				64050F141CE6199A004F6435 /* KnockListener.swift */,
-				64050F151CE6199A004F6435 /* Moment.swift */,
-				64050F161CE6199A004F6435 /* OpportunityCheck.swift */,
-				64050F171CE6199A004F6435 /* OpportunityPollerMoment.swift */,
-				64050F181CE6199A004F6435 /* SensorCollector.swift */,
-				64050F191CE6199A004F6435 /* SilentMoment.swift */,
-				64050F1A1CE6199A004F6435 /* Sound.swift */,
-				64050F1B1CE6199A004F6435 /* SpeechListener.swift */,
-				64050F1C1CE6199A004F6435 /* SynthVoiceMoment.swift */,
-				64050F1D1CE6199A004F6435 /* TriggerListener.swift */,
-				64050F1E1CE6199A004F6435 /* TriggerListenerWithSound.swift */,
-				64050F1F1CE6199A004F6435 /* WaitForDoubleKnock.swift */,
-				64050F201CE6199A004F6435 /* WaitForWord.swift */,
-			);
-			path = moments;
-			sourceTree = "<group>";
-		};
-		64050F211CE6199A004F6435 /* Parse */ = {
-			isa = PBXGroup;
-			children = (
-				64050F221CE6199A004F6435 /* Experience.swift */,
-				64050F231CE6199A004F6435 /* LocationUpdate.swift */,
-				64050F241CE6199A004F6435 /* MotionActivityUpdate.swift */,
-				64050F251CE6199A004F6435 /* SensorMoment.swift */,
-				64050F261CE6199A004F6435 /* WorldObject.swift */,
-			);
-			path = Parse;
-			sourceTree = "<group>";
-		};
-		64050F291CE6199A004F6435 /* utilities */ = {
-			isa = PBXGroup;
-			children = (
-				64050F2A1CE6199A004F6435 /* Extensions.swift */,
-				64050F2B1CE6199A004F6435 /* third_party */,
-			);
-			path = utilities;
-			sourceTree = "<group>";
-		};
-		64050F2B1CE6199A004F6435 /* third_party */ = {
-			isa = PBXGroup;
-			children = (
-				64050F2C1CE6199A004F6435 /* Events.swift */,
-				64050F2D1CE6199A004F6435 /* TapShare */,
-			);
-			path = third_party;
-			sourceTree = "<group>";
-		};
-		64050F2D1CE6199A004F6435 /* TapShare */ = {
-			isa = PBXGroup;
-			children = (
-				64050F2E1CE6199A004F6435 /* ARAudioRecognizer */,
-				64050F321CE6199A004F6435 /* TSCoreMotionListener.h */,
-				64050F331CE6199A004F6435 /* TSCoreMotionListener.m */,
-				64050F341CE6199A004F6435 /* TSTapDetector.h */,
-				64050F351CE6199A004F6435 /* TSTapDetector.m */,
-			);
-			path = TapShare;
-			sourceTree = "<group>";
-		};
-		64050F2E1CE6199A004F6435 /* ARAudioRecognizer */ = {
-			isa = PBXGroup;
-			children = (
-				64050F2F1CE6199A004F6435 /* ARAudioRecognizer.h */,
-				64050F301CE6199A004F6435 /* ARAudioRecognizer.m */,
-				64050F311CE6199A004F6435 /* ARAudioRecognizerDelegate.h */,
-			);
-			path = ARAudioRecognizer;
 			sourceTree = "<group>";
 		};
 		6455109F1C4E99FA00BB1C4C /* Audio */ = {
@@ -604,6 +501,109 @@
 				64F740A81B5CBB370024D45D /* WalksListViewController.swift */,
 			);
 			name = UserInfo;
+			sourceTree = "<group>";
+		};
+		D767F5C71CFB31700000A26B /* ExperienceKit */ = {
+			isa = PBXGroup;
+			children = (
+				D767F5C81CFB31700000A26B /* Context.swift */,
+				D767F5C91CFB31700000A26B /* Interaction.swift */,
+				D767F5CA1CFB31700000A26B /* managers */,
+				D767F5CF1CFB31700000A26B /* moments */,
+				D767F5E21CFB31700000A26B /* Parse */,
+				D767F5E81CFB31700000A26B /* Requirement.swift */,
+				D767F5E91CFB31700000A26B /* Stage.swift */,
+				D767F5EA1CFB31700000A26B /* utilities */,
+			);
+			path = ExperienceKit;
+			sourceTree = "<group>";
+		};
+		D767F5CA1CFB31700000A26B /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				D767F5CB1CFB31700000A26B /* DataManager.swift */,
+				D767F5CC1CFB31700000A26B /* ExperienceManager.swift */,
+				D767F5CD1CFB31700000A26B /* OpportunityManager.swift */,
+				D767F5CE1CFB31700000A26B /* ScaffoldingManager.swift */,
+			);
+			path = managers;
+			sourceTree = "<group>";
+		};
+		D767F5CF1CFB31700000A26B /* moments */ = {
+			isa = PBXGroup;
+			children = (
+				D767F5D01CFB31700000A26B /* CollectorWithSound.swift */,
+				D767F5D11CFB31700000A26B /* ConditionalMoment.swift */,
+				D767F5D21CFB31700000A26B /* ContinuousMoment.swift */,
+				D767F5D31CFB31700000A26B /* FunctionMoment.swift */,
+				D767F5D41CFB31700000A26B /* Interim.swift */,
+				D767F5D51CFB31700000A26B /* KnockListener.swift */,
+				D767F5D61CFB31700000A26B /* Moment.swift */,
+				D767F5D71CFB31700000A26B /* OpportunityCheck.swift */,
+				D767F5D81CFB31700000A26B /* OpportunityPollerMoment.swift */,
+				D767F5D91CFB31700000A26B /* SensorCollector.swift */,
+				D767F5DA1CFB31700000A26B /* SilentMoment.swift */,
+				D767F5DB1CFB31700000A26B /* Sound.swift */,
+				D767F5DC1CFB31700000A26B /* SpeechListener.swift */,
+				D767F5DD1CFB31700000A26B /* SynthVoiceMoment.swift */,
+				D767F5DE1CFB31700000A26B /* TriggerListener.swift */,
+				D767F5DF1CFB31700000A26B /* TriggerListenerWithSound.swift */,
+				D767F5E01CFB31700000A26B /* WaitForDoubleKnock.swift */,
+				D767F5E11CFB31700000A26B /* WaitForWord.swift */,
+			);
+			path = moments;
+			sourceTree = "<group>";
+		};
+		D767F5E21CFB31700000A26B /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				D767F5E31CFB31700000A26B /* Experience.swift */,
+				D767F5E41CFB31700000A26B /* LocationUpdate.swift */,
+				D767F5E51CFB31700000A26B /* MotionActivityUpdate.swift */,
+				D767F5E61CFB31700000A26B /* SensorMoment.swift */,
+				D767F5E71CFB31700000A26B /* WorldObject.swift */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
+		D767F5EA1CFB31700000A26B /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D767F5EB1CFB31700000A26B /* Extensions.swift */,
+				D767F5EC1CFB31700000A26B /* third_party */,
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
+		D767F5EC1CFB31700000A26B /* third_party */ = {
+			isa = PBXGroup;
+			children = (
+				D767F5ED1CFB31700000A26B /* Events.swift */,
+				D767F5EE1CFB31700000A26B /* TapShare */,
+			);
+			path = third_party;
+			sourceTree = "<group>";
+		};
+		D767F5EE1CFB31700000A26B /* TapShare */ = {
+			isa = PBXGroup;
+			children = (
+				D767F5EF1CFB31700000A26B /* ARAudioRecognizer */,
+				D767F5F31CFB31700000A26B /* TSCoreMotionListener.h */,
+				D767F5F41CFB31700000A26B /* TSCoreMotionListener.m */,
+				D767F5F51CFB31700000A26B /* TSTapDetector.h */,
+				D767F5F61CFB31700000A26B /* TSTapDetector.m */,
+			);
+			path = TapShare;
+			sourceTree = "<group>";
+		};
+		D767F5EF1CFB31700000A26B /* ARAudioRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				D767F5F01CFB31700000A26B /* ARAudioRecognizer.h */,
+				D767F5F11CFB31700000A26B /* ARAudioRecognizer.m */,
+				D767F5F21CFB31700000A26B /* ARAudioRecognizerDelegate.h */,
+			);
+			path = ARAudioRecognizer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -768,55 +768,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64050F531CE6199A004F6435 /* WaitForDoubleKnock.swift in Sources */,
-				64050F521CE6199A004F6435 /* TriggerListenerWithSound.swift in Sources */,
-				64050F5E1CE6199A004F6435 /* ARAudioRecognizer.m in Sources */,
-				64050F5D1CE6199A004F6435 /* Events.swift in Sources */,
+				D767F60C1CFB31700000A26B /* TriggerListenerWithSound.swift in Sources */,
 				64E7D4C11B5D744B00FCF61B /* EndViewController.swift in Sources */,
-				64050F3D1CE6199A004F6435 /* Context.swift in Sources */,
+				D767F6081CFB31700000A26B /* Sound.swift in Sources */,
+				D767F5FC1CFB31700000A26B /* ScaffoldingManager.swift in Sources */,
+				D767F5F91CFB31700000A26B /* DataManager.swift in Sources */,
 				64DC05C11B5F128A00D4CDF6 /* UserProfileViewController.swift in Sources */,
-				64050F411CE6199A004F6435 /* OpportunityManager.swift in Sources */,
-				64050F471CE6199A004F6435 /* Interim.swift in Sources */,
-				64050F5C1CE6199A004F6435 /* Extensions.swift in Sources */,
+				D767F6171CFB31700000A26B /* Events.swift in Sources */,
+				D767F5FF1CFB31700000A26B /* ContinuousMoment.swift in Sources */,
+				D767F60A1CFB31700000A26B /* SynthVoiceMoment.swift in Sources */,
+				D767F5FE1CFB31700000A26B /* ConditionalMoment.swift in Sources */,
+				D767F6121CFB31700000A26B /* SensorMoment.swift in Sources */,
+				D767F6161CFB31700000A26B /* Extensions.swift in Sources */,
+				D767F6101CFB31700000A26B /* LocationUpdate.swift in Sources */,
+				D767F6041CFB31700000A26B /* OpportunityCheck.swift in Sources */,
+				D767F6111CFB31700000A26B /* MotionActivityUpdate.swift in Sources */,
 				6494AB1C1C498B1800705320 /* WalkViewController.swift in Sources */,
-				64050F421CE6199A004F6435 /* ScaffoldingManager.swift in Sources */,
-				64050F4B1CE6199A004F6435 /* OpportunityPollerMoment.swift in Sources */,
+				D767F6181CFB31700000A26B /* ARAudioRecognizer.m in Sources */,
+				D767F5F71CFB31700000A26B /* Context.swift in Sources */,
+				D767F6011CFB31700000A26B /* Interim.swift in Sources */,
+				D767F6021CFB31700000A26B /* KnockListener.swift in Sources */,
+				D767F6051CFB31700000A26B /* OpportunityPollerMoment.swift in Sources */,
+				D767F6151CFB31700000A26B /* Stage.swift in Sources */,
+				D767F6091CFB31700000A26B /* SpeechListener.swift in Sources */,
+				D767F60D1CFB31700000A26B /* WaitForDoubleKnock.swift in Sources */,
+				D767F60F1CFB31700000A26B /* Experience.swift in Sources */,
 				52D9F1A51AF9181A00C3DCF3 /* ViewController.swift in Sources */,
-				64050F481CE6199A004F6435 /* KnockListener.swift in Sources */,
-				64050F4F1CE6199A004F6435 /* SpeechListener.swift in Sources */,
+				D767F61A1CFB31700000A26B /* TSTapDetector.m in Sources */,
+				D767F6031CFB31700000A26B /* Moment.swift in Sources */,
+				D767F6071CFB31700000A26B /* SilentMoment.swift in Sources */,
+				D767F5FD1CFB31700000A26B /* CollectorWithSound.swift in Sources */,
+				D767F5FA1CFB31700000A26B /* ExperienceManager.swift in Sources */,
 				64F740A91B5CBB370024D45D /* WalksListViewController.swift in Sources */,
+				D767F5F81CFB31700000A26B /* Interaction.swift in Sources */,
 				6494AB1E1C49A15300705320 /* AudioManager.swift in Sources */,
-				64050F501CE6199A004F6435 /* SynthVoiceMoment.swift in Sources */,
-				64050F4D1CE6199A004F6435 /* SilentMoment.swift in Sources */,
 				64CBDBBD1B557A04000354EB /* SignUpInViewController.swift in Sources */,
-				64050F441CE6199A004F6435 /* ConditionalMoment.swift in Sources */,
 				64CBDBC31B559F33000354EB /* ConditionViewController.swift in Sources */,
+				D767F6141CFB31700000A26B /* Requirement.swift in Sources */,
 				64DC05BA1B5ECBE000D4CDF6 /* HomeViewController.swift in Sources */,
-				64050F4A1CE6199A004F6435 /* OpportunityCheck.swift in Sources */,
-				64050F561CE6199A004F6435 /* LocationUpdate.swift in Sources */,
-				64050F431CE6199A004F6435 /* CollectorWithSound.swift in Sources */,
-				64050F491CE6199A004F6435 /* Moment.swift in Sources */,
-				64050F551CE6199A004F6435 /* Experience.swift in Sources */,
+				D767F6061CFB31700000A26B /* SensorCollector.swift in Sources */,
+				D767F6001CFB31700000A26B /* FunctionMoment.swift in Sources */,
 				643706C11C49849E00B3F463 /* ActuationController.swift in Sources */,
-				64050F451CE6199A004F6435 /* ContinuousMoment.swift in Sources */,
-				64050F571CE6199A004F6435 /* MotionActivityUpdate.swift in Sources */,
-				64050F541CE6199A004F6435 /* WaitForWord.swift in Sources */,
-				64050F3E1CE6199A004F6435 /* Interaction.swift in Sources */,
-				64050F401CE6199A004F6435 /* ExperienceManager.swift in Sources */,
-				64050F591CE6199A004F6435 /* WorldObject.swift in Sources */,
 				52D9F1A31AF9181A00C3DCF3 /* ZenWalk.xcdatamodeld in Sources */,
-				64050F5F1CE6199A004F6435 /* TSCoreMotionListener.m in Sources */,
-				64050F581CE6199A004F6435 /* SensorMoment.swift in Sources */,
-				64050F4C1CE6199A004F6435 /* SensorCollector.swift in Sources */,
-				64050F5A1CE6199A004F6435 /* Requirement.swift in Sources */,
-				64050F461CE6199A004F6435 /* FunctionMoment.swift in Sources */,
+				D767F60B1CFB31700000A26B /* TriggerListener.swift in Sources */,
+				D767F5FB1CFB31700000A26B /* OpportunityManager.swift in Sources */,
 				64CBDBC11B559EFD000354EB /* MeditationViewController.swift in Sources */,
-				64050F5B1CE6199A004F6435 /* Stage.swift in Sources */,
-				64050F3F1CE6199A004F6435 /* DataManager.swift in Sources */,
-				64050F511CE6199A004F6435 /* TriggerListener.swift in Sources */,
 				52D9F1A01AF9181A00C3DCF3 /* AppDelegate.swift in Sources */,
-				64050F601CE6199A004F6435 /* TSTapDetector.m in Sources */,
-				64050F4E1CE6199A004F6435 /* Sound.swift in Sources */,
+				D767F6191CFB31700000A26B /* TSCoreMotionListener.m in Sources */,
+				D767F60E1CFB31700000A26B /* WaitForWord.swift in Sources */,
+				D767F6131CFB31700000A26B /* WorldObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
